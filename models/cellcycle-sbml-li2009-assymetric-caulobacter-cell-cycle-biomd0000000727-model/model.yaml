@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000727
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000727?filename=Li2009.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model:Li2009AssymetricCaulobacterCellCycleBiomd0000000727Model
   init_kwargs:
     model_path: data/BIOMD0000000727.xml

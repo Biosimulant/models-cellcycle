@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000723
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000723?filename=Weis2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model:Weis2014DataDrivenMammalianCellCycleModelBiomd0000000723Model
   init_kwargs:
     model_path: data/BIOMD0000000723.xml

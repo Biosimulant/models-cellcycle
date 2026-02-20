@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1611230001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1611230001?filename=MODEL1611230001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.traynard2016_mammalian_cell_cycle_regulation_log_model1611230001_model:Traynard2016MammalianCellCycleRegulationLogModel1611230001Model
   init_kwargs:
     model_path: data/MODEL1611230001.xml

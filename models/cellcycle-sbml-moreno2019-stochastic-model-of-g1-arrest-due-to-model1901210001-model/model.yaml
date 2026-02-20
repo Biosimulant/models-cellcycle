@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1901210001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1901210001?filename=CellCycleProteinAggregation.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model:Moreno2019StochasticModelOfG1ArrestDueToModel1901210001Model
   init_kwargs:
     model_path: data/MODEL1901210001.xml

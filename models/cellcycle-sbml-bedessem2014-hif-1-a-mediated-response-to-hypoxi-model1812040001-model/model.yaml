@@ -19,7 +19,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812040001?filename=Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model:Bedessem2014Hif1AMediatedResponseToHypoxiModel1812040001Model
   init_kwargs:
     model_path: data/MODEL1812040001.xml

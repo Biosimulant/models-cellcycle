@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003180003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003180003?filename=Chiorino2002.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chiorino2002_g1_s_transition_model_model2003180003_model:Chiorino2002G1STransitionModelModel2003180003Model
   init_kwargs:
     model_path: data/MODEL2003180003.xml

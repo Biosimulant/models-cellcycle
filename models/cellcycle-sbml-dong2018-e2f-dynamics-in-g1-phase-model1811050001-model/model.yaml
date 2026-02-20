@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1811050001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1811050001?filename=Dong2018_final.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dong2018_e2f_dynamics_in_g1_phase_model1811050001_model:Dong2018E2fDynamicsInG1PhaseModel1811050001Model
   init_kwargs:
     model_path: data/MODEL1811050001.xml

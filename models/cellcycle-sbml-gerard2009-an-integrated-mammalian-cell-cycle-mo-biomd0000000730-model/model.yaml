@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000730
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000730?filename=Gerard2009.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model:Gerard2009AnIntegratedMammalianCellCycleMoBiomd0000000730Model
   init_kwargs:
     model_path: data/BIOMD0000000730.xml

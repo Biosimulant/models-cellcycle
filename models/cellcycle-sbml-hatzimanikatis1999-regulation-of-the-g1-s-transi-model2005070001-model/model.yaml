@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2005070001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005070001?filename=Hatzimanikatis1999.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hatzimanikatis1999_regulation_of_the_g1_s_transi_model2005070001_model:Hatzimanikatis1999RegulationOfTheG1STransiModel2005070001Model
   init_kwargs:
     model_path: data/MODEL2005070001.xml

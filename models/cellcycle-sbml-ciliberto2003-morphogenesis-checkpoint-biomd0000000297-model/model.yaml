@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000297
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000297?filename=BIOMD0000000297_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model:Ciliberto2003MorphogenesisCheckpointBiomd0000000297Model
   init_kwargs:
     model_path: data/BIOMD0000000297.xml

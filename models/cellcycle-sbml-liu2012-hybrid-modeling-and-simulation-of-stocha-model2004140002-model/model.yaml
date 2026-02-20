@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2004140002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2004140002?filename=Liu2012.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model:Liu2012HybridModelingAndSimulationOfStochaModel2004140002Model
   init_kwargs:
     model_path: data/MODEL2004140002.xml

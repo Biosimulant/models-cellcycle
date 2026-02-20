@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000265
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000265?filename=BIOMD0000000265_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.conradie2010_rpcontrol_cellcycle_biomd0000000265_model:Conradie2010RpcontrolCellcycleBiomd0000000265Model
   init_kwargs:
     model_path: data/BIOMD0000000265.xml

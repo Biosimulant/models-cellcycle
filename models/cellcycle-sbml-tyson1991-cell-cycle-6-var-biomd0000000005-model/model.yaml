@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000005
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000005?filename=BIOMD0000000005_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tyson1991_cell_cycle_6_var_biomd0000000005_model:Tyson1991CellCycle6VarBiomd0000000005Model
   init_kwargs:
     model_path: data/BIOMD0000000005.xml

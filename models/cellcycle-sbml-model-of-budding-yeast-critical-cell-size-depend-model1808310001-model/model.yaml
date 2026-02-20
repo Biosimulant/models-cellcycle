@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808310001?filename=MolCompVol
     ps3114.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.model_of_budding_yeast_critical_cell_size_depend_model1808310001_model:ModelOfBuddingYeastCriticalCellSizeDependModel1808310001Model
   init_kwargs:
     model_path: data/MODEL1808310001.xml

@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812060002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812060002?filename=Zhang2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model:Zhang2018CellCycleCommitmentInHypoxiaModel1812060002Model
   init_kwargs:
     model_path: data/MODEL1812060002.xml

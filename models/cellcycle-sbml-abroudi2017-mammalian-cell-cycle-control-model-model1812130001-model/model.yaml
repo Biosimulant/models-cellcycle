@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812130001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812130001?filename=Abroudi2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model:Abroudi2017MammalianCellCycleControlModelModel1812130001Model
   init_kwargs:
     model_path: data/MODEL1812130001.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000646
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000646?filename=BIOMD0000000646_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.barr2016_all_or_nothing_g1_s_transition_biomd0000000646_model:Barr2016AllOrNothingG1STransitionBiomd0000000646Model
   init_kwargs:
     model_path: data/BIOMD0000000646.xml

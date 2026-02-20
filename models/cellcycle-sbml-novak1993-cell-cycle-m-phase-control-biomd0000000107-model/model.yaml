@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000107
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000107?filename=BIOMD0000000107_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.novak1993_cell_cycle_m_phase_control_biomd0000000107_model:Novak1993CellCycleMPhaseControlBiomd0000000107Model
   init_kwargs:
     model_path: data/BIOMD0000000107.xml

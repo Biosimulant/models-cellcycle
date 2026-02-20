@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000509
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000509?filename=BIOMD0000000509_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model:Barrack2014CalciumCellCycleCouplingRsDepenBiomd0000000509Model
   init_kwargs:
     model_path: data/BIOMD0000000509.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2401050001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2401050001?filename=v4.0.0_optimized.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model:Lang2024CellCycleModelExplainsCompartmentRModel2401050001Model
   init_kwargs:
     model_path: data/MODEL2401050001.xml

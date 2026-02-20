@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000008
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000008?filename=BIOMD0000000008_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gardner1998_cell_cycle_goldbeter_biomd0000000008_model:Gardner1998CellCycleGoldbeterBiomd0000000008Model
   init_kwargs:
     model_path: data/BIOMD0000000008.xml

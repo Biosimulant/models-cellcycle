@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812210002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812210002?filename=Henze2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model:Henze2017ADynamicalModelForActivatingAndSModel1812210002Model
   init_kwargs:
     model_path: data/MODEL1812210002.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190004
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190004?filename=Novak1998.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model:Novak1998MathematicalModelOfFissionYeastCeModel2003190004Model
   init_kwargs:
     model_path: data/MODEL2003190004.xml

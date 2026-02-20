@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000704
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000704?filename=BIOMD0000000704_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model:Aguda1999G2DnaDamageCheckpointBiomd0000000704Model
   init_kwargs:
     model_path: data/BIOMD0000000704.xml

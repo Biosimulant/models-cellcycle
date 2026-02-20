@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000228
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000228?filename=BIOMD0000000228_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.swat2004_mammalian_g1_s_transition_biomd0000000228_model:Swat2004MammalianG1STransitionBiomd0000000228Model
   init_kwargs:
     model_path: data/BIOMD0000000228.xml

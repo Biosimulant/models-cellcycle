@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000186
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000186?filename=BIOMD0000000186_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model:Ibrahim2008MitoticSpindleAssemblyCheckpointBiomd0000000186Model
   init_kwargs:
     model_path: data/BIOMD0000000186.xml

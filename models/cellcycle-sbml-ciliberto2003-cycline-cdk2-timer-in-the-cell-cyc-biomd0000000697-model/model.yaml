@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000697
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000697?filename=BIOMD0000000697_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ciliberto2003_cycline_cdk2_timer_in_the_cell_cyc_biomd0000000697_model:Ciliberto2003CyclineCdk2TimerInTheCellCycBiomd0000000697Model
   init_kwargs:
     model_path: data/BIOMD0000000697.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000941
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000941?filename=gerard2010.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model:Gerard2010ProgressionOfMammalianCellCycleBBiomd0000000941Model
   init_kwargs:
     model_path: data/BIOMD0000000941.xml

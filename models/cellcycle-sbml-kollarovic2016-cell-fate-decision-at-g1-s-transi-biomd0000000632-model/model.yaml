@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000632
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000632?filename=BIOMD0000000632_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model:Kollarovic2016CellFateDecisionAtG1STransiBiomd0000000632Model
   init_kwargs:
     model_path: data/BIOMD0000000632.xml

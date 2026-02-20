@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL0913285268
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL0913285268?filename=MODEL0913285268_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ciliberto2003_swe1network_model0913285268_model:Ciliberto2003Swe1networkModel0913285268Model
   init_kwargs:
     model_path: data/MODEL0913285268.xml

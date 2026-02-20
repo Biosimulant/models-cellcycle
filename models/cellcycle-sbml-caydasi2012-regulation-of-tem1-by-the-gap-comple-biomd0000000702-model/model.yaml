@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000702
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000702?filename=BIOMD0000000702_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000702_model:Caydasi2012RegulationOfTem1ByTheGapCompleBiomd0000000702Model
   init_kwargs:
     model_path: data/BIOMD0000000702.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2312140001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2312140001?filename=MiDAS_Cell_Cycle_Arrests_Apoptosis_Fine.XML
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sizek2023_mitochondrial_dysfunction_associated_s_model2312140001_model:Sizek2023MitochondrialDysfunctionAssociatedSModel2312140001Model
   init_kwargs:
     model_path: data/MODEL2312140001.xml

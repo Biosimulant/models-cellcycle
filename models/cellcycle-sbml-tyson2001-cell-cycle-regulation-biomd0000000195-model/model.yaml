@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000195
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000195?filename=BIOMD0000000195_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tyson2001_cell_cycle_regulation_biomd0000000195_model:Tyson2001CellCycleRegulationBiomd0000000195Model
   init_kwargs:
     model_path: data/BIOMD0000000195.xml

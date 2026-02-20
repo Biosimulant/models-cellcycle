@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000701
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000701?filename=MODEL1202090001_FINAL.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.caydasi2012_inhibition_of_tem1_by_the_gap_comple_biomd0000000701_model:Caydasi2012InhibitionOfTem1ByTheGapCompleBiomd0000000701Model
   init_kwargs:
     model_path: data/BIOMD0000000701.xml

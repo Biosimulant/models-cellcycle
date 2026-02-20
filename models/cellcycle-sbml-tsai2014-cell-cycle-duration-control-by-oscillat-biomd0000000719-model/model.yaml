@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000719
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000719?filename=Tsai2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model:Tsai2014CellCycleDurationControlByOscillatBiomd0000000719Model
   init_kwargs:
     model_path: data/BIOMD0000000719.xml

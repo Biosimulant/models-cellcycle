@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2005040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005040001?filename=Novak1998.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.novak1998_model_scenarios_for_evolution_of_the_e_model2005040001_model:Novak1998ModelScenariosForEvolutionOfTheEModel2005040001Model
   init_kwargs:
     model_path: data/MODEL2005040001.xml

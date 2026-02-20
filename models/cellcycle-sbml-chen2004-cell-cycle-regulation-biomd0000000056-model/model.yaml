@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000056
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000056?filename=BIOMD0000000056_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chen2004_cell_cycle_regulation_biomd0000000056_model:Chen2004CellCycleRegulationBiomd0000000056Model
   init_kwargs:
     model_path: data/BIOMD0000000056.xml

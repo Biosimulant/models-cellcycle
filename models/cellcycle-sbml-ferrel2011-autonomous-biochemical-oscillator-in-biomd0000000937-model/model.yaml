@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000937
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000937?filename=Ferrel2011_V3.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model:Ferrel2011AutonomousBiochemicalOscillatorInBiomd0000000937Model
   init_kwargs:
     model_path: data/BIOMD0000000937.xml

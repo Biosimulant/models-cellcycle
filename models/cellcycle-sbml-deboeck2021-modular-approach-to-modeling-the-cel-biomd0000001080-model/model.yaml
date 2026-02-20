@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001080
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001080?filename=DeBoeck2021_cellcycle_threeswitches.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model:Deboeck2021ModularApproachToModelingTheCelBiomd0000001080Model
   init_kwargs:
     model_path: data/BIOMD0000001080.xml

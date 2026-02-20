@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2007020001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2007020001?filename=Muenzner2019_Yeast_Cell_Cycle_Control_Network.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.muenzner2019_yeast_cell_cycle_control_network_model2007020001_model:Muenzner2019YeastCellCycleControlNetworkModel2007020001Model
   init_kwargs:
     model_path: data/MODEL2007020001.sbml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001044
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001044?filename=Csikasz-Nagy2006.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model:CsikaszNagy2006MammalianCellCycleModelBiomd0000001044Model
   init_kwargs:
     model_path: data/BIOMD0000001044.xml

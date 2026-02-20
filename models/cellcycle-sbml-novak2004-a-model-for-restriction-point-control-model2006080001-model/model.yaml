@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2006080001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2006080001?filename=Novak2004.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.novak2004_a_model_for_restriction_point_control_model2006080001_model:Novak2004AModelForRestrictionPointControlModel2006080001Model
   init_kwargs:
     model_path: data/MODEL2006080001.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2005150001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005150001?filename=Pomerening2005.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model:Pomerening2005ModelOfTheXenopusCdc2ApcSysModel2005150001Model
   init_kwargs:
     model_path: data/MODEL2005150001.xml

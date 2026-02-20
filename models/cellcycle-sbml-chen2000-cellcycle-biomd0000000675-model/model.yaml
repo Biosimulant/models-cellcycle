@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000675
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000675?filename=BIOMD0000000675.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chen2000_cellcycle_biomd0000000675_model:Chen2000CellcycleBiomd0000000675Model
   init_kwargs:
     model_path: data/BIOMD0000000675.xml
