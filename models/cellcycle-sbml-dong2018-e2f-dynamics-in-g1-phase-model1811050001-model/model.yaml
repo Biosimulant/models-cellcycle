@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Dong2018E2fDynamicsInG1PhaseModel1811050001Model'
-description: The length of the G1 phase in the cell cycle shows significant variability
-  in different cell types and tissue types. To gain insights into the control of G1
-  length, we generated an E2F activity report
+description: "The length of the G1 phase in the cell cycle shows significant variability in different cell types and tissue types. To gain insights into the control of G1 length, we generated an E2F activity report."
 standard: other
 tags:
 - cellcycle

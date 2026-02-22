@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Ciliberto2003CyclineCdk2TimerInTheCellCycBiomd0000000697Model'
-description: 'Ciliberto2003 - CyclinE / Cdk2 timer in thecell cycle of Xenopus laevis
-  embryo This model is described in the article: A kinetic model of the cyclin E/Cdk2
-  developmental timer in Xenopus laevis embryo'
+description: "Ciliberto2003 - CyclinE / Cdk2 timer in thecell cycle of Xenopus laevis embryo This model is described in the article: A kinetic model of the cyclin E/Cdk2 developmental timer in Xenopus laevis embryo. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

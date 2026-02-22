@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Hatzimanikatis1999RegulationOfTheG1STransiModel2005070001Model'
-description: A mathematical model of regulation of the G1-S transition of the mammalian
-  cell cycle has been formulated to organize available experimental molecular-level
-  information in a systematic quantitative fr
+description: "A mathematical model of regulation of the G1-S transition of the mammalian cell cycle has been formulated to organize available experimental molecular-level information in a systematic quantitative fr. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Chen2004CellCycleRegulationBiomd0000000056Model'
-description: Chen2004 - Cell Cycle Regulation This is a hypothetical model of cell
-  cycle that describes the molecular mechanism for regulating DNA synthesis, bud emergence,
-  mitosis, and cell division in budding ye
+description: "Chen2004 - Cell Cycle Regulation This is a hypothetical model of cell cycle that describes the molecular mechanism for regulating DNA synthesis, bud emergence, mitosis, and cell division in budding ye. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

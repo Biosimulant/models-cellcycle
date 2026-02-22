@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Muenzner2019YeastCellCycleControlNetworkModel2007020001Model'
-description: A mechanistically detailed model of the cell cycle control network of
-  Saccharomyces cerevisiae.
+description: "A mechanistically detailed model of the cell cycle control network of Saccharomyces cerevisiae. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

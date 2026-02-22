@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Novak2004AModelForRestrictionPointControlModel2006080001Model'
-description: '&lt;notes xmlns=''http://www.sbml.org/sbml/level2/version4''&gt; &lt;body
-  xmlns=''http://www.w3.org/1999/xhtml''&gt; &lt;pre&gt;Inhibition of protein synthesis
-  by cycloheximide blocks subsequent division '
+description: "&lt;notes xmlns='http://www.sbml.org/sbml/level2/version4'&gt; &lt;body xmlns='http://www.w3.org/1999/xhtml'&gt; &lt;pre&gt;Inhibition of protein synthesis by cycloheximide blocks subsequent division. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

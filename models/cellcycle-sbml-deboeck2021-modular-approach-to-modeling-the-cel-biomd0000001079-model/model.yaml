@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Deboeck2021ModularApproachToModelingTheCelBiomd0000001079Model'
-description: Models the production and degradation of cyclin B that drives the early
-  embryonic cell cycle.Cyclin B is degraded by APC/C. The activity of APC/C is modeled
-  not through biochemical interactions, but t
+description: "Models the production and degradation of cyclin B that drives the early embryonic cell cycle.Cyclin B is degraded by APC/C. The activity of APC/C is modeled not through biochemical interactions, but t."
 standard: other
 tags:
 - cellcycle

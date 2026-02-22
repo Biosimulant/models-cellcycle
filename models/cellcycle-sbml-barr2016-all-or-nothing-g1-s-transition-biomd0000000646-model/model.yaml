@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Barr2016AllOrNothingG1STransitionBiomd0000000646Model'
-description: "Barr2016 - All-or-nothing G1/Stransition This model is described in\
-  \ the article: A Dynamical Framework for the All-or-None G1/S Transition. Barr AR,\
-  \ Heldt FS, Zhang T, Bakal C, Nov\xE1k B. Cell Syst 2016"
+description: "Barr2016 - All-or-nothing G1/Stransition This model is described in the article: A Dynamical Framework for the All-or-None G1/S Transition. Barr AR, Heldt FS, Zhang T, Bakal C, Nov\u00e1k B."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Barrack2014CalciumCellCycleCouplingCyclinDBiomd0000000508Model'
-description: Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release
-  This model is designed based on the hypothesis that cytoplasmic calcium accelerates
-  entry into S phase of the cell cycle and/
+description: "Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release This model is designed based on the hypothesis that cytoplasmic calcium accelerates entry into S phase of the cell cycle and/. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

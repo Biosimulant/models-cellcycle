@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Novak1998ModelScenariosForEvolutionOfTheEModel2005040001Model'
-description: 'Progress through the division cycle of present day eukaryotic cells
-  is controlled by a complex network consisting of (i) cyclin-dependent kinases (CDKs)
-  and their associated cyclins, (ii) kinases and '
+description: "Progress through the division cycle of present day eukaryotic cells is controlled by a complex network consisting of (i) cyclin-dependent kinases (CDKs) and their associated cyclins, (ii) kinases and. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

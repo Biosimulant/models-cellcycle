@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Swat2004MammalianG1STransitionBiomd0000000228Model'
-description: 'This is the extended model described the article: Bifurcation analysis
-  of the regulatory modules of the mammalian G1/S transition. Swat M, Kel A, Herzel
-  H. Bioinformatics 2004 Jul 10;20(10):1506-11. P'
+description: "This is the extended model described the article: Bifurcation analysis of the regulatory modules of the mammalian G1/S transition. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

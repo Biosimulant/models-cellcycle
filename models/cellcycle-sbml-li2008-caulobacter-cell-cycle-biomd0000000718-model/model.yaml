@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Li2008CaulobacterCellCycleBiomd0000000718Model'
-description: 'This a model from the article: A Quantitative Study of the Division
-  Cycle of Caulobacter crescentus Stalked Cells. Shenghua Li, Paul Brazhnik, Bruno
-  Sobral, John J. Tyson PLoS Comput Biol 2008 Jan 25:'
+description: "This a model from the article: A Quantitative Study of the Division Cycle of Caulobacter crescentus Stalked Cells. Shenghua Li, Paul Brazhnik, Bruno Sobral, John J."
 standard: other
 tags:
 - cellcycle

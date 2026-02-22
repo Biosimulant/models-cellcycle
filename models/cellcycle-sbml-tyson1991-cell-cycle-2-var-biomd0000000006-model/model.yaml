@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Tyson1991CellCycle2VarBiomd0000000006Model'
-description: Tyson1991 - Cell Cycle 2 var Mathematical model of the interactions of
-  cdc2 and cyclin. Description taken from the original Cellerator version of the model
-  ( Tyson (1991, 2 variables) at http://www.ce
+description: "Tyson1991 - Cell Cycle 2 var Mathematical model of the interactions of cdc2 and cyclin. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

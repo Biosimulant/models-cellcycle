@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Chen2000CellcycleBiomd0000000675Model'
-description: 'This a model from the article: Kinetic analysis of a molecular model
-  of the budding yeast cell cycle. Chen KC, Csikasz-Nagy A, Gyorffy B, Val J, Novak
-  B, Tyson JJ. Mol Biol Cell 2000 Jan;11(1):369-91 '
+description: "This a model from the article: Kinetic analysis of a molecular model of the budding yeast cell cycle. Chen KC, Csikasz-Nagy A, Gyorffy B, Val J, Novak B, Tyson JJ."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Kaizu2010BuddingyeastcellcycleMapModel1011020000Model'
-description: 'This is the map described in and accompanying the article: A comprehensive
-  molecular interaction map of the budding yeast cell cycle. Kaizu K, Ghosh S, Matsuoka
-  Y, Moriya H, Shimizu-Yoshida Y, Kitano '
+description: "This is the map described in and accompanying the article: A comprehensive molecular interaction map of the budding yeast cell cycle. Kaizu K, Ghosh S, Matsuoka Y, Moriya H, Shimizu-Yoshida Y, Kitano."
 standard: other
 tags:
 - cellcycle

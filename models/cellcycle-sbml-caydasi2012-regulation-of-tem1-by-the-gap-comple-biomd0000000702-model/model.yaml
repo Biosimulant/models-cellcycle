@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Caydasi2012RegulationOfTem1ByTheGapCompleBiomd0000000702Model'
-description: 'Regulation of Tem1 by the GAP complex inSpindle Position Checkpoint
-  - Ubiquitous inactive This model is described in the article: A dynamical model
-  of the spindle position checkpoint. Caydasi AK, Lohe'
+description: "Regulation of Tem1 by the GAP complex inSpindle Position Checkpoint - Ubiquitous inactive This model is described in the article: A dynamical model of the spindle position checkpoint. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

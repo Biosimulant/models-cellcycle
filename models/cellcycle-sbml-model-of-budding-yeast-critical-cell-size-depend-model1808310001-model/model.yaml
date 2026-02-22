@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: ModelOfBuddingYeastCriticalCellSizeDependModel1808310001Model'
-description: "Model published in the paperChaperone availability subordinates cell\
-  \ cycle entry to growth and stressbyDavid F. Moreno1, Eva Parisi1, Galal Yahya,\
-  \ Federico Vaggi, Attila Csik\xE1sz-Nagy, Mart\xED Aldea"
+description: "Model published in the paperChaperone availability subordinates cell cycle entry to growth and stressbyDavid F. Moreno1, Eva Parisi1, Galal Yahya, Federico Vaggi, Attila Csik\u00e1sz-Nagy, Mart\u00ed Aldea."
 standard: other
 tags:
 - cellcycle

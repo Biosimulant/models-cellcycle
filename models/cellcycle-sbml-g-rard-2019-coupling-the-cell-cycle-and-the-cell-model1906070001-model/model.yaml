@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: GRard2019CouplingTheCellCycleAndTheCellModel1906070001Model'
-description: "Model for the Let-7-mediated coupling between the CDK network driving\
-  \ the cell cycle and the malignant cell transformation network. The model is based\
-  \ on the cell cycle model by G\xE9rard and Goldbeter ("
+description: "Model for the Let-7-mediated coupling between the CDK network driving the cell cycle and the malignant cell transformation network. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

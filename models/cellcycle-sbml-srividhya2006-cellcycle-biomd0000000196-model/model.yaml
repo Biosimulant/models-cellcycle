@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Srividhya2006CellcycleBiomd0000000196Model'
-description: 'In this model the values of ''free CDK'' (Id: x2), ''cdc25_P'' (x4)
-  ''Wee1_P'' (Id: y5) and ''APC'' (Id: y6) are assigned using the parameters describing
-  the total concentrations totcdk (Id: c)), totcdc5, tot'
+description: "In this model the values of 'free CDK' (Id: x2), 'cdc25_P' (x4) 'Wee1_P' (Id: y5) and 'APC' (Id: y6) are assigned using the parameters describing the total concentrations totcdk (Id: c)), totcdc5, tot. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

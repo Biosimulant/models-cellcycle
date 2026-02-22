@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Kollarovic2016CellFateDecisionAtG1STransiBiomd0000000632Model'
-description: 'Kollarovic2016 - Cell fate decision at G1-Stransition This model is
-  described in the article: To senesce or not to senesce: how primary human fibroblasts
-  decide their cell fate after DNA damage. Kolla'
+description: "Kollarovic2016 - Cell fate decision at G1-Stransition This model is described in the article: To senesce or not to senesce: how primary human fibroblasts decide their cell fate after DNA damage. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Pomerening2005ModelOfTheXenopusCdc2ApcSysModel2005150001Model'
-description: 'The cell-cycle oscillator includes an essential negative-feedback loop:
-  Cdc2 activates the anaphase-promoting complex (APC), which leads to cyclin destruction
-  and Cdc2 inactivation. Under some circums'
+description: "The cell-cycle oscillator includes an essential negative-feedback loop: Cdc2 activates the anaphase-promoting complex (APC), which leads to cyclin destruction and Cdc2 inactivation. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

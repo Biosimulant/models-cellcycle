@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Haberichter2007CellcycleBiomd0000000109Model'
-description: This model is according to the paper A systems biology dynamical model
-  of mammalian G1 cell cycle progression. Supplementary Figure 2A has been reproduced
-  by the MathSBML and CellDesigner. All the dat
+description: "This model is according to the paper A systems biology dynamical model of mammalian G1 cell cycle progression. Supplementary Figure 2A has been reproduced by the MathSBML and CellDesigner."
 standard: other
 tags:
 - cellcycle

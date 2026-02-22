@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Lang2024CellCycleModelExplainsCompartmentRModel2401050001Model'
-description: This model provides a molecularly detailed description of the biochemical
-  reaction networks governing the mammalian cell cycle, including the restriction
-  point, the G1S, G2/M and metaphase/anaphase tr
+description: "This model provides a molecularly detailed description of the biochemical reaction networks governing the mammalian cell cycle, including the restriction point, the G1S, G2/M and metaphase/anaphase tr. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

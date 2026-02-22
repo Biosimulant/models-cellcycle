@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Tyson2001CellCycleRegulationBiomd0000000195Model'
-description: 'This model describes the budding yeast cell cycle model used in fig
-  8 a in Regulation of the eukaryotic cell cycle: molecular antagonism, hysteresis,
-  and irreversible transitions. Tyson JJ and Novak B'
+description: "This model describes the budding yeast cell cycle model used in fig 8 a in Regulation of the eukaryotic cell cycle: molecular antagonism, hysteresis, and irreversible transitions. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

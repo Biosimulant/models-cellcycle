@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Caydasi2012InhibitionOfTem1ByTheGapCompleBiomd0000000701Model'
-description: "This model is from the article: A dynamical model of the spindle position\
-  \ checkpoint Ayse Koca Caydasi, Maiko Lohel, Gerd Gr\xFCnert, Peter Dittrich, Gislene\
-  \ Pereira, Bashar Ibrahim Molecular Systems Bio"
+description: "This model is from the article: A dynamical model of the spindle position checkpoint Ayse Koca Caydasi, Maiko Lohel, Gerd Gr\u00fcnert, Peter Dittrich, Gislene Pereira, Bashar Ibrahim Molecular Systems Bio. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

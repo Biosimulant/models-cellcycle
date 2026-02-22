@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Tyson1991CellCycle6VarBiomd0000000005Model'
-description: 'Tyson1991 - Cell Cycle 6 var Mathematical model of the interactions
-  of cdc2 and cyclin. This model is described in the article: Modeling the cell division
-  cycle: cdc2 and cyclin interactions. Tyson JJ'
+description: "Tyson1991 - Cell Cycle 6 var Mathematical model of the interactions of cdc2 and cyclin. This model is described in the article: Modeling the cell division cycle: cdc2 and cyclin interactions."
 standard: other
 tags:
 - cellcycle

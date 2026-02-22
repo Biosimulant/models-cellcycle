@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Li2009AssymetricCaulobacterCellCycleBiomd0000000727Model'
-description: The asymmetric cell division cycle of Caulobacter crescentus is orchestrated
-  by an elaborate gene-protein regulatory network, centered on three major control
-  proteins, DnaA, GcrA and CtrA. The regulat
+description: "The asymmetric cell division cycle of Caulobacter crescentus is orchestrated by an elaborate gene-protein regulatory network, centered on three major control proteins, DnaA, GcrA and CtrA. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

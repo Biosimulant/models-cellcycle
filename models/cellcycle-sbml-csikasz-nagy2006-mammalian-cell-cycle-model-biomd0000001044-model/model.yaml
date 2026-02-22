@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: CsikaszNagy2006MammalianCellCycleModelBiomd0000001044Model'
-description: "This model originates from the Cell Cycle Database . It is described\
-  \ in: Analysis of a generic model of eukaryotic cell-cycle regulation. Csik\xE1\
-  sz-Nagy A , Battogtokh D , Chen KC , Nov\xE1k B , Tyson JJ B"
+description: "This model originates from the Cell Cycle Database . It is described in: Analysis of a generic model of eukaryotic cell-cycle regulation."
 standard: other
 tags:
 - cellcycle

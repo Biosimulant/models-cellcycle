@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Moreno2019StochasticModelOfG1ArrestDueToModel1901210001Model'
-description: "This model is described within the paper: A G1 arrest due to proteostasis\
-  \ decline delimits replicative lifespan in yeastDavid F. Moreno, Kirsten Jenkins,\
-  \ Sandrine Morlot, Gilles Charvin, Attila Csik\xE1s"
+description: "This model is described within the paper: A G1 arrest due to proteostasis decline delimits replicative lifespan in yeastDavid F. Moreno, Kirsten Jenkins, Sandrine Morlot, Gilles Charvin, Attila Csik\u00e1s."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Liu2012HybridModelingAndSimulationOfStochaModel2004140002Model'
-description: The eukaryotic cell cycle is regulated by a complicated chemical reaction
-  network. Although many deterministic models have been proposed, stochastic models
-  are desired to capture noise in the cell res
+description: "The eukaryotic cell cycle is regulated by a complicated chemical reaction network. Although many deterministic models have been proposed, stochastic models are desired to capture noise in the cell res."
 standard: other
 tags:
 - cellcycle

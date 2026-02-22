@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Henze2017ADynamicalModelForActivatingAndSModel1812210002Model'
-description: The spindle assembly checkpoint (SAC) is an evolutionarily conserved
-  mechanism, exclusively sensitive to the states of kinetochores attached to microtubules.
-  During metaphase, the anaphase-promoting c
+description: "The spindle assembly checkpoint (SAC) is an evolutionarily conserved mechanism, exclusively sensitive to the states of kinetochores attached to microtubules. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

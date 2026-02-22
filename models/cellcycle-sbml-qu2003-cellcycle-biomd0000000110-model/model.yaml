@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Qu2003CellcycleBiomd0000000110Model'
-description: 'This model is from the article: Dynamics of the cell cycle: checkpoints,
-  sizers, and timers. Qu Z, MacLellan WR, Weiss JN Biophys. J. 2003 Dec; 85(6): 3600-11
-  14645053 , Abstract: We have developed a '
+description: "This model is from the article: Dynamics of the cell cycle: checkpoints, sizers, and timers. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

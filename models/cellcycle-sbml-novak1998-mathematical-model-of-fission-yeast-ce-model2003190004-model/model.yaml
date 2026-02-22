@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Novak1998MathematicalModelOfFissionYeastCeModel2003190004Model'
-description: Mathematical model of the fission yeast cell cycle with checkpointcontrols
-  at the G1/S, G2/M and metaphase/anaphase transitions. Model encoded by Matthieu
-  Maire and submitted to BioModels by Krishna k
+description: "Mathematical model of the fission yeast cell cycle with checkpointcontrols at the G1/S, G2/M and metaphase/anaphase transitions. Model encoded by Matthieu Maire and submitted to BioModels by Krishna k."
 standard: other
 tags:
 - cellcycle

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Jaiswal2017CellCycleArrestBiomd0000000641Model'
-description: "Jaiswal2017 - Cell cycle arrest This model is described in the article:\
-  \ ATM/Wip1 activities at chromatin control Plk1 re-activation to determine G2 checkpoint\
-  \ duration. Jaiswal H, Benada J, M\xFCllers E,"
+description: "Jaiswal2017 - Cell cycle arrest This model is described in the article: ATM/Wip1 activities at chromatin control Plk1 re-activation to determine G2 checkpoint duration. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

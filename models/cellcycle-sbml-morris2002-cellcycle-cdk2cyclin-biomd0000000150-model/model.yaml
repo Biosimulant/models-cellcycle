@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Morris2002CellcycleCdk2cyclinBiomd0000000150Model'
-description: 'Notes from the original DOCQS curator: In this version of the CDK2/Cyclin
-  A complex activation there is discrepancy in the first curve which plots the binding
-  reaction of CDK2 and Cyclin A expressed i'
+description: "Notes from the original DOCQS curator: In this version of the CDK2/Cyclin A complex activation there is discrepancy in the first curve which plots the binding reaction of CDK2 and Cyclin A expressed i. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

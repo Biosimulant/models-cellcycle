@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Conradie2010RpcontrolCellcycleBiomd0000000265Model'
-description: "This model is from the article: Restriction point control of the mammalian\
-  \ cell cycle via the cyclin E/Cdk2:p27 complex. Conradie R, Bruggeman FJ, Ciliberto\
-  \ A, Csik\xE1sz-Nagy A, Nov\xE1k B, Westerhoff HV, "
+description: "This model is from the article: Restriction point control of the mammalian cell cycle via the cyclin E/Cdk2:p27 complex. Conradie R, Bruggeman FJ, Ciliberto A, Csik\u00e1sz-Nagy A, Nov\u00e1k B, Westerhoff HV,."
 standard: other
 tags:
 - cellcycle

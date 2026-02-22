@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Novak1993CellCycleMPhaseControlBiomd0000000107Model'
-description: Novak1993 - Cell cycle M-phase control The model reproduces Figure 9
-  of the paper. Please note that active MPF and cyclin concentrations in the paper
-  are given relative to total cdc2 concentration (10
+description: "Novak1993 - Cell cycle M-phase control The model reproduces Figure 9 of the paper. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

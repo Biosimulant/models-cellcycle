@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Bedessem2014Hif1AMediatedResponseToHypoxiModel1812040001Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Cell Cycle Bedessem2014Hif1AMediated Response To Hypoxi Model1812040001Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1812040001. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:
 - cellcycle

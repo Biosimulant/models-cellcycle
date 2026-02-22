@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Deineko2003CellcycleBiomd0000000208Model'
-description: The model reproduces Fig 3 of the paper corresponding to the transition
-  to S phase. Units have not been defined for this model because the paper mentions
-  the use of arbitrary units for the various spe
+description: "The model reproduces Fig 3 of the paper corresponding to the transition to S phase. Units have not been defined for this model because the paper mentions the use of arbitrary units for the various spe."
 standard: other
 tags:
 - cellcycle

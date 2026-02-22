@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Bai2003G1phaseregulationBiomd0000000242Model'
-description: 'This a model from the article: Theoretical and experimental evidence
-  for hysteresis in cell proliferation. Bai S, Goodrich D, Thron CD, Tecarro E, Obeyesekere
-  M. Cell Cycle. 2003 Jan-Feb;2(1):46-52. 1'
+description: "This a model from the article: Theoretical and experimental evidence for hysteresis in cell proliferation. Bai S, Goodrich D, Thron CD, Tecarro E, Obeyesekere M."
 standard: other
 tags:
 - cellcycle

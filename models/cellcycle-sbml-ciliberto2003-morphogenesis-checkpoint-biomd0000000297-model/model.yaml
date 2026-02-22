@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Ciliberto2003MorphogenesisCheckpointBiomd0000000297Model'
-description: 'This a model from the article: Mathematical model of the morphogenesis
-  checkpoint in budding yeast. Ciliberto A, Novak B, Tyson JJ J. Cell Biol. [2003
-  Dec; Volume: 163 (Issue: 6 )] Page info: 1243-54 '
+description: "This a model from the article: Mathematical model of the morphogenesis checkpoint in budding yeast. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

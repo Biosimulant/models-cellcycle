@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Gerard2009AnIntegratedMammalianCellCycleMoBiomd0000000730Model'
-description: We propose an integrated computational model for the network of cyclin-dependent
-  kinases (Cdks) that controls the dynamics of the mammalian cell cycle. The model
-  contains four Cdk modules regulated by
+description: "We propose an integrated computational model for the network of cyclin-dependent kinases (Cdks) that controls the dynamics of the mammalian cell cycle. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

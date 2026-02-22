@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Sizek2023MitochondrialDysfunctionAssociatedSModel2312140001Model'
-description: This 133-node Boolean regulatory network model reproduces mitochondrial
-  dynamics during cell cycle progression (hyper-fusion at the G1/S boundary, fission
-  in mitosis), apoptosis (fission and dysfuncti
+description: "This 133-node Boolean regulatory network model reproduces mitochondrial dynamics during cell cycle progression (hyper-fusion at the G1/S boundary, fission in mitosis), apoptosis (fission and dysfuncti. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

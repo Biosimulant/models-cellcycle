@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Tsai2014CellCycleDurationControlByOscillatBiomd0000000719Model'
-description: "During the early development of Xenopus laevis embryos, the first mitotic\
-  \ cell cycle is long (\u223C85 min) and the subsequent 11 cycles are short (\u223C\
-  30 min) and clock-like. Here we address the question of "
+description: "During the early development of Xenopus laevis embryos, the first mitotic cell cycle is long (\u223c85 min) and the subsequent 11 cycles are short (\u223c30 min) and clock-like. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:
 - cellcycle

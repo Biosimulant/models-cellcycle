@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'CellCycle: Zhang2018CellCycleCommitmentInHypoxiaModel1812060002Model'
-description: Does not reproduce publication figure 3
+description: "Cell Cycle Zhang2018Cell Cycle Commitment In Hypoxia Model1812060002Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1812060002. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:
 - cellcycle
