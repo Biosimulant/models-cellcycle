@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Weis2014DataDrivenMammalianCellCycleModelBiomd0000000723Model'
+title: "Weis2014 - Data driven Mammalian Cell Cycle Model"
 description: "This a model from the article: A Data-Driven, Mathematical Model of Mammalian Cell Cycle Regulation. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

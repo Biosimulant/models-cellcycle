@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Qu2003CellcycleBiomd0000000110Model'
+title: "Qu2003_CellCycle"
 description: "This model is from the article: Dynamics of the cell cycle: checkpoints, sizers, and timers. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

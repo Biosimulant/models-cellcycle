@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Gerard2010ProgressionOfMammalianCellCycleBBiomd0000000941Model'
+title: "Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes"
 description: "We previously proposed a detailed, 39-variable model for the network of cyclin-dependent kinases (Cdks) that controls progression along the successive phases of the mammalian cell cycle. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

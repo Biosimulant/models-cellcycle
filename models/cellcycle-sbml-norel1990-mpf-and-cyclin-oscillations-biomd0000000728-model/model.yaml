@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Norel1990MpfAndCyclinOscillationsBiomd0000000728Model'
+title: "Norel1990 - MPF and Cyclin Oscillations"
 description: "A mathematical model of cell cycle progression is presented, which integrates recent biochemical information on the interaction of the maturation promotion factor (MPF) and cyclin. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

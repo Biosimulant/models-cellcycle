@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Aguda1999G2DnaDamageCheckpointBiomd0000000704Model'
+title: "Aguda1999 - G2 DNA damage checkpoint"
 description: "Baltazar D. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

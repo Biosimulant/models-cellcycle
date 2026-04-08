@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Kosiuk2015GeometricAnalysisOfTheGoldbeterMBiomd0000000933Model'
+title: "Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle"
 description: "A minimal model describing the embryonic cell division cycle at the molecular level in eukaryotes is analyzed mathematically. It is known from numerical simulations that the corresponding three-dimens."
 standard: other
 tags:

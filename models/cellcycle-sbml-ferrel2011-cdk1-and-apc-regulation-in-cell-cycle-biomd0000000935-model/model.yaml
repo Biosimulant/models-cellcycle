@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Ferrel2011Cdk1AndApcRegulationInCellCycleBiomd0000000935Model'
+title: "Ferrel2011 - Cdk1 and APC regulation in cell cycle in Xenopus laevis"
 description: "Mathematical model of the regulation of Cdk1 and APC in cell cycle in Xenopus Laevis. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

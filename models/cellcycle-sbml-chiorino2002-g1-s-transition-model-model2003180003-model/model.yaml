@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Chiorino2002G1STransitionModelModel2003180003Model'
+title: "Chiorino2002 - G1/S transition model"
 description: "mathematical approach to model the protein interactions regulating the transition from the G1 phase to the phase of DNA synthesis. Model is encoded by matthieu Maire and submitted to BioModels by kris."
 standard: other
 tags:

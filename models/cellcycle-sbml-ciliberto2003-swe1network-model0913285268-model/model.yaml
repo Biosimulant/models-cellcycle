@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Ciliberto2003Swe1networkModel0913285268Model'
+title: "Ciliberto2003_Swe1Network"
 description: "This a model from the article: Mathematical model of the morphogenesis checkpoint in budding yeast. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

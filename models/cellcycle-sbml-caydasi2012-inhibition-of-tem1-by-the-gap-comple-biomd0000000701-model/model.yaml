@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Caydasi2012InhibitionOfTem1ByTheGapCompleBiomd0000000701Model'
+title: "Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint"
 description: "This model is from the article: A dynamical model of the spindle position checkpoint Ayse Koca Caydasi, Maiko Lohel, Gerd Gr\u00fcnert, Peter Dittrich, Gislene Pereira, Bashar Ibrahim Molecular Systems Bio. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Novak1997CellCycleBiomd0000000007Model'
+title: "Novak1997 - Cell Cycle"
 description: "Novak1997 - Cell Cycle Modeling the control of DNA replication in fission yeast. This model is described in the article: Modeling the control of DNA replication in fission yeast."
 standard: other
 tags:

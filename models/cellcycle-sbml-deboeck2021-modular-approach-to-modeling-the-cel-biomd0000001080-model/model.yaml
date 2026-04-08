@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'CellCycle: Deboeck2021ModularApproachToModelingTheCelBiomd0000001080Model'
+title: "DeBoeck2021 - Modular approach to modeling the cell cycle, 5 ODE model with 3 bistable switches"
 description: "Model of the mammalian cell cycle as a chain of bistable switches. There are three bistable responses: response of E2F to Cyclin D, of Cdk1 to Cyclin B and of APC/C to Cdk1 activity."
 standard: other
 tags:
