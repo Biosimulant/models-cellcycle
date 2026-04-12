@@ -11,14 +11,13 @@ Chen2004 - Cell Cycle Regulation This is a hypothetical model of cell cycle that
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-chen2004-cell-cycle-regulation-biomd0000000056-model
     alias: model
-    manifest_path: models/cellcycle-sbml-chen2004-cell-cycle-regulation-biomd0000000056-model/model.yaml
 ```
 
 ## Tags

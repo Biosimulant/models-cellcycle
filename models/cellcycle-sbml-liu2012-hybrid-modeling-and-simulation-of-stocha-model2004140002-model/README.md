@@ -11,14 +11,13 @@ The eukaryotic cell cycle is regulated by a complicated chemical reaction networ
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-liu2012-hybrid-modeling-and-simulation-of-stocha-model2004140002-model
     alias: model
-    manifest_path: models/cellcycle-sbml-liu2012-hybrid-modeling-and-simulation-of-stocha-model2004140002-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Ciliberto2003 - CyclinE / Cdk2 timer in thecell cycle of Xenopus laevis embryo T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-ciliberto2003-cycline-cdk2-timer-in-the-cell-cyc-biomd0000000697-model
     alias: model
-    manifest_path: models/cellcycle-sbml-ciliberto2003-cycline-cdk2-timer-in-the-cell-cyc-biomd0000000697-model/model.yaml
 ```
 
 ## Tags

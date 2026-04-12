@@ -11,14 +11,13 @@ Progress through the division cycle of present day eukaryotic cells is controlle
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-novak1998-model-scenarios-for-evolution-of-the-e-model2005040001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-novak1998-model-scenarios-for-evolution-of-the-e-model2005040001-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Model of the mammalian cell cycle as a chain of bistable switches. There are thr
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-deboeck2021-modular-approach-to-modeling-the-cel-biomd0000001080-model
     alias: model
-    manifest_path: models/cellcycle-sbml-deboeck2021-modular-approach-to-modeling-the-cel-biomd0000001080-model/model.yaml
 ```
 
 ## Tags

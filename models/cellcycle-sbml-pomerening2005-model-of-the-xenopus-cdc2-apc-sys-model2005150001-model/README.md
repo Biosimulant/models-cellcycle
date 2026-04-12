@@ -11,14 +11,13 @@ The cell-cycle oscillator includes an essential negative-feedback loop: Cdc2 act
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-pomerening2005-model-of-the-xenopus-cdc2-apc-sys-model2005150001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-pomerening2005-model-of-the-xenopus-cdc2-apc-sys-model2005150001-model/model.yaml
 ```
 
 ## Tags

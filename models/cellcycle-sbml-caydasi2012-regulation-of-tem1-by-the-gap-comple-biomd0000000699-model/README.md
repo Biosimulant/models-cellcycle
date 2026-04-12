@@ -11,14 +11,13 @@ Caydasi2012 - Regulation of Tem1 by the GAPcomplex in spindle position cell cycl
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-caydasi2012-regulation-of-tem1-by-the-gap-comple-biomd0000000699-model
     alias: model
-    manifest_path: models/cellcycle-sbml-caydasi2012-regulation-of-tem1-by-the-gap-comple-biomd0000000699-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ A mathematical model of cell cycle progression is presented, which integrates re
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-norel1990-mpf-and-cyclin-oscillations-biomd0000000728-model
     alias: model
-    manifest_path: models/cellcycle-sbml-norel1990-mpf-and-cyclin-oscillations-biomd0000000728-model/model.yaml
 ```
 
 ## Tags

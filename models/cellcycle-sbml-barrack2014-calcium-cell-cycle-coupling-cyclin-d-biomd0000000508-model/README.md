@@ -11,14 +11,13 @@ Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release This 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-barrack2014-calcium-cell-cycle-coupling-cyclin-d-biomd0000000508-model
     alias: model
-    manifest_path: models/cellcycle-sbml-barrack2014-calcium-cell-cycle-coupling-cyclin-d-biomd0000000508-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ mathematical approach to model the protein interactions regulating the transitio
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-chiorino2002-g1-s-transition-model-model2003180003-model
     alias: model
-    manifest_path: models/cellcycle-sbml-chiorino2002-g1-s-transition-model-model2003180003-model/model.yaml
 ```
 
 ## Tags

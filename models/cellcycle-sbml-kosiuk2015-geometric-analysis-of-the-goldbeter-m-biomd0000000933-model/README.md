@@ -11,14 +11,13 @@ A minimal model describing the embryonic cell division cycle at the molecular le
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-kosiuk2015-geometric-analysis-of-the-goldbeter-m-biomd0000000933-model
     alias: model
-    manifest_path: models/cellcycle-sbml-kosiuk2015-geometric-analysis-of-the-goldbeter-m-biomd0000000933-model/model.yaml
 ```
 
 ## Tags

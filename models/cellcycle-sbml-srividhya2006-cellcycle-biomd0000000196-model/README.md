@@ -11,14 +11,13 @@ In this model the values of 'free CDK' (Id: x2), 'cdc25_P' (x4) 'Wee1_P' (Id: y5
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-srividhya2006-cellcycle-biomd0000000196-model
     alias: model
-    manifest_path: models/cellcycle-sbml-srividhya2006-cellcycle-biomd0000000196-model/model.yaml
 ```
 
 ## Tags

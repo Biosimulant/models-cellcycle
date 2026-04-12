@@ -11,14 +11,13 @@ Does not reproduce publication figure 3
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-zhang2018-cell-cycle-commitment-in-hypoxia-model1812060002-model
     alias: model
-    manifest_path: models/cellcycle-sbml-zhang2018-cell-cycle-commitment-in-hypoxia-model1812060002-model/model.yaml
 ```
 
 ## Tags

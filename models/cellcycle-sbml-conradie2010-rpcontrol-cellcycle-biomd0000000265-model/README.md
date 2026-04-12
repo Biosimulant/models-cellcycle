@@ -11,14 +11,13 @@ This model is from the article: Restriction point control of the mammalian cell 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-conradie2010-rpcontrol-cellcycle-biomd0000000265-model
     alias: model
-    manifest_path: models/cellcycle-sbml-conradie2010-rpcontrol-cellcycle-biomd0000000265-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This model originates from the Cell Cycle Database . It is described in: Analysi
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-csikasz-nagy2006-mammalian-cell-cycle-model-biomd0000001044-model
     alias: model
-    manifest_path: models/cellcycle-sbml-csikasz-nagy2006-mammalian-cell-cycle-model-biomd0000001044-model/model.yaml
 ```
 
 ## Tags

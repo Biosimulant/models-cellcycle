@@ -11,14 +11,13 @@ This is the map described in and accompanying the article: A comprehensive molec
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-kaizu2010-buddingyeastcellcycle-map-model1011020000-model
     alias: model
-    manifest_path: models/cellcycle-sbml-kaizu2010-buddingyeastcellcycle-map-model1011020000-model/model.yaml
 ```
 
 ## Tags

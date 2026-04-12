@@ -11,14 +11,13 @@ Regulation of Tem1 by the GAP complex inSpindle Position Checkpoint - Ubiquitous
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-caydasi2012-regulation-of-tem1-by-the-gap-comple-biomd0000000702-model
     alias: model
-    manifest_path: models/cellcycle-sbml-caydasi2012-regulation-of-tem1-by-the-gap-comple-biomd0000000702-model/model.yaml
 ```
 
 ## Tags

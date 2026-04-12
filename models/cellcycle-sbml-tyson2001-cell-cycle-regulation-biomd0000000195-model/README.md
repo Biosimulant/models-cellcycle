@@ -11,14 +11,13 @@ This model describes the budding yeast cell cycle model used in fig 8 a in Regul
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-tyson2001-cell-cycle-regulation-biomd0000000195-model
     alias: model
-    manifest_path: models/cellcycle-sbml-tyson2001-cell-cycle-regulation-biomd0000000195-model/model.yaml
 ```
 
 ## Tags

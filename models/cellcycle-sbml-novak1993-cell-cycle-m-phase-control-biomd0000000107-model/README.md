@@ -11,14 +11,13 @@ Novak1993 - Cell cycle M-phase control The model reproduces Figure 9 of the pape
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-novak1993-cell-cycle-m-phase-control-biomd0000000107-model
     alias: model
-    manifest_path: models/cellcycle-sbml-novak1993-cell-cycle-m-phase-control-biomd0000000107-model/model.yaml
 ```
 
 ## Tags

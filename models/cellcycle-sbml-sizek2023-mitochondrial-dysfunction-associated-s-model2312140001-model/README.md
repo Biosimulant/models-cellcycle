@@ -11,14 +11,13 @@ This 133-node Boolean regulatory network model reproduces mitochondrial dynamics
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-sizek2023-mitochondrial-dysfunction-associated-s-model2312140001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-sizek2023-mitochondrial-dysfunction-associated-s-model2312140001-model/model.yaml
 ```
 
 ## Tags

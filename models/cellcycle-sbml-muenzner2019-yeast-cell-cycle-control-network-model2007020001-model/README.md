@@ -11,14 +11,13 @@ A mechanistically detailed model of the cell cycle control network of Saccharomy
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-muenzner2019-yeast-cell-cycle-control-network-model2007020001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-muenzner2019-yeast-cell-cycle-control-network-model2007020001-model/model.yaml
 ```
 
 ## Tags

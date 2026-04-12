@@ -11,14 +11,13 @@ Gardner1998 - Cell Cycle Goldbeter Mathematical modeling of cell division cycle 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-gardner1998-cell-cycle-goldbeter-biomd0000000008-model
     alias: model
-    manifest_path: models/cellcycle-sbml-gardner1998-cell-cycle-goldbeter-biomd0000000008-model/model.yaml
 ```
 
 ## Tags

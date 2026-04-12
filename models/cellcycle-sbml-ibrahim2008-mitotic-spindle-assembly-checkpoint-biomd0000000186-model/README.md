@@ -11,14 +11,13 @@ Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant The Mit
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-ibrahim2008-mitotic-spindle-assembly-checkpoint-biomd0000000186-model
     alias: model
-    manifest_path: models/cellcycle-sbml-ibrahim2008-mitotic-spindle-assembly-checkpoint-biomd0000000186-model/model.yaml
 ```
 
 ## Tags

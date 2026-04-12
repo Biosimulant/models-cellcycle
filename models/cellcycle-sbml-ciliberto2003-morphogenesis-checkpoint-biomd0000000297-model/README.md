@@ -11,14 +11,13 @@ This a model from the article: Mathematical model of the morphogenesis checkpoin
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-ciliberto2003-morphogenesis-checkpoint-biomd0000000297-model
     alias: model
-    manifest_path: models/cellcycle-sbml-ciliberto2003-morphogenesis-checkpoint-biomd0000000297-model/model.yaml
 ```
 
 ## Tags

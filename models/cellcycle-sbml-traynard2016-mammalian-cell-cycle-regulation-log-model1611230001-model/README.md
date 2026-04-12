@@ -11,14 +11,13 @@ Traynard2016 - Mammalian cell cycleregulation - Logical Model This model is desc
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-traynard2016-mammalian-cell-cycle-regulation-log-model1611230001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-traynard2016-mammalian-cell-cycle-regulation-log-model1611230001-model/model.yaml
 ```
 
 ## Tags

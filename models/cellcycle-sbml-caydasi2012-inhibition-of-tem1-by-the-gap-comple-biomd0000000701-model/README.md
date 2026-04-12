@@ -11,14 +11,13 @@ This model is from the article: A dynamical model of the spindle position checkp
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-caydasi2012-inhibition-of-tem1-by-the-gap-comple-biomd0000000701-model
     alias: model
-    manifest_path: models/cellcycle-sbml-caydasi2012-inhibition-of-tem1-by-the-gap-comple-biomd0000000701-model/model.yaml
 ```
 
 ## Tags

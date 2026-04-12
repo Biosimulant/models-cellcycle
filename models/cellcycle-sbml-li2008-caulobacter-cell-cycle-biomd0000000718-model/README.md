@@ -11,14 +11,13 @@ This a model from the article: A Quantitative Study of the Division Cycle of Cau
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-li2008-caulobacter-cell-cycle-biomd0000000718-model
     alias: model
-    manifest_path: models/cellcycle-sbml-li2008-caulobacter-cell-cycle-biomd0000000718-model/model.yaml
 ```
 
 ## Tags

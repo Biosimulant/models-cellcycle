@@ -11,14 +11,13 @@ Notes from the original DOCQS curator: In this version of the CDK2/Cyclin A comp
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-morris2002-cellcycle-cdk2cyclin-biomd0000000150-model
     alias: model
-    manifest_path: models/cellcycle-sbml-morris2002-cellcycle-cdk2cyclin-biomd0000000150-model/model.yaml
 ```
 
 ## Tags

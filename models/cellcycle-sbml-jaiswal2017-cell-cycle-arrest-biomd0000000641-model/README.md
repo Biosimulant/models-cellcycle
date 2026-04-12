@@ -11,14 +11,13 @@ Jaiswal2017 - Cell cycle arrest This model is described in the article: ATM/Wip1
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-jaiswal2017-cell-cycle-arrest-biomd0000000641-model
     alias: model
-    manifest_path: models/cellcycle-sbml-jaiswal2017-cell-cycle-arrest-biomd0000000641-model/model.yaml
 ```
 
 ## Tags

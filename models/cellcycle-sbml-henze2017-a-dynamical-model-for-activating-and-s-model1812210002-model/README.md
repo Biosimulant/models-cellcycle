@@ -11,14 +11,13 @@ The spindle assembly checkpoint (SAC) is an evolutionarily conserved mechanism, 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-henze2017-a-dynamical-model-for-activating-and-s-model1812210002-model
     alias: model
-    manifest_path: models/cellcycle-sbml-henze2017-a-dynamical-model-for-activating-and-s-model1812210002-model/model.yaml
 ```
 
 ## Tags

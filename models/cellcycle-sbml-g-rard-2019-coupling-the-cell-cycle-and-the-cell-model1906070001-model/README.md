@@ -11,14 +11,13 @@ Model for the Let-7-mediated coupling between the CDK network driving the cell c
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-g-rard-2019-coupling-the-cell-cycle-and-the-cell-model1906070001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-g-rard-2019-coupling-the-cell-cycle-and-the-cell-model1906070001-model/model.yaml
 ```
 
 ## Tags

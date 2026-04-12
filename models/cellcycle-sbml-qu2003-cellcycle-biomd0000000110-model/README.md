@@ -11,14 +11,13 @@ This model is from the article: Dynamics of the cell cycle: checkpoints, sizers,
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-qu2003-cellcycle-biomd0000000110-model
     alias: model
-    manifest_path: models/cellcycle-sbml-qu2003-cellcycle-biomd0000000110-model/model.yaml
 ```
 
 ## Tags

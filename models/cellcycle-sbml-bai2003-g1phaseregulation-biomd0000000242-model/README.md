@@ -11,14 +11,13 @@ This a model from the article: Theoretical and experimental evidence for hystere
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-bai2003-g1phaseregulation-biomd0000000242-model
     alias: model
-    manifest_path: models/cellcycle-sbml-bai2003-g1phaseregulation-biomd0000000242-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Barr2016 - All-or-nothing G1/Stransition This model is described in the article:
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-barr2016-all-or-nothing-g1-s-transition-biomd0000000646-model
     alias: model
-    manifest_path: models/cellcycle-sbml-barr2016-all-or-nothing-g1-s-transition-biomd0000000646-model/model.yaml
 ```
 
 ## Tags

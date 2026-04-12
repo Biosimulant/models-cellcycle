@@ -11,14 +11,13 @@ Faithful wrapper of upstream SBML model.
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-bedessem2014-hif-1-a-mediated-response-to-hypoxi-model1812040001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-bedessem2014-hif-1-a-mediated-response-to-hypoxi-model1812040001-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ During the early development of Xenopus laevis embryos, the first mitotic cell c
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-tsai2014-cell-cycle-duration-control-by-oscillat-biomd0000000719-model
     alias: model
-    manifest_path: models/cellcycle-sbml-tsai2014-cell-cycle-duration-control-by-oscillat-biomd0000000719-model/model.yaml
 ```
 
 ## Tags

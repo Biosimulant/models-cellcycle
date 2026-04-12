@@ -11,14 +11,13 @@ This model provides a molecularly detailed description of the biochemical reacti
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-lang2024-cell-cycle-model-explains-compartment-r-model2401050001-model
     alias: model
-    manifest_path: models/cellcycle-sbml-lang2024-cell-cycle-model-explains-compartment-r-model2401050001-model/model.yaml
 ```
 
 ## Tags

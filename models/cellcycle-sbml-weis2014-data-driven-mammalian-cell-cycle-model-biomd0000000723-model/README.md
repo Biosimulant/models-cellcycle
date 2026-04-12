@@ -11,14 +11,13 @@ This a model from the article: A Data-Driven, Mathematical Model of Mammalian Ce
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-weis2014-data-driven-mammalian-cell-cycle-model-biomd0000000723-model
     alias: model
-    manifest_path: models/cellcycle-sbml-weis2014-data-driven-mammalian-cell-cycle-model-biomd0000000723-model/model.yaml
 ```
 
 ## Tags

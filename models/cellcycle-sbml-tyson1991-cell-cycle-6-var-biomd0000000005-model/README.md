@@ -11,14 +11,13 @@ Tyson1991 - Cell Cycle 6 var Mathematical model of the interactions of cdc2 and 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-tyson1991-cell-cycle-6-var-biomd0000000005-model
     alias: model
-    manifest_path: models/cellcycle-sbml-tyson1991-cell-cycle-6-var-biomd0000000005-model/model.yaml
 ```
 
 ## Tags

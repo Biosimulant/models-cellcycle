@@ -11,14 +11,13 @@ Kollarovic2016 - Cell fate decision at G1-Stransition This model is described in
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/cellcycle-sbml-kollarovic2016-cell-fate-decision-at-g1-s-transi-biomd0000000632-model
     alias: model
-    manifest_path: models/cellcycle-sbml-kollarovic2016-cell-fate-decision-at-g1-s-transi-biomd0000000632-model/model.yaml
 ```
 
 ## Tags
