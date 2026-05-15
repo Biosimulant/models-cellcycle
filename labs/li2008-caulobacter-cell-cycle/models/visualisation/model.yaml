@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Li2008 - Caulobacter Cell Cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Li2008 - Caulobacter Cell Cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Li2008 - Caulobacter Cell Cycle Lab
+    question: Are bacterial replication and division regulators coordinated?
+    answer_focus: The answer is based on DnaA, CtrA, GcrA, DivK, DNA, and division markers.
+    sources:
+    - alias: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model
+      title: Li2008 - Caulobacter Cell Cycle
+      observables:
+      - id: CtrA
+        port: ctr_a_cell_cycle_regulator
+        label: CtrA cell-cycle regulator
+        group: replication
+      - id: GcrA
+        port: gcr_a_transcriptional_regulator
+        label: GcrA transcriptional regulator
+        group: replication
+      - id: DnaA
+        port: dna_a_replication_initiator
+        label: DnaA replication initiator
+        group: replication
+      - id: Fts
+        port: fts_z_division_marker
+        label: FtsZ division marker
+        group: replication
+      - id: Zring
+        port: z_ring
+        label: Z-ring
+        group: replication
+      - id: DivK
+        port: div_k_polarity_regulator
+        label: DivK polarity regulator
+        group: replication
+      - id: DivK_P
+        port: phosphorylated_div_k
+        label: Phosphorylated DivK
+        group: replication
+      - id: I
+        port: model_state_i
+        label: Model state I
+        group: replication
+      - id: CcrM
+        port: ccr_model_state_m
+        label: Ccr Model state M
+        group: replication
+      - id: hcori
+        port: hcori
+        label: Hcori
+        group: replication
+      - id: hctrA
+        port: hctr_a
+        label: Hctr A
+        group: replication
+      - id: hccrM
+        port: hccr_model_state_m
+        label: Hccr Model state M
+        group: replication
+      - id: hfts
+        port: hfts
+        label: Hfts
+        group: replication
+      - id: Ini
+        port: replication_initiation_state
+        label: Replication initiation state
+        group: replication
+      - id: Elong
+        port: cell_elongation_state
+        label: Cell elongation state
+        group: replication
+      - id: DNA
+        port: dna_replication_state
+        label: DNA replication state
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

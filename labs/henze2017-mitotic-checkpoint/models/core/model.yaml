@@ -1,0 +1,119 @@
+schema_version: '2.0'
+title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint
+description: The spindle assembly checkpoint (SAC) is an evolutionarily conserved mechanism, exclusively sensitive
+  to the states of kinetochores attached to microtubules. It can be used to explore cell-cycle regulation dynamics
+  and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Richard Henze
+- Peter Dittrich
+- Bashar Ibrahim
+upstream:
+  id: biomodels_ebi:MODEL1812210002
+  source_db: biomodels_ebi
+  source_id: MODEL1812210002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812210002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812210002?filename=Henze2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model:Henze2017ADynamicalModelForActivatingAndSModel1812210002Model
+  init_kwargs:
+    model_path: data/MODEL1812210002.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: kin_a
+    maps_to: KinA
+    label: Kin A
+    description: Tracks Kin A. Maps to SBML symbol `KinA`.
+  - name: kin_model_state_u
+    maps_to: KinU
+    label: Kin Model state U
+    description: Tracks Kin Model state U. Maps to SBML symbol `KinU`.
+  - name: apcc_cdc20
+    maps_to: APCC_Cdc20
+    label: APCC Cdc20
+    description: Tracks APCC Cdc20. Maps to SBML symbol `APCC_Cdc20`.
+  - name: securin_separase_inhibitor
+    maps_to: Securin
+    label: Securin separase inhibitor
+    description: Tracks Securin separase inhibitor. Maps to SBML symbol `Securin`.
+  - name: apc_c_complex
+    maps_to: APCC
+    label: APC/C complex
+    description: Tracks APC/C complex. Maps to SBML symbol `APCC`.
+  - name: cdc20_apc_c_activator
+    maps_to: Cdc20
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator. Maps to SBML symbol `Cdc20`.
+  - name: cyclin_b
+    maps_to: CyclinB
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `CyclinB`.
+  - name: apcc_mcc
+    maps_to: APCC_MCC
+    label: APCC MCC
+    description: Tracks APCC MCC. Maps to SBML symbol `APCC_MCC`.
+  - name: mitotic_checkpoint_complex
+    maps_to: MCC
+    label: Mitotic checkpoint complex
+    description: Tracks Mitotic checkpoint complex. Maps to SBML symbol `MCC`.
+  - name: model_state_c_mad2
+    maps_to: C_Mad2
+    label: Model state C Mad2
+    description: Tracks Model state C Mad2. Maps to SBML symbol `C_Mad2`.
+  - name: o_mad2
+    maps_to: O_Mad2
+    label: O Mad2
+    description: Tracks O Mad2. Maps to SBML symbol `O_Mad2`.
+  - name: cdc20_model_state_c_mad2
+    maps_to: Cdc20_C_Mad2
+    label: Cdc20 Model state C Mad2
+    description: Tracks Cdc20 Model state C Mad2. Maps to SBML symbol `Cdc20_C_Mad2`.
+  - name: bub_model_state_r1_bub3
+    maps_to: BubR1_Bub3
+    label: Bub Model state R1 Bub3
+    description: Tracks Bub Model state R1 Bub3. Maps to SBML symbol `BubR1_Bub3`.
+  - name: mad1_mad2
+    maps_to: Mad1_Mad2
+    label: Mad1 Mad2
+    description: Tracks Mad1 Mad2. Maps to SBML symbol `Mad1_Mad2`.
+  - name: mad1_mad2_model_state_c_mad2
+    maps_to: Mad1_Mad2_C_Mad2
+    label: Mad1 Mad2 Model state C Mad2
+    description: Tracks Mad1 Mad2 Model state C Mad2. Maps to SBML symbol `Mad1_Mad2_C_Mad2`.
+  - name: bub_r1_cdc20_checkpoint_complex
+    maps_to: BCC
+    label: BubR1-Cdc20 checkpoint complex
+    description: Tracks BubR1-Cdc20 checkpoint complex. Maps to SBML symbol `BCC`.
+  - name: apcc_cdc20_model_state_c_mad2
+    maps_to: APCC_Cdc20_C_Mad2
+    label: APCC Cdc20 Model state C Mad2
+    description: Tracks APCC Cdc20 Model state C Mad2. Maps to SBML symbol `APCC_Cdc20_C_Mad2`.
+  - name: apcc_bcc
+    maps_to: APCC_BCC
+    label: APCC BCC
+    description: Tracks APCC BCC. Maps to SBML symbol `APCC_BCC`.
+  - name: apcc_cdc20_mcc
+    maps_to: APCC_Cdc20_MCC
+    label: APCC Cdc20 MCC
+    description: Tracks APCC Cdc20 MCC. Maps to SBML symbol `APCC_Cdc20_MCC`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

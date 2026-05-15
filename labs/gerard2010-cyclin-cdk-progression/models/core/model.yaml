@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes
+description: We previously proposed a detailed, 39-variable model for the network of cyclin-dependent kinases (Cdks)
+  that controls progression along the successive phases of the mammalian cell cycle. It can be used to explore cell-cycle
+  regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "Claude G\xE9rard"
+- Albert Goldbeter
+upstream:
+  id: biomodels_ebi:BIOMD0000000941
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000941
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000941
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000941?filename=gerard2010.xml
+  license: CC0
+biosim:
+  entrypoint: src.gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model:Gerard2010ProgressionOfMammalianCellCycleBBiomd0000000941Model
+  init_kwargs:
+    model_path: data/BIOMD0000000941.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_d_cdk4_6
+    maps_to: cyclin_D_Cdk4_6
+    label: Cyclin D CDK4 6
+    description: Tracks Cyclin D CDK4 6. Maps to SBML symbol `cyclin_D_Cdk4_6`.
+  - name: transcription_factor_e2f_active
+    maps_to: transcription_factor_E2F_active
+    label: Transcription Factor E2F Active
+    description: Tracks Transcription Factor E2F Active. Maps to SBML symbol `transcription_factor_E2F_active`.
+  - name: cyclin_e_cdk2
+    maps_to: cyclin_E_Cdk2
+    label: Cyclin E CDK2
+    description: Tracks Cyclin E CDK2. Maps to SBML symbol `cyclin_E_Cdk2`.
+  - name: cyclin_active_cdk2
+    maps_to: cyclin_A_Cdk2
+    label: Cyclin Active CDK2
+    description: Tracks Cyclin Active CDK2. Maps to SBML symbol `cyclin_A_Cdk2`.
+  - name: cyclin_b_cdk1
+    maps_to: cyclin_B_Cdk1
+    label: Cyclin B CDK1
+    description: Tracks Cyclin B CDK1. Maps to SBML symbol `cyclin_B_Cdk1`.
+  - name: cdc20_active
+    maps_to: Cdc20_active
+    label: Cdc20 Active
+    description: Tracks Cdc20 Active. Maps to SBML symbol `Cdc20_active`.
+  - name: e2f_total
+    maps_to: E2F_total
+    label: E2F Total
+    description: Tracks E2F Total. Maps to SBML symbol `E2F_total`.
+  - name: cdc20_total
+    maps_to: Cdc20_total
+    label: Cdc20 Total
+    description: Tracks Cdc20 Total. Maps to SBML symbol `Cdc20_total`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: growth_factor
+    maps_to: GF
+    label: Growth Factor
+    accepted_units:
+    - dimensionless
+    description: Controls Growth Factor. Maps to SBML symbol `GF`.
+  - name: kgf
+    maps_to: Kgf
+    label: Kgf
+    accepted_units:
+    - dimensionless
+    description: Controls Kgf. Maps to SBML symbol `Kgf`.

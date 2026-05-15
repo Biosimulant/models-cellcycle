@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Tyson2001_Cell_Cycle_Regulation Visualisation
+description: Dedicated question-and-answer visualisation model for Tyson2001_Cell_Cycle_Regulation.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tyson2001_Cell_Cycle_Regulation Lab
+    question: Does the yeast model progress through its cell-cycle phase program?
+    answer_focus: The answer is based on cyclins, inhibitors, APC/C regulators, mass, and phase markers.
+    sources:
+    - alias: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model
+      title: Tyson2001_Cell_Cycle_Regulation
+      observables:
+      - id: CycBt
+        port: cyclin_bt
+        label: Cyclin Bt
+        group: mitosis
+      - id: Cdc20a
+        port: active_cdc20
+        label: Active Cdc20
+        group: mitosis
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: mitosis
+      - id: m
+        port: model_state_m_m
+        label: Model state M (m)
+        group: replication
+      - id: Cdc20t
+        port: total_cdc20_apc_c_activator
+        label: Total Cdc20 APC/C activator
+        group: mitosis
+      - id: IEP
+        port: phosphorylated_ie
+        label: Phosphorylated IE
+        group: replication
+      - id: CKIt
+        port: total_cyclin_dependent_kinase_inhibitor
+        label: Total cyclin-dependent kinase inhibitor
+        group: replication
+      - id: SK
+        port: model_state_sk
+        label: Model state SK
+        group: replication
+      - id: CycB
+        port: cyclin_b
+        label: Cyclin B
+        group: mitosis
+      - id: Trimer
+        port: trimer_complex
+        label: Trimer complex
+        group: replication
+      - id: Mad
+        port: mad_spindle_checkpoint_signal
+        label: Mad spindle checkpoint signal
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

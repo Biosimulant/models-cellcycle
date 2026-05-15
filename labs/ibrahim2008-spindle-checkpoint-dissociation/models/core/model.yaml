@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant
+description: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant The Mitotic Spindle Assembly
+  Checkpoint ((M)SAC) is an evolutionary conserved mechanism. It can be used to explore cell-cycle regulation dynamics
+  and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Bashar Ibrahim
+- Stephan Diekmann
+- Eberhard Schmitt
+- Peter Dittrich
+upstream:
+  id: biomodels_ebi:BIOMD0000000186
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000186
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000186
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000186?filename=BIOMD0000000186_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model:Ibrahim2008MitoticSpindleAssemblyCheckpointBiomd0000000186Model
+  init_kwargs:
+    model_path: data/BIOMD0000000186.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: mad1_c_mad2
+    maps_to: Mad1_CMad2
+    label: Mad1:C Mad2
+    description: Tracks Mad1:C Mad2. Maps to SBML symbol `Mad1_CMad2`.
+  - name: o_mad2
+    maps_to: OMad2
+    label: O Mad2
+    description: Tracks O Mad2. Maps to SBML symbol `OMad2`.
+  - name: mad1_c_mad2_o_mad2
+    maps_to: Mad1_CMad2_OMad2
+    label: Mad1:C Mad2:O Mad2*
+    description: Tracks Mad1:C Mad2:O Mad2*. Maps to SBML symbol `Mad1_CMad2_OMad2`.
+  - name: cdc20_apc_c_activator
+    maps_to: Cdc20
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator. Maps to SBML symbol `Cdc20`.
+  - name: cdc20_c_mad2
+    maps_to: Cdc20_CMad2
+    label: Cdc20:C Mad2
+    description: Tracks Cdc20:C Mad2. Maps to SBML symbol `Cdc20_CMad2`.
+  - name: bub3_bub_model_state_r1
+    maps_to: Bub3_BubR1
+    label: Bub3:Bub Model state R1
+    description: Tracks Bub3:Bub Model state R1. Maps to SBML symbol `Bub3_BubR1`.
+  - name: mitotic_checkpoint_complex
+    maps_to: MCC
+    label: Mitotic checkpoint complex
+    description: Tracks Mitotic checkpoint complex. Maps to SBML symbol `MCC`.
+  - name: bub3_bub_r1_cdc20
+    maps_to: Bub3_BubR1_Cdc20
+    label: Bub3:Bub R1:Cdc20
+    description: Tracks Bub3:Bub R1:Cdc20. Maps to SBML symbol `Bub3_BubR1_Cdc20`.
+  - name: apc_c_c
+    maps_to: APC
+    label: APC/C/C
+    description: Tracks APC/C/C. Maps to SBML symbol `APC`.
+  - name: mcc_apc_c_c
+    maps_to: MCC_APC
+    label: MCC:APC/C/C
+    description: Tracks MCC:APC/C/C. Maps to SBML symbol `MCC_APC`.
+  - name: apc_c_c_cdc20
+    maps_to: APC_Cdc20
+    label: APC/C/C:Cdc20
+    description: Tracks APC/C/C:Cdc20. Maps to SBML symbol `APC_Cdc20`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

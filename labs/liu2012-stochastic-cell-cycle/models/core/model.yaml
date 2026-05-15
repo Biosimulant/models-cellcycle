@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic cell cycle.
+description: The eukaryotic cell cycle is regulated by a complicated chemical reaction network. Although many deterministic
+  models have been proposed, stochastic models are desired to capture noise in the cell res.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Zhen Liu
+- Yang Pu
+- Fei Li
+- Clifford A Shaffer
+- Stefan Hoops
+upstream:
+  id: biomodels_ebi:MODEL2004140002
+  source_db: biomodels_ebi
+  source_id: MODEL2004140002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2004140002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2004140002?filename=Liu2012.xml
+  license: CC0
+biosim:
+  entrypoint: src.liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model:Liu2012HybridModelingAndSimulationOfStochaModel2004140002Model
+  init_kwargs:
+    model_path: data/MODEL2004140002.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_x_x
+    maps_to: X
+    label: Model state X (X)
+    description: Tracks Model state X (X). Maps to SBML symbol `X`.
+  - name: model_state_v_v
+    maps_to: V
+    label: Model state V (V)
+    description: Tracks Model state V (V). Maps to SBML symbol `V`.
+  - name: model_state_y_y
+    maps_to: Y
+    label: Model state Y (Y)
+    description: Tracks Model state Y (Y). Maps to SBML symbol `Y`.
+  - name: model_state_z_z
+    maps_to: Z
+    label: Model state Z (Z)
+    description: Tracks Model state Z (Z). Maps to SBML symbol `Z`.
+  - name: model_state_yt
+    maps_to: YT
+    label: Model state YT
+    description: Tracks Model state YT. Maps to SBML symbol `YT`.
+  - name: model_state_mx
+    maps_to: Mx
+    label: Model state Mx
+    description: Tracks Model state Mx. Maps to SBML symbol `Mx`.
+  - name: model_state_my
+    maps_to: My
+    label: Model state My
+    description: Tracks Model state My. Maps to SBML symbol `My`.
+  - name: model_state_mz
+    maps_to: Mz
+    label: Model state Mz
+    description: Tracks Model state Mz. Maps to SBML symbol `Mz`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

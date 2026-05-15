@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Csikasz-Nagy2006 - Mammalian Cell Cycle model Visualisation
+description: Dedicated question-and-answer visualisation model for Csikasz-Nagy2006 - Mammalian Cell Cycle model.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Csikasz-Nagy2006 - Mammalian Cell Cycle model Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model
+      title: Csikasz-Nagy2006 - Mammalian Cell Cycle model
+      observables:
+      - id: APCP
+        port: phosphorylated_apc_c_c
+        label: Phosphorylated APC/C/C
+        group: mitosis
+      - id: BCKI
+        port: b_type_cyclin_cdk_inhibitor
+        label: B-type cyclin CDK inhibitor
+        group: core
+      - id: Cdc20A
+        port: active_cdc20
+        label: Active Cdc20
+        group: mitosis
+      - id: Cdc20i
+        port: inactive_cdc20
+        label: Inactive Cdc20
+        group: mitosis
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: mitosis
+      - id: CKI
+        port: cyclin_dependent_kinase_inhibitor
+        label: Cyclin-dependent kinase inhibitor
+        group: core
+      - id: CycA
+        port: cyclin_a
+        label: Cyclin A
+        group: core
+      - id: CycB
+        port: cyclin_b
+        label: Cyclin B
+        group: mitosis
+      - id: CycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: Mass
+        port: cell_mass
+        label: Cell mass
+        group: replication
+      - id: pB
+        port: p_b
+        label: P B
+        group: core
+      - id: pBCKI
+        port: p_bcki
+        label: P BCKI
+        group: core
+      - id: TriA
+        port: tri_a
+        label: Tri A
+        group: core
+      - id: TriE
+        port: tri_e
+        label: Tri E
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

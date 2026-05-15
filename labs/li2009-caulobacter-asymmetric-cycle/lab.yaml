@@ -1,0 +1,172 @@
+schema_version: '2.0'
+title: Li2009- Assymetric Caulobacter cell cycle Lab
+description: Single-model lab wrapper for Li2009- Assymetric Caulobacter cell cycle. The asymmetric cell division
+  cycle of Caulobacter crescentus is orchestrated by an elaborate gene-protein regulatory network, centered on three
+  major control proteins, DnaA, GcrA and CtrA. It can be used to explore cell-cycle regulation dynamics and compare
+  checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.state
+  to:
+  - visualisation.cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model_state
+- from: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.summary
+  to:
+  - visualisation.cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model_summary
+- from: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: ks_dna_a1
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ks_dna_a1
+    label: Ks,DNA A1
+    description: Controls Ks,DNA A1 in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ks_dna_a1`.
+  - name: ks_dna_a2
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ks_dna_a2
+    label: Ks,DNA A2
+    description: Controls Ks,DNA A2 in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ks_dna_a2`.
+  - name: kd_dna_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.kd_dna_a
+    label: Kd,DnaA
+    description: Controls Kd,DnaA in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.kd_dna_a`.
+  - name: ji_dna_active_gcr_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ji_dna_active_gcr_a
+    label: Ji DNA Active GcrA
+    description: Controls Ji DNA Active GcrA in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ji_dna_active_gcr_a`.
+  - name: phosphorylated_ja_dna_ctr_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_ja_dna_ctr_a
+    label: Phosphorylated Ja DNA CtrA
+    description: Controls Phosphorylated Ja DNA CtrA in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_ja_dna_ctr_a`.
+  - name: ja_fts_q_dna
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ja_fts_q_dna
+    label: Ja,Fts Q,DNA
+    description: Controls Ja,Fts Q,DNA in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ja_fts_q_dna`.
+  outputs:
+  - name: dna_a_replication_initiator
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.dna_a_replication_initiator
+    label: DnaA replication initiator
+    description: Tracks DnaA replication initiator in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.dna_a_replication_initiator`.
+  - name: gcr_a_transcriptional_regulator
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.gcr_a_transcriptional_regulator
+    label: GcrA transcriptional regulator
+    description: Tracks GcrA transcriptional regulator in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.gcr_a_transcriptional_regulator`.
+  - name: ctr_a_cell_cycle_regulator
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ctr_a_cell_cycle_regulator
+    label: CtrA cell-cycle regulator
+    description: Tracks CtrA cell-cycle regulator in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ctr_a_cell_cycle_regulator`.
+  - name: phosphorylated_ctr_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_ctr_a
+    label: Phosphorylated CtrA
+    description: Tracks Phosphorylated CtrA in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_ctr_a`.
+  - name: div_k_polarity_regulator
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.div_k_polarity_regulator
+    label: DivK polarity regulator
+    description: Tracks DivK polarity regulator in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.div_k_polarity_regulator`.
+  - name: phosphorylated_div_k
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_div_k
+    label: Phosphorylated DivK
+    description: Tracks Phosphorylated DivK in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_div_k`.
+  - name: model_state_i
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.model_state_i
+    label: Model state I
+    description: Tracks Model state I in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.model_state_i`.
+  - name: ccr_model_state_m
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ccr_model_state_m
+    label: Ccr Model state M
+    description: Tracks Ccr Model state M in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.ccr_model_state_m`.
+  - name: hcori
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hcori
+    label: Hcori
+    description: Tracks Hcori in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hcori`.
+  - name: hctr_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hctr_a
+    label: Hctr A
+    description: Tracks Hctr A in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hctr_a`.
+  - name: hccr_model_state_m
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hccr_model_state_m
+    label: Hccr Model state M
+    description: Tracks Hccr Model state M in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hccr_model_state_m`.
+  - name: hfts_model_state_z
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hfts_model_state_z
+    label: Hfts Model state Z
+    description: Tracks Hfts Model state Z in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.hfts_model_state_z`.
+  - name: replication_initiation_state
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.replication_initiation_state
+    label: Replication initiation state
+    description: Tracks Replication initiation state in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.replication_initiation_state`.
+  - name: dna_replication_state
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.dna_replication_state
+    label: DNA replication state
+    description: Tracks DNA replication state in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.dna_replication_state`.
+  - name: division_event_counter
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.division_event_counter
+    label: Division event counter
+    description: Tracks Division event counter in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.division_event_counter`.
+  - name: pod_jl
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.pod_jl
+    label: Pod JL
+    description: Tracks Pod JL in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.pod_jl`.
+  - name: phosphorylated_per
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_per
+    label: Phosphorylated Per
+    description: Tracks Phosphorylated Per in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_per`.
+  - name: div_j
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.div_j
+    label: Div J
+    description: Tracks Div J in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.div_j`.
+  - name: phosphorylated_cck_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_cck_a
+    label: Phosphorylated Cck A
+    description: Tracks Phosphorylated Cck A in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_cck_a`.
+  - name: cpd_model_state_r
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cpd_model_state_r
+    label: Cpd Model state R
+    description: Tracks Cpd Model state R in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cpd_model_state_r`.
+  - name: rcd_a
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.rcd_a
+    label: Rcd A
+    description: Tracks Rcd A in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.rcd_a`.
+  - name: phosphorylated_par_aad
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_par_aad
+    label: Phosphorylated Par AAD
+    description: Tracks Phosphorylated Par AAD in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.phosphorylated_par_aad`.
+  - name: fts_model_state_z
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.fts_model_state_z
+    label: Fts Model state Z
+    description: Tracks Fts Model state Z in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.fts_model_state_z`.
+  - name: z_ring
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.z_ring
+    label: Z-ring
+    description: Tracks Z-ring in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.z_ring`.
+  - name: cck_active_tot
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cck_active_tot
+    label: Cck Active Tot
+    description: Tracks Cck Active Tot in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cck_active_tot`.
+  - name: cpd_model_state_r_tot
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cpd_model_state_r_tot
+    label: Cpd Model state R Tot
+    description: Tracks Cpd Model state R Tot in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cpd_model_state_r_tot`.
+  - name: par_active_tot
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.par_active_tot
+    label: Par Active Tot
+    description: Tracks Par Active Tot in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.par_active_tot`.
+  - name: cell_elongation_state
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cell_elongation_state
+    label: Cell elongation state
+    description: Tracks Cell elongation state in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.cell_elongation_state`.
+  - name: model_state_z_z
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.model_state_z_z
+    label: Model state Z (Z)
+    description: Tracks Model state Z (Z) in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.model_state_z_z`.
+  - name: fts_q
+    maps_to: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.fts_q
+    label: Fts Q
+    description: Tracks Fts Q in the lab model via `cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model.fts_q`.

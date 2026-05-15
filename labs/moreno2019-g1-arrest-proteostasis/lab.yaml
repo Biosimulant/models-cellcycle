@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan in yeast
+  Lab
+description: 'Single-model lab wrapper for Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline
+  delimits replicative lifespan in yeast. This model is described within the paper: A G1 arrest due to proteostasis
+  decline delimits replicative lifespan in yeastDavid F. Moreno, Kirsten Jenkins, Sandrine Morlot, Gilles Charvin,
+  Attila Csik\u00e1s.'
+models:
+- alias: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.state
+  to:
+  - visualisation.cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model_state
+- from: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model_summary
+- from: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: hsp104
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.hsp104
+    label: Hsp104
+    description: Controls Hsp104 in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.hsp104`.
+  outputs:
+  - name: protein_load
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.protein_load
+    label: Protein load
+    description: Tracks Protein load in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.protein_load`.
+  - name: model_state_yp
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yp
+    label: Model state YP
+    description: Tracks Model state YP in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yp`.
+  - name: ydj1_chaperone
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.ydj1_chaperone
+    label: Ydj1 chaperone
+    description: Tracks Ydj1 chaperone in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.ydj1_chaperone`.
+  - name: prot_f
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.prot_f
+    label: Prot F
+    description: Tracks Prot F in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.prot_f`.
+  - name: prot_model_state_m
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.prot_model_state_m
+    label: Prot Model state M
+    description: Tracks Prot Model state M in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.prot_model_state_m`.
+  - name: oligomerized_proteostasis_species
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.oligomerized_proteostasis_species
+    label: Oligomerized proteostasis species
+    description: Tracks Oligomerized proteostasis species in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.oligomerized_proteostasis_species`.
+  - name: protein_aggregate_burden
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.protein_aggregate_burden
+    label: Protein aggregate burden
+    description: Tracks Protein aggregate burden in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.protein_aggregate_burden`.
+  - name: ydj1_oligomer_aggregate_complex
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.ydj1_oligomer_aggregate_complex
+    label: Ydj1-oligomer aggregate complex
+    description: Tracks Ydj1-oligomer aggregate complex in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.ydj1_oligomer_aggregate_complex`.
+  - name: model_state_ym
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_ym
+    label: Model state YM
+    description: Tracks Model state YM in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_ym`.
+  - name: model_state_yo
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yo
+    label: Model state YO
+    description: Tracks Model state YO in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yo`.
+  - name: cln3_start_cyclin
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.cln3_start_cyclin
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.cln3_start_cyclin`.
+  - name: model_state_yc
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yc
+    label: Model state YC
+    description: Tracks Model state YC in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.model_state_yc`.
+  - name: folded_cln3_start_cyclin
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.folded_cln3_start_cyclin
+    label: Folded Cln3 Start cyclin
+    description: Tracks Folded Cln3 Start cyclin in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.folded_cln3_start_cyclin`.
+  - name: whi5_start_inhibitor
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.whi5_start_inhibitor
+    label: Whi5 Start inhibitor
+    description: Tracks Whi5 Start inhibitor in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.whi5_start_inhibitor`.
+  - name: inactive_whi5_start_inhibitor
+    maps_to: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.inactive_whi5_start_inhibitor
+    label: Inactive Whi5 Start inhibitor
+    description: Tracks Inactive Whi5 Start inhibitor in the lab model via `cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model.inactive_whi5_start_inhibitor`.

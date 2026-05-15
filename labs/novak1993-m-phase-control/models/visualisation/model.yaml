@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Novak1993 - Cell cycle M-phase control Visualisation
+description: Dedicated question-and-answer visualisation model for Novak1993 - Cell cycle M-phase control.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Novak1993 - Cell cycle M-phase control Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model
+      title: Novak1993 - Cell cycle M-phase control
+      observables:
+      - id: cyclin
+        port: cyclin
+        label: Cyclin
+        group: mitosis
+      - id: dimer
+        port: cyclin_cdc2_dimer
+        label: Cyclin Cdc2 Dimer
+        group: mitosis
+      - id: dimer_p
+        port: phosphorylated_dimer
+        label: Phosphorylated Dimer
+        group: mitosis
+      - id: p_dimer
+        port: tyr15_phosphorylated_dimer
+        label: Tyr15 Phosphorylated Dimer
+        group: mitosis
+      - id: p_dimer_p
+        port: phosphorylated_p_dimer
+        label: Phosphorylated P Dimer
+        group: mitosis
+      - id: cdc25_p
+        port: phosphorylated_cdc25
+        label: Phosphorylated Cdc25
+        group: mitosis
+      - id: wee1_p
+        port: phosphorylated_wee1
+        label: Phosphorylated Wee1
+        group: mitosis
+      - id: IE_p
+        port: phosphorylated_ie
+        label: Phosphorylated IE
+        group: mitosis
+      - id: UbE_star
+        port: ubiquitin_conjugating_enzyme
+        label: Ubiquitin Conjugating Enzyme
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

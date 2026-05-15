@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Morris2002_CellCycle_CDK2Cyclin
+description: 'Notes from the original DOCQS curator: In this version of the CDK2/Cyclin A complex activation there
+  is discrepancy in the first curve which plots the binding reaction of CDK2 and Cyclin A expressed i. It can be
+  used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- May C Morris
+- Claire Gondeau
+- John A Tainer
+- Gilles Divita
+upstream:
+  id: biomodels_ebi:BIOMD0000000150
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000150
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000150
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000150?filename=BIOMD0000000150_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.morris2002_cellcycle_cdk2cyclin_biomd0000000150_model:Morris2002CellcycleCdk2cyclinBiomd0000000150Model
+  init_kwargs:
+    model_path: data/BIOMD0000000150.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cdk2cyc_a
+    maps_to: CDK2cycA
+    label: CDK2cyc A
+    description: Tracks CDK2cyc A. Maps to SBML symbol `CDK2cycA`.
+  - name: cyclin_a
+    maps_to: CyclinA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `CyclinA`.
+  - name: cdk2
+    maps_to: Cdk2
+    label: CDK2
+    description: Tracks CDK2. Maps to SBML symbol `Cdk2`.
+  - name: cdk2cyc_active_star
+    maps_to: CDK2cycA_star_
+    label: CDK2cyc Active Star
+    description: Tracks CDK2cyc Active Star. Maps to SBML symbol `CDK2cycA_star_`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

@@ -1,0 +1,312 @@
+schema_version: '2.0'
+title: Abroudi2017 - Mammalian Cell Cycle Control Model
+description: Not many models of mammalian cell cycle system exist due to its complexity. Some models are too complex
+  and hard to understand, while some others are too simple and not comprehensive enough.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Ali Abroudi
+- Sandhya Samarasinghe
+- Don Kulasiri
+upstream:
+  id: biomodels_ebi:MODEL1812130001
+  source_db: biomodels_ebi
+  source_id: MODEL1812130001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812130001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812130001?filename=Abroudi2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model:Abroudi2017MammalianCellCycleControlModelModel1812130001Model
+  init_kwargs:
+    model_path: data/MODEL1812130001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: active_myc
+    maps_to: acMyc
+    label: Active Myc
+    description: Tracks Active Myc. Maps to SBML symbol `acMyc`.
+  - name: inactive_myc
+    maps_to: icMyc
+    label: Inactive Myc
+    description: Tracks Inactive Myc. Maps to SBML symbol `icMyc`.
+  - name: atm_checkpoint_kinase
+    maps_to: ATM
+    label: ATM checkpoint kinase
+    description: Tracks ATM checkpoint kinase. Maps to SBML symbol `ATM`.
+  - name: active_chk2
+    maps_to: aChk2
+    label: Active Chk2
+    description: Tracks Active Chk2. Maps to SBML symbol `aChk2`.
+  - name: inactive_chk2
+    maps_to: iChk2
+    label: Inactive Chk2
+    description: Tracks Inactive Chk2. Maps to SBML symbol `iChk2`.
+  - name: p53_tumor_suppressor
+    maps_to: p53
+    label: p53 tumor suppressor
+    description: Tracks p53 tumor suppressor. Maps to SBML symbol `p53`.
+  - name: mdm2
+    maps_to: mdm2
+    label: Mdm2
+    description: Tracks Mdm2. Maps to SBML symbol `mdm2`.
+  - name: model_state_if
+    maps_to: IF
+    label: Model state IF
+    description: Tracks Model state IF. Maps to SBML symbol `IF`.
+  - name: p21
+    maps_to: p21
+    label: P21
+    description: Tracks P21. Maps to SBML symbol `p21`.
+  - name: cyclin_d_cdk4
+    maps_to: cycd_cdk4
+    label: Cyclin D CDK4
+    description: Tracks Cyclin D CDK4. Maps to SBML symbol `cycd_cdk4`.
+  - name: p21_cyclin_d_cdk4
+    maps_to: p21_cycd_cdk4
+    label: P21 Cyclin D CDK4
+    description: Tracks P21 Cyclin D CDK4. Maps to SBML symbol `p21_cycd_cdk4`.
+  - name: acyce_cdk2
+    maps_to: acyce_cdk2
+    label: Acyce CDK2
+    description: Tracks Acyce CDK2. Maps to SBML symbol `acyce_cdk2`.
+  - name: p21_acyce_cdk2
+    maps_to: p21_acyce_cdk2
+    label: P21 Acyce CDK2
+    description: Tracks P21 Acyce CDK2. Maps to SBML symbol `p21_acyce_cdk2`.
+  - name: p21_acyca_cdk2
+    maps_to: p21_acyca_cdk2
+    label: P21 Acyca CDK2
+    description: Tracks P21 Acyca CDK2. Maps to SBML symbol `p21_acyca_cdk2`.
+  - name: acyca_cdk2
+    maps_to: acyca_cdk2
+    label: Acyca CDK2
+    description: Tracks Acyca CDK2. Maps to SBML symbol `acyca_cdk2`.
+  - name: observable_14_3_3_s
+    maps_to: _14_3_3_s
+    label: 14-3-3 S
+    description: Tracks 14-3-3 S. Maps to SBML symbol `_14_3_3_s`.
+  - name: gadda45
+    maps_to: gadda45
+    label: Gadda45
+    description: Tracks Gadda45. Maps to SBML symbol `gadda45`.
+  - name: cyclin_d
+    maps_to: cycd
+    label: Cyclin D
+    description: Tracks Cyclin D. Maps to SBML symbol `cycd`.
+  - name: cdk4
+    maps_to: cdk4
+    label: CDK4
+    description: Tracks CDK4. Maps to SBML symbol `cdk4`.
+  - name: ascf
+    maps_to: ascf
+    label: Ascf
+    description: Tracks Ascf. Maps to SBML symbol `ascf`.
+  - name: p27_cdk_inhibitor
+    maps_to: p27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor. Maps to SBML symbol `p27`.
+  - name: p27_acyce_cdk2
+    maps_to: p27_acyce_cdk2
+    label: P27 Acyce CDK2
+    description: Tracks P27 Acyce CDK2. Maps to SBML symbol `p27_acyce_cdk2`.
+  - name: p27_acyca_cdk2
+    maps_to: p27_acyca_cdk2
+    label: P27 Acyca CDK2
+    description: Tracks P27 Acyca CDK2. Maps to SBML symbol `p27_acyca_cdk2`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: phosphorylated_rb
+    maps_to: pRb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb. Maps to SBML symbol `pRb`.
+  - name: e2f_phosphorylated_rb
+    maps_to: E2F_pRb
+    label: E2F Phosphorylated Rb
+    description: Tracks E2F Phosphorylated Rb. Maps to SBML symbol `E2F_pRb`.
+  - name: p27_cyclin_d_cdk4
+    maps_to: p27_cycd_cdk4
+    label: P27 Cyclin D CDK4
+    description: Tracks P27 Cyclin D CDK4. Maps to SBML symbol `p27_cycd_cdk4`.
+  - name: phosphorylated_e2f_phosphorylated_rb_p
+    maps_to: E2F_pRbPP
+    label: Phosphorylated E2F Phosphorylated Rb P
+    description: Tracks Phosphorylated E2F Phosphorylated Rb P. Maps to SBML symbol `E2F_pRbPP`.
+  - name: phosphorylated_phosphorylated_rb_pp
+    maps_to: pRbPPP
+    label: Phosphorylated Phosphorylated Rb PP
+    description: Tracks Phosphorylated Phosphorylated Rb PP. Maps to SBML symbol `pRbPPP`.
+  - name: app1
+    maps_to: app1
+    label: App1
+    description: Tracks App1. Maps to SBML symbol `app1`.
+  - name: ipp1
+    maps_to: ipp1
+    label: Ipp1
+    description: Tracks Ipp1. Maps to SBML symbol `ipp1`.
+  - name: acycb_cdk1_nuc
+    maps_to: acycb_cdk1_nuc
+    label: Acycb CDK1 Nuc
+    description: Tracks Acycb CDK1 Nuc. Maps to SBML symbol `acycb_cdk1_nuc`.
+  - name: cyclin_e
+    maps_to: cyce
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cyce`.
+  - name: cdk2
+    maps_to: cdk2
+    label: CDK2
+    description: Tracks CDK2. Maps to SBML symbol `cdk2`.
+  - name: cyclin_a
+    maps_to: cyca
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `cyca`.
+  - name: active_bmyb
+    maps_to: aBMyb
+    label: Active BMyb
+    description: Tracks Active BMyb. Maps to SBML symbol `aBMyb`.
+  - name: nf_y_transcription_factor
+    maps_to: NFY
+    label: NF-Y transcription factor
+    description: Tracks NF-Y transcription factor. Maps to SBML symbol `NFY`.
+  - name: icyca_cdk2
+    maps_to: icyca_cdk2
+    label: Icyca CDK2
+    description: Tracks Icyca CDK2. Maps to SBML symbol `icyca_cdk2`.
+  - name: active_apc_c_c_cdc20
+    maps_to: aAPC_Cdc20
+    label: Active APC/C/C Cdc20
+    description: Tracks Active APC/C/C Cdc20. Maps to SBML symbol `aAPC_Cdc20`.
+  - name: active_apc_c_c_cdh1
+    maps_to: aAPC_Cdh1
+    label: Active APC/C/C Cdh1
+    description: Tracks Active APC/C/C Cdh1. Maps to SBML symbol `aAPC_Cdh1`.
+  - name: icyce_cdk2
+    maps_to: icyce_cdk2
+    label: Icyce CDK2
+    description: Tracks Icyce CDK2. Maps to SBML symbol `icyce_cdk2`.
+  - name: acdc25a
+    maps_to: acdc25a
+    label: Acdc25a
+    description: Tracks Acdc25a. Maps to SBML symbol `acdc25a`.
+  - name: iscf
+    maps_to: iscf
+    label: Iscf
+    description: Tracks Iscf. Maps to SBML symbol `iscf`.
+  - name: inactive_bmyb
+    maps_to: iBMyb
+    label: Inactive BMyb
+    description: Tracks Inactive BMyb. Maps to SBML symbol `iBMyb`.
+  - name: icdc25a
+    maps_to: icdc25a
+    label: Icdc25a
+    description: Tracks Icdc25a. Maps to SBML symbol `icdc25a`.
+  - name: aplk1
+    maps_to: aplk1
+    label: Aplk1
+    description: Tracks Aplk1. Maps to SBML symbol `aplk1`.
+  - name: awee1
+    maps_to: awee1
+    label: Awee1
+    description: Tracks Awee1. Maps to SBML symbol `awee1`.
+  - name: iwee1
+    maps_to: iwee1
+    label: Iwee1
+    description: Tracks Iwee1. Maps to SBML symbol `iwee1`.
+  - name: acdc25c
+    maps_to: acdc25c
+    label: Acdc25c
+    description: Tracks Acdc25c. Maps to SBML symbol `acdc25c`.
+  - name: icdc25c
+    maps_to: icdc25c
+    label: Icdc25c
+    description: Tracks Icdc25c. Maps to SBML symbol `icdc25c`.
+  - name: icdc25cp_s216
+    maps_to: icdc25cp_s216
+    label: Icdc25cp S216
+    description: Tracks Icdc25cp S216. Maps to SBML symbol `icdc25cp_s216`.
+  - name: acycb_cdk1_cyto
+    maps_to: acycb_cdk1_cyto
+    label: Acycb CDK1 Cyto
+    description: Tracks Acycb CDK1 Cyto. Maps to SBML symbol `acycb_cdk1_cyto`.
+  - name: acdc25cp_s216
+    maps_to: acdc25cp_s216
+    label: Acdc25cp S216
+    description: Tracks Acdc25cp S216. Maps to SBML symbol `acdc25cp_s216`.
+  - name: observable_14_3_3_icdc25cp_s216
+    maps_to: _14_3_3_icdc25cp_s216
+    label: 14-3-3 Icdc25cp S216
+    description: Tracks 14-3-3 Icdc25cp S216. Maps to SBML symbol `_14_3_3_icdc25cp_s216`.
+  - name: iplk1
+    maps_to: iplk1
+    label: Iplk1
+    description: Tracks Iplk1. Maps to SBML symbol `iplk1`.
+  - name: cyclin_b
+    maps_to: cycb
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `cycb`.
+  - name: cdk1
+    maps_to: cdk1
+    label: CDK1
+    description: Tracks CDK1. Maps to SBML symbol `cdk1`.
+  - name: icycb_cdk1_cyto
+    maps_to: icycb_cdk1_cyto
+    label: Icycb CDK1 Cyto
+    description: Tracks Icycb CDK1 Cyto. Maps to SBML symbol `icycb_cdk1_cyto`.
+  - name: p21_acycb_cdk1_nuc
+    maps_to: p21_acycb_cdk1_nuc
+    label: P21 Acycb CDK1 Nuc
+    description: Tracks P21 Acycb CDK1 Nuc. Maps to SBML symbol `p21_acycb_cdk1_nuc`.
+  - name: icycb_cdk1_nuc
+    maps_to: icycb_cdk1_nuc
+    label: Icycb CDK1 Nuc
+    description: Tracks Icycb CDK1 Nuc. Maps to SBML symbol `icycb_cdk1_nuc`.
+  - name: inactive_apc_c_c_cdc20
+    maps_to: iAPC_Cdc20
+    label: Inactive APC/C/C Cdc20
+    description: Tracks Inactive APC/C/C Cdc20. Maps to SBML symbol `iAPC_Cdc20`.
+  - name: inactive_apc_c_c_cdh1
+    maps_to: iAPC_Cdh1
+    label: Inactive APC/C/C Cdh1
+    description: Tracks Inactive APC/C/C Cdh1. Maps to SBML symbol `iAPC_Cdh1`.
+  - name: phosphorylated_rb_ppp_copy
+    maps_to: pRbPPP_copy
+    label: Phosphorylated Rb PPP Copy
+    description: Tracks Phosphorylated Rb PPP Copy. Maps to SBML symbol `pRbPPP_copy`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: dsb
+    maps_to: DSB
+    label: DSB
+    accepted_units:
+    - native SBML value
+    description: Controls DSB. Maps to SBML symbol `DSB`.
+  - name: oxygen_dependent_degradation_factor
+    maps_to: DEG
+    label: Oxygen-dependent degradation factor
+    accepted_units:
+    - native SBML value
+    description: Controls Oxygen-dependent degradation factor. Maps to SBML symbol `DEG`.
+  - name: growth_factor
+    maps_to: GF
+    label: Growth Factor
+    accepted_units:
+    - native SBML value
+    description: Controls Growth Factor. Maps to SBML symbol `GF`.

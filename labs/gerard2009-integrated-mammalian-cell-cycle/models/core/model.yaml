@@ -1,0 +1,234 @@
+schema_version: '2.0'
+title: Gerard2009 - An Integrated Mammalian Cell Cycle Model
+description: We propose an integrated computational model for the network of cyclin-dependent kinases (Cdks) that
+  controls the dynamics of the mammalian cell cycle. It can be used to explore cell-cycle regulation dynamics and
+  compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "Claude G\xE9rard"
+- Albert Goldbeter
+upstream:
+  id: biomodels_ebi:BIOMD0000000730
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000730
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000730
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000730?filename=Gerard2009.xml
+  license: CC0
+biosim:
+  entrypoint: src.gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model:Gerard2009AnIntegratedMammalianCellCycleMoBiomd0000000730Model
+  init_kwargs:
+    model_path: data/BIOMD0000000730.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: pRB
+    label: Phosphorylated Rb
+    description: Rb phosphorylation state. Maps to SBML symbol `pRB`.
+  - name: singly_phosphorylated_rb
+    maps_to: pRBp
+    label: Singly phosphorylated Rb
+    description: Intermediate phosphorylated Rb state. Maps to SBML symbol `pRBp`.
+  - name: hyperphosphorylated_rb
+    maps_to: pRBpp
+    label: Hyperphosphorylated Rb
+    description: Hyperphosphorylated Rb state. Maps to SBML symbol `pRBpp`.
+  - name: e2f
+    maps_to: E2F
+    label: E2F transcription factor
+    description: E2F transcription-factor pool. Maps to SBML symbol `E2F`.
+  - name: phosphorylated_e2f
+    maps_to: E2Fp
+    label: Phosphorylated E2F
+    description: Phosphorylated E2F pool. Maps to SBML symbol `E2Fp`.
+  - name: rb_e2f_complex
+    maps_to: pRBc1
+    label: Rb-E2F complex
+    description: Rb-E2F inhibitory complex. Maps to SBML symbol `pRBc1`.
+  - name: phosphorylated_rb_e2f_complex
+    maps_to: pRBc2
+    label: Phosphorylated Rb-E2F complex
+    description: Phosphorylated Rb-E2F complex. Maps to SBML symbol `pRBc2`.
+  - name: cyclin_d
+    maps_to: Cd
+    label: Cyclin D
+    description: Cyclin D module species. Maps to SBML symbol `Cd`.
+  - name: inactive_cyclin_d_cdk_complex
+    maps_to: Mdi
+    label: Inactive Cyclin D-CDK4/6 complex
+    description: Inactive Cyclin D-CDK4/6 module complex. Maps to SBML symbol `Mdi`.
+  - name: active_cyclin_d_cdk_complex
+    maps_to: Md
+    label: Active Cyclin D-CDK4/6 complex
+    description: Active Cyclin D-CDK4/6 module complex. Maps to SBML symbol `Md`.
+  - name: cyclin_d_cdk_p27_complex
+    maps_to: Mdp27
+    label: Cyclin D-CDK4/6-p27 complex
+    description: Cyclin D-CDK4/6 complex bound to p27. Maps to SBML symbol `Mdp27`.
+  - name: cyclin_e
+    maps_to: Ce
+    label: Cyclin E
+    description: Cyclin E module species. Maps to SBML symbol `Ce`.
+  - name: inactive_cyclin_e_cdk2_complex
+    maps_to: Mei
+    label: Inactive Cyclin E-CDK2 complex
+    description: Inactive Cyclin E-CDK2 module complex. Maps to SBML symbol `Mei`.
+  - name: active_cyclin_e_cdk2_complex
+    maps_to: Me
+    label: Active Cyclin E-CDK2 complex
+    description: Active Cyclin E-CDK2 module complex. Maps to SBML symbol `Me`.
+  - name: skp2
+    maps_to: Skp2
+    label: Skp2 ubiquitin-ligase adaptor
+    description: Skp2 p27-degradation regulator. Maps to SBML symbol `Skp2`.
+  - name: cyclin_e_cdk2_p27_complex
+    maps_to: Mep27
+    label: Cyclin E-CDK2-p27 complex
+    description: Cyclin E-CDK2 complex bound to p27. Maps to SBML symbol `Mep27`.
+  - name: inactive_cyclin_e_module_regulator
+    maps_to: Pei
+    label: Inactive Cyclin E module regulator
+    description: Inactive regulator in the Cyclin E-CDK2 module. Maps to SBML symbol `Pei`.
+  - name: active_cyclin_e_module_regulator
+    maps_to: Pe
+    label: Active Cyclin E module regulator
+    description: Active regulator in the Cyclin E-CDK2 module. Maps to SBML symbol `Pe`.
+  - name: cyclin_a
+    maps_to: Ca
+    label: Cyclin A
+    description: Cyclin A module species. Maps to SBML symbol `Ca`.
+  - name: inactive_cyclin_a_cdk2_complex
+    maps_to: Mai
+    label: Inactive Cyclin A-CDK2 complex
+    description: Inactive Cyclin A-CDK2 module complex. Maps to SBML symbol `Mai`.
+  - name: active_cyclin_a_cdk2_complex
+    maps_to: Ma
+    label: Active Cyclin A-CDK2 complex
+    description: Active Cyclin A-CDK2 module complex. Maps to SBML symbol `Ma`.
+  - name: cyclin_a_cdk2_p27_complex
+    maps_to: Map27
+    label: Cyclin A-CDK2-p27 complex
+    description: Cyclin A-CDK2 complex bound to p27. Maps to SBML symbol `Map27`.
+  - name: p27
+    maps_to: p27
+    label: p27 CDK inhibitor
+    description: p27 CDK inhibitor pool. Maps to SBML symbol `p27`.
+  - name: phosphorylated_p27
+    maps_to: p27p
+    label: Phosphorylated p27
+    description: Phosphorylated p27 pool. Maps to SBML symbol `p27p`.
+  - name: inactive_cdh1
+    maps_to: Cdh1i
+    label: Inactive Cdh1
+    description: Inactive Cdh1 APC/C regulator. Maps to SBML symbol `Cdh1i`.
+  - name: active_cdh1
+    maps_to: Cdh1a
+    label: Active Cdh1
+    description: Active Cdh1 APC/C regulator. Maps to SBML symbol `Cdh1a`.
+  - name: inactive_cyclin_a_module_regulator
+    maps_to: Pai
+    label: Inactive Cyclin A module regulator
+    description: Inactive regulator in the Cyclin A-CDK2 module. Maps to SBML symbol `Pai`.
+  - name: active_cyclin_a_module_regulator
+    maps_to: Pa
+    label: Active Cyclin A module regulator
+    description: Active regulator in the Cyclin A-CDK2 module. Maps to SBML symbol `Pa`.
+  - name: cyclin_b
+    maps_to: Cb
+    label: Cyclin B
+    description: Cyclin B module species. Maps to SBML symbol `Cb`.
+  - name: inactive_cyclin_b_cdk1_complex
+    maps_to: Mbi
+    label: Inactive Cyclin B-CDK1 complex
+    description: Inactive Cyclin B-CDK1 module complex. Maps to SBML symbol `Mbi`.
+  - name: active_cyclin_b_cdk1_complex
+    maps_to: Mb
+    label: Active Cyclin B-CDK1 complex
+    description: Active Cyclin B-CDK1 module complex. Maps to SBML symbol `Mb`.
+  - name: cyclin_b_cdk1_p27_complex
+    maps_to: Mbp27
+    label: Cyclin B-CDK1-p27 complex
+    description: Cyclin B-CDK1 complex bound to p27. Maps to SBML symbol `Mbp27`.
+  - name: inactive_cdc20
+    maps_to: Cdc20i
+    label: Inactive Cdc20
+    description: Inactive Cdc20 APC/C regulator. Maps to SBML symbol `Cdc20i`.
+  - name: active_cdc20
+    maps_to: Cdc20a
+    label: Active Cdc20
+    description: Active Cdc20 APC/C regulator. Maps to SBML symbol `Cdc20a`.
+  - name: inactive_cyclin_b_module_regulator
+    maps_to: Pbi
+    label: Inactive Cyclin B module regulator
+    description: Inactive regulator in the Cyclin B-CDK1 module. Maps to SBML symbol `Pbi`.
+  - name: active_cyclin_b_module_regulator
+    maps_to: Pb
+    label: Active Cyclin B module regulator
+    description: Active regulator in the Cyclin B-CDK1 module. Maps to SBML symbol `Pb`.
+  - name: wee1
+    maps_to: Wee1
+    label: Wee1 inhibitory kinase
+    description: Wee1 CDK inhibitory kinase. Maps to SBML symbol `Wee1`.
+  - name: phosphorylated_wee1
+    maps_to: Wee1p
+    label: Phosphorylated Wee1
+    description: Phosphorylated Wee1 pool. Maps to SBML symbol `Wee1p`.
+  - name: dna_polymerase
+    maps_to: Pol
+    label: DNA polymerase
+    description: DNA polymerase replication marker. Maps to SBML symbol `Pol`.
+  - name: cdc45
+    maps_to: Cdc45
+    label: Cdc45 replication factor
+    description: Cdc45 replication-initiation marker. Maps to SBML symbol `Cdc45`.
+  - name: replication_primer
+    maps_to: Primer
+    label: Replication primer
+    description: DNA replication primer marker. Maps to SBML symbol `Primer`.
+  - name: chk1
+    maps_to: Chk1
+    label: Chk1 checkpoint kinase
+    description: Chk1 checkpoint kinase. Maps to SBML symbol `Chk1`.
+  - name: atr
+    maps_to: ATR
+    label: ATR checkpoint kinase
+    description: ATR checkpoint kinase. Maps to SBML symbol `ATR`.
+  - name: ap1
+    maps_to: AP1
+    label: AP1 transcription factor
+    description: AP1 growth-response transcription factor. Maps to SBML symbol `AP1`.
+  - name: wee1_module_regulator
+    maps_to: Mw
+    label: Wee1 module regulator
+    description: Wee1-linked regulatory model state. Maps to SBML symbol `Mw`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: growth_factor
+    maps_to: GF
+    label: Growth factor
+    accepted_units:
+    - dimensionless
+    description: External growth-factor stimulus. Maps to SBML symbol `GF`.
+  - name: growth_factor_activation_rate
+    maps_to: Kagf
+    label: Growth factor activation rate
+    accepted_units:
+    - dimensionless
+    description: Growth-factor activation parameter. Maps to SBML symbol `Kagf`.

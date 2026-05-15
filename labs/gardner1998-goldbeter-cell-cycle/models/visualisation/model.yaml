@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Gardner1998 - Cell Cycle Goldbeter Visualisation
+description: Dedicated question-and-answer visualisation model for Gardner1998 - Cell Cycle Goldbeter.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Gardner1998 - Cell Cycle Goldbeter Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_gardner1998_cell_cycle_goldbeter_biomd0000000008_model
+      title: Gardner1998 - Cell Cycle Goldbeter
+      observables:
+      - id: C
+        port: cyclin
+        label: Cyclin
+        group: core
+      - id: X
+        port: protease
+        label: Protease
+        group: core
+      - id: M
+        port: cdc2k
+        label: Cdc2k
+        group: mitosis
+      - id: Y
+        port: cyclin_inhibitor
+        label: Cyclin Inhibitor
+        group: core
+      - id: Z
+        port: complex_inhibitor_cyclin
+        label: Complex Inhibitor Cyclin
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Model of budding yeast critical cell size dependence on growth rate with parameter set 3114 Visualisation
+description: Dedicated question-and-answer visualisation model for Model of budding yeast critical cell size dependence
+  on growth rate with parameter set 3114.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Model of budding yeast critical cell size dependence on growth rate with parameter set 3114 Lab
+    question: Does proteostasis pressure influence Start or G1 arrest?
+    answer_focus: The answer is based on chaperone, aggregate, Cln3, and Whi5-linked markers.
+    sources:
+    - alias: cellcycle_sbml_model_of_budding_yeast_critical_cell_size_depend_model1808310001_model
+      title: Model of budding yeast critical cell size dependence on growth rate with parameter set 3114
+      observables:
+      - id: Cln3F
+        port: folded_cln3_start_cyclin
+        label: Folded Cln3 Start cyclin
+        group: proteostasis
+      - id: Cln3U
+        port: unfolded_cln3_start_cyclin
+        label: Unfolded Cln3 Start cyclin
+        group: proteostasis
+      - id: Ydj1
+        port: ydj1_chaperone
+        label: Ydj1 chaperone
+        group: proteostasis
+      - id: YP
+        port: model_state_yp
+        label: Model state YP
+        group: replication
+      - id: YC
+        port: model_state_yc
+        label: Model state YC
+        group: replication
+      - id: ProtU
+        port: prot_model_state_u
+        label: Prot Model state U
+        group: replication
+      - id: ProtF
+        port: prot_f
+        label: Prot F
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

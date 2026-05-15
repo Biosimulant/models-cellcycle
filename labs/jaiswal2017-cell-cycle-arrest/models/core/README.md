@@ -1,0 +1,25 @@
+# Jaiswal2017 - Cell cycle arrest
+
+**Source**: [biomodels_ebi](https://www.ebi.ac.uk/biomodels/BIOMD0000000641)
+**Standard**: sbml
+**Authors**: Himjyot Jaiswal; Jan Benada; Erik Müllers; Karen Akopyan; Kamila Burdova
+
+## Description
+
+Jaiswal2017 - Cell cycle arrest This model is described in the article: ATM/Wip1 activities at chromatin control Plk1 re-activation to determine G2 checkpoint duration. Jaiswal H, Benada J, Müllers E,
+
+
+## Usage
+
+This model was auto-generated from the BioModels EBI catalog.
+
+```yaml
+# In a lab.yaml wiring file:
+models:
+  - path: ../../labs/jaiswal2017-cell-cycle-arrest/models/core
+    alias: model
+```
+
+## Tags
+
+systemsbiology, sbml, biomodels_ebi, auto-generated, biomodels-ebi, curated

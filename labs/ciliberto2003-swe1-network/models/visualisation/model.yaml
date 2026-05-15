@@ -1,0 +1,143 @@
+schema_version: '2.0'
+title: Ciliberto2003_Swe1Network Visualisation
+description: Dedicated question-and-answer visualisation model for Ciliberto2003_Swe1Network.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ciliberto2003_Swe1Network Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_ciliberto2003_swe1network_model0913285268_model
+      title: Ciliberto2003_Swe1Network
+      observables:
+      - id: Clb2
+        port: clb2_mitotic_cyclin
+        label: Clb2 mitotic cyclin
+        group: mitosis
+      - id: PClb2
+        port: phosphorylated_clb2
+        label: Phosphorylated Clb2
+        group: core
+      - id: Trim
+        port: trimer_complex
+        label: Trimer complex
+        group: core
+      - id: PTrim
+        port: phosphorylated_trimer_complex
+        label: Phosphorylated trimer complex
+        group: core
+      - id: Mcm_a
+        port: mcm_a
+        label: Mcm A
+        group: core
+      - id: Sic1
+        port: sic1_cdk_inhibitor
+        label: Sic1 CDK inhibitor
+        group: core
+      - id: Mih1_a
+        port: mih1_a
+        label: Mih1 A
+        group: core
+      - id: IE_a
+        port: ie_a
+        label: IE A
+        group: core
+      - id: Cdc20_a
+        port: cdc20_a
+        label: Cdc20 A
+        group: mitosis
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: mitosis
+      - id: Cdh1_a
+        port: cdh1_a
+        label: Cdh1 A
+        group: mitosis
+      - id: Cln
+        port: g1_cyclin_pool
+        label: G1 cyclin pool
+        group: g1s
+      - id: SBF_a
+        port: sbf_a
+        label: SBF A
+        group: core
+      - id: Swe1
+        port: swe1_inhibitory_kinase
+        label: Swe1 inhibitory kinase
+        group: core
+      - id: PSwe1
+        port: phosphorylated_swe1
+        label: Phosphorylated Swe1
+        group: core
+      - id: Swe1M
+        port: membrane_associated_swe1
+        label: Membrane-associated Swe1
+        group: core
+      - id: PSwe1M
+        port: membrane_associated_phosphorylated_swe1
+        label: Membrane-associated phosphorylated Swe1
+        group: core
+      - id: BE
+        port: model_state_be
+        label: Model state BE
+        group: core
+      - id: M
+        port: model_state_m_m
+        label: Model state M (M)
+        group: core
+      - id: BUD
+        port: budding_index
+        label: Budding index
+        group: replication
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: mitosis
+      - id: IE
+        port: model_state_ie
+        label: Model state IE
+        group: core
+      - id: Mcm
+        port: mcm_replication_licensing_complex
+        label: MCM replication licensing complex
+        group: core
+      - id: Mih1
+        port: mih1_activating_phosphatase
+        label: Mih1 activating phosphatase
+        group: core
+      - id: SBF
+        port: sbf_transcription_factor
+        label: SBF transcription factor
+        group: core
+      - id: Swe1_total
+        port: swe1_total
+        label: Swe1 Total
+        group: core
+      - id: kmih
+        port: kmih
+        label: Kmih
+        group: core
+      - id: kswe
+        port: kswe
+        label: Kswe
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Chiorino2002 - G1/S transition model
+description: mathematical approach to model the protein interactions regulating the transition from the G1 phase
+  to the phase of DNA synthesis. Model is encoded by matthieu Maire and submitted to BioModels by kris.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- G Chiorino
+- M Lupi
+upstream:
+  id: biomodels_ebi:MODEL2003180003
+  source_db: biomodels_ebi
+  source_id: MODEL2003180003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003180003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003180003?filename=Chiorino2002.xml
+  license: CC0
+biosim:
+  entrypoint: src.chiorino2002_g1_s_transition_model_model2003180003_model:Chiorino2002G1STransitionModelModel2003180003Model
+  init_kwargs:
+    model_path: data/MODEL2003180003.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: pRb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb. Maps to SBML symbol `pRb`.
+  - name: phosphorylated_rb_e2f
+    maps_to: pRbE2F
+    label: Phosphorylated Rb E2F
+    description: Tracks Phosphorylated Rb E2F. Maps to SBML symbol `pRbE2F`.
+  - name: cdk2
+    maps_to: Cdk2
+    label: CDK2
+    description: Tracks CDK2. Maps to SBML symbol `Cdk2`.
+  - name: cyclin_e
+    maps_to: cycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cycE`.
+  - name: cyclin_e_cdk2
+    maps_to: cycE_Cdk2
+    label: Cyclin E CDK2
+    description: Tracks Cyclin E CDK2. Maps to SBML symbol `cycE_Cdk2`.
+  - name: cyclin_e_cdk2_phosphorylated_rb_e2f
+    maps_to: cycE_Cdk2_pRbE2F
+    label: Cyclin E CDK2 Phosphorylated Rb E2F
+    description: Tracks Cyclin E CDK2 Phosphorylated Rb E2F. Maps to SBML symbol `cycE_Cdk2_pRbE2F`.
+  - name: phosphorylated_phosphorylated_rb
+    maps_to: pRb_P
+    label: Phosphorylated Phosphorylated Rb
+    description: Tracks Phosphorylated Phosphorylated Rb. Maps to SBML symbol `pRb_P`.
+  - name: phosphorylated_cyclin_e
+    maps_to: cycE_P
+    label: Phosphorylated Cyclin E
+    description: Tracks Phosphorylated Cyclin E. Maps to SBML symbol `cycE_P`.
+  - name: cyclin_e_cdk2_p27
+    maps_to: cycE_Cdk2_p27
+    label: Cyclin E CDK2 P27
+    description: Tracks Cyclin E CDK2 P27. Maps to SBML symbol `cycE_Cdk2_p27`.
+  - name: p27_cdk_inhibitor
+    maps_to: p27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor. Maps to SBML symbol `p27`.
+  - name: cyclin_e_cdk2_cyclin_e_cdk2_p27
+    maps_to: cycE_Cdk2_cycE_Cdk2_p27
+    label: Cyclin E CDK2 Cyclin E CDK2 P27
+    description: Tracks Cyclin E CDK2 Cyclin E CDK2 P27. Maps to SBML symbol `cycE_Cdk2_cycE_Cdk2_p27`.
+  - name: phosphorylated_p27
+    maps_to: p27_P
+    label: Phosphorylated P27
+    description: Tracks Phosphorylated P27. Maps to SBML symbol `p27_P`.
+  - name: model_state_m_rna_cyclin_e
+    maps_to: mRNA_cyclinE
+    label: Model state mRNA Cyclin E
+    description: Tracks Model state mRNA Cyclin E. Maps to SBML symbol `mRNA_cyclinE`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: model_state_m_rna_e2f
+    maps_to: mRNA_E2F
+    label: Model state mRNA E2F
+    description: Tracks Model state mRNA E2F. Maps to SBML symbol `mRNA_E2F`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

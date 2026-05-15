@@ -1,0 +1,107 @@
+schema_version: '2.0'
+title: Novak1993 - Cell cycle M-phase control
+description: Novak1993 - Cell cycle M-phase control The model reproduces Figure 9 of the paper. It can be used to
+  explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- B Novak
+- J J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000000107
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000107
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000107
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000107?filename=BIOMD0000000107_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.novak1993_cell_cycle_m_phase_control_biomd0000000107_model:Novak1993CellCycleMPhaseControlBiomd0000000107Model
+  init_kwargs:
+    model_path: data/BIOMD0000000107.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin
+    maps_to: cyclin
+    label: Cyclin
+    description: Tracks Cyclin. Maps to SBML symbol `cyclin`.
+  - name: cyclin_cdc2_dimer
+    maps_to: dimer
+    label: Cyclin Cdc2 Dimer
+    description: Tracks Cyclin Cdc2 Dimer. Maps to SBML symbol `dimer`.
+  - name: phosphorylated_dimer
+    maps_to: dimer_p
+    label: Phosphorylated Dimer
+    description: Tracks Phosphorylated Dimer. Maps to SBML symbol `dimer_p`.
+  - name: tyr15_phosphorylated_dimer
+    maps_to: p_dimer
+    label: Tyr15 Phosphorylated Dimer
+    description: Tracks Tyr15 Phosphorylated Dimer. Maps to SBML symbol `p_dimer`.
+  - name: phosphorylated_p_dimer
+    maps_to: p_dimer_p
+    label: Phosphorylated P Dimer
+    description: Tracks Phosphorylated P Dimer. Maps to SBML symbol `p_dimer_p`.
+  - name: phosphorylated_cdc25
+    maps_to: cdc25_p
+    label: Phosphorylated Cdc25
+    description: Tracks Phosphorylated Cdc25. Maps to SBML symbol `cdc25_p`.
+  - name: phosphorylated_wee1
+    maps_to: wee1_p
+    label: Phosphorylated Wee1
+    description: Tracks Phosphorylated Wee1. Maps to SBML symbol `wee1_p`.
+  - name: phosphorylated_ie
+    maps_to: IE_p
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE. Maps to SBML symbol `IE_p`.
+  - name: ubiquitin_conjugating_enzyme
+    maps_to: UbE_star
+    label: Ubiquitin Conjugating Enzyme
+    description: Tracks Ubiquitin Conjugating Enzyme. Maps to SBML symbol `UbE_star`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: cdc2
+    maps_to: cdc2
+    label: Cdc2
+    accepted_units:
+    - native SBML value
+    description: Controls Cdc2. Maps to SBML symbol `cdc2`.
+  - name: cdc25
+    maps_to: cdc25
+    label: Cdc25
+    accepted_units:
+    - native SBML value
+    description: Controls Cdc25. Maps to SBML symbol `cdc25`.
+  - name: wee1
+    maps_to: wee1
+    label: Wee1
+    accepted_units:
+    - native SBML value
+    description: Controls Wee1. Maps to SBML symbol `wee1`.
+  - name: intermediary_enzyme
+    maps_to: IE
+    label: Intermediary Enzyme
+    accepted_units:
+    - native SBML value
+    description: Controls Intermediary Enzyme. Maps to SBML symbol `IE`.
+  - name: ubiquitin_conjugating_enzyme
+    maps_to: UbE
+    label: Ubiquitin Conjugating Enzyme
+    accepted_units:
+    - native SBML value
+    description: Controls Ubiquitin Conjugating Enzyme. Maps to SBML symbol `UbE`.

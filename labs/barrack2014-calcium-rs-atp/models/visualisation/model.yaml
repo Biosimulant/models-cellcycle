@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release Visualisation
+description: Dedicated question-and-answer visualisation model for Barrack2014 - Calcium/cell cycle coupling - Rs
+  dependent ATP release.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release Lab
+    question: Does calcium-linked signaling couple to cell-cycle control?
+    answer_focus: The answer is based on ATP/IP3/calcium signals and cell-cycle response variables.
+    sources:
+    - alias: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model
+      title: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release
+      observables:
+      - id: d
+        port: model_state_d
+        label: Model state D
+        group: calcium
+      - id: ad
+        port: model_state_ad
+        label: Model state Ad
+        group: calcium
+      - id: e
+        port: model_state_e
+        label: Model state E
+        group: calcium
+      - id: r
+        port: model_state_r_r
+        label: Model state R (r)
+        group: calcium
+      - id: rs
+        port: model_state_rs
+        label: Model state Rs
+        group: calcium
+      - id: x
+        port: model_state_x_x
+        label: Model state X (x)
+        group: calcium
+      - id: ip3
+        port: ip3
+        label: IP3
+        group: calcium
+      - id: kg
+        port: model_state_kg
+        label: Model state Kg
+        group: calcium
+      - id: gstar
+        port: gstar
+        label: Gstar
+        group: calcium
+      - id: ro
+        port: model_state_ro
+        label: Model state Ro
+        group: calcium
+      - id: ip3con
+        port: ip3con
+        label: Ip3con
+        group: calcium
+      - id: rscon
+        port: rscon
+        label: Rscon
+        group: calcium
+      - id: atp
+        port: atp
+        label: ATP
+        group: calcium
+      - id: y
+        port: model_state_y_y
+        label: Model state Y (y)
+        group: calcium
+      - id: delta
+        port: delta
+        label: Delta
+        group: calcium
+      - id: ca
+        port: calcium
+        label: Calcium
+        group: calcium
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,178 @@
+schema_version: '2.0'
+title: Chen2000_CellCycle
+description: 'This a model from the article: Kinetic analysis of a molecular model of the budding yeast cell cycle.
+  Chen KC, Csikasz-Nagy A, Gyorffy B, Val J, Novak B, Tyson JJ.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- K C Chen
+- A Csikasz-Nagy
+- B Gyorffy
+- J Val
+- B Novak
+upstream:
+  id: biomodels_ebi:BIOMD0000000675
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000675
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000675
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000675?filename=BIOMD0000000675.xml
+  license: CC0
+biosim:
+  entrypoint: src.chen2000_cellcycle_biomd0000000675_model:Chen2000CellcycleBiomd0000000675Model
+  init_kwargs:
+    model_path: data/BIOMD0000000675.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cln2_g1_cyclin
+    maps_to: Cln2
+    label: Cln2 G1 cyclin
+    description: Tracks Cln2 G1 cyclin. Maps to SBML symbol `Cln2`.
+  - name: cdc20_apc_c_activator
+    maps_to: Cdc20
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator. Maps to SBML symbol `Cdc20`.
+  - name: cdc20_t
+    maps_to: Cdc20_T
+    label: Cdc20 T
+    description: Tracks Cdc20 T. Maps to SBML symbol `Cdc20_T`.
+  - name: hct1_apc_c_activator
+    maps_to: Hct1
+    label: Hct1 APC/C activator
+    description: Tracks Hct1 APC/C activator. Maps to SBML symbol `Hct1`.
+  - name: clb2_sic1
+    maps_to: Clb2_Sic1
+    label: Clb2 Sic1
+    description: Tracks Clb2 Sic1. Maps to SBML symbol `Clb2_Sic1`.
+  - name: sic1_t
+    maps_to: Sic1_T
+    label: Sic1 T
+    description: Tracks Sic1 T. Maps to SBML symbol `Sic1_T`.
+  - name: clb5_sic1
+    maps_to: Clb5_Sic1
+    label: Clb5 Sic1
+    description: Tracks Clb5 Sic1. Maps to SBML symbol `Clb5_Sic1`.
+  - name: clb5_t
+    maps_to: Clb5_T
+    label: Clb5 T
+    description: Tracks Clb5 T. Maps to SBML symbol `Clb5_T`.
+  - name: clb2_t
+    maps_to: Clb2_T
+    label: Clb2 T
+    description: Tracks Clb2 T. Maps to SBML symbol `Clb2_T`.
+  - name: mass
+    maps_to: mass
+    label: Mass
+    description: Tracks Mass. Maps to SBML symbol `mass`.
+  - name: replication_origin_state
+    maps_to: ORI
+    label: Replication origin state
+    description: Tracks Replication origin state. Maps to SBML symbol `ORI`.
+  - name: budding_index
+    maps_to: BUD
+    label: Budding index
+    description: Tracks Budding index. Maps to SBML symbol `BUD`.
+  - name: spindle_state
+    maps_to: SPN
+    label: Spindle state
+    description: Tracks Spindle state. Maps to SBML symbol `SPN`.
+  - name: bck2_g1_regulator
+    maps_to: Bck2
+    label: Bck2 G1 regulator
+    description: Tracks Bck2 G1 regulator. Maps to SBML symbol `Bck2`.
+  - name: clb2_mitotic_cyclin
+    maps_to: Clb2
+    label: Clb2 mitotic cyclin
+    description: Tracks Clb2 mitotic cyclin. Maps to SBML symbol `Clb2`.
+  - name: clb5_s_phase_cyclin
+    maps_to: Clb5
+    label: Clb5 S-phase cyclin
+    description: Tracks Clb5 S-phase cyclin. Maps to SBML symbol `Clb5`.
+  - name: cln3_start_cyclin
+    maps_to: Cln3
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin. Maps to SBML symbol `Cln3`.
+  - name: model_state_d
+    maps_to: D
+    label: Model state D
+    description: Tracks Model state D. Maps to SBML symbol `D`.
+  - name: mbf_transcription_factor
+    maps_to: MBF
+    label: MBF transcription factor
+    description: Tracks MBF transcription factor. Maps to SBML symbol `MBF`.
+  - name: mcm1_transcription_factor
+    maps_to: Mcm1
+    label: Mcm1 transcription factor
+    description: Tracks Mcm1 transcription factor. Maps to SBML symbol `Mcm1`.
+  - name: sbf_transcription_factor
+    maps_to: SBF
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor. Maps to SBML symbol `SBF`.
+  - name: sic1_cdk_inhibitor
+    maps_to: Sic1
+    label: Sic1 CDK inhibitor
+    description: Tracks Sic1 CDK inhibitor. Maps to SBML symbol `Sic1`.
+  - name: swi5_transcription_factor
+    maps_to: Swi5
+    label: Swi5 transcription factor
+    description: Tracks Swi5 transcription factor. Maps to SBML symbol `Swi5`.
+  - name: va_sbf
+    maps_to: Va_sbf
+    label: Va Sbf
+    description: Tracks Va Sbf. Maps to SBML symbol `Va_sbf`.
+  - name: vd2_model_state_c1
+    maps_to: Vd2_c1
+    label: Vd2 Model state C1
+    description: Tracks Vd2 Model state C1. Maps to SBML symbol `Vd2_c1`.
+  - name: vd_b2
+    maps_to: Vd_b2
+    label: Vd B2
+    description: Tracks Vd B2. Maps to SBML symbol `Vd_b2`.
+  - name: vd_b5
+    maps_to: Vd_b5
+    label: Vd B5
+    description: Tracks Vd B5. Maps to SBML symbol `Vd_b5`.
+  - name: vi_20
+    maps_to: Vi_20
+    label: Vi 20
+    description: Tracks Vi 20. Maps to SBML symbol `Vi_20`.
+  - name: vi_t1
+    maps_to: Vi_t1
+    label: Vi T1
+    description: Tracks Vi T1. Maps to SBML symbol `Vi_t1`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: hct1_t
+    maps_to: Hct1_T
+    label: Hct1 T
+    accepted_units:
+    - native SBML value
+    description: Controls Hct1 T. Maps to SBML symbol `Hct1_T`.
+  - name: bck2_0
+    maps_to: Bck2_0
+    label: Bck2 0
+    accepted_units:
+    - native SBML value
+    description: Controls Bck2 0. Maps to SBML symbol `Bck2_0`.
+  - name: cln3_max
+    maps_to: Cln3_max
+    label: Cln3 Max
+    accepted_units:
+    - native SBML value
+    description: Controls Cln3 Max. Maps to SBML symbol `Cln3_max`.

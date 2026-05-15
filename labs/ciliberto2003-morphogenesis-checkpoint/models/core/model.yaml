@@ -1,0 +1,118 @@
+schema_version: '2.0'
+title: Ciliberto2003_Morphogenesis_Checkpoint
+description: 'This a model from the article: Mathematical model of the morphogenesis checkpoint in budding yeast.
+  It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Andrea Ciliberto
+- "B\xE9la Nov\xE1k"
+- John J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000000297
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000297
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000297
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000297?filename=BIOMD0000000297_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model:Ciliberto2003MorphogenesisCheckpointBiomd0000000297Model
+  init_kwargs:
+    model_path: data/BIOMD0000000297.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: trimer_complex
+    maps_to: Trim
+    label: Trimer complex
+    description: Tracks Trimer complex. Maps to SBML symbol `Trim`.
+  - name: clb2
+    maps_to: Clb
+    label: Clb2
+    description: Tracks Clb2. Maps to SBML symbol `Clb`.
+  - name: sic1
+    maps_to: Sic
+    label: Sic1
+    description: Tracks Sic1. Maps to SBML symbol `Sic`.
+  - name: phosphorylated_trimer_complex
+    maps_to: PTrim
+    label: Phosphorylated trimer complex
+    description: Tracks Phosphorylated trimer complex. Maps to SBML symbol `PTrim`.
+  - name: phosphorylated_clb2
+    maps_to: PClb
+    label: Phosphorylated Clb2
+    description: Tracks Phosphorylated Clb2. Maps to SBML symbol `PClb`.
+  - name: sbf_transcription_factor
+    maps_to: SBF
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor. Maps to SBML symbol `SBF`.
+  - name: intermediary_enzyme
+    maps_to: IE
+    label: Intermediary Enzyme
+    description: Tracks Intermediary Enzyme. Maps to SBML symbol `IE`.
+  - name: cdc20_activated
+    maps_to: Cdc20a
+    label: Cdc20 Activated
+    description: Tracks Cdc20 Activated. Maps to SBML symbol `Cdc20a`.
+  - name: cdc20_apc_c_activator
+    maps_to: Cdc20
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator. Maps to SBML symbol `Cdc20`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: swe1_inhibitory_kinase
+    maps_to: Swe1
+    label: Swe1 inhibitory kinase
+    description: Tracks Swe1 inhibitory kinase. Maps to SBML symbol `Swe1`.
+  - name: membrane_associated_swe1
+    maps_to: Swe1M
+    label: Membrane-associated Swe1
+    description: Tracks Membrane-associated Swe1. Maps to SBML symbol `Swe1M`.
+  - name: phosphorylated_swe1
+    maps_to: PSwe1
+    label: Phosphorylated Swe1
+    description: Tracks Phosphorylated Swe1. Maps to SBML symbol `PSwe1`.
+  - name: membrane_associated_phosphorylated_swe1
+    maps_to: PSwe1M
+    label: Membrane-associated phosphorylated Swe1
+    description: Tracks Membrane-associated phosphorylated Swe1. Maps to SBML symbol `PSwe1M`.
+  - name: active_mih1_phosphatase
+    maps_to: Mih1a
+    label: Active Mih1 phosphatase
+    description: Tracks Active Mih1 phosphatase. Maps to SBML symbol `Mih1a`.
+  - name: mcm_replication_licensing_complex
+    maps_to: Mcm
+    label: MCM replication licensing complex
+    description: Tracks MCM replication licensing complex. Maps to SBML symbol `Mcm`.
+  - name: model_state_be
+    maps_to: BE
+    label: Model state BE
+    description: Tracks Model state BE. Maps to SBML symbol `BE`.
+  - name: g1_cyclin_pool
+    maps_to: Cln
+    label: G1 cyclin pool
+    description: Tracks G1 cyclin pool. Maps to SBML symbol `Cln`.
+  - name: mass
+    maps_to: mass
+    label: Mass
+    description: Tracks Mass. Maps to SBML symbol `mass`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

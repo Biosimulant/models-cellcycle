@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Novak1998 - Mathematical model of fission yeast cell cycle Lab
+description: Single-model lab wrapper for Novak1998 - Mathematical model of fission yeast cell cycle. Mathematical
+  model of the fission yeast cell cycle with checkpointcontrols at the G1/S, G2/M and metaphase/anaphase transitions.
+  Model encoded by Matthieu Maire and submitted to BioModels by Krishna k.
+models:
+- alias: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.state
+  to:
+  - visualisation.cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model_state
+- from: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.summary
+  to:
+  - visualisation.cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model_summary
+- from: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: aggregated_apc_c_enzyme_state
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.aggregated_apc_c_enzyme_state
+    label: Aggregated APC/C enzyme state
+    description: Tracks Aggregated APC/C enzyme state in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.aggregated_apc_c_enzyme_state`.
+  - name: cdc13_cdc2
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_cdc2
+    label: Cdc13 Cdc2
+    description: Tracks Cdc13 Cdc2 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_cdc2`.
+  - name: mik1_inhibitory_kinase
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.mik1_inhibitory_kinase
+    label: Mik1 inhibitory kinase
+    description: Tracks Mik1 inhibitory kinase in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.mik1_inhibitory_kinase`.
+  - name: aae_total
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.aae_total
+    label: AAE Total
+    description: Tracks AAE Total in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.aae_total`.
+  - name: wee1_inhibitory_kinase
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.wee1_inhibitory_kinase
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.wee1_inhibitory_kinase`.
+  - name: rum1_cdk_inhibitor
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_cdk_inhibitor
+    label: Rum1 CDK inhibitor
+    description: Tracks Rum1 CDK inhibitor in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_cdk_inhibitor`.
+  - name: mass
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.mass
+    label: Mass
+    description: Tracks Mass in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.mass`.
+  - name: cdc13_p_cdc2
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_p_cdc2
+    label: Cdc13 P Cdc2
+    description: Tracks Cdc13 P Cdc2 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_p_cdc2`.
+  - name: rum1_cdc13_cdc2
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_cdc13_cdc2
+    label: Rum1 Cdc13 Cdc2
+    description: Tracks Rum1 Cdc13 Cdc2 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_cdc13_cdc2`.
+  - name: apc_c_c
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.apc_c_c
+    label: APC/C/C
+    description: Tracks APC/C/C in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.apc_c_c`.
+  - name: phosphorylated_cdc25
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.phosphorylated_cdc25
+    label: Phosphorylated Cdc25
+    description: Tracks Phosphorylated Cdc25 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.phosphorylated_cdc25`.
+  - name: cdc13_total
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_total
+    label: Cdc13 Total
+    description: Tracks Cdc13 Total in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.cdc13_total`.
+  - name: maturation_promoting_factor
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.maturation_promoting_factor
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.maturation_promoting_factor`.
+  - name: rum1_total
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_total
+    label: Rum1 Total
+    description: Tracks Rum1 Total in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.rum1_total`.
+  - name: model_state_k2
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_k2
+    label: Model state K2
+    description: Tracks Model state K2 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_k2`.
+  - name: k25r
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.k25r
+    label: K25r
+    description: Tracks K25r in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.k25r`.
+  - name: k2c
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.k2c
+    label: K2c
+    description: Tracks K2c in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.k2c`.
+  - name: model_state_k4
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_k4
+    label: Model state K4
+    description: Tracks Model state K4 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_k4`.
+  - name: kai
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kai
+    label: Kai
+    description: Tracks Kai in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kai`.
+  - name: kcdc25
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kcdc25
+    label: Kcdc25
+    description: Tracks Kcdc25 in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kcdc25`.
+  - name: kmr
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kmr
+    label: Kmr
+    description: Tracks Kmr in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kmr`.
+  - name: model_state_ks
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_ks
+    label: Model state Ks
+    description: Tracks Model state Ks in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.model_state_ks`.
+  - name: kwee
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kwee
+    label: Kwee
+    description: Tracks Kwee in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kwee`.
+  - name: kwr
+    maps_to: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kwr
+    label: Kwr
+    description: Tracks Kwr in the lab model via `cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model.kwr`.

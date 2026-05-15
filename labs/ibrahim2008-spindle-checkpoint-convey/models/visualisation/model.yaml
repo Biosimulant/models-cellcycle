@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Convey variant Visualisation
+description: Dedicated question-and-answer visualisation model for Ibrahim2008 - Mitotic Spindle Assembly Checkpoint
+  - Convey variant.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Convey variant Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000187_model
+      title: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Convey variant
+      observables:
+      - id: Mad1_CMad2
+        port: mad1_c_mad2
+        label: Mad1:C Mad2
+        group: checkpoint
+      - id: OMad2
+        port: o_mad2
+        label: O Mad2
+        group: checkpoint
+      - id: Mad1_CMad2_OMad2
+        port: mad1_c_mad2_o_mad2
+        label: Mad1:C Mad2:O Mad2*
+        group: checkpoint
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: checkpoint
+      - id: Cdc20_CMad2
+        port: cdc20_c_mad2
+        label: Cdc20:C Mad2
+        group: checkpoint
+      - id: Bub3_BubR1
+        port: bub3_bub_model_state_r1
+        label: Bub3:Bub Model state R1
+        group: checkpoint
+      - id: MCC
+        port: mitotic_checkpoint_complex
+        label: Mitotic checkpoint complex
+        group: checkpoint
+      - id: Bub3_BubR1_Cdc20
+        port: bub3_bub_r1_cdc20
+        label: Bub3:Bub R1:Cdc20
+        group: checkpoint
+      - id: APC
+        port: apc_c_c
+        label: APC/C/C
+        group: checkpoint
+      - id: MCC_APC
+        port: mcc_apc_c_c
+        label: MCC:APC/C/C
+        group: checkpoint
+      - id: APC_Cdc20
+        port: apc_c_c_cdc20
+        label: APC/C/C:Cdc20
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

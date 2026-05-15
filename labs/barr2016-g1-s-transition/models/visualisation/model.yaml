@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Barr2016 - All-or-nothing G1/S transition Visualisation
+description: Dedicated question-and-answer visualisation model for Barr2016 - All-or-nothing G1/S transition.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Barr2016 - All-or-nothing G1/S transition Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_barr2016_all_or_nothing_g1_s_transition_biomd0000000646_model
+      title: Barr2016 - All-or-nothing G1/S transition
+      observables:
+      - id: CycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: CycA
+        port: cyclin_a
+        label: Cyclin A
+        group: g1s
+      - id: CycEp27
+        port: cyclin_ep27
+        label: Cyclin Ep27
+        group: g1s
+      - id: CycAp27
+        port: cyclin_ap27
+        label: Cyclin Ap27
+        group: g1s
+      - id: Skp2
+        port: skp2_ubiquitin_ligase_adaptor
+        label: Skp2 ubiquitin-ligase adaptor
+        group: g1s
+      - id: Cdh1p
+        port: phosphorylated_cdh1
+        label: Phosphorylated Cdh1
+        group: g1s
+      - id: Emi1
+        port: emi1_apc_c_inhibitor
+        label: Emi1 APC/C inhibitor
+        group: g1s
+      - id: p27
+        port: p27_cdk_inhibitor
+        label: p27 CDK inhibitor
+        group: g1s
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: g1s
+      - id: Emi1Cdh1
+        port: emi1_cdh1_complex
+        label: Emi1-Cdh1 complex
+        group: g1s
+      - id: Emi1Cdh1p
+        port: emi1_phosphorylated_cdh1_complex
+        label: Emi1-phosphorylated Cdh1 complex
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

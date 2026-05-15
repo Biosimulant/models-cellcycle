@@ -1,0 +1,107 @@
+schema_version: '2.0'
+title: Ciliberto2003_Morphogenesis_Checkpoint Visualisation
+description: Dedicated question-and-answer visualisation model for Ciliberto2003_Morphogenesis_Checkpoint.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ciliberto2003_Morphogenesis_Checkpoint Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model
+      title: Ciliberto2003_Morphogenesis_Checkpoint
+      observables:
+      - id: Trim
+        port: trimer_complex
+        label: Trimer complex
+        group: checkpoint
+      - id: Clb
+        port: clb2
+        label: Clb2
+        group: checkpoint
+      - id: Sic
+        port: sic1
+        label: Sic1
+        group: checkpoint
+      - id: PTrim
+        port: phosphorylated_trimer_complex
+        label: Phosphorylated trimer complex
+        group: checkpoint
+      - id: PClb
+        port: phosphorylated_clb2
+        label: Phosphorylated Clb2
+        group: checkpoint
+      - id: SBF
+        port: sbf_transcription_factor
+        label: SBF transcription factor
+        group: checkpoint
+      - id: IE
+        port: intermediary_enzyme
+        label: Intermediary Enzyme
+        group: checkpoint
+      - id: Cdc20a
+        port: cdc20_activated
+        label: Cdc20 Activated
+        group: checkpoint
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: checkpoint
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: checkpoint
+      - id: Swe1
+        port: swe1_inhibitory_kinase
+        label: Swe1 inhibitory kinase
+        group: checkpoint
+      - id: Swe1M
+        port: membrane_associated_swe1
+        label: Membrane-associated Swe1
+        group: checkpoint
+      - id: PSwe1
+        port: phosphorylated_swe1
+        label: Phosphorylated Swe1
+        group: checkpoint
+      - id: PSwe1M
+        port: membrane_associated_phosphorylated_swe1
+        label: Membrane-associated phosphorylated Swe1
+        group: checkpoint
+      - id: Mih1a
+        port: active_mih1_phosphatase
+        label: Active Mih1 phosphatase
+        group: checkpoint
+      - id: Mcm
+        port: mcm_replication_licensing_complex
+        label: MCM replication licensing complex
+        group: checkpoint
+      - id: BE
+        port: model_state_be
+        label: Model state BE
+        group: checkpoint
+      - id: Cln
+        port: g1_cyclin_pool
+        label: G1 cyclin pool
+        group: checkpoint
+      - id: mass
+        port: mass
+        label: Mass
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

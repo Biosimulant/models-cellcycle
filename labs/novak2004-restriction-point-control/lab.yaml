@@ -1,0 +1,124 @@
+schema_version: '2.0'
+title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle Lab
+description: Single-model lab wrapper for Novak2004 - A Model for Restriction Point Control of the Mammalian Cell
+  Cycle. &lt;notes xmlns='http://www.sbml.org/sbml/level2/version4'&gt; &lt;body xmlns='http://www.w3.org/1999/xhtml'&gt;
+  &lt;pre&gt;Inhibition of protein synthesis by cycloheximide blocks subsequent division. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.state
+  to:
+  - visualisation.cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model_state
+- from: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model_summary
+- from: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: e2ft
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.e2ft
+    label: E2FT
+    description: Controls E2FT in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.e2ft`.
+  - name: pp1t
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.pp1t
+    label: PP1T
+    description: Controls PP1T in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.pp1t`.
+  - name: rb_t
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.rb_t
+    label: Rb T
+    description: Controls Rb T in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.rb_t`.
+  - name: cyclin_et
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_et
+    label: Cyclin ET
+    description: Controls Cyclin ET in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_et`.
+  - name: pp1a
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.pp1a
+    label: PP1A
+    description: Controls PP1A in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.pp1a`.
+  - name: rb_hypo
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.rb_hypo
+    label: Rb Hypo
+    description: Controls Rb Hypo in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.rb_hypo`.
+  outputs:
+  - name: early_response_gene_module
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.early_response_gene_module
+    label: Early response gene module
+    description: Tracks Early response gene module in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.early_response_gene_module`.
+  - name: delayed_response_gene_module
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.delayed_response_gene_module
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.delayed_response_gene_module`.
+  - name: cyclin_d
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_d
+    label: Cyclin D
+    description: Tracks Cyclin D in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_d`.
+  - name: cyclin_d_kip1
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_d_kip1
+    label: Cyclin D:Kip1
+    description: Tracks Cyclin D:Kip1 in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_d_kip1`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_e`.
+  - name: cyclin_e_kip1
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_e_kip1
+    label: Cyclin E:Kip1
+    description: Tracks Cyclin E:Kip1 in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_e_kip1`.
+  - name: cyclin_a
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_a
+    label: Cyclin A
+    description: Tracks Cyclin A in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_a`.
+  - name: cyclin_a_kip1
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_a_kip1
+    label: Cyclin A:Kip1
+    description: Tracks Cyclin A:Kip1 in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_a_kip1`.
+  - name: kip1_cdk_inhibitor
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.kip1_cdk_inhibitor
+    label: Kip1 CDK inhibitor
+    description: Tracks Kip1 CDK inhibitor in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.kip1_cdk_inhibitor`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.e2f_transcription_factor`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cyclin_b`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdh1_apc_c_activator`.
+  - name: cdc20t
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdc20t
+    label: Cdc20T
+    description: Tracks Cdc20T in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdc20t`.
+  - name: cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdc20_apc_c_activator
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.cdc20_apc_c_activator`.
+  - name: ppx_phosphatase
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.ppx_phosphatase
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.ppx_phosphatase`.
+  - name: phosphorylated_ie
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.phosphorylated_ie
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.phosphorylated_ie`.
+  - name: model_state_gm
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.model_state_gm
+    label: Model state GM
+    description: Tracks Model state GM in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.model_state_gm`.
+  - name: mass
+    maps_to: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.mass
+    label: Mass
+    description: Tracks Mass in the lab model via `cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model.mass`.

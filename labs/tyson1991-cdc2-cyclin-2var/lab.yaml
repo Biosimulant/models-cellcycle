@@ -1,0 +1,43 @@
+schema_version: '2.0'
+title: Tyson1991 - Cell Cycle 2 var Lab
+description: Single-model lab wrapper for Tyson1991 - Cell Cycle 2 var. Tyson1991 - Cell Cycle 2 var Mathematical
+  model of the interactions of cdc2 and cyclin. It can be used to explore cell-cycle regulation dynamics and compare
+  checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.state
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model_state
+- from: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.summary
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model_summary
+- from: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_u_u
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_u_u
+    label: Model state U (u)
+    description: Tracks Model state U (u) in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_u_u`.
+  - name: model_state_v_v
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_v_v
+    label: Model state V (v)
+    description: Tracks Model state V (v) in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_v_v`.
+  - name: alpha
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.alpha
+    label: Alpha
+    description: Tracks Alpha in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.alpha`.
+  - name: model_state_z_z
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_z_z
+    label: Model state Z (z)
+    description: Tracks Model state Z (z) in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model.model_state_z_z`.

@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Pomerening2005- Model of the Xenopus Cdc2/APC System Visualisation
+description: Dedicated question-and-answer visualisation model for Pomerening2005- Model of the Xenopus Cdc2/APC
+  System.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Pomerening2005- Model of the Xenopus Cdc2/APC System Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model
+      title: Pomerening2005- Model of the Xenopus Cdc2/APC System
+      observables:
+      - id: Cyclin
+        port: cyclin_pool
+        label: Cyclin pool
+        group: mitosis
+      - id: cdc2cyclin
+        port: cdc2cyclin
+        label: Cdc2cyclin
+        group: mitosis
+      - id: cdc2cyclinyp
+        port: cdc2cyclinyp
+        label: Cdc2cyclinyp
+        group: mitosis
+      - id: cdc2cyclinyptp
+        port: cdc2cyclinyptp
+        label: Cdc2cyclinyptp
+        group: mitosis
+      - id: cdc2cyclintp
+        port: cdc2cyclintp
+        label: Cdc2cyclintp
+        group: mitosis
+      - id: cdc2
+        port: cdc2
+        label: Cdc2
+        group: mitosis
+      - id: cdc2afcyclin
+        port: cdc2afcyclin
+        label: Cdc2afcyclin
+        group: mitosis
+      - id: cdc2afcyclintp
+        port: cdc2afcyclintp
+        label: Cdc2afcyclintp
+        group: mitosis
+      - id: cdc2af
+        port: cdc2af
+        label: Cdc2af
+        group: mitosis
+      - id: cdc25act
+        port: cdc25act
+        label: Cdc25act
+        group: mitosis
+      - id: wee1act
+        port: wee1act
+        label: Wee1act
+        group: mitosis
+      - id: plxact
+        port: plxact
+        label: Plxact
+        group: mitosis
+      - id: apcstar
+        port: apcstar
+        label: Apcstar
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

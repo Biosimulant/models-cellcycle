@@ -1,0 +1,553 @@
+schema_version: '2.0'
+title: Lang2024 - Cell cycle model explains compartment-resolved dynamics of 16 observables in RPE1 cells
+description: This model provides a molecularly detailed description of the biochemical reaction networks governing
+  the mammalian cell cycle, including the restriction point, the G1S, G2/M and metaphase/anaphase tr. It can be
+  used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Paul F Lang
+- David R Penas
+- Julio R Banga
+- Daniel Weindl
+- Bela Novak
+upstream:
+  id: biomodels_ebi:MODEL2401050001
+  source_db: biomodels_ebi
+  source_id: MODEL2401050001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2401050001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2401050001?filename=v4.0.0_optimized.xml
+  license: CC0
+biosim:
+  entrypoint: src.lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model:Lang2024CellCycleModelExplainsCompartmentRModel2401050001Model
+  init_kwargs:
+    model_path: data/MODEL2401050001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyt_cyclin_d
+    maps_to: _Cyt__CCND
+    label: Cyt Cyclin D
+    description: Tracks Cyt Cyclin D. Maps to SBML symbol `_Cyt__CCND`.
+  - name: cyt_cyclin_e_cdkn1a_b
+    maps_to: _Cyt__CCNE_CDKN1A_B_
+    label: Cyt Cyclin E CDKN1A B
+    description: Tracks Cyt Cyclin E CDKN1A B. Maps to SBML symbol `_Cyt__CCNE_CDKN1A_B_`.
+  - name: cyt_e2f_dbd_rb1_ser332u
+    maps_to: _Cyt__E2F_DBD_RB1_Ser332u_
+    label: Cyt E2F DBD Rb1 Ser332u
+    description: Tracks Cyt E2F DBD Rb1 Ser332u. Maps to SBML symbol `_Cyt__E2F_DBD_RB1_Ser332u_`.
+  - name: cyt_e2f_dbd_rb1_ser332p
+    maps_to: _Cyt__E2F_DBD_RB1_Ser332p_
+    label: Cyt E2F DBD Rb1 Ser332p
+    description: Tracks Cyt E2F DBD Rb1 Ser332p. Maps to SBML symbol `_Cyt__E2F_DBD_RB1_Ser332p_`.
+  - name: cyt_cyclin_active_cdkn1a_b
+    maps_to: _Cyt__CCNA_CDKN1A_B_
+    label: Cyt Cyclin Active CDKN1A B
+    description: Tracks Cyt Cyclin Active CDKN1A B. Maps to SBML symbol `_Cyt__CCNA_CDKN1A_B_`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    maps_to: _Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A. Maps to SBML symbol `_Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_`.
+  - name: cyt_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    maps_to: _Cyt__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_
+    label: Cyt E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Cyt E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u. Maps to SBML symbol `_Cyt__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_`.
+  - name: cyt_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    maps_to: _Cyt__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_
+    label: Cyt E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Cyt E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u. Maps to SBML symbol `_Cyt__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_`.
+  - name: cyt_rb1_e2f_ser807_ser811u
+    maps_to: _Cyt__RB1_E2F_Ser807_Ser811u_
+    label: Cyt Rb1 E2F Ser807 Ser811u
+    description: Tracks Cyt Rb1 E2F Ser807 Ser811u. Maps to SBML symbol `_Cyt__RB1_E2F_Ser807_Ser811u_`.
+  - name: cyt_rb1_e2f_ser807_ser811p
+    maps_to: _Cyt__RB1_E2F_Ser807_Ser811p_
+    label: Cyt Rb1 E2F Ser807 Ser811p
+    description: Tracks Cyt Rb1 E2F Ser807 Ser811p. Maps to SBML symbol `_Cyt__RB1_E2F_Ser807_Ser811p_`.
+  - name: cyt_ppp2r2b_ensa_arpp19
+    maps_to: _Cyt__PPP2R2B_ENSA_ARPP19_
+    label: Cyt PPP2R2B ENSA ARPP19
+    description: Tracks Cyt PPP2R2B ENSA ARPP19. Maps to SBML symbol `_Cyt__PPP2R2B_ENSA_ARPP19_`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    maps_to: _Cyt__APC_FBXO5_FZR1_CDC20_Ser355u_
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355u
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355u. Maps to SBML symbol `_Cyt__APC_FBXO5_FZR1_CDC20_Ser355u_`.
+  - name: cyt_cdc20_apc_c_c
+    maps_to: _Cyt__CDC20_APC_
+    label: Cyt Cdc20 APC/C/C
+    description: Tracks Cyt Cdc20 APC/C/C. Maps to SBML symbol `_Cyt__CDC20_APC_`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    maps_to: _Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1. Maps to SBML symbol `_Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    maps_to: _Cyt__APC_FBXO5_FZR1_CDC20_Ser355p_
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355p
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355p. Maps to SBML symbol `_Cyt__APC_FBXO5_FZR1_CDC20_Ser355p_`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: _Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu. Maps to SBML symbol
+      `_Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_`.
+  - name: cyt_fzr1_apc_c_c_fbxo5_n_termu
+    maps_to: _Cyt__FZR1_APC_FBXO5_nTermu_
+    label: Cyt FZR1 APC/C/C FBXO5 N Termu
+    description: Tracks Cyt FZR1 APC/C/C FBXO5 N Termu. Maps to SBML symbol `_Cyt__FZR1_APC_FBXO5_nTermu_`.
+  - name: cyt_fzr1_apc_c_c_fbxo5_n_termp
+    maps_to: _Cyt__FZR1_APC_FBXO5_nTermp_
+    label: Cyt FZR1 APC/C/C FBXO5 N Termp
+    description: Tracks Cyt FZR1 APC/C/C FBXO5 N Termp. Maps to SBML symbol `_Cyt__FZR1_APC_FBXO5_nTermp_`.
+  - name: cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: _Cyt__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_
+    label: Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu. Maps to SBML symbol `_Cyt__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_`.
+  - name: cyt_fbxo5_apc_c_c_fzr1_ser182u
+    maps_to: _Cyt__FBXO5_APC_FZR1_Ser182u_
+    label: Cyt FBXO5 APC/C/C FZR1 Ser182u
+    description: Tracks Cyt FBXO5 APC/C/C FZR1 Ser182u. Maps to SBML symbol `_Cyt__FBXO5_APC_FZR1_Ser182u_`.
+  - name: cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: _Cyt__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_
+    label: Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu. Maps to SBML symbol `_Cyt__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: _Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu. Maps to SBML symbol
+      `_Cyt__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_`.
+  - name: cyt_fbxo5_apc_c_c_fzr1_ser182p
+    maps_to: _Cyt__FBXO5_APC_FZR1_Ser182p_
+    label: Cyt FBXO5 APC/C/C FZR1 Ser182p
+    description: Tracks Cyt FBXO5 APC/C/C FZR1 Ser182p. Maps to SBML symbol `_Cyt__FBXO5_APC_FZR1_Ser182p_`.
+  - name: cyt_foxm1_dbd_thr600u
+    maps_to: _Cyt__FOXM1_DBD_Thr600u_
+    label: Cyt FOXM1 DBD Thr600u
+    description: Tracks Cyt FOXM1 DBD Thr600u. Maps to SBML symbol `_Cyt__FOXM1_DBD_Thr600u_`.
+  - name: cyt_foxm1_dbd_thr600p
+    maps_to: _Cyt__FOXM1_DBD_Thr600p_
+    label: Cyt FOXM1 DBD Thr600p
+    description: Tracks Cyt FOXM1 DBD Thr600p. Maps to SBML symbol `_Cyt__FOXM1_DBD_Thr600p_`.
+  - name: cyt_wee1_ser123u
+    maps_to: _Cyt__WEE1_Ser123u_
+    label: Cyt Wee1 Ser123u
+    description: Tracks Cyt Wee1 Ser123u. Maps to SBML symbol `_Cyt__WEE1_Ser123u_`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    maps_to: _Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A. Maps to SBML symbol `_Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_`.
+  - name: cyt_wee1_ser123p
+    maps_to: _Cyt__WEE1_Ser123p_
+    label: Cyt Wee1 Ser123p
+    description: Tracks Cyt Wee1 Ser123p. Maps to SBML symbol `_Cyt__WEE1_Ser123p_`.
+  - name: cyt_cdc25_p_sitesp
+    maps_to: _Cyt__CDC25_pSitesp_
+    label: Cyt Cdc25 P Sitesp
+    description: Tracks Cyt Cdc25 P Sitesp. Maps to SBML symbol `_Cyt__CDC25_pSitesp_`.
+  - name: cyt_cdc25_p_sitesu
+    maps_to: _Cyt__CDC25_pSitesu_
+    label: Cyt Cdc25 P Sitesu
+    description: Tracks Cyt Cdc25 P Sitesu. Maps to SBML symbol `_Cyt__CDC25_pSitesu_`.
+  - name: cyt_mastl_thr198u
+    maps_to: _Cyt__MASTL_Thr198u_
+    label: Cyt MASTL Thr198u
+    description: Tracks Cyt MASTL Thr198u. Maps to SBML symbol `_Cyt__MASTL_Thr198u_`.
+  - name: cyt_mastl_thr198p
+    maps_to: _Cyt__MASTL_Thr198p_
+    label: Cyt MASTL Thr198p
+    description: Tracks Cyt MASTL Thr198p. Maps to SBML symbol `_Cyt__MASTL_Thr198p_`.
+  - name: cyt_ensa_arpp19_ppp2r2b_ser62_ser67u
+    maps_to: _Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_
+    label: Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67u
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67u. Maps to SBML symbol `_Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_`.
+  - name: cyt_ensa_arpp19_ppp2r2b_ser62_ser67p
+    maps_to: _Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_
+    label: Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67p
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67p. Maps to SBML symbol `_Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_`.
+  - name: cyt_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    maps_to: _Cyt__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_
+    label: Cyt ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1. Maps to SBML symbol `_Cyt__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_`.
+  - name: cyt_skp2
+    maps_to: _Cyt__SKP2
+    label: Cyt SKP2
+    description: Tracks Cyt SKP2. Maps to SBML symbol `_Cyt__SKP2`.
+  - name: cyt_tp53_dbd_ser15p
+    maps_to: _Cyt__TP53_DBD_Ser15p_
+    label: Cyt TP53 DBD Ser15p
+    description: Tracks Cyt TP53 DBD Ser15p. Maps to SBML symbol `_Cyt__TP53_DBD_Ser15p_`.
+  - name: cyt_foxo_dbd
+    maps_to: _Cyt__FOXO_DBD_
+    label: Cyt FOXO DBD
+    description: Tracks Cyt FOXO DBD. Maps to SBML symbol `_Cyt__FOXO_DBD_`.
+  - name: num_nup_p_sitesu
+    maps_to: _Num__NUP_pSitesu_
+    label: Num NUP P Sitesu
+    description: Tracks Num NUP P Sitesu. Maps to SBML symbol `_Num__NUP_pSitesu_`.
+  - name: nuc_cyclin_d
+    maps_to: _Nuc__CCND
+    label: Nuc Cyclin D
+    description: Tracks Nuc Cyclin D. Maps to SBML symbol `_Nuc__CCND`.
+  - name: nuc_cyclin_e_cdkn1a_b
+    maps_to: _Nuc__CCNE_CDKN1A_B_
+    label: Nuc Cyclin E CDKN1A B
+    description: Tracks Nuc Cyclin E CDKN1A B. Maps to SBML symbol `_Nuc__CCNE_CDKN1A_B_`.
+  - name: nuc_e2f_dbd_rb1_ser332u
+    maps_to: _Nuc__E2F_DBD_RB1_Ser332u_
+    label: Nuc E2F DBD Rb1 Ser332u
+    description: Tracks Nuc E2F DBD Rb1 Ser332u. Maps to SBML symbol `_Nuc__E2F_DBD_RB1_Ser332u_`.
+  - name: nuc_e2f_dbd_rb1_ser332p
+    maps_to: _Nuc__E2F_DBD_RB1_Ser332p_
+    label: Nuc E2F DBD Rb1 Ser332p
+    description: Tracks Nuc E2F DBD Rb1 Ser332p. Maps to SBML symbol `_Nuc__E2F_DBD_RB1_Ser332p_`.
+  - name: nuc_cyclin_active_cdkn1a_b
+    maps_to: _Nuc__CCNA_CDKN1A_B_
+    label: Nuc Cyclin Active CDKN1A B
+    description: Tracks Nuc Cyclin Active CDKN1A B. Maps to SBML symbol `_Nuc__CCNA_CDKN1A_B_`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    maps_to: _Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A. Maps to SBML symbol `_Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_`.
+  - name: nuc_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    maps_to: _Nuc__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_
+    label: Nuc E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Nuc E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u. Maps to SBML symbol `_Nuc__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_`.
+  - name: nuc_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    maps_to: _Nuc__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_
+    label: Nuc E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Nuc E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u. Maps to SBML symbol `_Nuc__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_`.
+  - name: nuc_rb1_e2f_ser807_ser811u
+    maps_to: _Nuc__RB1_E2F_Ser807_Ser811u_
+    label: Nuc Rb1 E2F Ser807 Ser811u
+    description: Tracks Nuc Rb1 E2F Ser807 Ser811u. Maps to SBML symbol `_Nuc__RB1_E2F_Ser807_Ser811u_`.
+  - name: nuc_rb1_e2f_ser807_ser811p
+    maps_to: _Nuc__RB1_E2F_Ser807_Ser811p_
+    label: Nuc Rb1 E2F Ser807 Ser811p
+    description: Tracks Nuc Rb1 E2F Ser807 Ser811p. Maps to SBML symbol `_Nuc__RB1_E2F_Ser807_Ser811p_`.
+  - name: nuc_ppp2r2b_ensa_arpp19
+    maps_to: _Nuc__PPP2R2B_ENSA_ARPP19_
+    label: Nuc PPP2R2B ENSA ARPP19
+    description: Tracks Nuc PPP2R2B ENSA ARPP19. Maps to SBML symbol `_Nuc__PPP2R2B_ENSA_ARPP19_`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    maps_to: _Nuc__APC_FBXO5_FZR1_CDC20_Ser355u_
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355u
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355u. Maps to SBML symbol `_Nuc__APC_FBXO5_FZR1_CDC20_Ser355u_`.
+  - name: nuc_cdc20_apc_c_c
+    maps_to: _Nuc__CDC20_APC_
+    label: Nuc Cdc20 APC/C/C
+    description: Tracks Nuc Cdc20 APC/C/C. Maps to SBML symbol `_Nuc__CDC20_APC_`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    maps_to: _Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1. Maps to SBML symbol `_Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    maps_to: _Nuc__APC_FBXO5_FZR1_CDC20_Ser355p_
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355p
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355p. Maps to SBML symbol `_Nuc__APC_FBXO5_FZR1_CDC20_Ser355p_`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: _Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu. Maps to SBML symbol
+      `_Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_`.
+  - name: nuc_fzr1_apc_c_c_fbxo5_n_termu
+    maps_to: _Nuc__FZR1_APC_FBXO5_nTermu_
+    label: Nuc FZR1 APC/C/C FBXO5 N Termu
+    description: Tracks Nuc FZR1 APC/C/C FBXO5 N Termu. Maps to SBML symbol `_Nuc__FZR1_APC_FBXO5_nTermu_`.
+  - name: nuc_fzr1_apc_c_c_fbxo5_n_termp
+    maps_to: _Nuc__FZR1_APC_FBXO5_nTermp_
+    label: Nuc FZR1 APC/C/C FBXO5 N Termp
+    description: Tracks Nuc FZR1 APC/C/C FBXO5 N Termp. Maps to SBML symbol `_Nuc__FZR1_APC_FBXO5_nTermp_`.
+  - name: nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: _Nuc__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_
+    label: Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu. Maps to SBML symbol `_Nuc__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_`.
+  - name: nuc_fbxo5_apc_c_c_fzr1_ser182u
+    maps_to: _Nuc__FBXO5_APC_FZR1_Ser182u_
+    label: Nuc FBXO5 APC/C/C FZR1 Ser182u
+    description: Tracks Nuc FBXO5 APC/C/C FZR1 Ser182u. Maps to SBML symbol `_Nuc__FBXO5_APC_FZR1_Ser182u_`.
+  - name: nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: _Nuc__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_
+    label: Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu. Maps to SBML symbol `_Nuc__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: _Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu. Maps to SBML symbol
+      `_Nuc__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_`.
+  - name: nuc_fbxo5_apc_c_c_fzr1_ser182p
+    maps_to: _Nuc__FBXO5_APC_FZR1_Ser182p_
+    label: Nuc FBXO5 APC/C/C FZR1 Ser182p
+    description: Tracks Nuc FBXO5 APC/C/C FZR1 Ser182p. Maps to SBML symbol `_Nuc__FBXO5_APC_FZR1_Ser182p_`.
+  - name: nuc_foxm1_dbd_thr600u
+    maps_to: _Nuc__FOXM1_DBD_Thr600u_
+    label: Nuc FOXM1 DBD Thr600u
+    description: Tracks Nuc FOXM1 DBD Thr600u. Maps to SBML symbol `_Nuc__FOXM1_DBD_Thr600u_`.
+  - name: nuc_foxm1_dbd_thr600p
+    maps_to: _Nuc__FOXM1_DBD_Thr600p_
+    label: Nuc FOXM1 DBD Thr600p
+    description: Tracks Nuc FOXM1 DBD Thr600p. Maps to SBML symbol `_Nuc__FOXM1_DBD_Thr600p_`.
+  - name: nuc_cyclin_b_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    maps_to: _Nuc__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_
+    label: Nuc Cyclin B Promoter FOXM1 1 FOXM1 DBD 1 Thr600p
+    description: Tracks Nuc Cyclin B Promoter FOXM1 1 FOXM1 DBD 1 Thr600p. Maps to SBML symbol `_Nuc__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_`.
+  - name: nuc_cyclin_b_promoter_foxm1
+    maps_to: _Nuc__CCNB_promoter_FOXM1_
+    label: Nuc Cyclin B Promoter FOXM1
+    description: Tracks Nuc Cyclin B Promoter FOXM1. Maps to SBML symbol `_Nuc__CCNB_promoter_FOXM1_`.
+  - name: nuc_cdc20_promoter_foxm1
+    maps_to: _Nuc__CDC20_promoter_FOXM1_
+    label: Nuc Cdc20 Promoter FOXM1
+    description: Tracks Nuc Cdc20 Promoter FOXM1. Maps to SBML symbol `_Nuc__CDC20_promoter_FOXM1_`.
+  - name: nuc_cdc20_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    maps_to: _Nuc__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_
+    label: Nuc Cdc20 Promoter FOXM1 1 FOXM1 DBD 1 Thr600p
+    description: Tracks Nuc Cdc20 Promoter FOXM1 1 FOXM1 DBD 1 Thr600p. Maps to SBML symbol `_Nuc__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_`.
+  - name: nuc_wee1_ser123u
+    maps_to: _Nuc__WEE1_Ser123u_
+    label: Nuc Wee1 Ser123u
+    description: Tracks Nuc Wee1 Ser123u. Maps to SBML symbol `_Nuc__WEE1_Ser123u_`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    maps_to: _Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A. Maps to SBML symbol `_Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_`.
+  - name: nuc_wee1_ser123p
+    maps_to: _Nuc__WEE1_Ser123p_
+    label: Nuc Wee1 Ser123p
+    description: Tracks Nuc Wee1 Ser123p. Maps to SBML symbol `_Nuc__WEE1_Ser123p_`.
+  - name: nuc_cdc25_p_sitesp
+    maps_to: _Nuc__CDC25_pSitesp_
+    label: Nuc Cdc25 P Sitesp
+    description: Tracks Nuc Cdc25 P Sitesp. Maps to SBML symbol `_Nuc__CDC25_pSitesp_`.
+  - name: nuc_cdc25_p_sitesu
+    maps_to: _Nuc__CDC25_pSitesu_
+    label: Nuc Cdc25 P Sitesu
+    description: Tracks Nuc Cdc25 P Sitesu. Maps to SBML symbol `_Nuc__CDC25_pSitesu_`.
+  - name: nuc_mastl_thr198u
+    maps_to: _Nuc__MASTL_Thr198u_
+    label: Nuc MASTL Thr198u
+    description: Tracks Nuc MASTL Thr198u. Maps to SBML symbol `_Nuc__MASTL_Thr198u_`.
+  - name: nuc_mastl_thr198p
+    maps_to: _Nuc__MASTL_Thr198p_
+    label: Nuc MASTL Thr198p
+    description: Tracks Nuc MASTL Thr198p. Maps to SBML symbol `_Nuc__MASTL_Thr198p_`.
+  - name: nuc_ensa_arpp19_ppp2r2b_ser62_ser67u
+    maps_to: _Nuc__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_
+    label: Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67u
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67u. Maps to SBML symbol `_Nuc__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_`.
+  - name: nuc_ensa_arpp19_ppp2r2b_ser62_ser67p
+    maps_to: _Nuc__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_
+    label: Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67p
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67p. Maps to SBML symbol `_Nuc__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_`.
+  - name: nuc_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    maps_to: _Nuc__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_
+    label: Nuc ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1. Maps to SBML symbol `_Nuc__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_`.
+  - name: nuc_cyclin_e_promoter_e2f
+    maps_to: _Nuc__CCNE_promoter_E2F_
+    label: Nuc Cyclin E Promoter E2F
+    description: Tracks Nuc Cyclin E Promoter E2F. Maps to SBML symbol `_Nuc__CCNE_promoter_E2F_`.
+  - name: nuc_cyclin_active_promoter_e2f
+    maps_to: _Nuc__CCNA_promoter_E2F_
+    label: Nuc Cyclin Active Promoter E2F
+    description: Tracks Nuc Cyclin Active Promoter E2F. Maps to SBML symbol `_Nuc__CCNA_promoter_E2F_`.
+  - name: nuc_e2f_promoter_e2f
+    maps_to: _Nuc__E2F_promoter_E2F_
+    label: Nuc E2F Promoter E2F
+    description: Tracks Nuc E2F Promoter E2F. Maps to SBML symbol `_Nuc__E2F_promoter_E2F_`.
+  - name: nuc_fbxo5_promoter_e2f
+    maps_to: _Nuc__FBXO5_promoter_E2F_
+    label: Nuc FBXO5 Promoter E2F
+    description: Tracks Nuc FBXO5 Promoter E2F. Maps to SBML symbol `_Nuc__FBXO5_promoter_E2F_`.
+  - name: nuc_foxm1_promoter_e2f
+    maps_to: _Nuc__FOXM1_promoter_E2F_
+    label: Nuc FOXM1 Promoter E2F
+    description: Tracks Nuc FOXM1 Promoter E2F. Maps to SBML symbol `_Nuc__FOXM1_promoter_E2F_`.
+  - name: nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    maps_to: _Nuc__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_
+    label: Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332u
+    description: Tracks Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332u. Maps to SBML symbol `_Nuc__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_`.
+  - name: nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    maps_to: _Nuc__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_
+    label: Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332u
+    description: Tracks Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332u. Maps to SBML symbol `_Nuc__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_e2f_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332u E2F Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u E2F Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_fbxo5_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332u FBXO5 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u FBXO5 Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_foxm1_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332u FOXM1 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u FOXM1 Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_`.
+  - name: nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    maps_to: _Nuc__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_
+    label: Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332p
+    description: Tracks Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332p. Maps to SBML symbol `_Nuc__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_`.
+  - name: nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    maps_to: _Nuc__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_
+    label: Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332p
+    description: Tracks Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332p. Maps to SBML symbol `_Nuc__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_e2f_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332p__E2F_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332p E2F Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p E2F Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332p__E2F_promoter_E2F_1_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_fbxo5_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332p__FBXO5_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332p FBXO5 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p FBXO5 Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332p__FBXO5_promoter_E2F_1_`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_foxm1_promoter_e2f_1
+    maps_to: _Nuc__E2F_DBD_1_RB1_Ser332p__FOXM1_promoter_E2F_1_
+    label: Nuc E2F DBD 1 Rb1 Ser332p FOXM1 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p FOXM1 Promoter E2F 1. Maps to SBML symbol `_Nuc__E2F_DBD_1_RB1_Ser332p__FOXM1_promoter_E2F_1_`.
+  - name: nuc_skp2
+    maps_to: _Nuc__SKP2
+    label: Nuc SKP2
+    description: Tracks Nuc SKP2. Maps to SBML symbol `_Nuc__SKP2`.
+  - name: nuc_tp53_dbd_ser15p
+    maps_to: _Nuc__TP53_DBD_Ser15p_
+    label: Nuc TP53 DBD Ser15p
+    description: Tracks Nuc TP53 DBD Ser15p. Maps to SBML symbol `_Nuc__TP53_DBD_Ser15p_`.
+  - name: nuc_cdkn1a_promoter_tp53
+    maps_to: _Nuc__CDKN1A_promoter_TP53_
+    label: Nuc CDKN1A Promoter TP53
+    description: Tracks Nuc CDKN1A Promoter TP53. Maps to SBML symbol `_Nuc__CDKN1A_promoter_TP53_`.
+  - name: nuc_foxo_dbd
+    maps_to: _Nuc__FOXO_DBD_
+    label: Nuc FOXO DBD
+    description: Tracks Nuc FOXO DBD. Maps to SBML symbol `_Nuc__FOXO_DBD_`.
+  - name: nuc_cdkn1b_promoter_foxo
+    maps_to: _Nuc__CDKN1B_promoter_FOXO_
+    label: Nuc CDKN1B Promoter FOXO
+    description: Tracks Nuc CDKN1B Promoter FOXO. Maps to SBML symbol `_Nuc__CDKN1B_promoter_FOXO_`.
+  - name: nuc_cdkn1a_promoter_tp53_1_tp53_dbd_1_ser15p
+    maps_to: _Nuc__CDKN1A_promoter_TP53_1__TP53_DBD_1_Ser15p_
+    label: Nuc CDKN1A Promoter TP53 1 TP53 DBD 1 Ser15p
+    description: Tracks Nuc CDKN1A Promoter TP53 1 TP53 DBD 1 Ser15p. Maps to SBML symbol `_Nuc__CDKN1A_promoter_TP53_1__TP53_DBD_1_Ser15p_`.
+  - name: cyt_cdkn1a_cyclin_e_active_b_ser130u
+    maps_to: _Cyt__CDKN1A_CCNE_A_B_Ser130u_
+    label: Cyt CDKN1A Cyclin E Active B Ser130u
+    description: Tracks Cyt CDKN1A Cyclin E Active B Ser130u. Maps to SBML symbol `_Cyt__CDKN1A_CCNE_A_B_Ser130u_`.
+  - name: nuc_cdkn1b_promoter_foxo_1_foxo_dbd_1
+    maps_to: _Nuc__CDKN1B_promoter_FOXO_1__FOXO_DBD_1_
+    label: Nuc CDKN1B Promoter FOXO 1 FOXO DBD 1
+    description: Tracks Nuc CDKN1B Promoter FOXO 1 FOXO DBD 1. Maps to SBML symbol `_Nuc__CDKN1B_promoter_FOXO_1__FOXO_DBD_1_`.
+  - name: cyt_cdkn1b_cyclin_e_active_thr187u
+    maps_to: _Cyt__CDKN1B_CCNE_A_Thr187u_
+    label: Cyt CDKN1B Cyclin E Active Thr187u
+    description: Tracks Cyt CDKN1B Cyclin E Active Thr187u. Maps to SBML symbol `_Cyt__CDKN1B_CCNE_A_Thr187u_`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Cyt__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML symbol `_Cyt__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Cyt__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML symbol `_Cyt__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML
+      symbol `_Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML
+      symbol `_Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: cyt_cdkn1a_cyclin_e_active_b_ser130p
+    maps_to: _Cyt__CDKN1A_CCNE_A_B_Ser130p_
+    label: Cyt CDKN1A Cyclin E Active B Ser130p
+    description: Tracks Cyt CDKN1A Cyclin E Active B Ser130p. Maps to SBML symbol `_Cyt__CDKN1A_CCNE_A_B_Ser130p_`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: _Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u. Maps to SBML symbol `_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: _Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u. Maps to SBML symbol `_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_`.
+  - name: cyt_cdkn1b_cyclin_e_active_thr187p
+    maps_to: _Cyt__CDKN1B_CCNE_A_Thr187p_
+    label: Cyt CDKN1B Cyclin E Active Thr187p
+    description: Tracks Cyt CDKN1B Cyclin E Active Thr187p. Maps to SBML symbol `_Cyt__CDKN1B_CCNE_A_Thr187p_`.
+  - name: nuc_cdkn1a_cyclin_e_active_b_ser130u
+    maps_to: _Nuc__CDKN1A_CCNE_A_B_Ser130u_
+    label: Nuc CDKN1A Cyclin E Active B Ser130u
+    description: Tracks Nuc CDKN1A Cyclin E Active B Ser130u. Maps to SBML symbol `_Nuc__CDKN1A_CCNE_A_B_Ser130u_`.
+  - name: nuc_cdkn1b_cyclin_e_active_thr187u
+    maps_to: _Nuc__CDKN1B_CCNE_A_Thr187u_
+    label: Nuc CDKN1B Cyclin E Active Thr187u
+    description: Tracks Nuc CDKN1B Cyclin E Active Thr187u. Maps to SBML symbol `_Nuc__CDKN1B_CCNE_A_Thr187u_`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Nuc__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML symbol `_Nuc__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Nuc__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML symbol `_Nuc__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML
+      symbol `_Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: _Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u. Maps to SBML
+      symbol `_Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_`.
+  - name: nuc_cdkn1a_cyclin_e_active_b_ser130p
+    maps_to: _Nuc__CDKN1A_CCNE_A_B_Ser130p_
+    label: Nuc CDKN1A Cyclin E Active B Ser130p
+    description: Tracks Nuc CDKN1A Cyclin E Active B Ser130p. Maps to SBML symbol `_Nuc__CDKN1A_CCNE_A_B_Ser130p_`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: _Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p. Maps to SBML symbol `_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: _Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u. Maps to SBML symbol `_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: _Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p. Maps to SBML symbol `_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: _Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u. Maps to SBML symbol `_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_`.
+  - name: nuc_cdkn1b_cyclin_e_active_thr187p
+    maps_to: _Nuc__CDKN1B_CCNE_A_Thr187p_
+    label: Nuc CDKN1B Cyclin E Active Thr187p
+    description: Tracks Nuc CDKN1B Cyclin E Active Thr187p. Maps to SBML symbol `_Nuc__CDKN1B_CCNE_A_Thr187p_`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: _Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p. Maps to SBML symbol `_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: _Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p. Maps to SBML symbol `_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

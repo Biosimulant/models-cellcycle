@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Novak1997 - Cell Cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Novak1997 - Cell Cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Novak1997 - Cell Cycle Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model
+      title: Novak1997 - Cell Cycle
+      observables:
+      - id: UbE
+        port: ubiquitin_protease1
+        label: Ubiquitin Protease1
+        group: replication
+      - id: UbE2
+        port: ubiquitin_protease2
+        label: Ubiquitin Protease2
+        group: replication
+      - id: Wee1
+        port: wee1_inhibitory_kinase
+        label: Wee1 inhibitory kinase
+        group: mitosis
+      - id: Cdc25
+        port: cdc25_activating_phosphatase
+        label: Cdc25 activating phosphatase
+        group: mitosis
+      - id: G2K
+        port: cdc13_cdc2
+        label: Cdc13 Cdc2
+        group: mitosis
+      - id: R
+        port: free_rum1
+        label: Free Rum1
+        group: replication
+      - id: G1K
+        port: cig2_cdc2
+        label: Cig2 Cdc2
+        group: mitosis
+      - id: IE
+        port: intermediary_enzyme
+        label: Intermediary Enzyme
+        group: replication
+      - id: PG2
+        port: cdc13_p_cdc2
+        label: Cdc13 P Cdc2
+        group: mitosis
+      - id: G1R
+        port: cig2_cdc2_rum1
+        label: Cig2 Cdc2 Rum1
+        group: mitosis
+      - id: G2R
+        port: cdc13_cdc2_rum1
+        label: Cdc13 Cdc2 Rum1
+        group: mitosis
+      - id: PG2R
+        port: cdc13_p_cdc2_rum1
+        label: Cdc13 P Cdc2 Rum1
+        group: mitosis
+      - id: SPF
+        port: s_phase_promoting_factor
+        label: S Phase Promoting Factor
+        group: replication
+      - id: MPF
+        port: maturation_promoting_factor
+        label: Maturation-promoting factor
+        group: replication
+      - id: Rum1Total
+        port: total_rum1
+        label: Total Rum1
+        group: replication
+      - id: Cdc13Total
+        port: total_cdc13
+        label: Total Cdc13
+        group: replication
+      - id: Cig2Total
+        port: total_cig2
+        label: Total Cig2
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Aguda1999 - G2 DNA damage checkpoint Visualisation
+description: Dedicated question-and-answer visualisation model for Aguda1999 - G2 DNA damage checkpoint.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Aguda1999 - G2 DNA damage checkpoint Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model
+      title: Aguda1999 - G2 DNA damage checkpoint
+      observables:
+      - id: Cdc25_active
+        port: cdc25_active
+        label: Cdc25 Active
+        group: checkpoint
+      - id: Cdc25Ps216_active
+        port: cdc25ps216_active
+        label: Cdc25Ps216 Active
+        group: checkpoint
+      - id: Cdc25_inactive
+        port: cdc25_inactive
+        label: Cdc25 Inactive
+        group: checkpoint
+      - id: Cdc25Ps216_inactive
+        port: cdc25ps216_inactive
+        label: Cdc25Ps216 Inactive
+        group: checkpoint
+      - id: Chk1P
+        port: phosphorylated_chk1
+        label: Phosphorylated Chk1
+        group: checkpoint
+      - id: protein_14_3_3
+        port: protein_14_3_3
+        label: Protein 14-3-3
+        group: checkpoint
+      - id: Cdc25Ps216_14_3_3_inactive
+        port: cdc25ps216_14_3_3_inactive
+        label: Cdc25Ps216 14-3-3 Inactive
+        group: checkpoint
+      - id: p53
+        port: p53_tumor_suppressor
+        label: p53 tumor suppressor
+        group: checkpoint
+      - id: p21
+        port: p21
+        label: P21
+        group: checkpoint
+      - id: MPF
+        port: maturation_promoting_factor
+        label: Maturation-promoting factor
+        group: checkpoint
+      - id: p21_MPF
+        port: p21_mpf
+        label: P21 MPF
+        group: checkpoint
+      - id: preMPF
+        port: pre_mpf
+        label: Pre MPF
+        group: checkpoint
+      - id: Wee1
+        port: wee1_inhibitory_kinase
+        label: Wee1 inhibitory kinase
+        group: checkpoint
+      - id: Chk1
+        port: chk1_checkpoint_kinase
+        label: Chk1 checkpoint kinase
+        group: checkpoint
+      - id: Rad3_ATM
+        port: rad3_atm
+        label: Rad3 ATM
+        group: checkpoint
+      - id: Wee1_phosphorylated
+        port: wee1_phosphorylated
+        label: Wee1 Phosphorylated
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

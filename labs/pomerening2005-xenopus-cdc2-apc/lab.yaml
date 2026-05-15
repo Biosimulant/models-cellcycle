@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Pomerening2005- Model of the Xenopus Cdc2/APC System Lab
+description: 'Single-model lab wrapper for Pomerening2005- Model of the Xenopus Cdc2/APC System. The cell-cycle
+  oscillator includes an essential negative-feedback loop: Cdc2 activates the anaphase-promoting complex (APC),
+  which leads to cyclin destruction and Cdc2 inactivation. It can be used to explore cell-cycle regulation dynamics
+  and compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.state
+  to:
+  - visualisation.cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model_state
+- from: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model_summary
+- from: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cyclin_pool
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cyclin_pool
+    label: Cyclin pool
+    description: Tracks Cyclin pool in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cyclin_pool`.
+  - name: cdc2cyclin
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclin
+    label: Cdc2cyclin
+    description: Tracks Cdc2cyclin in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclin`.
+  - name: cdc2cyclinyp
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclinyp
+    label: Cdc2cyclinyp
+    description: Tracks Cdc2cyclinyp in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclinyp`.
+  - name: cdc2cyclinyptp
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclinyptp
+    label: Cdc2cyclinyptp
+    description: Tracks Cdc2cyclinyptp in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclinyptp`.
+  - name: cdc2cyclintp
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclintp
+    label: Cdc2cyclintp
+    description: Tracks Cdc2cyclintp in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2cyclintp`.
+  - name: cdc2
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2
+    label: Cdc2
+    description: Tracks Cdc2 in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2`.
+  - name: cdc2afcyclin
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2afcyclin
+    label: Cdc2afcyclin
+    description: Tracks Cdc2afcyclin in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2afcyclin`.
+  - name: cdc2afcyclintp
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2afcyclintp
+    label: Cdc2afcyclintp
+    description: Tracks Cdc2afcyclintp in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2afcyclintp`.
+  - name: cdc2af
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2af
+    label: Cdc2af
+    description: Tracks Cdc2af in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc2af`.
+  - name: cdc25act
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc25act
+    label: Cdc25act
+    description: Tracks Cdc25act in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.cdc25act`.
+  - name: wee1act
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.wee1act
+    label: Wee1act
+    description: Tracks Wee1act in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.wee1act`.
+  - name: plxact
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.plxact
+    label: Plxact
+    description: Tracks Plxact in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.plxact`.
+  - name: apcstar
+    maps_to: cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.apcstar
+    label: Apcstar
+    description: Tracks Apcstar in the lab model via `cellcycle_sbml_pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model.apcstar`.

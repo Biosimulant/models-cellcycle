@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Conradie2010_RPControl_CellCycle Visualisation
+description: Dedicated question-and-answer visualisation model for Conradie2010_RPControl_CellCycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Conradie2010_RPControl_CellCycle Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model
+      title: Conradie2010_RPControl_CellCycle
+      observables:
+      - id: CDc20
+        port: cdc20
+        label: Cdc20
+        group: checkpoint
+      - id: CDh1
+        port: cdh1
+        label: Cdh1
+        group: checkpoint
+      - id: CYCA
+        port: cyclin_a_cdk2
+        label: Cyclin A:CDK2
+        group: checkpoint
+      - id: CYCB
+        port: cyclin_b_cdk2
+        label: Cyclin B:CDK2
+        group: checkpoint
+      - id: CYCD
+        port: cyclin_d_cdk2
+        label: Cyclin D:CDK2
+        group: checkpoint
+      - id: CYCE
+        port: cyclin_e_cdk2
+        label: Cyclin E:CDK2
+        group: checkpoint
+      - id: DRG
+        port: delayed_response_gene_module
+        label: Delayed response gene module
+        group: checkpoint
+      - id: var2
+        port: e2f
+        label: E2F
+        group: checkpoint
+      - id: var5
+        port: e2f_rb
+        label: E2F:Rb
+        group: checkpoint
+      - id: ERG
+        port: early_response_gene_module
+        label: Early response gene module
+        group: checkpoint
+      - id: GM
+        port: general_machinery_for_protein_synthesis
+        label: General Machinery For Protein Synthesis
+        group: checkpoint
+      - id: var1
+        port: hypophosphorylated_rb
+        label: Hypophosphorylated Rb
+        group: checkpoint
+      - id: CDc20T
+        port: inactive_cdc20
+        label: Inactive Cdc20
+        group: checkpoint
+      - id: MASS
+        port: cell_mass
+        label: Cell mass
+        group: checkpoint
+      - id: P27
+        port: p27_cdk_inhibitor
+        label: p27 CDK inhibitor
+        group: checkpoint
+      - id: CA
+        port: p27_cyclin_a_cdk2
+        label: P27:cyclin A:CDK2
+        group: checkpoint
+      - id: CD
+        port: p27_cyclin_d_cdk2
+        label: P27:cyclin D:CDK2
+        group: checkpoint
+      - id: CE
+        port: p27_cyclin_e_cdk2
+        label: P27:cyclin E:CDK2
+        group: checkpoint
+      - id: var3
+        port: phosphorylated_e2f
+        label: Phosphorylated E2F
+        group: checkpoint
+      - id: var6
+        port: phosphorylated_e2f_rb
+        label: Phosphorylated E2F:Rb
+        group: checkpoint
+      - id: IEP
+        port: phosphorylated_ie
+        label: Phosphorylated IE
+        group: checkpoint
+      - id: PPX
+        port: ppx_phosphatase
+        label: PPX phosphatase
+        group: checkpoint
+      - id: var4
+        port: retinoblastoma_protein_rb
+        label: Retinoblastoma Protein (Rb)
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,119 @@
+schema_version: '2.0'
+title: Novak1997 - Cell Cycle Lab
+description: 'Single-model lab wrapper for Novak1997 - Cell Cycle. Novak1997 - Cell Cycle Modeling the control of
+  DNA replication in fission yeast. This model is described in the article: Modeling the control of DNA replication
+  in fission yeast.'
+models:
+- alias: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.state
+  to:
+  - visualisation.cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model_state
+- from: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.summary
+  to:
+  - visualisation.cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model_summary
+- from: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: bound_intermediary_enzyme
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_intermediary_enzyme
+    label: Bound Intermediary Enzyme
+    description: Controls Bound Intermediary Enzyme in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_intermediary_enzyme`.
+  - name: bound_ubiquitin_protease1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_ubiquitin_protease1
+    label: Bound Ubiquitin Protease1
+    description: Controls Bound Ubiquitin Protease1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_ubiquitin_protease1`.
+  - name: bound_ubiquitin_protease2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_ubiquitin_protease2
+    label: Bound Ubiquitin Protease2
+    description: Controls Bound Ubiquitin Protease2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_ubiquitin_protease2`.
+  - name: bound_wee1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_wee1
+    label: Bound Wee1
+    description: Controls Bound Wee1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_wee1`.
+  - name: bound_cdc25
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_cdc25
+    label: Bound Cdc25
+    description: Controls Bound Cdc25 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.bound_cdc25`.
+  - name: cell_mass
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cell_mass
+    label: Cell mass
+    description: Controls Cell mass in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cell_mass`.
+  outputs:
+  - name: ubiquitin_protease1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.ubiquitin_protease1
+    label: Ubiquitin Protease1
+    description: Tracks Ubiquitin Protease1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.ubiquitin_protease1`.
+  - name: ubiquitin_protease2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.ubiquitin_protease2
+    label: Ubiquitin Protease2
+    description: Tracks Ubiquitin Protease2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.ubiquitin_protease2`.
+  - name: wee1_inhibitory_kinase
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.wee1_inhibitory_kinase
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.wee1_inhibitory_kinase`.
+  - name: cdc25_activating_phosphatase
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc25_activating_phosphatase
+    label: Cdc25 activating phosphatase
+    description: Tracks Cdc25 activating phosphatase in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc25_activating_phosphatase`.
+  - name: cdc13_cdc2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_cdc2
+    label: Cdc13 Cdc2
+    description: Tracks Cdc13 Cdc2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_cdc2`.
+  - name: free_rum1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.free_rum1
+    label: Free Rum1
+    description: Tracks Free Rum1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.free_rum1`.
+  - name: cig2_cdc2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cig2_cdc2
+    label: Cig2 Cdc2
+    description: Tracks Cig2 Cdc2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cig2_cdc2`.
+  - name: intermediary_enzyme
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.intermediary_enzyme
+    label: Intermediary Enzyme
+    description: Tracks Intermediary Enzyme in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.intermediary_enzyme`.
+  - name: cdc13_p_cdc2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_p_cdc2
+    label: Cdc13 P Cdc2
+    description: Tracks Cdc13 P Cdc2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_p_cdc2`.
+  - name: cig2_cdc2_rum1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cig2_cdc2_rum1
+    label: Cig2 Cdc2 Rum1
+    description: Tracks Cig2 Cdc2 Rum1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cig2_cdc2_rum1`.
+  - name: cdc13_cdc2_rum1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_cdc2_rum1
+    label: Cdc13 Cdc2 Rum1
+    description: Tracks Cdc13 Cdc2 Rum1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_cdc2_rum1`.
+  - name: cdc13_p_cdc2_rum1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_p_cdc2_rum1
+    label: Cdc13 P Cdc2 Rum1
+    description: Tracks Cdc13 P Cdc2 Rum1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.cdc13_p_cdc2_rum1`.
+  - name: s_phase_promoting_factor
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.s_phase_promoting_factor
+    label: S Phase Promoting Factor
+    description: Tracks S Phase Promoting Factor in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.s_phase_promoting_factor`.
+  - name: maturation_promoting_factor
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.maturation_promoting_factor
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.maturation_promoting_factor`.
+  - name: total_rum1
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_rum1
+    label: Total Rum1
+    description: Tracks Total Rum1 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_rum1`.
+  - name: total_cdc13
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_cdc13
+    label: Total Cdc13
+    description: Tracks Total Cdc13 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_cdc13`.
+  - name: total_cig2
+    maps_to: cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_cig2
+    label: Total Cig2
+    description: Tracks Total Cig2 in the lab model via `cellcycle_sbml_novak1997_cell_cycle_biomd0000000007_model.total_cig2`.

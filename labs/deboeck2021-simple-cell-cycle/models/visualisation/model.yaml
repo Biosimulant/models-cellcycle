@@ -1,0 +1,36 @@
+schema_version: '2.0'
+title: DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell cycle model Visualisation
+description: Dedicated question-and-answer visualisation model for DeBoeck2021 - Modular approach to modeling the
+  cell cycle, simple cell cycle model.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell cycle model Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model
+      title: DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell cycle model
+      observables:
+      - id: CycCdk
+        port: cyclin_cdk
+        label: Cyclin CDK
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

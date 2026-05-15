@@ -1,0 +1,50 @@
+schema_version: '2.0'
+title: Norel1990 - MPF and Cyclin Oscillations
+description: A mathematical model of cell cycle progression is presented, which integrates recent biochemical information
+  on the interaction of the maturation promotion factor (MPF) and cyclin. It can be used to explore cell-cycle regulation
+  dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- R Norel
+- Z Agur
+upstream:
+  id: biomodels_ebi:BIOMD0000000728
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000728
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000728
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000728?filename=Norell1990.xml
+  license: CC0
+biosim:
+  entrypoint: src.norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model:Norel1990MpfAndCyclinOscillationsBiomd0000000728Model
+  init_kwargs:
+    model_path: data/BIOMD0000000728.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_m_m
+    maps_to: M
+    label: Model state M (M)
+    description: Tracks Model state M (M). Maps to SBML symbol `M`.
+  - name: model_state_c_c
+    maps_to: C
+    label: Model state C (C)
+    description: Tracks Model state C (C). Maps to SBML symbol `C`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

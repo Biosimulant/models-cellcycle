@@ -1,0 +1,44 @@
+schema_version: '2.0'
+title: Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle. Visualisation
+description: Dedicated question-and-answer visualisation model for Hatzimanikatis1999-Regulation of the G1-S transition
+  of the mammalian cell cycle..
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle. Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_hatzimanikatis1999_regulation_of_the_g1_s_transi_model2005070001_model
+      title: Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle.
+      observables:
+      - id: C
+        port: model_state_c_c
+        label: Model state C (C)
+        group: g1s
+      - id: K
+        port: model_state_k
+        label: Model state K
+        group: g1s
+      - id: Rp
+        port: model_state_rp
+        label: Model state Rp
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

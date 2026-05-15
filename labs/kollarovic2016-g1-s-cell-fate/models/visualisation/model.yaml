@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Kollarovic2016 - Cell fate decision at G1-S transition Visualisation
+description: Dedicated question-and-answer visualisation model for Kollarovic2016 - Cell fate decision at G1-S transition.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kollarovic2016 - Cell fate decision at G1-S transition Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model
+      title: Kollarovic2016 - Cell fate decision at G1-S transition
+      observables:
+      - id: CycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: Cdk2
+        port: cdk2
+        label: CDK2
+        group: g1s
+      - id: CycECdk2
+        port: cyclin_ecdk2
+        label: Cyclin ECdk2
+        group: g1s
+      - id: CycECdk2a
+        port: cyclin_ecdk2a
+        label: Cyclin ECdk2a
+        group: g1s
+      - id: p21
+        port: p21
+        label: P21
+        group: checkpoint
+      - id: DNADamageC
+        port: dna_damage_model_state_c
+        label: DNA damage Model state C
+        group: checkpoint
+      - id: DNADamageS
+        port: dna_damage_s
+        label: DNA damage S
+        group: checkpoint
+      - id: p53
+        port: p53_tumor_suppressor
+        label: p53 tumor suppressor
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

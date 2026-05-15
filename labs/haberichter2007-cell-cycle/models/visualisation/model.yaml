@@ -1,0 +1,259 @@
+schema_version: '2.0'
+title: Haberichter2007_cellcycle Visualisation
+description: Dedicated question-and-answer visualisation model for Haberichter2007_cellcycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Haberichter2007_cellcycle Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_haberichter2007_cellcycle_biomd0000000109_model
+      title: Haberichter2007_cellcycle
+      observables:
+      - id: APCC
+        port: apc_c_complex
+        label: APC/C complex
+        group: mitosis
+      - id: APCCYCdk1Y00YCdk1Y01YInt
+        port: apc_c_cdk_interaction_state_apccycdk1y00ycdk1y01yint
+        label: APC/C-CDK interaction state APCCYCdk1Y00YCdk1Y01YInt
+        group: mitosis
+      - id: APCCYCdk1Y10YCdk1Y11YInt
+        port: apc_c_cdk_interaction_state_apccycdk1y10ycdk1y11yint
+        label: APC/C-CDK interaction state APCCYCdk1Y10YCdk1Y11YInt
+        group: mitosis
+      - id: APCCYCdk2Y000YCdk2Y002YInt
+        port: apc_c_cdk_interaction_state_apccycdk2y000ycdk2y002yint
+        label: APC/C-CDK interaction state APCCYCdk2Y000YCdk2Y002YInt
+        group: g1s
+      - id: APCCYCdk2Y010YCdk2Y012YInt
+        port: apc_c_cdk_interaction_state_apccycdk2y010ycdk2y012yint
+        label: APC/C-CDK interaction state APCCYCdk2Y010YCdk2Y012YInt
+        group: g1s
+      - id: APCCYCdk2Y100YCdk2Y102YInt
+        port: apc_c_cdk_interaction_state_apccycdk2y100ycdk2y102yint
+        label: APC/C-CDK interaction state APCCYCdk2Y100YCdk2Y102YInt
+        group: g1s
+      - id: APCCYCdk2Y110YCdk2Y112YInt
+        port: apc_c_cdk_interaction_state_apccycdk2y110ycdk2y112yint
+        label: APC/C-CDK interaction state APCCYCdk2Y110YCdk2Y112YInt
+        group: g1s
+      - id: APCCYCyclinAYInt
+        port: apc_c_bound_cyclin_ayint_state
+        label: APC/C-bound CyclinAYInt state
+        group: mitosis
+      - id: APCCYEmi1
+        port: apc_c_bound_emi1_state
+        label: APC/C-bound Emi1 state
+        group: mitosis
+      - id: Cdk1Y00
+        port: cdk1_phosphorylation_state_00
+        label: CDK1 phosphorylation state 00
+        group: mitosis
+      - id: Cdk1Y01
+        port: cdk1_phosphorylation_state_01
+        label: CDK1 phosphorylation state 01
+        group: mitosis
+      - id: Cdk1Y10
+        port: cdk1_phosphorylation_state_10
+        label: CDK1 phosphorylation state 10
+        group: mitosis
+      - id: Cdk1Y11
+        port: cdk1_phosphorylation_state_11
+        label: CDK1 phosphorylation state 11
+        group: mitosis
+      - id: Cdk1Y11YpRbY10YpRbY20YInt
+        port: cdk1y11yp_rb_y10yp_rb_y20yint
+        label: Cdk1Y11Yp Rb Y10Yp Rb Y20YInt
+        group: g1s
+      - id: Cdk1Y11YpRbY11YpRbY21YInt
+        port: cdk1y11yp_rb_y11yp_rb_y21yint
+        label: Cdk1Y11Yp Rb Y11Yp Rb Y21YInt
+        group: g1s
+      - id: Cdk2Y000
+        port: cdk2_phosphorylation_state_000
+        label: CDK2 phosphorylation state 000
+        group: g1s
+      - id: Cdk2Y001
+        port: cdk2_phosphorylation_state_001
+        label: CDK2 phosphorylation state 001
+        group: g1s
+      - id: Cdk2Y002
+        port: cdk2_phosphorylation_state_002
+        label: CDK2 phosphorylation state 002
+        group: g1s
+      - id: Cdk2Y010
+        port: cdk2_phosphorylation_state_010
+        label: CDK2 phosphorylation state 010
+        group: g1s
+      - id: Cdk2Y011
+        port: cdk2_phosphorylation_state_011
+        label: CDK2 phosphorylation state 011
+        group: g1s
+      - id: Cdk2Y011YpRbY10YpRbY20YInt
+        port: cdk2y011yp_rb_y10yp_rb_y20yint
+        label: Cdk2Y011Yp Rb Y10Yp Rb Y20YInt
+        group: g1s
+      - id: Cdk2Y011YpRbY11YpRbY21YInt
+        port: cdk2y011yp_rb_y11yp_rb_y21yint
+        label: Cdk2Y011Yp Rb Y11Yp Rb Y21YInt
+        group: g1s
+      - id: Cdk2Y012
+        port: cdk2_phosphorylation_state_012
+        label: CDK2 phosphorylation state 012
+        group: g1s
+      - id: Cdk2Y012YpRbY10YpRbY20YInt
+        port: cdk2y012yp_rb_y10yp_rb_y20yint
+        label: Cdk2Y012Yp Rb Y10Yp Rb Y20YInt
+        group: g1s
+      - id: Cdk2Y012YpRbY11YpRbY21YInt
+        port: cdk2y012yp_rb_y11yp_rb_y21yint
+        label: Cdk2Y012Yp Rb Y11Yp Rb Y21YInt
+        group: g1s
+      - id: Cdk2Y100
+        port: cdk2_phosphorylation_state_100
+        label: CDK2 phosphorylation state 100
+        group: g1s
+      - id: Cdk2Y101
+        port: cdk2_phosphorylation_state_101
+        label: CDK2 phosphorylation state 101
+        group: g1s
+      - id: Cdk2Y102
+        port: cdk2_phosphorylation_state_102
+        label: CDK2 phosphorylation state 102
+        group: g1s
+      - id: Cdk2Y110
+        port: cdk2_phosphorylation_state_110
+        label: CDK2 phosphorylation state 110
+        group: g1s
+      - id: Cdk2Y111
+        port: cdk2_phosphorylation_state_111
+        label: CDK2 phosphorylation state 111
+        group: g1s
+      - id: Cdk2Y112
+        port: cdk2_phosphorylation_state_112
+        label: CDK2 phosphorylation state 112
+        group: g1s
+      - id: Cdk4Y00
+        port: cdk4_phosphorylation_state_00
+        label: CDK4 phosphorylation state 00
+        group: core
+      - id: Cdk4Y01
+        port: cdk4_phosphorylation_state_01
+        label: CDK4 phosphorylation state 01
+        group: core
+      - id: Cdk4Y01YpRbY00YpRbY10YInt
+        port: cdk4y01yp_rb_y00yp_rb_y10yint
+        label: Cdk4Y01Yp Rb Y00Yp Rb Y10YInt
+        group: g1s
+      - id: Cdk4Y01YpRbY01YpRbY11YInt
+        port: cdk4y01yp_rb_y01yp_rb_y11yint
+        label: Cdk4Y01Yp Rb Y01Yp Rb Y11YInt
+        group: g1s
+      - id: Cdk4Y10
+        port: cdk4_phosphorylation_state_10
+        label: CDK4 phosphorylation state 10
+        group: core
+      - id: Cdk4Y11
+        port: cdk4_phosphorylation_state_11
+        label: CDK4 phosphorylation state 11
+        group: core
+      - id: CyclinA
+        port: cyclin_a
+        label: Cyclin A
+        group: core
+      - id: CyclinD
+        port: cyclin_d
+        label: Cyclin D
+        group: g1s
+      - id: CyclinE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: Emi1
+        port: emi1_apc_c_inhibitor
+        label: Emi1 APC/C inhibitor
+        group: mitosis
+      - id: p27
+        port: p27_cdk_inhibitor
+        label: p27 CDK inhibitor
+        group: g1s
+      - id: pRbY00
+        port: phosphorylated_rb_model_state_y00
+        label: Phosphorylated Rb Model state Y00
+        group: g1s
+      - id: pRbY01
+        port: phosphorylated_rb_model_state_y01
+        label: Phosphorylated Rb Model state Y01
+        group: g1s
+      - id: pRbY10
+        port: phosphorylated_rb_model_state_y10
+        label: Phosphorylated Rb Model state Y10
+        group: g1s
+      - id: pRbY11
+        port: phosphorylated_rb_model_state_y11
+        label: Phosphorylated Rb Model state Y11
+        group: g1s
+      - id: pRbY20
+        port: phosphorylated_rb_model_state_y20
+        label: Phosphorylated Rb Model state Y20
+        group: g1s
+      - id: pRbY21
+        port: phosphorylated_rb_model_state_y21
+        label: Phosphorylated Rb Model state Y21
+        group: g1s
+      - id: totalYCyclinYD
+        port: total_ycyclin_yd
+        label: Total YCyclin YD
+        group: core
+      - id: totalYCyclinYE
+        port: total_ycyclin_ye
+        label: Total YCyclin YE
+        group: core
+      - id: totalYCyclinYA
+        port: total_ycyclin_ya
+        label: Total YCyclin YA
+        group: core
+      - id: totalYp27
+        port: total_yp27
+        label: Total Yp27
+        group: g1s
+      - id: hypophosphorylatedYpRb
+        port: hypophosphorylated_yp_rb
+        label: Hypophosphorylated Yp Rb
+        group: g1s
+      - id: hyperphosphorylatedYpRb
+        port: hyperphosphorylated_yp_rb
+        label: Hyperphosphorylated Yp Rb
+        group: g1s
+      - id: totalYEmi1
+        port: total_yemi1
+        label: Total YEmi1
+        group: core
+      - id: activeYCdk2
+        port: active_ycdk2
+        label: Active YCdk2
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

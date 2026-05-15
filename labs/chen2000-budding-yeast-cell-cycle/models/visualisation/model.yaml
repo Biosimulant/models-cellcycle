@@ -1,0 +1,147 @@
+schema_version: '2.0'
+title: Chen2000_CellCycle Visualisation
+description: Dedicated question-and-answer visualisation model for Chen2000_CellCycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chen2000_CellCycle Lab
+    question: Does the yeast model progress through its cell-cycle phase program?
+    answer_focus: The answer is based on cyclins, inhibitors, APC/C regulators, mass, and phase markers.
+    sources:
+    - alias: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model
+      title: Chen2000_CellCycle
+      observables:
+      - id: Cln2
+        port: cln2_g1_cyclin
+        label: Cln2 G1 cyclin
+        group: g1s
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: mitosis
+      - id: Cdc20_T
+        port: cdc20_t
+        label: Cdc20 T
+        group: mitosis
+      - id: Hct1
+        port: hct1_apc_c_activator
+        label: Hct1 APC/C activator
+        group: mitosis
+      - id: Clb2_Sic1
+        port: clb2_sic1
+        label: Clb2 Sic1
+        group: replication
+      - id: Sic1_T
+        port: sic1_t
+        label: Sic1 T
+        group: replication
+      - id: Clb5_Sic1
+        port: clb5_sic1
+        label: Clb5 Sic1
+        group: replication
+      - id: Clb5_T
+        port: clb5_t
+        label: Clb5 T
+        group: replication
+      - id: Clb2_T
+        port: clb2_t
+        label: Clb2 T
+        group: replication
+      - id: mass
+        port: mass
+        label: Mass
+        group: replication
+      - id: ORI
+        port: replication_origin_state
+        label: Replication origin state
+        group: replication
+      - id: BUD
+        port: budding_index
+        label: Budding index
+        group: replication
+      - id: SPN
+        port: spindle_state
+        label: Spindle state
+        group: replication
+      - id: Bck2
+        port: bck2_g1_regulator
+        label: Bck2 G1 regulator
+        group: g1s
+      - id: Clb2
+        port: clb2_mitotic_cyclin
+        label: Clb2 mitotic cyclin
+        group: mitosis
+      - id: Clb5
+        port: clb5_s_phase_cyclin
+        label: Clb5 S-phase cyclin
+        group: replication
+      - id: Cln3
+        port: cln3_start_cyclin
+        label: Cln3 Start cyclin
+        group: proteostasis
+      - id: D
+        port: model_state_d
+        label: Model state D
+        group: replication
+      - id: MBF
+        port: mbf_transcription_factor
+        label: MBF transcription factor
+        group: replication
+      - id: Mcm1
+        port: mcm1_transcription_factor
+        label: Mcm1 transcription factor
+        group: replication
+      - id: SBF
+        port: sbf_transcription_factor
+        label: SBF transcription factor
+        group: replication
+      - id: Sic1
+        port: sic1_cdk_inhibitor
+        label: Sic1 CDK inhibitor
+        group: replication
+      - id: Swi5
+        port: swi5_transcription_factor
+        label: Swi5 transcription factor
+        group: replication
+      - id: Va_sbf
+        port: va_sbf
+        label: Va Sbf
+        group: replication
+      - id: Vd2_c1
+        port: vd2_model_state_c1
+        label: Vd2 Model state C1
+        group: replication
+      - id: Vd_b2
+        port: vd_b2
+        label: Vd B2
+        group: replication
+      - id: Vd_b5
+        port: vd_b5
+        label: Vd B5
+        group: replication
+      - id: Vi_20
+        port: vi_20
+        label: Vi 20
+        group: replication
+      - id: Vi_t1
+        port: vi_t1
+        label: Vi T1
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

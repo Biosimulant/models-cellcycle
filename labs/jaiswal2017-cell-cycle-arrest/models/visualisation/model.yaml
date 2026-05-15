@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Jaiswal2017 - Cell cycle arrest Visualisation
+description: Dedicated question-and-answer visualisation model for Jaiswal2017 - Cell cycle arrest.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Jaiswal2017 - Cell cycle arrest Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model
+      title: Jaiswal2017 - Cell cycle arrest
+      observables:
+      - id: Timeract
+        port: active_timer_state
+        label: Active timer state
+        group: core
+      - id: CellCact
+        port: cell_cact
+        label: Cell Cact
+        group: core
+      - id: Effectoract
+        port: active_checkpoint_effector
+        label: Active checkpoint effector
+        group: checkpoint
+      - id: HR
+        port: model_state_hr
+        label: Model state HR
+        group: core
+      - id: NHEJ
+        port: non_homologous_end_joining_repair_state
+        label: Non-homologous end joining repair state
+        group: core
+      - id: CellCina
+        port: cell_cina
+        label: Cell Cina
+        group: core
+      - id: Damage
+        port: dna_damage
+        label: DNA Damage
+        group: checkpoint
+      - id: Effectorina
+        port: inactive_checkpoint_effector
+        label: Inactive checkpoint effector
+        group: checkpoint
+      - id: Timerinact
+        port: inactive_timer_state
+        label: Inactive timer state
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

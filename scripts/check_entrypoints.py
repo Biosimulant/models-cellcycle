@@ -16,14 +16,18 @@ sys.dont_write_bytecode = True
 
 # Resolve local biosim source when running in the Biosimulant monorepo.
 for p in [ROOT, *ROOT.parents]:
-    bsim_src = p / "bsim" / "src"
-    if bsim_src.exists():
-        sys.path.insert(0, str(bsim_src))
-        break
-    biosim_src = p / "biosim" / "src"
-    if biosim_src.exists():
-        sys.path.insert(0, str(biosim_src))
-        break
+    candidates = (
+        p / "bsim" / "src",
+        p / "biosim" / "src",
+        p / "bsim-active" / "biosim" / "src",
+    )
+    for src in candidates:
+        if src.exists():
+            sys.path.insert(0, str(src))
+            break
+    else:
+        continue
+    break
 
 
 def _load_yaml(path: Path) -> dict[str, Any]:

@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan in yeast
+description: "This model is described within the paper: A G1 arrest due to proteostasis decline delimits replicative\
+  \ lifespan in yeastDavid F. Moreno, Kirsten Jenkins, Sandrine Morlot, Gilles Charvin, Attila Csik\xE1s."
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- David F Moreno
+- Kirsten Jenkins
+- Sandrine Morlot
+- Gilles Charvin
+- Attila Csikasz-Nagy
+upstream:
+  id: biomodels_ebi:MODEL1901210001
+  source_db: biomodels_ebi
+  source_id: MODEL1901210001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1901210001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1901210001?filename=CellCycleProteinAggregation.xml
+  license: CC0
+biosim:
+  entrypoint: src.moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model:Moreno2019StochasticModelOfG1ArrestDueToModel1901210001Model
+  init_kwargs:
+    model_path: data/MODEL1901210001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: protein_load
+    maps_to: Prot
+    label: Protein load
+    description: Tracks Protein load. Maps to SBML symbol `Prot`.
+  - name: model_state_yp
+    maps_to: YP
+    label: Model state YP
+    description: Tracks Model state YP. Maps to SBML symbol `YP`.
+  - name: ydj1_chaperone
+    maps_to: Ydj1
+    label: Ydj1 chaperone
+    description: Tracks Ydj1 chaperone. Maps to SBML symbol `Ydj1`.
+  - name: prot_f
+    maps_to: ProtF
+    label: Prot F
+    description: Tracks Prot F. Maps to SBML symbol `ProtF`.
+  - name: prot_model_state_m
+    maps_to: ProtM
+    label: Prot Model state M
+    description: Tracks Prot Model state M. Maps to SBML symbol `ProtM`.
+  - name: oligomerized_proteostasis_species
+    maps_to: Oli
+    label: Oligomerized proteostasis species
+    description: Tracks Oligomerized proteostasis species. Maps to SBML symbol `Oli`.
+  - name: protein_aggregate_burden
+    maps_to: Agg
+    label: Protein aggregate burden
+    description: Tracks Protein aggregate burden. Maps to SBML symbol `Agg`.
+  - name: ydj1_oligomer_aggregate_complex
+    maps_to: YOAgg
+    label: Ydj1-oligomer aggregate complex
+    description: Tracks Ydj1-oligomer aggregate complex. Maps to SBML symbol `YOAgg`.
+  - name: model_state_ym
+    maps_to: YM
+    label: Model state YM
+    description: Tracks Model state YM. Maps to SBML symbol `YM`.
+  - name: model_state_yo
+    maps_to: YO
+    label: Model state YO
+    description: Tracks Model state YO. Maps to SBML symbol `YO`.
+  - name: cln3_start_cyclin
+    maps_to: Cln3
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin. Maps to SBML symbol `Cln3`.
+  - name: model_state_yc
+    maps_to: YC
+    label: Model state YC
+    description: Tracks Model state YC. Maps to SBML symbol `YC`.
+  - name: folded_cln3_start_cyclin
+    maps_to: Cln3F
+    label: Folded Cln3 Start cyclin
+    description: Tracks Folded Cln3 Start cyclin. Maps to SBML symbol `Cln3F`.
+  - name: whi5_start_inhibitor
+    maps_to: Whi5
+    label: Whi5 Start inhibitor
+    description: Tracks Whi5 Start inhibitor. Maps to SBML symbol `Whi5`.
+  - name: inactive_whi5_start_inhibitor
+    maps_to: Whi5i
+    label: Inactive Whi5 Start inhibitor
+    description: Tracks Inactive Whi5 Start inhibitor. Maps to SBML symbol `Whi5i`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: hsp104
+    maps_to: Hsp104
+    label: Hsp104
+    accepted_units:
+    - native SBML value
+    description: Controls Hsp104. Maps to SBML symbol `Hsp104`.

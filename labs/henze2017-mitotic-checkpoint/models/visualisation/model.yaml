@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint Visualisation
+description: Dedicated question-and-answer visualisation model for Henze2017 - A Dynamical Model for Activating
+  and Silencing the Mitotic Checkpoint.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model
+      title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint
+      observables:
+      - id: KinA
+        port: kin_a
+        label: Kin A
+        group: checkpoint
+      - id: KinU
+        port: kin_model_state_u
+        label: Kin Model state U
+        group: checkpoint
+      - id: APCC_Cdc20
+        port: apcc_cdc20
+        label: APCC Cdc20
+        group: checkpoint
+      - id: Securin
+        port: securin_separase_inhibitor
+        label: Securin separase inhibitor
+        group: checkpoint
+      - id: APCC
+        port: apc_c_complex
+        label: APC/C complex
+        group: checkpoint
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: checkpoint
+      - id: CyclinB
+        port: cyclin_b
+        label: Cyclin B
+        group: checkpoint
+      - id: APCC_MCC
+        port: apcc_mcc
+        label: APCC MCC
+        group: checkpoint
+      - id: MCC
+        port: mitotic_checkpoint_complex
+        label: Mitotic checkpoint complex
+        group: checkpoint
+      - id: C_Mad2
+        port: model_state_c_mad2
+        label: Model state C Mad2
+        group: checkpoint
+      - id: O_Mad2
+        port: o_mad2
+        label: O Mad2
+        group: checkpoint
+      - id: Cdc20_C_Mad2
+        port: cdc20_model_state_c_mad2
+        label: Cdc20 Model state C Mad2
+        group: checkpoint
+      - id: BubR1_Bub3
+        port: bub_model_state_r1_bub3
+        label: Bub Model state R1 Bub3
+        group: checkpoint
+      - id: Mad1_Mad2
+        port: mad1_mad2
+        label: Mad1 Mad2
+        group: checkpoint
+      - id: Mad1_Mad2_C_Mad2
+        port: mad1_mad2_model_state_c_mad2
+        label: Mad1 Mad2 Model state C Mad2
+        group: checkpoint
+      - id: BCC
+        port: bub_r1_cdc20_checkpoint_complex
+        label: BubR1-Cdc20 checkpoint complex
+        group: checkpoint
+      - id: APCC_Cdc20_C_Mad2
+        port: apcc_cdc20_model_state_c_mad2
+        label: APCC Cdc20 Model state C Mad2
+        group: checkpoint
+      - id: APCC_BCC
+        port: apcc_bcc
+        label: APCC BCC
+        group: checkpoint
+      - id: APCC_Cdc20_MCC
+        port: apcc_cdc20_mcc
+        label: APCC Cdc20 MCC
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Qu2003_CellCycle Lab
+description: 'Single-model lab wrapper for Qu2003_CellCycle. This model is from the article: Dynamics of the cell
+  cycle: checkpoints, sizers, and timers. It can be used to explore cell-cycle regulation dynamics and compare checkpoint
+  behavior across conditions.'
+models:
+- alias: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.state
+  to:
+  - visualisation.cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model_state
+- from: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.summary
+  to:
+  - visualisation.cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model_summary
+- from: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: inactive_cyclin_cdk_complex
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.inactive_cyclin_cdk_complex
+    label: Inactive Cyclin:CDK Complex
+    description: Tracks Inactive Cyclin:CDK Complex in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.inactive_cyclin_cdk_complex`.
+  - name: active_cyclin_cdk_complex
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.active_cyclin_cdk_complex
+    label: Active Cyclin:CDK Complex
+    description: Tracks Active Cyclin:CDK Complex in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.active_cyclin_cdk_complex`.
+  - name: total_cdk
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.total_cdk
+    label: Total CDK
+    description: Tracks Total CDK in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.total_cdk`.
+  - name: unphosphorylated_cdc25
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.unphosphorylated_cdc25
+    label: Unphosphorylated Cdc25
+    description: Tracks Unphosphorylated Cdc25 in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.unphosphorylated_cdc25`.
+  - name: one_site_phosphorylated_cdc25
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.one_site_phosphorylated_cdc25
+    label: One Site Phosphorylated Cdc25
+    description: Tracks One Site Phosphorylated Cdc25 in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.one_site_phosphorylated_cdc25`.
+  - name: two_site_phosphorylated_cdc25
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.two_site_phosphorylated_cdc25
+    label: Two Site Phosphorylated Cdc25
+    description: Tracks Two Site Phosphorylated Cdc25 in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.two_site_phosphorylated_cdc25`.
+  - name: unphosphorylated_wee1
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.unphosphorylated_wee1
+    label: Unphosphorylated Wee1
+    description: Tracks Unphosphorylated Wee1 in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.unphosphorylated_wee1`.
+  - name: phosphorylated_wee1
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.phosphorylated_wee1
+    label: Phosphorylated Wee1
+    description: Tracks Phosphorylated Wee1 in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.phosphorylated_wee1`.
+  - name: active_skp2_or_apc_c_c
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.active_skp2_or_apc_c_c
+    label: Active SKP2 Or APC/C/C
+    description: Tracks Active SKP2 Or APC/C/C in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.active_skp2_or_apc_c_c`.
+  - name: free_cki
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cki
+    label: Free CKI
+    description: Tracks Free CKI in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cki`.
+  - name: cyclin_cdk_cki_complex_with_cki_unphosphorylated
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.cyclin_cdk_cki_complex_with_cki_unphosphorylated
+    label: Cyclin:CDK:CKI Complex With CKI Unphosphorylated
+    description: Tracks Cyclin:CDK:CKI Complex With CKI Unphosphorylated in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.cyclin_cdk_cki_complex_with_cki_unphosphorylated`.
+  - name: cyclin_cdk_cki_complex_with_cki_phosphorylated
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.cyclin_cdk_cki_complex_with_cki_phosphorylated
+    label: Cyclin:CDK:CKI Complex With CKI Phosphorylated
+    description: Tracks Cyclin:CDK:CKI Complex With CKI Phosphorylated in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.cyclin_cdk_cki_complex_with_cki_phosphorylated`.
+  - name: free_cyclin
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cyclin
+    label: Free Cyclin
+    description: Tracks Free Cyclin in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cyclin`.
+  - name: free_cdk
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cdk
+    label: Free CDK
+    description: Tracks Free CDK in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.free_cdk`.
+  - name: total_cyclin
+    maps_to: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.total_cyclin
+    label: Total Cyclin
+    description: Tracks Total Cyclin in the lab model via `cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model.total_cyclin`.

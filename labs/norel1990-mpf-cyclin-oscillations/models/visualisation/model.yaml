@@ -1,0 +1,39 @@
+schema_version: '2.0'
+title: Norel1990 - MPF and Cyclin Oscillations Visualisation
+description: Dedicated question-and-answer visualisation model for Norel1990 - MPF and Cyclin Oscillations.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Norel1990 - MPF and Cyclin Oscillations Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model
+      title: Norel1990 - MPF and Cyclin Oscillations
+      observables:
+      - id: M
+        port: model_state_m_m
+        label: Model state M (M)
+        group: mitosis
+      - id: C
+        port: model_state_c_c
+        label: Model state C (C)
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

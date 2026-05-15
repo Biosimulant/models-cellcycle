@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Tyson1991 - Cell Cycle 6 var
+description: 'Tyson1991 - Cell Cycle 6 var Mathematical model of the interactions of cdc2 and cyclin. This model
+  is described in the article: Modeling the cell division cycle: cdc2 and cyclin interactions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- J J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000000005
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000005
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000005
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000005?filename=BIOMD0000000005_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.tyson1991_cell_cycle_6_var_biomd0000000005_model:Tyson1991CellCycle6VarBiomd0000000005Model
+  init_kwargs:
+    model_path: data/BIOMD0000000005.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cdc2k
+    maps_to: C2
+    label: Cdc2k
+    description: Tracks Cdc2k. Maps to SBML symbol `C2`.
+  - name: cdc2k_p
+    maps_to: CP
+    label: Cdc2k P
+    description: Tracks Cdc2k P. Maps to SBML symbol `CP`.
+  - name: phosphorylated_cyclin_cdc2
+    maps_to: M
+    label: Phosphorylated Cyclin Cdc2
+    description: Tracks Phosphorylated Cyclin Cdc2. Maps to SBML symbol `M`.
+  - name: phosphorylated_cyclin_cdc2_p
+    maps_to: pM
+    label: Phosphorylated Cyclin Cdc2 P
+    description: Tracks Phosphorylated Cyclin Cdc2 P. Maps to SBML symbol `pM`.
+  - name: cyclin
+    maps_to: Y
+    label: Cyclin
+    description: Tracks Cyclin. Maps to SBML symbol `Y`.
+  - name: phosphorylated_cyclin
+    maps_to: YP
+    label: Phosphorylated Cyclin
+    description: Tracks Phosphorylated Cyclin. Maps to SBML symbol `YP`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: total_cyclin
+    maps_to: YT
+    label: Total Cyclin
+    accepted_units:
+    - native SBML value
+    description: Controls Total Cyclin. Maps to SBML symbol `YT`.
+  - name: total_cdc2
+    maps_to: CT
+    label: Total Cdc2
+    accepted_units:
+    - native SBML value
+    description: Controls Total Cdc2. Maps to SBML symbol `CT`.

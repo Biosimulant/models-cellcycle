@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Chiorino2002 - G1/S transition model Visualisation
+description: Dedicated question-and-answer visualisation model for Chiorino2002 - G1/S transition model.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chiorino2002 - G1/S transition model Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model
+      title: Chiorino2002 - G1/S transition model
+      observables:
+      - id: pRb
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: pRbE2F
+        port: phosphorylated_rb_e2f
+        label: Phosphorylated Rb E2F
+        group: g1s
+      - id: Cdk2
+        port: cdk2
+        label: CDK2
+        group: g1s
+      - id: cycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: cycE_Cdk2
+        port: cyclin_e_cdk2
+        label: Cyclin E CDK2
+        group: g1s
+      - id: cycE_Cdk2_pRbE2F
+        port: cyclin_e_cdk2_phosphorylated_rb_e2f
+        label: Cyclin E CDK2 Phosphorylated Rb E2F
+        group: g1s
+      - id: pRb_P
+        port: phosphorylated_phosphorylated_rb
+        label: Phosphorylated Phosphorylated Rb
+        group: g1s
+      - id: cycE_P
+        port: phosphorylated_cyclin_e
+        label: Phosphorylated Cyclin E
+        group: g1s
+      - id: cycE_Cdk2_p27
+        port: cyclin_e_cdk2_p27
+        label: Cyclin E CDK2 P27
+        group: g1s
+      - id: p27
+        port: p27_cdk_inhibitor
+        label: p27 CDK inhibitor
+        group: g1s
+      - id: cycE_Cdk2_cycE_Cdk2_p27
+        port: cyclin_e_cdk2_cyclin_e_cdk2_p27
+        label: Cyclin E CDK2 Cyclin E CDK2 P27
+        group: g1s
+      - id: p27_P
+        port: phosphorylated_p27
+        label: Phosphorylated P27
+        group: g1s
+      - id: mRNA_cyclinE
+        port: model_state_m_rna_cyclin_e
+        label: Model state mRNA Cyclin E
+        group: g1s
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: mRNA_E2F
+        port: model_state_m_rna_e2f
+        label: Model state mRNA E2F
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

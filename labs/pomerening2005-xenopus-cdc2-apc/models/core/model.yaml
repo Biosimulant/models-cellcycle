@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Pomerening2005- Model of the Xenopus Cdc2/APC System
+description: 'The cell-cycle oscillator includes an essential negative-feedback loop: Cdc2 activates the anaphase-promoting
+  complex (APC), which leads to cyclin destruction and Cdc2 inactivation. It can be used to explore cell-cycle regulation
+  dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Joseph R Pomerening
+- Sun Young Kim
+- James E Ferrell
+upstream:
+  id: biomodels_ebi:MODEL2005150001
+  source_db: biomodels_ebi
+  source_id: MODEL2005150001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2005150001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005150001?filename=Pomerening2005.xml
+  license: CC0
+biosim:
+  entrypoint: src.pomerening2005_model_of_the_xenopus_cdc2_apc_sys_model2005150001_model:Pomerening2005ModelOfTheXenopusCdc2ApcSysModel2005150001Model
+  init_kwargs:
+    model_path: data/MODEL2005150001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_pool
+    maps_to: Cyclin
+    label: Cyclin pool
+    description: Tracks Cyclin pool. Maps to SBML symbol `Cyclin`.
+  - name: cdc2cyclin
+    maps_to: cdc2cyclin
+    label: Cdc2cyclin
+    description: Tracks Cdc2cyclin. Maps to SBML symbol `cdc2cyclin`.
+  - name: cdc2cyclinyp
+    maps_to: cdc2cyclinyp
+    label: Cdc2cyclinyp
+    description: Tracks Cdc2cyclinyp. Maps to SBML symbol `cdc2cyclinyp`.
+  - name: cdc2cyclinyptp
+    maps_to: cdc2cyclinyptp
+    label: Cdc2cyclinyptp
+    description: Tracks Cdc2cyclinyptp. Maps to SBML symbol `cdc2cyclinyptp`.
+  - name: cdc2cyclintp
+    maps_to: cdc2cyclintp
+    label: Cdc2cyclintp
+    description: Tracks Cdc2cyclintp. Maps to SBML symbol `cdc2cyclintp`.
+  - name: cdc2
+    maps_to: cdc2
+    label: Cdc2
+    description: Tracks Cdc2. Maps to SBML symbol `cdc2`.
+  - name: cdc2afcyclin
+    maps_to: cdc2afcyclin
+    label: Cdc2afcyclin
+    description: Tracks Cdc2afcyclin. Maps to SBML symbol `cdc2afcyclin`.
+  - name: cdc2afcyclintp
+    maps_to: cdc2afcyclintp
+    label: Cdc2afcyclintp
+    description: Tracks Cdc2afcyclintp. Maps to SBML symbol `cdc2afcyclintp`.
+  - name: cdc2af
+    maps_to: cdc2af
+    label: Cdc2af
+    description: Tracks Cdc2af. Maps to SBML symbol `cdc2af`.
+  - name: cdc25act
+    maps_to: cdc25act
+    label: Cdc25act
+    description: Tracks Cdc25act. Maps to SBML symbol `cdc25act`.
+  - name: wee1act
+    maps_to: wee1act
+    label: Wee1act
+    description: Tracks Wee1act. Maps to SBML symbol `wee1act`.
+  - name: plxact
+    maps_to: plxact
+    label: Plxact
+    description: Tracks Plxact. Maps to SBML symbol `plxact`.
+  - name: apcstar
+    maps_to: apcstar
+    label: Apcstar
+    description: Tracks Apcstar. Maps to SBML symbol `apcstar`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

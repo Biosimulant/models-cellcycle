@@ -1,0 +1,25 @@
+# Tyson1991 - Cell Cycle 2 var
+
+**Source**: [biomodels_ebi](https://www.ebi.ac.uk/biomodels/BIOMD0000000006)
+**Standard**: sbml
+**Authors**: J J Tyson
+
+## Description
+
+Tyson1991 - Cell Cycle 2 var Mathematical model of the interactions of cdc2 and cyclin. Description taken from the original Cellerator version of the model ( Tyson (1991, 2 variables) at http://www.ce
+
+
+## Usage
+
+This model was auto-generated from the BioModels EBI catalog.
+
+```yaml
+# In a lab.yaml wiring file:
+models:
+  - path: ../../labs/tyson1991-cdc2-cyclin-2var/models/core
+    alias: model
+```
+
+## Tags
+
+systemsbiology, sbml, biomodels_ebi, auto-generated, biomodels-ebi, curated

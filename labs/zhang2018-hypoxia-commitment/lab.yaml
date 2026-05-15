@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Zhang2018 - Cell cycle commitment in hypoxia Lab
+description: Single-model lab wrapper for Zhang2018 - Cell cycle commitment in hypoxia. Cell Cycle Zhang2018Cell
+  Cycle Commitment In Hypoxia Model1812060002Model represents core biological mechanisms from biomodels_ebi reference
+  biomodels_ebi:MODEL1812060002. When you run it, you can inspect state and compare temporal behavior between baseline
+  and adjusted inputs.
+models:
+- alias: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.state
+  to:
+  - visualisation.cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model_state
+- from: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.summary
+  to:
+  - visualisation.cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model_summary
+- from: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: oxygen
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.oxygen
+    label: Oxygen
+    description: Controls Oxygen in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.oxygen`.
+  outputs:
+  - name: hif_1_alpha_myc
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_1_alpha_myc
+    label: HIF-1 alpha Myc
+    description: Tracks HIF-1 alpha Myc in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_1_alpha_myc`.
+  - name: hif_2_alpha_myc
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_2_alpha_myc
+    label: HIF-2 alpha Myc
+    description: Tracks HIF-2 alpha Myc in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_2_alpha_myc`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.e2f_transcription_factor`.
+  - name: double_phosphorylated_cyclin_d
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylated_cyclin_d
+    label: Double-phosphorylated Cyclin D
+    description: Tracks Double-phosphorylated Cyclin D in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylated_cyclin_d`.
+  - name: cyclin_d
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.cyclin_d
+    label: Cyclin D
+    description: Tracks Cyclin D in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.cyclin_d`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.cyclin_e`.
+  - name: phosphorylated_rb
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.phosphorylated_rb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.phosphorylated_rb`.
+  - name: unphosphorylated_rb
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.unphosphorylated_rb
+    label: Unphosphorylated Rb
+    description: Tracks Unphosphorylated Rb in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.unphosphorylated_rb`.
+  - name: myc_transcription_factor
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.myc_transcription_factor
+    label: Myc transcription factor
+    description: Tracks Myc transcription factor in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.myc_transcription_factor`.
+  - name: e2f_rb
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.e2f_rb
+    label: E2F Rb
+    description: Tracks E2F Rb in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.e2f_rb`.
+  - name: rb_tumor_suppressor
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.rb_tumor_suppressor
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.rb_tumor_suppressor`.
+  - name: double_phosphorylation_signal
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylation_signal
+    label: Double phosphorylation signal
+    description: Tracks Double phosphorylation signal in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylation_signal`.
+  - name: double_phosphorylated_cyclin_e
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylated_cyclin_e
+    label: Double-phosphorylated Cyclin E
+    description: Tracks Double-phosphorylated Cyclin E in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.double_phosphorylated_cyclin_e`.
+  - name: oxygen_dependent_degradation_factor
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.oxygen_dependent_degradation_factor
+    label: Oxygen-dependent degradation factor
+    description: Tracks Oxygen-dependent degradation factor in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.oxygen_dependent_degradation_factor`.
+  - name: hif_1_alpha
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_1_alpha
+    label: HIF-1 alpha
+    description: Tracks HIF-1 alpha in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_1_alpha`.
+  - name: hif_2_alpha
+    maps_to: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_2_alpha
+    label: HIF-2 alpha
+    description: Tracks HIF-2 alpha in the lab model via `cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model.hif_2_alpha`.

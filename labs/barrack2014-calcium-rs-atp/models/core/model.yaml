@@ -1,0 +1,107 @@
+schema_version: '2.0'
+title: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release
+description: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release This model is designed based on
+  the hypothesis that cytoplasmic calcium accelerates entry into S phase of the cell cycle and/or act. It can be
+  used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Duncan S Barrack
+- "R\xFCdiger Thul"
+- Markus R Owen
+upstream:
+  id: biomodels_ebi:BIOMD0000000509
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000509
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000509
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000509?filename=BIOMD0000000509_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model:Barrack2014CalciumCellCycleCouplingRsDepenBiomd0000000509Model
+  init_kwargs:
+    model_path: data/BIOMD0000000509.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_d
+    maps_to: d
+    label: Model state D
+    description: Tracks Model state D. Maps to SBML symbol `d`.
+  - name: model_state_ad
+    maps_to: ad
+    label: Model state Ad
+    description: Tracks Model state Ad. Maps to SBML symbol `ad`.
+  - name: model_state_e
+    maps_to: e
+    label: Model state E
+    description: Tracks Model state E. Maps to SBML symbol `e`.
+  - name: model_state_r_r
+    maps_to: r
+    label: Model state R (r)
+    description: Tracks Model state R (r). Maps to SBML symbol `r`.
+  - name: model_state_rs
+    maps_to: rs
+    label: Model state Rs
+    description: Tracks Model state Rs. Maps to SBML symbol `rs`.
+  - name: model_state_x_x
+    maps_to: x
+    label: Model state X (x)
+    description: Tracks Model state X (x). Maps to SBML symbol `x`.
+  - name: ip3
+    maps_to: ip3
+    label: IP3
+    description: Tracks IP3. Maps to SBML symbol `ip3`.
+  - name: model_state_kg
+    maps_to: kg
+    label: Model state Kg
+    description: Tracks Model state Kg. Maps to SBML symbol `kg`.
+  - name: gstar
+    maps_to: gstar
+    label: Gstar
+    description: Tracks Gstar. Maps to SBML symbol `gstar`.
+  - name: model_state_ro
+    maps_to: ro
+    label: Model state Ro
+    description: Tracks Model state Ro. Maps to SBML symbol `ro`.
+  - name: ip3con
+    maps_to: ip3con
+    label: Ip3con
+    description: Tracks Ip3con. Maps to SBML symbol `ip3con`.
+  - name: rscon
+    maps_to: rscon
+    label: Rscon
+    description: Tracks Rscon. Maps to SBML symbol `rscon`.
+  - name: atp
+    maps_to: atp
+    label: ATP
+    description: Tracks ATP. Maps to SBML symbol `atp`.
+  - name: model_state_y_y
+    maps_to: y
+    label: Model state Y (y)
+    description: Tracks Model state Y (y). Maps to SBML symbol `y`.
+  - name: delta
+    maps_to: delta
+    label: Delta
+    description: Tracks Delta. Maps to SBML symbol `delta`.
+  - name: calcium
+    maps_to: ca
+    label: Calcium
+    description: Tracks Calcium. Maps to SBML symbol `ca`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

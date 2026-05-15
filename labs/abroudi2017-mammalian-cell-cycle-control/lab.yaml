@@ -1,0 +1,291 @@
+description: Single-model lab wrapper for Abroudi2017 - Mammalian Cell Cycle Control Model. Not many models of mammalian
+  cell cycle system exist due to its complexity. Some models are too complex and hard to understand, while some
+  others are too simple and not comprehensive enough.
+io:
+  inputs:
+  - description: Controls DSB in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.dsb`.
+    label: DSB
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.dsb
+    name: dsb
+  - description: Controls Oxygen-dependent degradation factor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.oxygen_dependent_degradation_factor`.
+    label: Oxygen-dependent degradation factor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.oxygen_dependent_degradation_factor
+    name: oxygen_dependent_degradation_factor
+  - description: Controls Growth Factor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.growth_factor`.
+    label: Growth Factor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.growth_factor
+    name: growth_factor
+  outputs:
+  - description: Tracks Active Myc in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_myc`.
+    label: Active Myc
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_myc
+    name: active_myc
+  - description: Tracks Inactive Myc in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_myc`.
+    label: Inactive Myc
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_myc
+    name: inactive_myc
+  - description: Tracks ATM checkpoint kinase in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.atm_checkpoint_kinase`.
+    label: ATM checkpoint kinase
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.atm_checkpoint_kinase
+    name: atm_checkpoint_kinase
+  - description: Tracks Active Chk2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_chk2`.
+    label: Active Chk2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_chk2
+    name: active_chk2
+  - description: Tracks Inactive Chk2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_chk2`.
+    label: Inactive Chk2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_chk2
+    name: inactive_chk2
+  - description: Tracks p53 tumor suppressor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p53_tumor_suppressor`.
+    label: p53 tumor suppressor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p53_tumor_suppressor
+    name: p53_tumor_suppressor
+  - description: Tracks Mdm2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.mdm2`.
+    label: Mdm2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.mdm2
+    name: mdm2
+  - description: Tracks Model state IF in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.model_state_if`.
+    label: Model state IF
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.model_state_if
+    name: model_state_if
+  - description: Tracks P21 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21`.
+    label: P21
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21
+    name: p21
+  - description: Tracks Cyclin D CDK4 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_d_cdk4`.
+    label: Cyclin D CDK4
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_d_cdk4
+    name: cyclin_d_cdk4
+  - description: Tracks P21 Cyclin D CDK4 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_cyclin_d_cdk4`.
+    label: P21 Cyclin D CDK4
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_cyclin_d_cdk4
+    name: p21_cyclin_d_cdk4
+  - description: Tracks Acyce CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acyce_cdk2`.
+    label: Acyce CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acyce_cdk2
+    name: acyce_cdk2
+  - description: Tracks P21 Acyce CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acyce_cdk2`.
+    label: P21 Acyce CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acyce_cdk2
+    name: p21_acyce_cdk2
+  - description: Tracks P21 Acyca CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acyca_cdk2`.
+    label: P21 Acyca CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acyca_cdk2
+    name: p21_acyca_cdk2
+  - description: Tracks Acyca CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acyca_cdk2`.
+    label: Acyca CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acyca_cdk2
+    name: acyca_cdk2
+  - description: Tracks 14-3-3 S in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.observable_14_3_3_s`.
+    label: 14-3-3 S
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.observable_14_3_3_s
+    name: observable_14_3_3_s
+  - description: Tracks Gadda45 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.gadda45`.
+    label: Gadda45
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.gadda45
+    name: gadda45
+  - description: Tracks Cyclin D in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_d`.
+    label: Cyclin D
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_d
+    name: cyclin_d
+  - description: Tracks CDK4 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk4`.
+    label: CDK4
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk4
+    name: cdk4
+  - description: Tracks Ascf in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.ascf`.
+    label: Ascf
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.ascf
+    name: ascf
+  - description: Tracks p27 CDK inhibitor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_cdk_inhibitor`.
+    label: p27 CDK inhibitor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_cdk_inhibitor
+    name: p27_cdk_inhibitor
+  - description: Tracks P27 Acyce CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_acyce_cdk2`.
+    label: P27 Acyce CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_acyce_cdk2
+    name: p27_acyce_cdk2
+  - description: Tracks P27 Acyca CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_acyca_cdk2`.
+    label: P27 Acyca CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_acyca_cdk2
+    name: p27_acyca_cdk2
+  - description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.e2f_transcription_factor`.
+    label: E2F transcription factor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.e2f_transcription_factor
+    name: e2f_transcription_factor
+  - description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_rb`.
+    label: Phosphorylated Rb
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_rb
+    name: phosphorylated_rb
+  - description: Tracks E2F Phosphorylated Rb in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.e2f_phosphorylated_rb`.
+    label: E2F Phosphorylated Rb
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.e2f_phosphorylated_rb
+    name: e2f_phosphorylated_rb
+  - description: Tracks P27 Cyclin D CDK4 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_cyclin_d_cdk4`.
+    label: P27 Cyclin D CDK4
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p27_cyclin_d_cdk4
+    name: p27_cyclin_d_cdk4
+  - description: Tracks Phosphorylated E2F Phosphorylated Rb P in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_e2f_phosphorylated_rb_p`.
+    label: Phosphorylated E2F Phosphorylated Rb P
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_e2f_phosphorylated_rb_p
+    name: phosphorylated_e2f_phosphorylated_rb_p
+  - description: Tracks Phosphorylated Phosphorylated Rb PP in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_phosphorylated_rb_pp`.
+    label: Phosphorylated Phosphorylated Rb PP
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_phosphorylated_rb_pp
+    name: phosphorylated_phosphorylated_rb_pp
+  - description: Tracks App1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.app1`.
+    label: App1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.app1
+    name: app1
+  - description: Tracks Ipp1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.ipp1`.
+    label: Ipp1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.ipp1
+    name: ipp1
+  - description: Tracks Acycb CDK1 Nuc in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acycb_cdk1_nuc`.
+    label: Acycb CDK1 Nuc
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acycb_cdk1_nuc
+    name: acycb_cdk1_nuc
+  - description: Tracks Cyclin E in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_e`.
+    label: Cyclin E
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_e
+    name: cyclin_e
+  - description: Tracks CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk2`.
+    label: CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk2
+    name: cdk2
+  - description: Tracks Cyclin A in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_a`.
+    label: Cyclin A
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_a
+    name: cyclin_a
+  - description: Tracks Active BMyb in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_bmyb`.
+    label: Active BMyb
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_bmyb
+    name: active_bmyb
+  - description: Tracks NF-Y transcription factor in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.nf_y_transcription_factor`.
+    label: NF-Y transcription factor
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.nf_y_transcription_factor
+    name: nf_y_transcription_factor
+  - description: Tracks Icyca CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icyca_cdk2`.
+    label: Icyca CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icyca_cdk2
+    name: icyca_cdk2
+  - description: Tracks Active APC/C/C Cdc20 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_apc_c_c_cdc20`.
+    label: Active APC/C/C Cdc20
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_apc_c_c_cdc20
+    name: active_apc_c_c_cdc20
+  - description: Tracks Active APC/C/C Cdh1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_apc_c_c_cdh1`.
+    label: Active APC/C/C Cdh1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.active_apc_c_c_cdh1
+    name: active_apc_c_c_cdh1
+  - description: Tracks Icyce CDK2 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icyce_cdk2`.
+    label: Icyce CDK2
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icyce_cdk2
+    name: icyce_cdk2
+  - description: Tracks Acdc25a in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25a`.
+    label: Acdc25a
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25a
+    name: acdc25a
+  - description: Tracks Iscf in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iscf`.
+    label: Iscf
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iscf
+    name: iscf
+  - description: Tracks Inactive BMyb in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_bmyb`.
+    label: Inactive BMyb
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_bmyb
+    name: inactive_bmyb
+  - description: Tracks Icdc25a in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25a`.
+    label: Icdc25a
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25a
+    name: icdc25a
+  - description: Tracks Aplk1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.aplk1`.
+    label: Aplk1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.aplk1
+    name: aplk1
+  - description: Tracks Awee1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.awee1`.
+    label: Awee1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.awee1
+    name: awee1
+  - description: Tracks Iwee1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iwee1`.
+    label: Iwee1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iwee1
+    name: iwee1
+  - description: Tracks Acdc25c in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25c`.
+    label: Acdc25c
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25c
+    name: acdc25c
+  - description: Tracks Icdc25c in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25c`.
+    label: Icdc25c
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25c
+    name: icdc25c
+  - description: Tracks Icdc25cp S216 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25cp_s216`.
+    label: Icdc25cp S216
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icdc25cp_s216
+    name: icdc25cp_s216
+  - description: Tracks Acycb CDK1 Cyto in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acycb_cdk1_cyto`.
+    label: Acycb CDK1 Cyto
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acycb_cdk1_cyto
+    name: acycb_cdk1_cyto
+  - description: Tracks Acdc25cp S216 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25cp_s216`.
+    label: Acdc25cp S216
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.acdc25cp_s216
+    name: acdc25cp_s216
+  - description: Tracks 14-3-3 Icdc25cp S216 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.observable_14_3_3_icdc25cp_s216`.
+    label: 14-3-3 Icdc25cp S216
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.observable_14_3_3_icdc25cp_s216
+    name: observable_14_3_3_icdc25cp_s216
+  - description: Tracks Iplk1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iplk1`.
+    label: Iplk1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.iplk1
+    name: iplk1
+  - description: Tracks Cyclin B in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_b`.
+    label: Cyclin B
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cyclin_b
+    name: cyclin_b
+  - description: Tracks CDK1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk1`.
+    label: CDK1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.cdk1
+    name: cdk1
+  - description: Tracks Icycb CDK1 Cyto in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icycb_cdk1_cyto`.
+    label: Icycb CDK1 Cyto
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icycb_cdk1_cyto
+    name: icycb_cdk1_cyto
+  - description: Tracks P21 Acycb CDK1 Nuc in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acycb_cdk1_nuc`.
+    label: P21 Acycb CDK1 Nuc
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.p21_acycb_cdk1_nuc
+    name: p21_acycb_cdk1_nuc
+  - description: Tracks Icycb CDK1 Nuc in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icycb_cdk1_nuc`.
+    label: Icycb CDK1 Nuc
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.icycb_cdk1_nuc
+    name: icycb_cdk1_nuc
+  - description: Tracks Inactive APC/C/C Cdc20 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_apc_c_c_cdc20`.
+    label: Inactive APC/C/C Cdc20
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_apc_c_c_cdc20
+    name: inactive_apc_c_c_cdc20
+  - description: Tracks Inactive APC/C/C Cdh1 in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_apc_c_c_cdh1`.
+    label: Inactive APC/C/C Cdh1
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.inactive_apc_c_c_cdh1
+    name: inactive_apc_c_c_cdh1
+  - description: Tracks Phosphorylated Rb PPP Copy in the lab model via `cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_rb_ppp_copy`.
+    label: Phosphorylated Rb PPP Copy
+    maps_to: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.phosphorylated_rb_ppp_copy
+    name: phosphorylated_rb_ppp_copy
+models:
+- alias: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+runtime:
+  communication_step: 1.0
+  duration: 10.0
+  initial_inputs: {}
+schema_version: '2.0'
+title: Abroudi2017 - Mammalian Cell Cycle Control Model Lab
+wiring:
+- from: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.state
+  to:
+  - visualisation.cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model_state
+- from: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model_summary
+- from: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model_species_labels

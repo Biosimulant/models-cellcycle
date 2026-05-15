@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early Xenopus laevis Embryos Visualisation
+description: Dedicated question-and-answer visualisation model for Tsai2014 - Cell cycle duration control by oscillatory
+  Dynamics in Early Xenopus laevis Embryos.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early Xenopus laevis Embryos Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model
+      title: Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early Xenopus laevis Embryos
+      observables:
+      - id: Cyclin_B1_Cdk1_complex_phosphorylated
+        port: cyclin_b1_cdk1_complex_phosphorylated
+        label: Cyclin B1 CDK1 Complex Phosphorylated
+        group: mitosis
+      - id: Cyclin_B1_Cdk1_complex_unphosphorylated
+        port: cyclin_b1_cdk1_complex_unphosphorylated
+        label: Cyclin B1 CDK1 Complex Unphosphorylated
+        group: mitosis
+      - id: Plx1_active
+        port: plx1_active
+        label: Plx1 Active
+        group: core
+      - id: APC_C_active
+        port: apc_c_c_model_state_c_active
+        label: APC/C/C Model state C Active
+        group: mitosis
+      - id: APC_C_total
+        port: apc_c_c_model_state_c_total
+        label: APC/C/C Model state C Total
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

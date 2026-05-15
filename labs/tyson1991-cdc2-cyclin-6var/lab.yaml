@@ -1,0 +1,59 @@
+schema_version: '2.0'
+title: Tyson1991 - Cell Cycle 6 var Lab
+description: 'Single-model lab wrapper for Tyson1991 - Cell Cycle 6 var. Tyson1991 - Cell Cycle 6 var Mathematical
+  model of the interactions of cdc2 and cyclin. This model is described in the article: Modeling the cell division
+  cycle: cdc2 and cyclin interactions.'
+models:
+- alias: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.state
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model_state
+- from: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.summary
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model_summary
+- from: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: total_cyclin
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.total_cyclin
+    label: Total Cyclin
+    description: Controls Total Cyclin in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.total_cyclin`.
+  - name: total_cdc2
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.total_cdc2
+    label: Total Cdc2
+    description: Controls Total Cdc2 in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.total_cdc2`.
+  outputs:
+  - name: cdc2k
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cdc2k
+    label: Cdc2k
+    description: Tracks Cdc2k in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cdc2k`.
+  - name: cdc2k_p
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cdc2k_p
+    label: Cdc2k P
+    description: Tracks Cdc2k P in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cdc2k_p`.
+  - name: phosphorylated_cyclin_cdc2
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin_cdc2
+    label: Phosphorylated Cyclin Cdc2
+    description: Tracks Phosphorylated Cyclin Cdc2 in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin_cdc2`.
+  - name: phosphorylated_cyclin_cdc2_p
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin_cdc2_p
+    label: Phosphorylated Cyclin Cdc2 P
+    description: Tracks Phosphorylated Cyclin Cdc2 P in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin_cdc2_p`.
+  - name: cyclin
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cyclin
+    label: Cyclin
+    description: Tracks Cyclin in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.cyclin`.
+  - name: phosphorylated_cyclin
+    maps_to: cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin
+    label: Phosphorylated Cyclin
+    description: Tracks Phosphorylated Cyclin in the lab model via `cellcycle_sbml_tyson1991_cell_cycle_6_var_biomd0000000005_model.phosphorylated_cyclin`.

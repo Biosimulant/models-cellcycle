@@ -1,0 +1,35 @@
+schema_version: '2.0'
+title: DeBoeck2021 - Modular approach to modeling the cell cycle, 5 ODE model with 3 bistable switches Lab
+description: 'Single-model lab wrapper for DeBoeck2021 - Modular approach to modeling the cell cycle, 5 ODE model
+  with 3 bistable switches. Model of the mammalian cell cycle as a chain of bistable switches. There are three bistable
+  responses: response of E2F to Cyclin D, of Cdk1 to Cyclin B and of APC/C to Cdk1 activity.'
+models:
+- alias: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.state
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model_state
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.summary
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model_summary
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cyclin_d
+    maps_to: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.cyclin_d
+    label: Cyclin D
+    description: Tracks Cyclin D in the lab model via `cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.cyclin_d`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001080_model.cyclin_b`.

@@ -1,0 +1,136 @@
+schema_version: '2.0'
+title: Conradie2010_RPControl_CellCycle
+description: "This model is from the article: Restriction point control of the mammalian cell cycle via the cyclin\
+  \ E/Cdk2:p27 complex. Conradie R, Bruggeman FJ, Ciliberto A, Csik\xE1sz-Nagy A, Nov\xE1k B, Westerhoff HV,."
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Riaan Conradie
+- Frank J Bruggeman
+- Andrea Ciliberto
+- "Attila Csik\xE1sz-Nagy"
+- "B\xE9la Nov\xE1k"
+upstream:
+  id: biomodels_ebi:BIOMD0000000265
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000265
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000265
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000265?filename=BIOMD0000000265_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.conradie2010_rpcontrol_cellcycle_biomd0000000265_model:Conradie2010RpcontrolCellcycleBiomd0000000265Model
+  init_kwargs:
+    model_path: data/BIOMD0000000265.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cdc20
+    maps_to: CDc20
+    label: Cdc20
+    description: Tracks Cdc20. Maps to SBML symbol `CDc20`.
+  - name: cdh1
+    maps_to: CDh1
+    label: Cdh1
+    description: Tracks Cdh1. Maps to SBML symbol `CDh1`.
+  - name: cyclin_a_cdk2
+    maps_to: CYCA
+    label: Cyclin A:CDK2
+    description: Tracks Cyclin A:CDK2. Maps to SBML symbol `CYCA`.
+  - name: cyclin_b_cdk2
+    maps_to: CYCB
+    label: Cyclin B:CDK2
+    description: Tracks Cyclin B:CDK2. Maps to SBML symbol `CYCB`.
+  - name: cyclin_d_cdk2
+    maps_to: CYCD
+    label: Cyclin D:CDK2
+    description: Tracks Cyclin D:CDK2. Maps to SBML symbol `CYCD`.
+  - name: cyclin_e_cdk2
+    maps_to: CYCE
+    label: Cyclin E:CDK2
+    description: Tracks Cyclin E:CDK2. Maps to SBML symbol `CYCE`.
+  - name: delayed_response_gene_module
+    maps_to: DRG
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module. Maps to SBML symbol `DRG`.
+  - name: e2f
+    maps_to: var2
+    label: E2F
+    description: Tracks E2F. Maps to SBML symbol `var2`.
+  - name: e2f_rb
+    maps_to: var5
+    label: E2F:Rb
+    description: Tracks E2F:Rb. Maps to SBML symbol `var5`.
+  - name: early_response_gene_module
+    maps_to: ERG
+    label: Early response gene module
+    description: Tracks Early response gene module. Maps to SBML symbol `ERG`.
+  - name: general_machinery_for_protein_synthesis
+    maps_to: GM
+    label: General Machinery For Protein Synthesis
+    description: Tracks General Machinery For Protein Synthesis. Maps to SBML symbol `GM`.
+  - name: hypophosphorylated_rb
+    maps_to: var1
+    label: Hypophosphorylated Rb
+    description: Tracks Hypophosphorylated Rb. Maps to SBML symbol `var1`.
+  - name: inactive_cdc20
+    maps_to: CDc20T
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20. Maps to SBML symbol `CDc20T`.
+  - name: cell_mass
+    maps_to: MASS
+    label: Cell mass
+    description: Tracks Cell mass. Maps to SBML symbol `MASS`.
+  - name: p27_cdk_inhibitor
+    maps_to: P27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor. Maps to SBML symbol `P27`.
+  - name: p27_cyclin_a_cdk2
+    maps_to: CA
+    label: P27:cyclin A:CDK2
+    description: Tracks P27:cyclin A:CDK2. Maps to SBML symbol `CA`.
+  - name: p27_cyclin_d_cdk2
+    maps_to: CD
+    label: P27:cyclin D:CDK2
+    description: Tracks P27:cyclin D:CDK2. Maps to SBML symbol `CD`.
+  - name: p27_cyclin_e_cdk2
+    maps_to: CE
+    label: P27:cyclin E:CDK2
+    description: Tracks P27:cyclin E:CDK2. Maps to SBML symbol `CE`.
+  - name: phosphorylated_e2f
+    maps_to: var3
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F. Maps to SBML symbol `var3`.
+  - name: phosphorylated_e2f_rb
+    maps_to: var6
+    label: Phosphorylated E2F:Rb
+    description: Tracks Phosphorylated E2F:Rb. Maps to SBML symbol `var6`.
+  - name: phosphorylated_ie
+    maps_to: IEP
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE. Maps to SBML symbol `IEP`.
+  - name: ppx_phosphatase
+    maps_to: PPX
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase. Maps to SBML symbol `PPX`.
+  - name: retinoblastoma_protein_rb
+    maps_to: var4
+    label: Retinoblastoma Protein (Rb)
+    description: Tracks Retinoblastoma Protein (Rb). Maps to SBML symbol `var4`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

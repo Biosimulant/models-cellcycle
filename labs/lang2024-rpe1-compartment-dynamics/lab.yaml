@@ -1,0 +1,536 @@
+schema_version: '2.0'
+title: Lang2024 - Cell cycle model explains compartment-resolved dynamics of 16 observables in RPE1 cells Lab
+description: Single-model lab wrapper for Lang2024 - Cell cycle model explains compartment-resolved dynamics of
+  16 observables in RPE1 cells. This model provides a molecularly detailed description of the biochemical reaction
+  networks governing the mammalian cell cycle, including the restriction point, the G1S, G2/M and metaphase/anaphase
+  tr. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.state
+  to:
+  - visualisation.cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model_state
+- from: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model_summary
+- from: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cyt_cyclin_d
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_d
+    label: Cyt Cyclin D
+    description: Tracks Cyt Cyclin D in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_d`.
+  - name: cyt_cyclin_e_cdkn1a_b
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b
+    label: Cyt Cyclin E CDKN1A B
+    description: Tracks Cyt Cyclin E CDKN1A B in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b`.
+  - name: cyt_e2f_dbd_rb1_ser332u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_ser332u
+    label: Cyt E2F DBD Rb1 Ser332u
+    description: Tracks Cyt E2F DBD Rb1 Ser332u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_ser332u`.
+  - name: cyt_e2f_dbd_rb1_ser332p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_ser332p
+    label: Cyt E2F DBD Rb1 Ser332p
+    description: Tracks Cyt E2F DBD Rb1 Ser332p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_ser332p`.
+  - name: cyt_cyclin_active_cdkn1a_b
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b
+    label: Cyt Cyclin Active CDKN1A B
+    description: Tracks Cyt Cyclin Active CDKN1A B in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a`.
+  - name: cyt_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    label: Cyt E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Cyt E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u`.
+  - name: cyt_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    label: Cyt E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Cyt E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u`.
+  - name: cyt_rb1_e2f_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_rb1_e2f_ser807_ser811u
+    label: Cyt Rb1 E2F Ser807 Ser811u
+    description: Tracks Cyt Rb1 E2F Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_rb1_e2f_ser807_ser811u`.
+  - name: cyt_rb1_e2f_ser807_ser811p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_rb1_e2f_ser807_ser811p
+    label: Cyt Rb1 E2F Ser807 Ser811p
+    description: Tracks Cyt Rb1 E2F Ser807 Ser811p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_rb1_e2f_ser807_ser811p`.
+  - name: cyt_ppp2r2b_ensa_arpp19
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ppp2r2b_ensa_arpp19
+    label: Cyt PPP2R2B ENSA ARPP19
+    description: Tracks Cyt PPP2R2B ENSA ARPP19 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ppp2r2b_ensa_arpp19`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355u
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355u`.
+  - name: cyt_cdc20_apc_c_c
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc20_apc_c_c
+    label: Cyt Cdc20 APC/C/C
+    description: Tracks Cyt Cdc20 APC/C/C in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc20_apc_c_c`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355p
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 Ser355p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_ser355p`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu in the lab model via
+      `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu`.
+  - name: cyt_fzr1_apc_c_c_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fzr1_apc_c_c_fbxo5_n_termu
+    label: Cyt FZR1 APC/C/C FBXO5 N Termu
+    description: Tracks Cyt FZR1 APC/C/C FBXO5 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fzr1_apc_c_c_fbxo5_n_termu`.
+  - name: cyt_fzr1_apc_c_c_fbxo5_n_termp
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fzr1_apc_c_c_fbxo5_n_termp
+    label: Cyt FZR1 APC/C/C FBXO5 N Termp
+    description: Tracks Cyt FZR1 APC/C/C FBXO5 N Termp in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fzr1_apc_c_c_fbxo5_n_termp`.
+  - name: cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    label: Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu`.
+  - name: cyt_fbxo5_apc_c_c_fzr1_ser182u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fbxo5_apc_c_c_fzr1_ser182u
+    label: Cyt FBXO5 APC/C/C FZR1 Ser182u
+    description: Tracks Cyt FBXO5 APC/C/C FZR1 Ser182u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fbxo5_apc_c_c_fzr1_ser182u`.
+  - name: cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    label: Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu`.
+  - name: cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    label: Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Cyt APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu in the lab model via
+      `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu`.
+  - name: cyt_fbxo5_apc_c_c_fzr1_ser182p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fbxo5_apc_c_c_fzr1_ser182p
+    label: Cyt FBXO5 APC/C/C FZR1 Ser182p
+    description: Tracks Cyt FBXO5 APC/C/C FZR1 Ser182p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_fbxo5_apc_c_c_fzr1_ser182p`.
+  - name: cyt_foxm1_dbd_thr600u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxm1_dbd_thr600u
+    label: Cyt FOXM1 DBD Thr600u
+    description: Tracks Cyt FOXM1 DBD Thr600u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxm1_dbd_thr600u`.
+  - name: cyt_foxm1_dbd_thr600p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxm1_dbd_thr600p
+    label: Cyt FOXM1 DBD Thr600p
+    description: Tracks Cyt FOXM1 DBD Thr600p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxm1_dbd_thr600p`.
+  - name: cyt_wee1_ser123u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_wee1_ser123u
+    label: Cyt Wee1 Ser123u
+    description: Tracks Cyt Wee1 Ser123u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_wee1_ser123u`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a`.
+  - name: cyt_wee1_ser123p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_wee1_ser123p
+    label: Cyt Wee1 Ser123p
+    description: Tracks Cyt Wee1 Ser123p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_wee1_ser123p`.
+  - name: cyt_cdc25_p_sitesp
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc25_p_sitesp
+    label: Cyt Cdc25 P Sitesp
+    description: Tracks Cyt Cdc25 P Sitesp in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc25_p_sitesp`.
+  - name: cyt_cdc25_p_sitesu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc25_p_sitesu
+    label: Cyt Cdc25 P Sitesu
+    description: Tracks Cyt Cdc25 P Sitesu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdc25_p_sitesu`.
+  - name: cyt_mastl_thr198u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_mastl_thr198u
+    label: Cyt MASTL Thr198u
+    description: Tracks Cyt MASTL Thr198u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_mastl_thr198u`.
+  - name: cyt_mastl_thr198p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_mastl_thr198p
+    label: Cyt MASTL Thr198p
+    description: Tracks Cyt MASTL Thr198p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_mastl_thr198p`.
+  - name: cyt_ensa_arpp19_ppp2r2b_ser62_ser67u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_ser62_ser67u
+    label: Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67u
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_ser62_ser67u`.
+  - name: cyt_ensa_arpp19_ppp2r2b_ser62_ser67p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_ser62_ser67p
+    label: Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67p
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B Ser62 Ser67p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_ser62_ser67p`.
+  - name: cyt_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    label: Cyt ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1
+    description: Tracks Cyt ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1`.
+  - name: cyt_skp2
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_skp2
+    label: Cyt SKP2
+    description: Tracks Cyt SKP2 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_skp2`.
+  - name: cyt_tp53_dbd_ser15p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_tp53_dbd_ser15p
+    label: Cyt TP53 DBD Ser15p
+    description: Tracks Cyt TP53 DBD Ser15p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_tp53_dbd_ser15p`.
+  - name: cyt_foxo_dbd
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxo_dbd
+    label: Cyt FOXO DBD
+    description: Tracks Cyt FOXO DBD in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_foxo_dbd`.
+  - name: num_nup_p_sitesu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.num_nup_p_sitesu
+    label: Num NUP P Sitesu
+    description: Tracks Num NUP P Sitesu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.num_nup_p_sitesu`.
+  - name: nuc_cyclin_d
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_d
+    label: Nuc Cyclin D
+    description: Tracks Nuc Cyclin D in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_d`.
+  - name: nuc_cyclin_e_cdkn1a_b
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b
+    label: Nuc Cyclin E CDKN1A B
+    description: Tracks Nuc Cyclin E CDKN1A B in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b`.
+  - name: nuc_e2f_dbd_rb1_ser332u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_ser332u
+    label: Nuc E2F DBD Rb1 Ser332u
+    description: Tracks Nuc E2F DBD Rb1 Ser332u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_ser332u`.
+  - name: nuc_e2f_dbd_rb1_ser332p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_ser332p
+    label: Nuc E2F DBD Rb1 Ser332p
+    description: Tracks Nuc E2F DBD Rb1 Ser332p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_ser332p`.
+  - name: nuc_cyclin_active_cdkn1a_b
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b
+    label: Nuc Cyclin Active CDKN1A B
+    description: Tracks Nuc Cyclin Active CDKN1A B in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a`.
+  - name: nuc_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u
+    label: Nuc E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Nuc E2F DBD Rb1 1 Ser332u Rb1 E2F 1 Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_1_ser332u_rb1_e2f_1_ser807_ser811u`.
+  - name: nuc_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u
+    label: Nuc E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u
+    description: Tracks Nuc E2F DBD Rb1 1 Ser332p Rb1 E2F 1 Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_rb1_1_ser332p_rb1_e2f_1_ser807_ser811u`.
+  - name: nuc_rb1_e2f_ser807_ser811u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_rb1_e2f_ser807_ser811u
+    label: Nuc Rb1 E2F Ser807 Ser811u
+    description: Tracks Nuc Rb1 E2F Ser807 Ser811u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_rb1_e2f_ser807_ser811u`.
+  - name: nuc_rb1_e2f_ser807_ser811p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_rb1_e2f_ser807_ser811p
+    label: Nuc Rb1 E2F Ser807 Ser811p
+    description: Tracks Nuc Rb1 E2F Ser807 Ser811p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_rb1_e2f_ser807_ser811p`.
+  - name: nuc_ppp2r2b_ensa_arpp19
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ppp2r2b_ensa_arpp19
+    label: Nuc PPP2R2B ENSA ARPP19
+    description: Tracks Nuc PPP2R2B ENSA ARPP19 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ppp2r2b_ensa_arpp19`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355u
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355u
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355u`.
+  - name: nuc_cdc20_apc_c_c
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_apc_c_c
+    label: Nuc Cdc20 APC/C/C
+    description: Tracks Nuc Cdc20 APC/C/C in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_apc_c_c`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p Cdc20 APC/C/C 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_cdc20_apc_c_c_1`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355p
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355p
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 Ser355p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_ser355p`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355u FZR1 APC/C/C 1 FBXO5 N Termu in the lab model via
+      `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355u_fzr1_apc_c_c_1_fbxo5_n_termu`.
+  - name: nuc_fzr1_apc_c_c_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fzr1_apc_c_c_fbxo5_n_termu
+    label: Nuc FZR1 APC/C/C FBXO5 N Termu
+    description: Tracks Nuc FZR1 APC/C/C FBXO5 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fzr1_apc_c_c_fbxo5_n_termu`.
+  - name: nuc_fzr1_apc_c_c_fbxo5_n_termp
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fzr1_apc_c_c_fbxo5_n_termp
+    label: Nuc FZR1 APC/C/C FBXO5 N Termp
+    description: Tracks Nuc FZR1 APC/C/C FBXO5 N Termp in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fzr1_apc_c_c_fbxo5_n_termp`.
+  - name: nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    label: Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355u FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355u_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu`.
+  - name: nuc_fbxo5_apc_c_c_fzr1_ser182u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_apc_c_c_fzr1_ser182u
+    label: Nuc FBXO5 APC/C/C FZR1 Ser182u
+    description: Tracks Nuc FBXO5 APC/C/C FZR1 Ser182u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_apc_c_c_fzr1_ser182u`.
+  - name: nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu
+    label: Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5 3 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 1 FZR1 Cdc20 2 Ser355p FBXO5 APC/C/C 1 FZR1 3 Ser182u FZR1 APC/C/C 2 FBXO5
+      3 N Termu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_1_fzr1_cdc20_2_ser355p_fbxo5_apc_c_c_1_fzr1_3_ser182u_fzr1_apc_c_c_2_fbxo5_3_n_termu`.
+  - name: nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu
+    label: Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu
+    description: Tracks Nuc APC/C/C FBXO5 FZR1 Cdc20 1 Ser355p FZR1 APC/C/C 1 FBXO5 N Termu in the lab model via
+      `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_apc_c_c_fbxo5_fzr1_cdc20_1_ser355p_fzr1_apc_c_c_1_fbxo5_n_termu`.
+  - name: nuc_fbxo5_apc_c_c_fzr1_ser182p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_apc_c_c_fzr1_ser182p
+    label: Nuc FBXO5 APC/C/C FZR1 Ser182p
+    description: Tracks Nuc FBXO5 APC/C/C FZR1 Ser182p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_apc_c_c_fzr1_ser182p`.
+  - name: nuc_foxm1_dbd_thr600u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_dbd_thr600u
+    label: Nuc FOXM1 DBD Thr600u
+    description: Tracks Nuc FOXM1 DBD Thr600u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_dbd_thr600u`.
+  - name: nuc_foxm1_dbd_thr600p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_dbd_thr600p
+    label: Nuc FOXM1 DBD Thr600p
+    description: Tracks Nuc FOXM1 DBD Thr600p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_dbd_thr600p`.
+  - name: nuc_cyclin_b_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    label: Nuc Cyclin B Promoter FOXM1 1 FOXM1 DBD 1 Thr600p
+    description: Tracks Nuc Cyclin B Promoter FOXM1 1 FOXM1 DBD 1 Thr600p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_promoter_foxm1_1_foxm1_dbd_1_thr600p`.
+  - name: nuc_cyclin_b_promoter_foxm1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_promoter_foxm1
+    label: Nuc Cyclin B Promoter FOXM1
+    description: Tracks Nuc Cyclin B Promoter FOXM1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_promoter_foxm1`.
+  - name: nuc_cdc20_promoter_foxm1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_promoter_foxm1
+    label: Nuc Cdc20 Promoter FOXM1
+    description: Tracks Nuc Cdc20 Promoter FOXM1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_promoter_foxm1`.
+  - name: nuc_cdc20_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_promoter_foxm1_1_foxm1_dbd_1_thr600p
+    label: Nuc Cdc20 Promoter FOXM1 1 FOXM1 DBD 1 Thr600p
+    description: Tracks Nuc Cdc20 Promoter FOXM1 1 FOXM1 DBD 1 Thr600p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc20_promoter_foxm1_1_foxm1_dbd_1_thr600p`.
+  - name: nuc_wee1_ser123u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_wee1_ser123u
+    label: Nuc Wee1 Ser123u
+    description: Tracks Nuc Wee1 Ser123u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_wee1_ser123u`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a`.
+  - name: nuc_wee1_ser123p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_wee1_ser123p
+    label: Nuc Wee1 Ser123p
+    description: Tracks Nuc Wee1 Ser123p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_wee1_ser123p`.
+  - name: nuc_cdc25_p_sitesp
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc25_p_sitesp
+    label: Nuc Cdc25 P Sitesp
+    description: Tracks Nuc Cdc25 P Sitesp in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc25_p_sitesp`.
+  - name: nuc_cdc25_p_sitesu
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc25_p_sitesu
+    label: Nuc Cdc25 P Sitesu
+    description: Tracks Nuc Cdc25 P Sitesu in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdc25_p_sitesu`.
+  - name: nuc_mastl_thr198u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_mastl_thr198u
+    label: Nuc MASTL Thr198u
+    description: Tracks Nuc MASTL Thr198u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_mastl_thr198u`.
+  - name: nuc_mastl_thr198p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_mastl_thr198p
+    label: Nuc MASTL Thr198p
+    description: Tracks Nuc MASTL Thr198p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_mastl_thr198p`.
+  - name: nuc_ensa_arpp19_ppp2r2b_ser62_ser67u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_ser62_ser67u
+    label: Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67u
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_ser62_ser67u`.
+  - name: nuc_ensa_arpp19_ppp2r2b_ser62_ser67p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_ser62_ser67p
+    label: Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67p
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B Ser62 Ser67p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_ser62_ser67p`.
+  - name: nuc_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1
+    label: Nuc ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1
+    description: Tracks Nuc ENSA ARPP19 PPP2R2B 1 Ser62 Ser67p PPP2R2B ENSA ARPP19 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_ensa_arpp19_ppp2r2b_1_ser62_ser67p_ppp2r2b_ensa_arpp19_1`.
+  - name: nuc_cyclin_e_promoter_e2f
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f
+    label: Nuc Cyclin E Promoter E2F
+    description: Tracks Nuc Cyclin E Promoter E2F in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f`.
+  - name: nuc_cyclin_active_promoter_e2f
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f
+    label: Nuc Cyclin Active Promoter E2F
+    description: Tracks Nuc Cyclin Active Promoter E2F in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f`.
+  - name: nuc_e2f_promoter_e2f
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_promoter_e2f
+    label: Nuc E2F Promoter E2F
+    description: Tracks Nuc E2F Promoter E2F in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_promoter_e2f`.
+  - name: nuc_fbxo5_promoter_e2f
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_promoter_e2f
+    label: Nuc FBXO5 Promoter E2F
+    description: Tracks Nuc FBXO5 Promoter E2F in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_fbxo5_promoter_e2f`.
+  - name: nuc_foxm1_promoter_e2f
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_promoter_e2f
+    label: Nuc FOXM1 Promoter E2F
+    description: Tracks Nuc FOXM1 Promoter E2F in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxm1_promoter_e2f`.
+  - name: nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    label: Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332u
+    description: Tracks Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332u`.
+  - name: nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332u
+    label: Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332u
+    description: Tracks Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332u`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_e2f_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_e2f_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332u E2F Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u E2F Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_e2f_promoter_e2f_1`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_fbxo5_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_fbxo5_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332u FBXO5 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u FBXO5 Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_fbxo5_promoter_e2f_1`.
+  - name: nuc_e2f_dbd_1_rb1_ser332u_foxm1_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_foxm1_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332u FOXM1 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332u FOXM1 Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332u_foxm1_promoter_e2f_1`.
+  - name: nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    label: Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332p
+    description: Tracks Nuc Cyclin E Promoter E2F 1 E2F DBD 1 Rb1 Ser332p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_promoter_e2f_1_e2f_dbd_1_rb1_ser332p`.
+  - name: nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332p
+    label: Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332p
+    description: Tracks Nuc Cyclin Active Promoter E2F 1 E2F DBD 1 Rb1 Ser332p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_promoter_e2f_1_e2f_dbd_1_rb1_ser332p`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_e2f_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_e2f_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332p E2F Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p E2F Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_e2f_promoter_e2f_1`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_fbxo5_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_fbxo5_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332p FBXO5 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p FBXO5 Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_fbxo5_promoter_e2f_1`.
+  - name: nuc_e2f_dbd_1_rb1_ser332p_foxm1_promoter_e2f_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_foxm1_promoter_e2f_1
+    label: Nuc E2F DBD 1 Rb1 Ser332p FOXM1 Promoter E2F 1
+    description: Tracks Nuc E2F DBD 1 Rb1 Ser332p FOXM1 Promoter E2F 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_e2f_dbd_1_rb1_ser332p_foxm1_promoter_e2f_1`.
+  - name: nuc_skp2
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_skp2
+    label: Nuc SKP2
+    description: Tracks Nuc SKP2 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_skp2`.
+  - name: nuc_tp53_dbd_ser15p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_tp53_dbd_ser15p
+    label: Nuc TP53 DBD Ser15p
+    description: Tracks Nuc TP53 DBD Ser15p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_tp53_dbd_ser15p`.
+  - name: nuc_cdkn1a_promoter_tp53
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_promoter_tp53
+    label: Nuc CDKN1A Promoter TP53
+    description: Tracks Nuc CDKN1A Promoter TP53 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_promoter_tp53`.
+  - name: nuc_foxo_dbd
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxo_dbd
+    label: Nuc FOXO DBD
+    description: Tracks Nuc FOXO DBD in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_foxo_dbd`.
+  - name: nuc_cdkn1b_promoter_foxo
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_promoter_foxo
+    label: Nuc CDKN1B Promoter FOXO
+    description: Tracks Nuc CDKN1B Promoter FOXO in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_promoter_foxo`.
+  - name: nuc_cdkn1a_promoter_tp53_1_tp53_dbd_1_ser15p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_promoter_tp53_1_tp53_dbd_1_ser15p
+    label: Nuc CDKN1A Promoter TP53 1 TP53 DBD 1 Ser15p
+    description: Tracks Nuc CDKN1A Promoter TP53 1 TP53 DBD 1 Ser15p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_promoter_tp53_1_tp53_dbd_1_ser15p`.
+  - name: cyt_cdkn1a_cyclin_e_active_b_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1a_cyclin_e_active_b_ser130u
+    label: Cyt CDKN1A Cyclin E Active B Ser130u
+    description: Tracks Cyt CDKN1A Cyclin E Active B Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1a_cyclin_e_active_b_ser130u`.
+  - name: nuc_cdkn1b_promoter_foxo_1_foxo_dbd_1
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_promoter_foxo_1_foxo_dbd_1
+    label: Nuc CDKN1B Promoter FOXO 1 FOXO DBD 1
+    description: Tracks Nuc CDKN1B Promoter FOXO 1 FOXO DBD 1 in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_promoter_foxo_1_foxo_dbd_1`.
+  - name: cyt_cdkn1b_cyclin_e_active_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1b_cyclin_e_active_thr187u
+    label: Cyt CDKN1B Cyclin E Active Thr187u
+    description: Tracks Cyt CDKN1B Cyclin E Active Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1b_cyclin_e_active_thr187u`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model
+      via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Cyt Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model
+      via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: cyt_cdkn1a_cyclin_e_active_b_ser130p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1a_cyclin_e_active_b_ser130p
+    label: Cyt CDKN1A Cyclin E Active B Ser130p
+    description: Tracks Cyt CDKN1A Cyclin E Active B Ser130p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1a_cyclin_e_active_b_ser130p`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u`.
+  - name: cyt_cdkn1b_cyclin_e_active_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1b_cyclin_e_active_thr187p
+    label: Cyt CDKN1B Cyclin E Active Thr187p
+    description: Tracks Cyt CDKN1B Cyclin E Active Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cdkn1b_cyclin_e_active_thr187p`.
+  - name: nuc_cdkn1a_cyclin_e_active_b_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_cyclin_e_active_b_ser130u
+    label: Nuc CDKN1A Cyclin E Active B Ser130u
+    description: Tracks Nuc CDKN1A Cyclin E Active B Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_cyclin_e_active_b_ser130u`.
+  - name: nuc_cdkn1b_cyclin_e_active_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_cyclin_e_active_thr187u
+    label: Nuc CDKN1B Cyclin E Active Thr187u
+    description: Tracks Nuc CDKN1B Cyclin E Active Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_cyclin_e_active_thr187u`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15u CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model
+      via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15u_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u
+    label: Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u
+    description: Tracks Nuc Cyclin B CDK1 Thr14 Tyr15p CDKN1A 1 CDKN1A Cyclin E Active B 1 Ser130u in the lab model
+      via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_b_cdk1_thr14_tyr15p_cdkn1a_1_cdkn1a_cyclin_e_active_b_1_ser130u`.
+  - name: nuc_cdkn1a_cyclin_e_active_b_ser130p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_cyclin_e_active_b_ser130p
+    label: Nuc CDKN1A Cyclin E Active B Ser130p
+    description: Tracks Nuc CDKN1A Cyclin E Active B Ser130p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1a_cyclin_e_active_b_ser130p`.
+  - name: cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    label: Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Cyt Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u`.
+  - name: cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    label: Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Cyt Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.cyt_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187u in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187u`.
+  - name: nuc_cdkn1b_cyclin_e_active_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_cyclin_e_active_thr187p
+    label: Nuc CDKN1B Cyclin E Active Thr187p
+    description: Tracks Nuc CDKN1B Cyclin E Active Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cdkn1b_cyclin_e_active_thr187p`.
+  - name: nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    label: Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Nuc Cyclin Active CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_active_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p`.
+  - name: nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    maps_to: cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p
+    label: Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p
+    description: Tracks Nuc Cyclin E CDKN1A B 1 CDKN1B Cyclin E A 1 Thr187p in the lab model via `cellcycle_sbml_lang2024_cell_cycle_model_explains_compartment_r_model2401050001_model.nuc_cyclin_e_cdkn1a_b_1_cdkn1b_cyclin_e_a_1_thr187p`.

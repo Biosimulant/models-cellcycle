@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Qu2003_CellCycle Visualisation
+description: Dedicated question-and-answer visualisation model for Qu2003_CellCycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Qu2003_CellCycle Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_qu2003_cellcycle_biomd0000000110_model
+      title: Qu2003_CellCycle
+      observables:
+      - id: x1
+        port: inactive_cyclin_cdk_complex
+        label: Inactive Cyclin:CDK Complex
+        group: core
+      - id: x
+        port: active_cyclin_cdk_complex
+        label: Active Cyclin:CDK Complex
+        group: core
+      - id: c0
+        port: total_cdk
+        label: Total CDK
+        group: core
+      - id: z0
+        port: unphosphorylated_cdc25
+        label: Unphosphorylated Cdc25
+        group: mitosis
+      - id: z1
+        port: one_site_phosphorylated_cdc25
+        label: One Site Phosphorylated Cdc25
+        group: mitosis
+      - id: z2
+        port: two_site_phosphorylated_cdc25
+        label: Two Site Phosphorylated Cdc25
+        group: mitosis
+      - id: w0
+        port: unphosphorylated_wee1
+        label: Unphosphorylated Wee1
+        group: mitosis
+      - id: w1
+        port: phosphorylated_wee1
+        label: Phosphorylated Wee1
+        group: mitosis
+      - id: u
+        port: active_skp2_or_apc_c_c
+        label: Active SKP2 Or APC/C/C
+        group: mitosis
+      - id: i
+        port: free_cki
+        label: Free CKI
+        group: core
+      - id: ix
+        port: cyclin_cdk_cki_complex_with_cki_unphosphorylated
+        label: Cyclin:CDK:CKI Complex With CKI Unphosphorylated
+        group: core
+      - id: ixp
+        port: cyclin_cdk_cki_complex_with_cki_phosphorylated
+        label: Cyclin:CDK:CKI Complex With CKI Phosphorylated
+        group: core
+      - id: y
+        port: free_cyclin
+        label: Free Cyclin
+        group: core
+      - id: c
+        port: free_cdk
+        label: Free CDK
+        group: core
+      - id: totalCyclin
+        port: total_cyclin
+        label: Total Cyclin
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

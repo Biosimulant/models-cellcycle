@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Zhang2018 - Cell cycle commitment in hypoxia Visualisation
+description: Dedicated question-and-answer visualisation model for Zhang2018 - Cell cycle commitment in hypoxia.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zhang2018 - Cell cycle commitment in hypoxia Lab
+    question: Does hypoxia signaling reshape cell-cycle commitment?
+    answer_focus: The answer is based on HIF, Myc, Rb/E2F, and cyclin commitment markers.
+    sources:
+    - alias: cellcycle_sbml_zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model
+      title: Zhang2018 - Cell cycle commitment in hypoxia
+      observables:
+      - id: Hif1a_Myc
+        port: hif_1_alpha_myc
+        label: HIF-1 alpha Myc
+        group: checkpoint
+      - id: Hif2a_Myc
+        port: hif_2_alpha_myc
+        label: HIF-2 alpha Myc
+        group: checkpoint
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: cycD_p_p
+        port: double_phosphorylated_cyclin_d
+        label: Double-phosphorylated Cyclin D
+        group: g1s
+      - id: cycD
+        port: cyclin_d
+        label: Cyclin D
+        group: g1s
+      - id: cycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: RbP
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: Rb_nP
+        port: unphosphorylated_rb
+        label: Unphosphorylated Rb
+        group: g1s
+      - id: Myc
+        port: myc_transcription_factor
+        label: Myc transcription factor
+        group: core
+      - id: E2F_RB
+        port: e2f_rb
+        label: E2F Rb
+        group: g1s
+      - id: Rb
+        port: rb_tumor_suppressor
+        label: Rb tumor suppressor
+        group: g1s
+      - id: p_p
+        port: double_phosphorylation_signal
+        label: Double phosphorylation signal
+        group: core
+      - id: cycE_p_p
+        port: double_phosphorylated_cyclin_e
+        label: Double-phosphorylated Cyclin E
+        group: g1s
+      - id: DEG
+        port: oxygen_dependent_degradation_factor
+        label: Oxygen-dependent degradation factor
+        group: checkpoint
+      - id: Hif1a
+        port: hif_1_alpha
+        label: HIF-1 alpha
+        group: checkpoint
+      - id: Hif2a
+        port: hif_2_alpha
+        label: HIF-2 alpha
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

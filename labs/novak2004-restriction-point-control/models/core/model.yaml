@@ -1,0 +1,150 @@
+schema_version: '2.0'
+title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle
+description: '&lt;notes xmlns=''http://www.sbml.org/sbml/level2/version4''&gt; &lt;body xmlns=''http://www.w3.org/1999/xhtml''&gt;
+  &lt;pre&gt;Inhibition of protein synthesis by cycloheximide blocks subsequent division. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "B\xE9la Nov\xE1k"
+- John J Tyson
+upstream:
+  id: biomodels_ebi:MODEL2006080001
+  source_db: biomodels_ebi
+  source_id: MODEL2006080001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2006080001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2006080001?filename=Novak2004.xml
+  license: CC0
+biosim:
+  entrypoint: src.novak2004_a_model_for_restriction_point_control_model2006080001_model:Novak2004AModelForRestrictionPointControlModel2006080001Model
+  init_kwargs:
+    model_path: data/MODEL2006080001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: early_response_gene_module
+    maps_to: ERG
+    label: Early response gene module
+    description: Tracks Early response gene module. Maps to SBML symbol `ERG`.
+  - name: delayed_response_gene_module
+    maps_to: DRG
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module. Maps to SBML symbol `DRG`.
+  - name: cyclin_d
+    maps_to: cycD
+    label: Cyclin D
+    description: Tracks Cyclin D. Maps to SBML symbol `cycD`.
+  - name: cyclin_d_kip1
+    maps_to: cycD_Kip1
+    label: Cyclin D:Kip1
+    description: Tracks Cyclin D:Kip1. Maps to SBML symbol `cycD_Kip1`.
+  - name: cyclin_e
+    maps_to: cycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cycE`.
+  - name: cyclin_e_kip1
+    maps_to: cycE_Kip1
+    label: Cyclin E:Kip1
+    description: Tracks Cyclin E:Kip1. Maps to SBML symbol `cycE_Kip1`.
+  - name: cyclin_a
+    maps_to: cycA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `cycA`.
+  - name: cyclin_a_kip1
+    maps_to: cycA_Kip1
+    label: Cyclin A:Kip1
+    description: Tracks Cyclin A:Kip1. Maps to SBML symbol `cycA_Kip1`.
+  - name: kip1_cdk_inhibitor
+    maps_to: Kip1
+    label: Kip1 CDK inhibitor
+    description: Tracks Kip1 CDK inhibitor. Maps to SBML symbol `Kip1`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: cyclin_b
+    maps_to: cycB
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `cycB`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: cdc20t
+    maps_to: cdc20T
+    label: Cdc20T
+    description: Tracks Cdc20T. Maps to SBML symbol `cdc20T`.
+  - name: cdc20_apc_c_activator
+    maps_to: Cdc20
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator. Maps to SBML symbol `Cdc20`.
+  - name: ppx_phosphatase
+    maps_to: PPX
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase. Maps to SBML symbol `PPX`.
+  - name: phosphorylated_ie
+    maps_to: IEP
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE. Maps to SBML symbol `IEP`.
+  - name: model_state_gm
+    maps_to: GM
+    label: Model state GM
+    description: Tracks Model state GM. Maps to SBML symbol `GM`.
+  - name: mass
+    maps_to: mass
+    label: Mass
+    description: Tracks Mass. Maps to SBML symbol `mass`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: e2ft
+    maps_to: E2FT
+    label: E2FT
+    accepted_units:
+    - native SBML value
+    description: Controls E2FT. Maps to SBML symbol `E2FT`.
+  - name: pp1t
+    maps_to: PP1T
+    label: PP1T
+    accepted_units:
+    - native SBML value
+    description: Controls PP1T. Maps to SBML symbol `PP1T`.
+  - name: rb_t
+    maps_to: RbT
+    label: Rb T
+    accepted_units:
+    - native SBML value
+    description: Controls Rb T. Maps to SBML symbol `RbT`.
+  - name: cyclin_et
+    maps_to: cycET
+    label: Cyclin ET
+    accepted_units:
+    - native SBML value
+    description: Controls Cyclin ET. Maps to SBML symbol `cycET`.
+  - name: pp1a
+    maps_to: PP1A
+    label: PP1A
+    accepted_units:
+    - native SBML value
+    description: Controls PP1A. Maps to SBML symbol `PP1A`.
+  - name: rb_hypo
+    maps_to: Rb_hypo
+    label: Rb Hypo
+    accepted_units:
+    - native SBML value
+    description: Controls Rb Hypo. Maps to SBML symbol `Rb_hypo`.

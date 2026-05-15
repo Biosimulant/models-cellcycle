@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Swat2004_Mammalian_G1_S_Transition Visualisation
+description: Dedicated question-and-answer visualisation model for Swat2004_Mammalian_G1_S_Transition.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Swat2004_Mammalian_G1_S_Transition Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model
+      title: Swat2004_Mammalian_G1_S_Transition
+      observables:
+      - id: pRB
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: pRBp
+        port: p_rbp
+        label: P RBp
+        group: g1s
+      - id: E2F1
+        port: e2f1_transcription_factor
+        label: E2F1 transcription factor
+        group: g1s
+      - id: CycDi
+        port: cyclin_d_cdk4_6_i
+        label: Cyclin D CDK4,6(i)
+        group: g1s
+      - id: CycDa
+        port: cyclin_d_cdk4_6_a
+        label: Cyclin D CDK4,6(a)
+        group: g1s
+      - id: AP1
+        port: ap1_transcription_factor
+        label: AP1 transcription factor
+        group: g1s
+      - id: pRBpp
+        port: p_rbpp
+        label: P RBpp
+        group: g1s
+      - id: CycEi
+        port: cyclin_e_cdk2_i
+        label: Cyclin E CDK2(i)
+        group: g1s
+      - id: CycEa
+        port: cyclin_ea_cdk2_a
+        label: Cyclin Ea CDK2(a)
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

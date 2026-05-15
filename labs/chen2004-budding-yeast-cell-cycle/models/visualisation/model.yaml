@@ -1,0 +1,231 @@
+schema_version: '2.0'
+title: Chen2004 - Cell Cycle Regulation Visualisation
+description: Dedicated question-and-answer visualisation model for Chen2004 - Cell Cycle Regulation.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chen2004 - Cell Cycle Regulation Lab
+    question: Does the yeast model progress through its cell-cycle phase program?
+    answer_focus: The answer is based on cyclins, inhibitors, APC/C regulators, mass, and phase markers.
+    sources:
+    - alias: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model
+      title: Chen2004 - Cell Cycle Regulation
+      observables:
+      - id: BUB2
+        port: bub2
+        label: Bub2
+        group: checkpoint
+      - id: BUD
+        port: budding_index
+        label: Budding index
+        group: replication
+      - id: C2
+        port: model_state_c2_c2
+        label: Model state C2 (C2)
+        group: replication
+      - id: C2P
+        port: phosphorylated_model_state_c2
+        label: Phosphorylated Model state C2
+        group: replication
+      - id: C5
+        port: model_state_c5_c5
+        label: Model state C5 (C5)
+        group: replication
+      - id: C5P
+        port: phosphorylated_model_state_c5
+        label: Phosphorylated Model state C5
+        group: replication
+      - id: CDC14
+        port: cdc14_phosphatase
+        label: Cdc14 phosphatase
+        group: replication
+      - id: CDC15
+        port: cdc15_mitotic_exit_kinase
+        label: Cdc15 mitotic exit kinase
+        group: mitosis
+      - id: CDC20
+        port: cdc20
+        label: Cdc20
+        group: mitosis
+      - id: CDC20i
+        port: inactive_cdc20
+        label: Inactive Cdc20
+        group: mitosis
+      - id: CDC6
+        port: cdc6_replication_licensing_factor
+        label: Cdc6 replication licensing factor
+        group: replication
+      - id: CDC6P
+        port: phosphorylated_cdc6
+        label: Phosphorylated CDC6
+        group: replication
+      - id: CDH1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: mitosis
+      - id: CDH1i
+        port: inactive_cdh1
+        label: Inactive Cdh1
+        group: mitosis
+      - id: CLB2
+        port: clb2_mitotic_cyclin
+        label: Clb2 mitotic cyclin
+        group: mitosis
+      - id: CLB5
+        port: clb5_s_phase_cyclin
+        label: Clb5 S-phase cyclin
+        group: replication
+      - id: CLN2
+        port: cln2_g1_cyclin
+        label: Cln2 G1 cyclin
+        group: g1s
+      - id: ESP1
+        port: esp1_separase
+        label: Esp1 separase
+        group: replication
+      - id: F2
+        port: model_state_f2
+        label: Model state F2
+        group: replication
+      - id: F2P
+        port: phosphorylated_f2
+        label: Phosphorylated F2
+        group: replication
+      - id: F5
+        port: model_state_f5
+        label: Model state F5
+        group: replication
+      - id: F5P
+        port: phosphorylated_f5
+        label: Phosphorylated F5
+        group: replication
+      - id: IEP
+        port: phosphorylated_ie
+        label: Phosphorylated IE
+        group: replication
+      - id: LTE1
+        port: lte1_mitotic_exit_regulator
+        label: Lte1 mitotic exit regulator
+        group: mitosis
+      - id: MAD2
+        port: mad2_spindle_checkpoint_protein
+        label: Mad2 spindle checkpoint protein
+        group: checkpoint
+      - id: MASS
+        port: cell_mass
+        label: Cell mass
+        group: replication
+      - id: NET1
+        port: net1_nucleolar_cdc14_anchor
+        label: Net1 nucleolar Cdc14 anchor
+        group: replication
+      - id: NET1P
+        port: phosphorylated_net1
+        label: Phosphorylated NET1
+        group: replication
+      - id: ORI
+        port: replication_origin_state
+        label: Replication origin state
+        group: replication
+      - id: PDS1
+        port: pds1_securin
+        label: Pds1 securin
+        group: checkpoint
+      - id: PPX
+        port: ppx_phosphatase
+        label: PPX phosphatase
+        group: replication
+      - id: RENT
+        port: rent_cdc14_sequestration_complex
+        label: RENT Cdc14 sequestration complex
+        group: replication
+      - id: RENTP
+        port: phosphorylated_rent
+        label: Phosphorylated RENT
+        group: replication
+      - id: SIC1
+        port: sic1
+        label: Sic1
+        group: replication
+      - id: SIC1P
+        port: phosphorylated_sic1
+        label: Phosphorylated Sic1
+        group: replication
+      - id: SPN
+        port: spindle_state
+        label: Spindle state
+        group: replication
+      - id: SWI5
+        port: swi5_transcription_factor
+        label: Swi5 transcription factor
+        group: replication
+      - id: SWI5P
+        port: phosphorylated_swi5
+        label: Phosphorylated SWI5
+        group: replication
+      - id: TEM1GTP
+        port: phosphorylated_tem1gt
+        label: Phosphorylated TEM1GT
+        group: replication
+      - id: BCK2
+        port: bck2_g1_regulator
+        label: Bck2 G1 regulator
+        group: g1s
+      - id: CDC14T
+        port: total_cdc14_phosphatase
+        label: Total Cdc14 phosphatase
+        group: replication
+      - id: CDC6T
+        port: total_cdc6_replication_licensing_factor
+        label: Total Cdc6 replication licensing factor
+        group: replication
+      - id: CKIT
+        port: total_cyclin_dependent_kinase_inhibitor
+        label: Total cyclin-dependent kinase inhibitor
+        group: replication
+      - id: CLB2T
+        port: total_clb2_mitotic_cyclin
+        label: Total Clb2 mitotic cyclin
+        group: mitosis
+      - id: CLB5T
+        port: total_clb5_s_phase_cyclin
+        label: Total Clb5 S-phase cyclin
+        group: replication
+      - id: CLN3
+        port: cln3_start_cyclin
+        label: Cln3 Start cyclin
+        group: proteostasis
+      - id: MCM1
+        port: mcm1
+        label: Mcm1
+        group: replication
+      - id: NET1T
+        port: total_net1_nucleolar_cdc14_anchor
+        label: Total Net1 nucleolar Cdc14 anchor
+        group: replication
+      - id: SBF
+        port: sbf_transcription_factor
+        label: SBF transcription factor
+        group: replication
+      - id: SIC1T
+        port: total_sic1_cdk_inhibitor
+        label: Total Sic1 CDK inhibitor
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

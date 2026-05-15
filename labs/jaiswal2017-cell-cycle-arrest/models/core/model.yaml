@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Jaiswal2017 - Cell cycle arrest
+description: 'Jaiswal2017 - Cell cycle arrest This model is described in the article: ATM/Wip1 activities at chromatin
+  control Plk1 re-activation to determine G2 checkpoint duration. It can be used to explore cell-cycle regulation
+  dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Himjyot Jaiswal
+- Jan Benada
+- "Erik M\xFCllers"
+- Karen Akopyan
+- Kamila Burdova
+upstream:
+  id: biomodels_ebi:BIOMD0000000641
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000641
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000641
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000641?filename=BIOMD0000000641_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.jaiswal2017_cell_cycle_arrest_biomd0000000641_model:Jaiswal2017CellCycleArrestBiomd0000000641Model
+  init_kwargs:
+    model_path: data/BIOMD0000000641.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: active_timer_state
+    maps_to: Timeract
+    label: Active timer state
+    description: Tracks Active timer state. Maps to SBML symbol `Timeract`.
+  - name: cell_cact
+    maps_to: CellCact
+    label: Cell Cact
+    description: Tracks Cell Cact. Maps to SBML symbol `CellCact`.
+  - name: active_checkpoint_effector
+    maps_to: Effectoract
+    label: Active checkpoint effector
+    description: Tracks Active checkpoint effector. Maps to SBML symbol `Effectoract`.
+  - name: model_state_hr
+    maps_to: HR
+    label: Model state HR
+    description: Tracks Model state HR. Maps to SBML symbol `HR`.
+  - name: non_homologous_end_joining_repair_state
+    maps_to: NHEJ
+    label: Non-homologous end joining repair state
+    description: Tracks Non-homologous end joining repair state. Maps to SBML symbol `NHEJ`.
+  - name: cell_cina
+    maps_to: CellCina
+    label: Cell Cina
+    description: Tracks Cell Cina. Maps to SBML symbol `CellCina`.
+  - name: dna_damage
+    maps_to: Damage
+    label: DNA Damage
+    description: Tracks DNA Damage. Maps to SBML symbol `Damage`.
+  - name: inactive_checkpoint_effector
+    maps_to: Effectorina
+    label: Inactive checkpoint effector
+    description: Tracks Inactive checkpoint effector. Maps to SBML symbol `Effectorina`.
+  - name: inactive_timer_state
+    maps_to: Timerinact
+    label: Inactive timer state
+    description: Tracks Inactive timer state. Maps to SBML symbol `Timerinact`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: cell_cycletot
+    maps_to: CellCycletot
+    label: Cell Cycletot
+    accepted_units:
+    - substance
+    description: Controls Cell Cycletot. Maps to SBML symbol `CellCycletot`.
+  - name: effectortot
+    maps_to: Effectortot
+    label: Effectortot
+    accepted_units:
+    - substance
+    description: Controls Effectortot. Maps to SBML symbol `Effectortot`.
+  - name: timertot
+    maps_to: Timertot
+    label: Timertot
+    accepted_units:
+    - substance
+    description: Controls Timertot. Maps to SBML symbol `Timertot`.

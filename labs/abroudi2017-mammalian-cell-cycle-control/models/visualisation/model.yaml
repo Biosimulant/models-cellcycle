@@ -1,0 +1,283 @@
+schema_version: '2.0'
+title: Abroudi2017 - Mammalian Cell Cycle Control Model Visualisation
+description: Dedicated question-and-answer visualisation model for Abroudi2017 - Mammalian Cell Cycle Control Model.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Abroudi2017 - Mammalian Cell Cycle Control Model Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model
+      title: Abroudi2017 - Mammalian Cell Cycle Control Model
+      observables:
+      - id: acMyc
+        port: active_myc
+        label: Active Myc
+        group: core
+      - id: icMyc
+        port: inactive_myc
+        label: Inactive Myc
+        group: core
+      - id: ATM
+        port: atm_checkpoint_kinase
+        label: ATM checkpoint kinase
+        group: checkpoint
+      - id: aChk2
+        port: active_chk2
+        label: Active Chk2
+        group: checkpoint
+      - id: iChk2
+        port: inactive_chk2
+        label: Inactive Chk2
+        group: checkpoint
+      - id: p53
+        port: p53_tumor_suppressor
+        label: p53 tumor suppressor
+        group: checkpoint
+      - id: mdm2
+        port: mdm2
+        label: Mdm2
+        group: core
+      - id: IF
+        port: model_state_if
+        label: Model state IF
+        group: core
+      - id: p21
+        port: p21
+        label: P21
+        group: checkpoint
+      - id: cycd_cdk4
+        port: cyclin_d_cdk4
+        label: Cyclin D CDK4
+        group: g1s
+      - id: p21_cycd_cdk4
+        port: p21_cyclin_d_cdk4
+        label: P21 Cyclin D CDK4
+        group: checkpoint
+      - id: acyce_cdk2
+        port: acyce_cdk2
+        label: Acyce CDK2
+        group: g1s
+      - id: p21_acyce_cdk2
+        port: p21_acyce_cdk2
+        label: P21 Acyce CDK2
+        group: checkpoint
+      - id: p21_acyca_cdk2
+        port: p21_acyca_cdk2
+        label: P21 Acyca CDK2
+        group: checkpoint
+      - id: acyca_cdk2
+        port: acyca_cdk2
+        label: Acyca CDK2
+        group: g1s
+      - id: _14_3_3_s
+        port: observable_14_3_3_s
+        label: 14-3-3 S
+        group: core
+      - id: gadda45
+        port: gadda45
+        label: Gadda45
+        group: core
+      - id: cycd
+        port: cyclin_d
+        label: Cyclin D
+        group: g1s
+      - id: cdk4
+        port: cdk4
+        label: CDK4
+        group: core
+      - id: ascf
+        port: ascf
+        label: Ascf
+        group: core
+      - id: p27
+        port: p27_cdk_inhibitor
+        label: p27 CDK inhibitor
+        group: g1s
+      - id: p27_acyce_cdk2
+        port: p27_acyce_cdk2
+        label: P27 Acyce CDK2
+        group: g1s
+      - id: p27_acyca_cdk2
+        port: p27_acyca_cdk2
+        label: P27 Acyca CDK2
+        group: g1s
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: pRb
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: E2F_pRb
+        port: e2f_phosphorylated_rb
+        label: E2F Phosphorylated Rb
+        group: g1s
+      - id: p27_cycd_cdk4
+        port: p27_cyclin_d_cdk4
+        label: P27 Cyclin D CDK4
+        group: g1s
+      - id: E2F_pRbPP
+        port: phosphorylated_e2f_phosphorylated_rb_p
+        label: Phosphorylated E2F Phosphorylated Rb P
+        group: g1s
+      - id: pRbPPP
+        port: phosphorylated_phosphorylated_rb_pp
+        label: Phosphorylated Phosphorylated Rb PP
+        group: g1s
+      - id: app1
+        port: app1
+        label: App1
+        group: core
+      - id: ipp1
+        port: ipp1
+        label: Ipp1
+        group: core
+      - id: acycb_cdk1_nuc
+        port: acycb_cdk1_nuc
+        label: Acycb CDK1 Nuc
+        group: mitosis
+      - id: cyce
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: cdk2
+        port: cdk2
+        label: CDK2
+        group: g1s
+      - id: cyca
+        port: cyclin_a
+        label: Cyclin A
+        group: core
+      - id: aBMyb
+        port: active_bmyb
+        label: Active BMyb
+        group: core
+      - id: NFY
+        port: nf_y_transcription_factor
+        label: NF-Y transcription factor
+        group: core
+      - id: icyca_cdk2
+        port: icyca_cdk2
+        label: Icyca CDK2
+        group: g1s
+      - id: aAPC_Cdc20
+        port: active_apc_c_c_cdc20
+        label: Active APC/C/C Cdc20
+        group: mitosis
+      - id: aAPC_Cdh1
+        port: active_apc_c_c_cdh1
+        label: Active APC/C/C Cdh1
+        group: mitosis
+      - id: icyce_cdk2
+        port: icyce_cdk2
+        label: Icyce CDK2
+        group: g1s
+      - id: acdc25a
+        port: acdc25a
+        label: Acdc25a
+        group: mitosis
+      - id: iscf
+        port: iscf
+        label: Iscf
+        group: core
+      - id: iBMyb
+        port: inactive_bmyb
+        label: Inactive BMyb
+        group: core
+      - id: icdc25a
+        port: icdc25a
+        label: Icdc25a
+        group: mitosis
+      - id: aplk1
+        port: aplk1
+        label: Aplk1
+        group: mitosis
+      - id: awee1
+        port: awee1
+        label: Awee1
+        group: mitosis
+      - id: iwee1
+        port: iwee1
+        label: Iwee1
+        group: mitosis
+      - id: acdc25c
+        port: acdc25c
+        label: Acdc25c
+        group: mitosis
+      - id: icdc25c
+        port: icdc25c
+        label: Icdc25c
+        group: mitosis
+      - id: icdc25cp_s216
+        port: icdc25cp_s216
+        label: Icdc25cp S216
+        group: mitosis
+      - id: acycb_cdk1_cyto
+        port: acycb_cdk1_cyto
+        label: Acycb CDK1 Cyto
+        group: mitosis
+      - id: acdc25cp_s216
+        port: acdc25cp_s216
+        label: Acdc25cp S216
+        group: mitosis
+      - id: _14_3_3_icdc25cp_s216
+        port: observable_14_3_3_icdc25cp_s216
+        label: 14-3-3 Icdc25cp S216
+        group: mitosis
+      - id: iplk1
+        port: iplk1
+        label: Iplk1
+        group: mitosis
+      - id: cycb
+        port: cyclin_b
+        label: Cyclin B
+        group: mitosis
+      - id: cdk1
+        port: cdk1
+        label: CDK1
+        group: mitosis
+      - id: icycb_cdk1_cyto
+        port: icycb_cdk1_cyto
+        label: Icycb CDK1 Cyto
+        group: mitosis
+      - id: p21_acycb_cdk1_nuc
+        port: p21_acycb_cdk1_nuc
+        label: P21 Acycb CDK1 Nuc
+        group: checkpoint
+      - id: icycb_cdk1_nuc
+        port: icycb_cdk1_nuc
+        label: Icycb CDK1 Nuc
+        group: mitosis
+      - id: iAPC_Cdc20
+        port: inactive_apc_c_c_cdc20
+        label: Inactive APC/C/C Cdc20
+        group: mitosis
+      - id: iAPC_Cdh1
+        port: inactive_apc_c_c_cdh1
+        label: Inactive APC/C/C Cdh1
+        group: mitosis
+      - id: pRbPPP_copy
+        port: phosphorylated_rb_ppp_copy
+        label: Phosphorylated Rb PPP Copy
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

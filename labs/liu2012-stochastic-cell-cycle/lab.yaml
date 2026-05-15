@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic cell cycle.
+  Lab
+description: Single-model lab wrapper for Liu2012-Hybrid modeling and simulation of stochastic effects on progression
+  through the eukaryotic cell cycle.. The eukaryotic cell cycle is regulated by a complicated chemical reaction
+  network. Although many deterministic models have been proposed, stochastic models are desired to capture noise
+  in the cell res.
+models:
+- alias: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.state
+  to:
+  - visualisation.cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model_state
+- from: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.summary
+  to:
+  - visualisation.cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model_summary
+- from: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_x_x
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_x_x
+    label: Model state X (X)
+    description: Tracks Model state X (X) in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_x_x`.
+  - name: model_state_v_v
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_v_v
+    label: Model state V (V)
+    description: Tracks Model state V (V) in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_v_v`.
+  - name: model_state_y_y
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_y_y
+    label: Model state Y (Y)
+    description: Tracks Model state Y (Y) in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_y_y`.
+  - name: model_state_z_z
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_z_z
+    label: Model state Z (Z)
+    description: Tracks Model state Z (Z) in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_z_z`.
+  - name: model_state_yt
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_yt
+    label: Model state YT
+    description: Tracks Model state YT in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_yt`.
+  - name: model_state_mx
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_mx
+    label: Model state Mx
+    description: Tracks Model state Mx in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_mx`.
+  - name: model_state_my
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_my
+    label: Model state My
+    description: Tracks Model state My in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_my`.
+  - name: model_state_mz
+    maps_to: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_mz
+    label: Model state Mz
+    description: Tracks Model state Mz in the lab model via `cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model.model_state_mz`.

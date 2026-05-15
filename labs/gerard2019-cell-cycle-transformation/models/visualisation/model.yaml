@@ -1,0 +1,156 @@
+schema_version: '2.0'
+title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML) Visualisation"
+description: "Dedicated question-and-answer visualisation model for G\xE9rard - 2019 - Coupling the cell cycle and\
+  \ the cell transformation networks (SBML)."
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML) Lab"
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model
+      title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML)"
+      observables:
+      - id: NFKB
+        port: nf_k_b_0_00045
+        label: NF-kB = 0 00045
+        group: core
+      - id: LIN28
+        port: lin28_0_34
+        label: LIN28 = 0 34
+        group: core
+      - id: let7
+        port: let_7_40
+        label: let-7 = 40
+        group: core
+      - id: mIL6
+        port: model_state_m_il6_0_0003
+        label: Model state M IL6 = 0 0003
+        group: core
+      - id: mIL6let7
+        port: model_state_m_il6let7
+        label: Model state M IL6let7
+        group: core
+      - id: IL6
+        port: il6_0_001
+        label: IL6 = 0 001
+        group: core
+      - id: mRas
+        port: model_state_m_ras_0_00001
+        label: Model state M Ras = 0 00001
+        group: core
+      - id: mRaslet7
+        port: model_state_m_raslet7
+        label: Model state M Raslet7
+        group: core
+      - id: Ras
+        port: ras_0_0001
+        label: Ras = 0 0001
+        group: core
+      - id: STAT3
+        port: stat3_0_0001
+        label: STAT3 = 0 0001
+        group: core
+      - id: miR21
+        port: mi_model_state_r21_0_0003
+        label: Mi Model state R21 = 0 0003
+        group: core
+      - id: mPTEN
+        port: model_state_m_pten_0_01
+        label: Model state M PTEN = 0 01
+        group: core
+      - id: miRmpten
+        port: mi_rmpten
+        label: Mi Rmpten
+        group: core
+      - id: PTEN
+        port: pten_0_17
+        label: PTEN = 0 17
+        group: core
+      - id: mMd
+        port: model_state_m_md
+        label: Model state M Md
+        group: core
+      - id: Md
+        port: md_0_01
+        label: Md = 0 01
+        group: core
+      - id: mMdlet7
+        port: model_state_m_mdlet7
+        label: Model state M Mdlet7
+        group: core
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: mMe
+        port: model_state_m_me
+        label: Model state M Me
+        group: core
+      - id: Me
+        port: me_0_01
+        label: Me = 0 01
+        group: core
+      - id: mMelet7
+        port: model_state_m_melet7
+        label: Model state M Melet7
+        group: core
+      - id: mMa
+        port: model_state_m_ma
+        label: Model state M Ma
+        group: core
+      - id: Ma
+        port: ma_0_01
+        label: Ma = 0 01
+        group: core
+      - id: mMalet7
+        port: model_state_m_malet7
+        label: Model state M Malet7
+        group: core
+      - id: mMb
+        port: model_state_m_mb
+        label: Model state M Mb
+        group: core
+      - id: Mb
+        port: mb_0_01
+        label: Mb = 0 01
+        group: core
+      - id: mMblet7
+        port: model_state_m_mblet7
+        label: Model state M Mblet7
+        group: core
+      - id: APC
+        port: apc_c_c_0_01
+        label: APC/C/C = 0 01
+        group: mitosis
+      - id: Let7TOT
+        port: total_let_7_micro_rna
+        label: Total let-7 microRNA
+        group: core
+      - id: NFKBi
+        port: inactive_nf_k_b
+        label: Inactive NF-kB
+        group: core
+      - id: t
+        port: model_time
+        label: Model Time
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,44 @@
+schema_version: '2.0'
+title: Morris2002_CellCycle_CDK2Cyclin Lab
+description: 'Single-model lab wrapper for Morris2002_CellCycle_CDK2Cyclin. Notes from the original DOCQS curator:
+  In this version of the CDK2/Cyclin A complex activation there is discrepancy in the first curve which plots the
+  binding reaction of CDK2 and Cyclin A expressed i. It can be used to explore cell-cycle regulation dynamics and
+  compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.state
+  to:
+  - visualisation.cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model_state
+- from: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.summary
+  to:
+  - visualisation.cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model_summary
+- from: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cdk2cyc_a
+    maps_to: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2cyc_a
+    label: CDK2cyc A
+    description: Tracks CDK2cyc A in the lab model via `cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2cyc_a`.
+  - name: cyclin_a
+    maps_to: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cyclin_a
+    label: Cyclin A
+    description: Tracks Cyclin A in the lab model via `cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cyclin_a`.
+  - name: cdk2
+    maps_to: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2
+    label: CDK2
+    description: Tracks CDK2 in the lab model via `cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2`.
+  - name: cdk2cyc_active_star
+    maps_to: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2cyc_active_star
+    label: CDK2cyc Active Star
+    description: Tracks CDK2cyc Active Star in the lab model via `cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model.cdk2cyc_active_star`.

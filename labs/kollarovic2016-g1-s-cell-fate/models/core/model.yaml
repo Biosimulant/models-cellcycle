@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Kollarovic2016 - Cell fate decision at G1-S transition
+description: 'Kollarovic2016 - Cell fate decision at G1-Stransition This model is described in the article: To senesce
+  or not to senesce: how primary human fibroblasts decide their cell fate after DNA damage. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Gabriel Kollarovic
+- Maja Studencka
+- Lyubomira Ivanova
+- Claudia Lauenstein
+- Kristina Heinze
+upstream:
+  id: biomodels_ebi:BIOMD0000000632
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000632
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000632
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000632?filename=BIOMD0000000632_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model:Kollarovic2016CellFateDecisionAtG1STransiBiomd0000000632Model
+  init_kwargs:
+    model_path: data/BIOMD0000000632.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_e
+    maps_to: CycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `CycE`.
+  - name: cdk2
+    maps_to: Cdk2
+    label: CDK2
+    description: Tracks CDK2. Maps to SBML symbol `Cdk2`.
+  - name: cyclin_ecdk2
+    maps_to: CycECdk2
+    label: Cyclin ECdk2
+    description: Tracks Cyclin ECdk2. Maps to SBML symbol `CycECdk2`.
+  - name: cyclin_ecdk2a
+    maps_to: CycECdk2a
+    label: Cyclin ECdk2a
+    description: Tracks Cyclin ECdk2a. Maps to SBML symbol `CycECdk2a`.
+  - name: p21
+    maps_to: p21
+    label: P21
+    description: Tracks P21. Maps to SBML symbol `p21`.
+  - name: dna_damage_model_state_c
+    maps_to: DNADamageC
+    label: DNA damage Model state C
+    description: Tracks DNA damage Model state C. Maps to SBML symbol `DNADamageC`.
+  - name: dna_damage_s
+    maps_to: DNADamageS
+    label: DNA damage S
+    description: Tracks DNA damage S. Maps to SBML symbol `DNADamageS`.
+  - name: p53_tumor_suppressor
+    maps_to: p53
+    label: p53 tumor suppressor
+    description: Tracks p53 tumor suppressor. Maps to SBML symbol `p53`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: ddr
+    maps_to: DDR
+    label: DDR
+    accepted_units:
+    - native SBML value
+    description: Controls DDR. Maps to SBML symbol `DDR`.
+  - name: dna_damagefoci_0
+    maps_to: DNAdamagefoci_0
+    label: DNA damagefoci 0
+    accepted_units:
+    - dimensionless
+    description: Controls DNA damagefoci 0. Maps to SBML symbol `DNAdamagefoci_0`.
+  - name: base_dna_damage
+    maps_to: BaseDNAdamage
+    label: Base DNA damage
+    accepted_units:
+    - dimensionless
+    description: Controls Base DNA damage. Maps to SBML symbol `BaseDNAdamage`.

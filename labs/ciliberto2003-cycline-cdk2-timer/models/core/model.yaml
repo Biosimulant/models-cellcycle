@@ -1,0 +1,114 @@
+schema_version: '2.0'
+title: Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo
+description: 'Ciliberto2003 - CyclinE / Cdk2 timer in thecell cycle of Xenopus laevis embryo This model is described
+  in the article: A kinetic model of the cyclin E/Cdk2 developmental timer in Xenopus laevis embryo. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Andrea Ciliberto
+- Matthew J Petrus
+- John J Tyson
+- Jill C Sible
+upstream:
+  id: biomodels_ebi:BIOMD0000000697
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000697
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000697
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000697?filename=BIOMD0000000697_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.ciliberto2003_cycline_cdk2_timer_in_the_cell_cyc_biomd0000000697_model:Ciliberto2003CyclineCdk2TimerInTheCellCycBiomd0000000697Model
+  init_kwargs:
+    model_path: data/BIOMD0000000697.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: pcdk2_cyclin_e
+    maps_to: PCdk2_CycE
+    label: PCdk2 Cyclin E
+    description: Tracks PCdk2 Cyclin E. Maps to SBML symbol `PCdk2_CycE`.
+  - name: cdk2_cyclin_e
+    maps_to: Cdk2_CycE
+    label: CDK2 Cyclin E
+    description: Tracks CDK2 Cyclin E. Maps to SBML symbol `Cdk2_CycE`.
+  - name: wee1_a
+    maps_to: Wee1_a
+    label: Wee1 A
+    description: Tracks Wee1 A. Maps to SBML symbol `Wee1_a`.
+  - name: cdk2_cyclin_erem
+    maps_to: Cdk2_CycErem
+    label: CDK2 Cyclin Erem
+    description: Tracks CDK2 Cyclin Erem. Maps to SBML symbol `Cdk2_CycErem`.
+  - name: pcdk2_cyclin_erem
+    maps_to: PCdk2_CycErem
+    label: PCdk2 Cyclin Erem
+    description: Tracks PCdk2 Cyclin Erem. Maps to SBML symbol `PCdk2_CycErem`.
+  - name: oxygen_dependent_degradation_factor_cyclin_e
+    maps_to: Deg_a
+    label: Oxygen-dependent degradation factor Cyclin E
+    description: Tracks Oxygen-dependent degradation factor Cyclin E. Maps to SBML symbol `Deg_a`.
+  - name: xic_cdk_inhibitor
+    maps_to: Xic
+    label: Xic CDK inhibitor
+    description: Tracks Xic CDK inhibitor. Maps to SBML symbol `Xic`.
+  - name: xic_cdk2_cyclin_e
+    maps_to: Xic_Cdk2_CycE
+    label: Xic CDK2 Cyclin E
+    description: Tracks Xic CDK2 Cyclin E. Maps to SBML symbol `Xic_Cdk2_CycE`.
+  - name: xic_pcdk2_cyclin_e
+    maps_to: Xic_PCdk2_CycE
+    label: Xic PCdk2 Cyclin E
+    description: Tracks Xic PCdk2 Cyclin E. Maps to SBML symbol `Xic_PCdk2_CycE`.
+  - name: xic_cdk2_cyclin_erem
+    maps_to: Xic_Cdk2_CycErem
+    label: Xic CDK2 Cyclin Erem
+    description: Tracks Xic CDK2 Cyclin Erem. Maps to SBML symbol `Xic_Cdk2_CycErem`.
+  - name: xic_pcdk2_cyclin_erem
+    maps_to: Xic_PCdk2_CycErem
+    label: Xic PCdk2 Cyclin Erem
+    description: Tracks Xic PCdk2 Cyclin Erem. Maps to SBML symbol `Xic_PCdk2_CycErem`.
+  - name: removed_xic_inhibitor_pool
+    maps_to: Xicrem
+    label: Removed Xic inhibitor pool
+    description: Tracks Removed Xic inhibitor pool. Maps to SBML symbol `Xicrem`.
+  - name: kin_a
+    maps_to: Kin_a
+    label: Kin A
+    description: Tracks Kin A. Maps to SBML symbol `Kin_a`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: wee1_total
+    maps_to: Wee1_total
+    label: Wee1 Total
+    accepted_units:
+    - native SBML value
+    description: Controls Wee1 Total. Maps to SBML symbol `Wee1_total`.
+  - name: cyclin_total
+    maps_to: Cyc_total
+    label: Cyclin Total
+    accepted_units:
+    - native SBML value
+    description: Controls Cyclin Total. Maps to SBML symbol `Cyc_total`.
+  - name: xic_total
+    maps_to: Xic_total
+    label: Xic Total
+    accepted_units:
+    - native SBML value
+    description: Controls Xic Total. Maps to SBML symbol `Xic_total`.

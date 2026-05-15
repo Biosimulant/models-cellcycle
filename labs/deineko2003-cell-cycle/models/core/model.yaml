@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Deineko2003_CellCycle
+description: The model reproduces Fig 3 of the paper corresponding to the transition to S phase. Units have not
+  been defined for this model because the paper mentions the use of arbitrary units for the various spe.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "I V De\u012Dneko"
+- A E Kel'
+- O V Kel'-Margulis
+- E Wingender
+- V A Ratner
+upstream:
+  id: biomodels_ebi:BIOMD0000000208
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000208
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000208
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000208?filename=BIOMD0000000208_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.deineko2003_cellcycle_biomd0000000208_model:Deineko2003CellcycleBiomd0000000208Model
+  init_kwargs:
+    model_path: data/BIOMD0000000208.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: e2f
+    maps_to: y1
+    label: E2F
+    description: Tracks E2F. Maps to SBML symbol `y1`.
+  - name: phosphorylated_rb
+    maps_to: y2
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb. Maps to SBML symbol `y2`.
+  - name: phosphorylated_phosphorylated_rb
+    maps_to: y3
+    label: Phosphorylated Phosphorylated Rb
+    description: Tracks Phosphorylated Phosphorylated Rb. Maps to SBML symbol `y3`.
+  - name: inactive_cyclin_e_cdk2
+    maps_to: y4
+    label: Inactive Cyclin E CDK2
+    description: Tracks Inactive Cyclin E CDK2. Maps to SBML symbol `y4`.
+  - name: active_cyclin_e_cdk2
+    maps_to: y5
+    label: Active Cyclin E CDK2
+    description: Tracks Active Cyclin E CDK2. Maps to SBML symbol `y5`.
+  - name: ap_1
+    maps_to: y6
+    label: AP 1
+    description: Tracks AP 1. Maps to SBML symbol `y6`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

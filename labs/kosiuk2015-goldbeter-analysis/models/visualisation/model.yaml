@@ -1,0 +1,44 @@
+schema_version: '2.0'
+title: Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Kosiuk2015-Geometric analysis of the Goldbeter
+  minimal model for the embryonic cell cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model
+      title: Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle
+      observables:
+      - id: C
+        port: model_state_c_c
+        label: Model state C (C)
+        group: core
+      - id: M
+        port: model_state_m_m
+        label: Model state M (M)
+        group: core
+      - id: X
+        port: model_state_x_x
+        label: Model state X (X)
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint Lab
+description: Single-model lab wrapper for Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic
+  Checkpoint. The spindle assembly checkpoint (SAC) is an evolutionarily conserved mechanism, exclusively sensitive
+  to the states of kinetochores attached to microtubules. It can be used to explore cell-cycle regulation dynamics
+  and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.state
+  to:
+  - visualisation.cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model_state
+- from: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.summary
+  to:
+  - visualisation.cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model_summary
+- from: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: kin_a
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.kin_a
+    label: Kin A
+    description: Tracks Kin A in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.kin_a`.
+  - name: kin_model_state_u
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.kin_model_state_u
+    label: Kin Model state U
+    description: Tracks Kin Model state U in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.kin_model_state_u`.
+  - name: apcc_cdc20
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20
+    label: APCC Cdc20
+    description: Tracks APCC Cdc20 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20`.
+  - name: securin_separase_inhibitor
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.securin_separase_inhibitor
+    label: Securin separase inhibitor
+    description: Tracks Securin separase inhibitor in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.securin_separase_inhibitor`.
+  - name: apc_c_complex
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apc_c_complex
+    label: APC/C complex
+    description: Tracks APC/C complex in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apc_c_complex`.
+  - name: cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cdc20_apc_c_activator
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cdc20_apc_c_activator`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cyclin_b`.
+  - name: apcc_mcc
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_mcc
+    label: APCC MCC
+    description: Tracks APCC MCC in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_mcc`.
+  - name: mitotic_checkpoint_complex
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mitotic_checkpoint_complex
+    label: Mitotic checkpoint complex
+    description: Tracks Mitotic checkpoint complex in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mitotic_checkpoint_complex`.
+  - name: model_state_c_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.model_state_c_mad2
+    label: Model state C Mad2
+    description: Tracks Model state C Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.model_state_c_mad2`.
+  - name: o_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.o_mad2
+    label: O Mad2
+    description: Tracks O Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.o_mad2`.
+  - name: cdc20_model_state_c_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cdc20_model_state_c_mad2
+    label: Cdc20 Model state C Mad2
+    description: Tracks Cdc20 Model state C Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.cdc20_model_state_c_mad2`.
+  - name: bub_model_state_r1_bub3
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.bub_model_state_r1_bub3
+    label: Bub Model state R1 Bub3
+    description: Tracks Bub Model state R1 Bub3 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.bub_model_state_r1_bub3`.
+  - name: mad1_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mad1_mad2
+    label: Mad1 Mad2
+    description: Tracks Mad1 Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mad1_mad2`.
+  - name: mad1_mad2_model_state_c_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mad1_mad2_model_state_c_mad2
+    label: Mad1 Mad2 Model state C Mad2
+    description: Tracks Mad1 Mad2 Model state C Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.mad1_mad2_model_state_c_mad2`.
+  - name: bub_r1_cdc20_checkpoint_complex
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.bub_r1_cdc20_checkpoint_complex
+    label: BubR1-Cdc20 checkpoint complex
+    description: Tracks BubR1-Cdc20 checkpoint complex in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.bub_r1_cdc20_checkpoint_complex`.
+  - name: apcc_cdc20_model_state_c_mad2
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20_model_state_c_mad2
+    label: APCC Cdc20 Model state C Mad2
+    description: Tracks APCC Cdc20 Model state C Mad2 in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20_model_state_c_mad2`.
+  - name: apcc_bcc
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_bcc
+    label: APCC BCC
+    description: Tracks APCC BCC in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_bcc`.
+  - name: apcc_cdc20_mcc
+    maps_to: cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20_mcc
+    label: APCC Cdc20 MCC
+    description: Tracks APCC Cdc20 MCC in the lab model via `cellcycle_sbml_henze2017_a_dynamical_model_for_activating_and_s_model1812210002_model.apcc_cdc20_mcc`.

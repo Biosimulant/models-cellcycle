@@ -1,0 +1,167 @@
+schema_version: '2.0'
+title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML)"
+description: Model for the Let-7-mediated coupling between the CDK network driving the cell cycle and the malignant
+  cell transformation network. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior
+  across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "Claude G\xE9rard"
+- "Fr\xE9d\xE9ric Lemaigre"
+- Didier Gonze
+upstream:
+  id: biomodels_ebi:MODEL1906070001
+  source_db: biomodels_ebi
+  source_id: MODEL1906070001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1906070001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1906070001?filename=Gerard_2019_SBML.xml
+  license: CC0
+biosim:
+  entrypoint: src.g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model:GRard2019CouplingTheCellCycleAndTheCellModel1906070001Model
+  init_kwargs:
+    model_path: data/MODEL1906070001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: nf_k_b_0_00045
+    maps_to: NFKB
+    label: NF-kB = 0 00045
+    description: Tracks NF-kB = 0 00045. Maps to SBML symbol `NFKB`.
+  - name: lin28_0_34
+    maps_to: LIN28
+    label: LIN28 = 0 34
+    description: Tracks LIN28 = 0 34. Maps to SBML symbol `LIN28`.
+  - name: let_7_40
+    maps_to: let7
+    label: let-7 = 40
+    description: Tracks let-7 = 40. Maps to SBML symbol `let7`.
+  - name: model_state_m_il6_0_0003
+    maps_to: mIL6
+    label: Model state M IL6 = 0 0003
+    description: Tracks Model state M IL6 = 0 0003. Maps to SBML symbol `mIL6`.
+  - name: model_state_m_il6let7
+    maps_to: mIL6let7
+    label: Model state M IL6let7
+    description: Tracks Model state M IL6let7. Maps to SBML symbol `mIL6let7`.
+  - name: il6_0_001
+    maps_to: IL6
+    label: IL6 = 0 001
+    description: Tracks IL6 = 0 001. Maps to SBML symbol `IL6`.
+  - name: model_state_m_ras_0_00001
+    maps_to: mRas
+    label: Model state M Ras = 0 00001
+    description: Tracks Model state M Ras = 0 00001. Maps to SBML symbol `mRas`.
+  - name: model_state_m_raslet7
+    maps_to: mRaslet7
+    label: Model state M Raslet7
+    description: Tracks Model state M Raslet7. Maps to SBML symbol `mRaslet7`.
+  - name: ras_0_0001
+    maps_to: Ras
+    label: Ras = 0 0001
+    description: Tracks Ras = 0 0001. Maps to SBML symbol `Ras`.
+  - name: stat3_0_0001
+    maps_to: STAT3
+    label: STAT3 = 0 0001
+    description: Tracks STAT3 = 0 0001. Maps to SBML symbol `STAT3`.
+  - name: mi_model_state_r21_0_0003
+    maps_to: miR21
+    label: Mi Model state R21 = 0 0003
+    description: Tracks Mi Model state R21 = 0 0003. Maps to SBML symbol `miR21`.
+  - name: model_state_m_pten_0_01
+    maps_to: mPTEN
+    label: Model state M PTEN = 0 01
+    description: Tracks Model state M PTEN = 0 01. Maps to SBML symbol `mPTEN`.
+  - name: mi_rmpten
+    maps_to: miRmpten
+    label: Mi Rmpten
+    description: Tracks Mi Rmpten. Maps to SBML symbol `miRmpten`.
+  - name: pten_0_17
+    maps_to: PTEN
+    label: PTEN = 0 17
+    description: Tracks PTEN = 0 17. Maps to SBML symbol `PTEN`.
+  - name: model_state_m_md
+    maps_to: mMd
+    label: Model state M Md
+    description: Tracks Model state M Md. Maps to SBML symbol `mMd`.
+  - name: md_0_01
+    maps_to: Md
+    label: Md = 0 01
+    description: Tracks Md = 0 01. Maps to SBML symbol `Md`.
+  - name: model_state_m_mdlet7
+    maps_to: mMdlet7
+    label: Model state M Mdlet7
+    description: Tracks Model state M Mdlet7. Maps to SBML symbol `mMdlet7`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: model_state_m_me
+    maps_to: mMe
+    label: Model state M Me
+    description: Tracks Model state M Me. Maps to SBML symbol `mMe`.
+  - name: me_0_01
+    maps_to: Me
+    label: Me = 0 01
+    description: Tracks Me = 0 01. Maps to SBML symbol `Me`.
+  - name: model_state_m_melet7
+    maps_to: mMelet7
+    label: Model state M Melet7
+    description: Tracks Model state M Melet7. Maps to SBML symbol `mMelet7`.
+  - name: model_state_m_ma
+    maps_to: mMa
+    label: Model state M Ma
+    description: Tracks Model state M Ma. Maps to SBML symbol `mMa`.
+  - name: ma_0_01
+    maps_to: Ma
+    label: Ma = 0 01
+    description: Tracks Ma = 0 01. Maps to SBML symbol `Ma`.
+  - name: model_state_m_malet7
+    maps_to: mMalet7
+    label: Model state M Malet7
+    description: Tracks Model state M Malet7. Maps to SBML symbol `mMalet7`.
+  - name: model_state_m_mb
+    maps_to: mMb
+    label: Model state M Mb
+    description: Tracks Model state M Mb. Maps to SBML symbol `mMb`.
+  - name: mb_0_01
+    maps_to: Mb
+    label: Mb = 0 01
+    description: Tracks Mb = 0 01. Maps to SBML symbol `Mb`.
+  - name: model_state_m_mblet7
+    maps_to: mMblet7
+    label: Model state M Mblet7
+    description: Tracks Model state M Mblet7. Maps to SBML symbol `mMblet7`.
+  - name: apc_c_c_0_01
+    maps_to: APC
+    label: APC/C/C = 0 01
+    description: Tracks APC/C/C = 0 01. Maps to SBML symbol `APC`.
+  - name: total_let_7_micro_rna
+    maps_to: Let7TOT
+    label: Total let-7 microRNA
+    description: Tracks Total let-7 microRNA. Maps to SBML symbol `Let7TOT`.
+  - name: inactive_nf_k_b
+    maps_to: NFKBi
+    label: Inactive NF-kB
+    description: Tracks Inactive NF-kB. Maps to SBML symbol `NFKBi`.
+  - name: model_time
+    maps_to: t
+    label: Model Time
+    description: Tracks Model Time. Maps to SBML symbol `t`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

@@ -1,0 +1,111 @@
+schema_version: '2.0'
+title: Li2008 - Caulobacter Cell Cycle Lab
+description: 'Single-model lab wrapper for Li2008 - Caulobacter Cell Cycle. This a model from the article: A Quantitative
+  Study of the Division Cycle of Caulobacter crescentus Stalked Cells. Shenghua Li, Paul Brazhnik, Bruno Sobral,
+  John J.'
+models:
+- alias: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.state
+  to:
+  - visualisation.cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model_state
+- from: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.summary
+  to:
+  - visualisation.cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model_summary
+- from: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: ks_dna_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ks_dna_a
+    label: Ks,DnaA
+    description: Controls Ks,DnaA in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ks_dna_a`.
+  - name: kd_dna_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.kd_dna_a
+    label: Kd,DnaA
+    description: Controls Kd,DnaA in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.kd_dna_a`.
+  - name: ja_dna_active_ctr_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ja_dna_active_ctr_a
+    label: Ja,DNA Active CtrA
+    description: Controls Ja,DNA Active CtrA in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ja_dna_active_ctr_a`.
+  - name: theta_dna_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.theta_dna_a
+    label: Theta DnaA
+    description: Controls Theta DnaA in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.theta_dna_a`.
+  - name: ji_dna_active_gcr_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ji_dna_active_gcr_a
+    label: Ji,DNA Active GcrA
+    description: Controls Ji,DNA Active GcrA in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ji_dna_active_gcr_a`.
+  outputs:
+  - name: ctr_a_cell_cycle_regulator
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ctr_a_cell_cycle_regulator
+    label: CtrA cell-cycle regulator
+    description: Tracks CtrA cell-cycle regulator in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ctr_a_cell_cycle_regulator`.
+  - name: gcr_a_transcriptional_regulator
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.gcr_a_transcriptional_regulator
+    label: GcrA transcriptional regulator
+    description: Tracks GcrA transcriptional regulator in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.gcr_a_transcriptional_regulator`.
+  - name: dna_a_replication_initiator
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.dna_a_replication_initiator
+    label: DnaA replication initiator
+    description: Tracks DnaA replication initiator in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.dna_a_replication_initiator`.
+  - name: fts_z_division_marker
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.fts_z_division_marker
+    label: FtsZ division marker
+    description: Tracks FtsZ division marker in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.fts_z_division_marker`.
+  - name: z_ring
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.z_ring
+    label: Z-ring
+    description: Tracks Z-ring in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.z_ring`.
+  - name: div_k_polarity_regulator
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.div_k_polarity_regulator
+    label: DivK polarity regulator
+    description: Tracks DivK polarity regulator in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.div_k_polarity_regulator`.
+  - name: phosphorylated_div_k
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.phosphorylated_div_k
+    label: Phosphorylated DivK
+    description: Tracks Phosphorylated DivK in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.phosphorylated_div_k`.
+  - name: model_state_i
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.model_state_i
+    label: Model state I
+    description: Tracks Model state I in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.model_state_i`.
+  - name: ccr_model_state_m
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ccr_model_state_m
+    label: Ccr Model state M
+    description: Tracks Ccr Model state M in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.ccr_model_state_m`.
+  - name: hcori
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hcori
+    label: Hcori
+    description: Tracks Hcori in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hcori`.
+  - name: hctr_a
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hctr_a
+    label: Hctr A
+    description: Tracks Hctr A in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hctr_a`.
+  - name: hccr_model_state_m
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hccr_model_state_m
+    label: Hccr Model state M
+    description: Tracks Hccr Model state M in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hccr_model_state_m`.
+  - name: hfts
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hfts
+    label: Hfts
+    description: Tracks Hfts in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.hfts`.
+  - name: replication_initiation_state
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.replication_initiation_state
+    label: Replication initiation state
+    description: Tracks Replication initiation state in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.replication_initiation_state`.
+  - name: cell_elongation_state
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.cell_elongation_state
+    label: Cell elongation state
+    description: Tracks Cell elongation state in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.cell_elongation_state`.
+  - name: dna_replication_state
+    maps_to: cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.dna_replication_state
+    label: DNA replication state
+    description: Tracks DNA replication state in the lab model via `cellcycle_sbml_li2008_caulobacter_cell_cycle_biomd0000000718_model.dna_replication_state`.

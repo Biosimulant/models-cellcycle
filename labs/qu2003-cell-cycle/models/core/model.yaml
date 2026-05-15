@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Qu2003_CellCycle
+description: 'This model is from the article: Dynamics of the cell cycle: checkpoints, sizers, and timers. It can
+  be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Zhilin Qu
+- W Robb MacLellan
+- James N Weiss
+upstream:
+  id: biomodels_ebi:BIOMD0000000110
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000110
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000110
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000110?filename=BIOMD0000000110_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.qu2003_cellcycle_biomd0000000110_model:Qu2003CellcycleBiomd0000000110Model
+  init_kwargs:
+    model_path: data/BIOMD0000000110.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: inactive_cyclin_cdk_complex
+    maps_to: x1
+    label: Inactive Cyclin:CDK Complex
+    description: Tracks Inactive Cyclin:CDK Complex. Maps to SBML symbol `x1`.
+  - name: active_cyclin_cdk_complex
+    maps_to: x
+    label: Active Cyclin:CDK Complex
+    description: Tracks Active Cyclin:CDK Complex. Maps to SBML symbol `x`.
+  - name: total_cdk
+    maps_to: c0
+    label: Total CDK
+    description: Tracks Total CDK. Maps to SBML symbol `c0`.
+  - name: unphosphorylated_cdc25
+    maps_to: z0
+    label: Unphosphorylated Cdc25
+    description: Tracks Unphosphorylated Cdc25. Maps to SBML symbol `z0`.
+  - name: one_site_phosphorylated_cdc25
+    maps_to: z1
+    label: One Site Phosphorylated Cdc25
+    description: Tracks One Site Phosphorylated Cdc25. Maps to SBML symbol `z1`.
+  - name: two_site_phosphorylated_cdc25
+    maps_to: z2
+    label: Two Site Phosphorylated Cdc25
+    description: Tracks Two Site Phosphorylated Cdc25. Maps to SBML symbol `z2`.
+  - name: unphosphorylated_wee1
+    maps_to: w0
+    label: Unphosphorylated Wee1
+    description: Tracks Unphosphorylated Wee1. Maps to SBML symbol `w0`.
+  - name: phosphorylated_wee1
+    maps_to: w1
+    label: Phosphorylated Wee1
+    description: Tracks Phosphorylated Wee1. Maps to SBML symbol `w1`.
+  - name: active_skp2_or_apc_c_c
+    maps_to: u
+    label: Active SKP2 Or APC/C/C
+    description: Tracks Active SKP2 Or APC/C/C. Maps to SBML symbol `u`.
+  - name: free_cki
+    maps_to: i
+    label: Free CKI
+    description: Tracks Free CKI. Maps to SBML symbol `i`.
+  - name: cyclin_cdk_cki_complex_with_cki_unphosphorylated
+    maps_to: ix
+    label: Cyclin:CDK:CKI Complex With CKI Unphosphorylated
+    description: Tracks Cyclin:CDK:CKI Complex With CKI Unphosphorylated. Maps to SBML symbol `ix`.
+  - name: cyclin_cdk_cki_complex_with_cki_phosphorylated
+    maps_to: ixp
+    label: Cyclin:CDK:CKI Complex With CKI Phosphorylated
+    description: Tracks Cyclin:CDK:CKI Complex With CKI Phosphorylated. Maps to SBML symbol `ixp`.
+  - name: free_cyclin
+    maps_to: y
+    label: Free Cyclin
+    description: Tracks Free Cyclin. Maps to SBML symbol `y`.
+  - name: free_cdk
+    maps_to: c
+    label: Free CDK
+    description: Tracks Free CDK. Maps to SBML symbol `c`.
+  - name: total_cyclin
+    maps_to: totalCyclin
+    label: Total Cyclin
+    description: Tracks Total Cyclin. Maps to SBML symbol `totalCyclin`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

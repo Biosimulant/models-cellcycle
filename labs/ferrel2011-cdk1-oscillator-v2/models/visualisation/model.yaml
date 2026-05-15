@@ -1,0 +1,36 @@
+schema_version: '2.0'
+title: ferrel2011 - autonomous biochemical oscillator in cell cycle in Xenopus laevis v2 Visualisation
+description: Dedicated question-and-answer visualisation model for ferrel2011 - autonomous biochemical oscillator
+  in cell cycle in Xenopus laevis v2.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: ferrel2011 - autonomous biochemical oscillator in cell cycle in Xenopus laevis v2 Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000936_model
+      title: ferrel2011 - autonomous biochemical oscillator in cell cycle in Xenopus laevis v2
+      observables:
+      - id: CDK1_active
+        port: cdk1_active
+        label: CDK1 Active
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

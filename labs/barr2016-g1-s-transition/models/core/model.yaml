@@ -1,0 +1,124 @@
+schema_version: '2.0'
+title: Barr2016 - All-or-nothing G1/S transition
+description: "Barr2016 - All-or-nothing G1/Stransition This model is described in the article: A Dynamical Framework\
+  \ for the All-or-None G1/S Transition. Barr AR, Heldt FS, Zhang T, Bakal C, Nov\xE1k B."
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Alexis R Barr
+- Frank S Heldt
+- Tongli Zhang
+- Bakal C
+- "B\xE9la Nov\xE1k"
+upstream:
+  id: biomodels_ebi:BIOMD0000000646
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000646
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000646
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000646?filename=BIOMD0000000646_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.barr2016_all_or_nothing_g1_s_transition_biomd0000000646_model:Barr2016AllOrNothingG1STransitionBiomd0000000646Model
+  init_kwargs:
+    model_path: data/BIOMD0000000646.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_e
+    maps_to: CycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `CycE`.
+  - name: cyclin_a
+    maps_to: CycA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `CycA`.
+  - name: cyclin_ep27
+    maps_to: CycEp27
+    label: Cyclin Ep27
+    description: Tracks Cyclin Ep27. Maps to SBML symbol `CycEp27`.
+  - name: cyclin_ap27
+    maps_to: CycAp27
+    label: Cyclin Ap27
+    description: Tracks Cyclin Ap27. Maps to SBML symbol `CycAp27`.
+  - name: skp2_ubiquitin_ligase_adaptor
+    maps_to: Skp2
+    label: Skp2 ubiquitin-ligase adaptor
+    description: Tracks Skp2 ubiquitin-ligase adaptor. Maps to SBML symbol `Skp2`.
+  - name: phosphorylated_cdh1
+    maps_to: Cdh1p
+    label: Phosphorylated Cdh1
+    description: Tracks Phosphorylated Cdh1. Maps to SBML symbol `Cdh1p`.
+  - name: emi1_apc_c_inhibitor
+    maps_to: Emi1
+    label: Emi1 APC/C inhibitor
+    description: Tracks Emi1 APC/C inhibitor. Maps to SBML symbol `Emi1`.
+  - name: p27_cdk_inhibitor
+    maps_to: p27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor. Maps to SBML symbol `p27`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: emi1_cdh1_complex
+    maps_to: Emi1Cdh1
+    label: Emi1-Cdh1 complex
+    description: Tracks Emi1-Cdh1 complex. Maps to SBML symbol `Emi1Cdh1`.
+  - name: emi1_phosphorylated_cdh1_complex
+    maps_to: Emi1Cdh1p
+    label: Emi1-phosphorylated Cdh1 complex
+    description: Tracks Emi1-phosphorylated Cdh1 complex. Maps to SBML symbol `Emi1Cdh1p`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: cyclin_et
+    maps_to: CycET
+    label: Cyclin ET
+    accepted_units:
+    - native SBML value
+    description: Controls Cyclin ET. Maps to SBML symbol `CycET`.
+  - name: cyclin_at
+    maps_to: CycAT
+    label: Cyclin AT
+    accepted_units:
+    - native SBML value
+    description: Controls Cyclin AT. Maps to SBML symbol `CycAT`.
+  - name: p27t
+    maps_to: p27T
+    label: P27T
+    accepted_units:
+    - native SBML value
+    description: Controls P27T. Maps to SBML symbol `p27T`.
+  - name: emi_model_state_c
+    maps_to: EmiC
+    label: Emi Model state C
+    accepted_units:
+    - native SBML value
+    description: Controls Emi Model state C. Maps to SBML symbol `EmiC`.
+  - name: emi1t
+    maps_to: Emi1T
+    label: Emi1T
+    accepted_units:
+    - native SBML value
+    description: Controls Emi1T. Maps to SBML symbol `Emi1T`.
+  - name: cdh1dp
+    maps_to: Cdh1dp
+    label: Cdh1dp
+    accepted_units:
+    - native SBML value
+    description: Controls Cdh1dp. Maps to SBML symbol `Cdh1dp`.

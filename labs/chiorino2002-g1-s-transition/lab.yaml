@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Chiorino2002 - G1/S transition model Lab
+description: Single-model lab wrapper for Chiorino2002 - G1/S transition model. mathematical approach to model the
+  protein interactions regulating the transition from the G1 phase to the phase of DNA synthesis. Model is encoded
+  by matthieu Maire and submitted to BioModels by kris.
+models:
+- alias: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.state
+  to:
+  - visualisation.cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model_state
+- from: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.summary
+  to:
+  - visualisation.cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model_summary
+- from: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_rb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_rb`.
+  - name: phosphorylated_rb_e2f
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_rb_e2f
+    label: Phosphorylated Rb E2F
+    description: Tracks Phosphorylated Rb E2F in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_rb_e2f`.
+  - name: cdk2
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cdk2
+    label: CDK2
+    description: Tracks CDK2 in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cdk2`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e`.
+  - name: cyclin_e_cdk2
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2
+    label: Cyclin E CDK2
+    description: Tracks Cyclin E CDK2 in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2`.
+  - name: cyclin_e_cdk2_phosphorylated_rb_e2f
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_phosphorylated_rb_e2f
+    label: Cyclin E CDK2 Phosphorylated Rb E2F
+    description: Tracks Cyclin E CDK2 Phosphorylated Rb E2F in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_phosphorylated_rb_e2f`.
+  - name: phosphorylated_phosphorylated_rb
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_phosphorylated_rb
+    label: Phosphorylated Phosphorylated Rb
+    description: Tracks Phosphorylated Phosphorylated Rb in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_phosphorylated_rb`.
+  - name: phosphorylated_cyclin_e
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_cyclin_e
+    label: Phosphorylated Cyclin E
+    description: Tracks Phosphorylated Cyclin E in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_cyclin_e`.
+  - name: cyclin_e_cdk2_p27
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_p27
+    label: Cyclin E CDK2 P27
+    description: Tracks Cyclin E CDK2 P27 in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_p27`.
+  - name: p27_cdk_inhibitor
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.p27_cdk_inhibitor
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.p27_cdk_inhibitor`.
+  - name: cyclin_e_cdk2_cyclin_e_cdk2_p27
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_cyclin_e_cdk2_p27
+    label: Cyclin E CDK2 Cyclin E CDK2 P27
+    description: Tracks Cyclin E CDK2 Cyclin E CDK2 P27 in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.cyclin_e_cdk2_cyclin_e_cdk2_p27`.
+  - name: phosphorylated_p27
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_p27
+    label: Phosphorylated P27
+    description: Tracks Phosphorylated P27 in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.phosphorylated_p27`.
+  - name: model_state_m_rna_cyclin_e
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.model_state_m_rna_cyclin_e
+    label: Model state mRNA Cyclin E
+    description: Tracks Model state mRNA Cyclin E in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.model_state_m_rna_cyclin_e`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.e2f_transcription_factor`.
+  - name: model_state_m_rna_e2f
+    maps_to: cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.model_state_m_rna_e2f
+    label: Model state mRNA E2F
+    description: Tracks Model state mRNA E2F in the lab model via `cellcycle_sbml_chiorino2002_g1_s_transition_model_model2003180003_model.model_state_m_rna_e2f`.

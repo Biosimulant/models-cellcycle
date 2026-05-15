@@ -1,0 +1,106 @@
+schema_version: '2.0'
+title: Csikasz-Nagy2006 - Mammalian Cell Cycle model Lab
+description: 'Single-model lab wrapper for Csikasz-Nagy2006 - Mammalian Cell Cycle model. This model originates
+  from the Cell Cycle Database . It is described in: Analysis of a generic model of eukaryotic cell-cycle regulation.'
+models:
+- alias: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.state
+  to:
+  - visualisation.cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model_state
+- from: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.summary
+  to:
+  - visualisation.cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model_summary
+- from: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: apc_c
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.apc_c
+    label: APC/C
+    description: Controls APC/C in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.apc_c`.
+  - name: cdc14
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cdc14
+    label: Cdc14
+    description: Controls Cdc14 in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cdc14`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.total_cdc20_apc_c_activator
+    label: Total Cdc20 APC/C activator
+    description: Controls Total Cdc20 APC/C activator in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.total_cdc20_apc_c_activator`.
+  - name: phosphorylated_cdc25
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.phosphorylated_cdc25
+    label: Phosphorylated Cdc25
+    description: Controls Phosphorylated Cdc25 in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.phosphorylated_cdc25`.
+  - name: inactive_cdh1
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.inactive_cdh1
+    label: Inactive Cdh1
+    description: Controls Inactive Cdh1 in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.inactive_cdh1`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.total_cyclin_dependent_kinase_inhibitor
+    label: Total cyclin-dependent kinase inhibitor
+    description: Controls Total cyclin-dependent kinase inhibitor in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.total_cyclin_dependent_kinase_inhibitor`.
+  outputs:
+  - name: phosphorylated_apc_c_c
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.phosphorylated_apc_c_c
+    label: Phosphorylated APC/C/C
+    description: Tracks Phosphorylated APC/C/C in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.phosphorylated_apc_c_c`.
+  - name: b_type_cyclin_cdk_inhibitor
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.b_type_cyclin_cdk_inhibitor
+    label: B-type cyclin CDK inhibitor
+    description: Tracks B-type cyclin CDK inhibitor in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.b_type_cyclin_cdk_inhibitor`.
+  - name: active_cdc20
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.active_cdc20
+    label: Active Cdc20
+    description: Tracks Active Cdc20 in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.active_cdc20`.
+  - name: inactive_cdc20
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.inactive_cdc20
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20 in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.inactive_cdc20`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cdh1_apc_c_activator`.
+  - name: cyclin_dependent_kinase_inhibitor
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_dependent_kinase_inhibitor
+    label: Cyclin-dependent kinase inhibitor
+    description: Tracks Cyclin-dependent kinase inhibitor in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_dependent_kinase_inhibitor`.
+  - name: cyclin_a
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_a
+    label: Cyclin A
+    description: Tracks Cyclin A in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_a`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_b`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cyclin_e`.
+  - name: cell_mass
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cell_mass
+    label: Cell mass
+    description: Tracks Cell mass in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.cell_mass`.
+  - name: p_b
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.p_b
+    label: P B
+    description: Tracks P B in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.p_b`.
+  - name: p_bcki
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.p_bcki
+    label: P BCKI
+    description: Tracks P BCKI in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.p_bcki`.
+  - name: tri_a
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.tri_a
+    label: Tri A
+    description: Tracks Tri A in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.tri_a`.
+  - name: tri_e
+    maps_to: cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.tri_e
+    label: Tri E
+    description: Tracks Tri E in the lab model via `cellcycle_sbml_csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model.tri_e`.

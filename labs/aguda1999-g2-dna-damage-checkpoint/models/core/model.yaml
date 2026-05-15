@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Aguda1999 - G2 DNA damage checkpoint
+description: Baltazar D. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior
+  across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- B D Aguda
+upstream:
+  id: biomodels_ebi:BIOMD0000000704
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000704
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000704
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000704?filename=BIOMD0000000704_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model:Aguda1999G2DnaDamageCheckpointBiomd0000000704Model
+  init_kwargs:
+    model_path: data/BIOMD0000000704.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cdc25_active
+    maps_to: Cdc25_active
+    label: Cdc25 Active
+    description: Tracks Cdc25 Active. Maps to SBML symbol `Cdc25_active`.
+  - name: cdc25ps216_active
+    maps_to: Cdc25Ps216_active
+    label: Cdc25Ps216 Active
+    description: Tracks Cdc25Ps216 Active. Maps to SBML symbol `Cdc25Ps216_active`.
+  - name: cdc25_inactive
+    maps_to: Cdc25_inactive
+    label: Cdc25 Inactive
+    description: Tracks Cdc25 Inactive. Maps to SBML symbol `Cdc25_inactive`.
+  - name: cdc25ps216_inactive
+    maps_to: Cdc25Ps216_inactive
+    label: Cdc25Ps216 Inactive
+    description: Tracks Cdc25Ps216 Inactive. Maps to SBML symbol `Cdc25Ps216_inactive`.
+  - name: phosphorylated_chk1
+    maps_to: Chk1P
+    label: Phosphorylated Chk1
+    description: Tracks Phosphorylated Chk1. Maps to SBML symbol `Chk1P`.
+  - name: protein_14_3_3
+    maps_to: protein_14_3_3
+    label: Protein 14-3-3
+    description: Tracks Protein 14-3-3. Maps to SBML symbol `protein_14_3_3`.
+  - name: cdc25ps216_14_3_3_inactive
+    maps_to: Cdc25Ps216_14_3_3_inactive
+    label: Cdc25Ps216 14-3-3 Inactive
+    description: Tracks Cdc25Ps216 14-3-3 Inactive. Maps to SBML symbol `Cdc25Ps216_14_3_3_inactive`.
+  - name: p53_tumor_suppressor
+    maps_to: p53
+    label: p53 tumor suppressor
+    description: Tracks p53 tumor suppressor. Maps to SBML symbol `p53`.
+  - name: p21
+    maps_to: p21
+    label: P21
+    description: Tracks P21. Maps to SBML symbol `p21`.
+  - name: maturation_promoting_factor
+    maps_to: MPF
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor. Maps to SBML symbol `MPF`.
+  - name: p21_mpf
+    maps_to: p21_MPF
+    label: P21 MPF
+    description: Tracks P21 MPF. Maps to SBML symbol `p21_MPF`.
+  - name: pre_mpf
+    maps_to: preMPF
+    label: Pre MPF
+    description: Tracks Pre MPF. Maps to SBML symbol `preMPF`.
+  - name: wee1_inhibitory_kinase
+    maps_to: Wee1
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase. Maps to SBML symbol `Wee1`.
+  - name: chk1_checkpoint_kinase
+    maps_to: Chk1
+    label: Chk1 checkpoint kinase
+    description: Tracks Chk1 checkpoint kinase. Maps to SBML symbol `Chk1`.
+  - name: rad3_atm
+    maps_to: Rad3_ATM
+    label: Rad3 ATM
+    description: Tracks Rad3 ATM. Maps to SBML symbol `Rad3_ATM`.
+  - name: wee1_phosphorylated
+    maps_to: Wee1_phosphorylated
+    label: Wee1 Phosphorylated
+    description: Tracks Wee1 Phosphorylated. Maps to SBML symbol `Wee1_phosphorylated`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: cdc25_active_total
+    maps_to: Cdc25_active_total
+    label: Cdc25 Active Total
+    accepted_units:
+    - native SBML value
+    description: Controls Cdc25 Active Total. Maps to SBML symbol `Cdc25_active_total`.

@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early Xenopus laevis Embryos Lab
+description: Single-model lab wrapper for Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early
+  Xenopus laevis Embryos. During the early development of Xenopus laevis embryos, the first mitotic cell cycle is
+  long (\u223c85 min) and the subsequent 11 cycles are short (\u223c30 min) and clock-like. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.state
+  to:
+  - visualisation.cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model_state
+- from: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.summary
+  to:
+  - visualisation.cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model_summary
+- from: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: plx1_total
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.plx1_total
+    label: Plx1 Total
+    description: Controls Plx1 Total in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.plx1_total`.
+  - name: cyclin_b1_cdk1_complex_total
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_total
+    label: Cyclin B1 CDK1 Complex Total
+    description: Controls Cyclin B1 CDK1 Complex Total in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_total`.
+  outputs:
+  - name: cyclin_b1_cdk1_complex_phosphorylated
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_phosphorylated
+    label: Cyclin B1 CDK1 Complex Phosphorylated
+    description: Tracks Cyclin B1 CDK1 Complex Phosphorylated in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_phosphorylated`.
+  - name: cyclin_b1_cdk1_complex_unphosphorylated
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_unphosphorylated
+    label: Cyclin B1 CDK1 Complex Unphosphorylated
+    description: Tracks Cyclin B1 CDK1 Complex Unphosphorylated in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.cyclin_b1_cdk1_complex_unphosphorylated`.
+  - name: plx1_active
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.plx1_active
+    label: Plx1 Active
+    description: Tracks Plx1 Active in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.plx1_active`.
+  - name: apc_c_c_model_state_c_active
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.apc_c_c_model_state_c_active
+    label: APC/C/C Model state C Active
+    description: Tracks APC/C/C Model state C Active in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.apc_c_c_model_state_c_active`.
+  - name: apc_c_c_model_state_c_total
+    maps_to: cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.apc_c_c_model_state_c_total
+    label: APC/C/C Model state C Total
+    description: Tracks APC/C/C Model state C Total in the lab model via `cellcycle_sbml_tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model.apc_c_c_model_state_c_total`.

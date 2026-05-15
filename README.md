@@ -1,5 +1,8 @@
 # models-cellcycle
 
+> Storage-only repo: each former root model now lives in `labs/<slug>/models/core/` and is wrapped by
+> `labs/<slug>/lab.yaml`. This repo has no repo-level import catalog and no composed labs at the root.
+
 Curated collection of **cell cycle** simulation models for the **biosim** platform. This repository contains comprehensive computational models of cell cycle regulation, including G1/S and G2/M transitions, checkpoint control, cyclin-CDK dynamics, and cell cycle oscillators across yeast and mammalian systems.
 
 ## What's Inside
@@ -100,9 +103,9 @@ Every model implements the `biosim.BioModule` interface:
 
 - **`inputs()`** — declares named input signals the module consumes
 - **`outputs()`** — declares named output signals the module produces
-- **`advance_to(t)`** — advances the model's internal state to time `t`
+- **`advance_window(t)`** — advances the model's internal state to time `t`
 
-Most curated models include Python source under `src/` and are wired together via `space.yaml` in composed simulations without additional code.
+Most curated models include Python source under `src/` and are wired together via `lab.yaml` in composed simulations without additional code.
 
 ### Model Standards
 
@@ -111,7 +114,7 @@ All models in this repository:
 - Are sourced from BioModels and other curated repositories
 - Include tellurium runtime for SBML execution
 - Provide `state` output for monitoring simulation results
-- Support configurable timesteps via `min_dt` parameter
+- Support configurable timesteps via `communication_step` parameter
 
 ### Running Models
 
@@ -144,7 +147,7 @@ pip install "biosim @ git+https://github.com/BioSimulant/biosim.git@main"
 
 To integrate cell cycle models into larger simulations:
 
-1. Reference models by `manifest_path` (e.g., `models/cellcycle-sbml-tyson1991-cell-cycle-6-var/model.yaml`)
+1. Reference models by `manifest_path` (e.g., `labs/cellcycle-sbml-tyson1991-cell-cycle-6-var/models/core/model.yaml`)
 2. Wire model outputs to inputs of other models in your space configuration
 3. Compose multi-scale simulations combining cell cycle with metabolism, signaling, or gene regulation
 4. Configure runtime parameters and simulation duration
@@ -152,7 +155,7 @@ To integrate cell cycle models into larger simulations:
 ## Linking in biosim-platform
 
 - Models can be linked with explicit paths:
-  - `models/cellcycle-sbml-gerard2009-an-integrated-mammalian-cell-cycle-mo/model.yaml`
+  - `labs/cellcycle-sbml-gerard2009-an-integrated-mammalian-cell-cycle-mo/models/core/model.yaml`
 - Models can be composed with other domain models (signaling, metabolism, etc.) in multi-scale simulations
 
 ## External Repos

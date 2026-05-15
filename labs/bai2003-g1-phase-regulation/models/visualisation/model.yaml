@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Bai2003_G1phaseRegulation Visualisation
+description: Dedicated question-and-answer visualisation model for Bai2003_G1phaseRegulation.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bai2003_G1phaseRegulation Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model
+      title: Bai2003_G1phaseRegulation
+      observables:
+      - id: D_1
+        port: model_state_d
+        label: Model state D
+        group: g1s
+      - id: E_1
+        port: model_state_e
+        label: Model state E
+        group: g1s
+      - id: R_1
+        port: model_state_r_r_1
+        label: Model state R (R_1)
+        group: g1s
+      - id: RS_1
+        port: restriction_point_signal
+        label: Restriction-point signal
+        group: g1s
+      - id: theta_1
+        port: theta
+        label: Theta
+        group: g1s
+      - id: X_1
+        port: model_state_x_x_1
+        label: Model state X (X_1)
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

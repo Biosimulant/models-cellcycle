@@ -1,0 +1,145 @@
+schema_version: '2.0'
+title: Novak1997 - Cell Cycle
+description: 'Novak1997 - Cell Cycle Modeling the control of DNA replication in fission yeast. This model is described
+  in the article: Modeling the control of DNA replication in fission yeast.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Novak B
+- Tyson JJ
+upstream:
+  id: biomodels_ebi:BIOMD0000000007
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000007
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000007
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000007?filename=BIOMD0000000007_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.novak1997_cell_cycle_biomd0000000007_model:Novak1997CellCycleBiomd0000000007Model
+  init_kwargs:
+    model_path: data/BIOMD0000000007.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: ubiquitin_protease1
+    maps_to: UbE
+    label: Ubiquitin Protease1
+    description: Tracks Ubiquitin Protease1. Maps to SBML symbol `UbE`.
+  - name: ubiquitin_protease2
+    maps_to: UbE2
+    label: Ubiquitin Protease2
+    description: Tracks Ubiquitin Protease2. Maps to SBML symbol `UbE2`.
+  - name: wee1_inhibitory_kinase
+    maps_to: Wee1
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase. Maps to SBML symbol `Wee1`.
+  - name: cdc25_activating_phosphatase
+    maps_to: Cdc25
+    label: Cdc25 activating phosphatase
+    description: Tracks Cdc25 activating phosphatase. Maps to SBML symbol `Cdc25`.
+  - name: cdc13_cdc2
+    maps_to: G2K
+    label: Cdc13 Cdc2
+    description: Tracks Cdc13 Cdc2. Maps to SBML symbol `G2K`.
+  - name: free_rum1
+    maps_to: R
+    label: Free Rum1
+    description: Tracks Free Rum1. Maps to SBML symbol `R`.
+  - name: cig2_cdc2
+    maps_to: G1K
+    label: Cig2 Cdc2
+    description: Tracks Cig2 Cdc2. Maps to SBML symbol `G1K`.
+  - name: intermediary_enzyme
+    maps_to: IE
+    label: Intermediary Enzyme
+    description: Tracks Intermediary Enzyme. Maps to SBML symbol `IE`.
+  - name: cdc13_p_cdc2
+    maps_to: PG2
+    label: Cdc13 P Cdc2
+    description: Tracks Cdc13 P Cdc2. Maps to SBML symbol `PG2`.
+  - name: cig2_cdc2_rum1
+    maps_to: G1R
+    label: Cig2 Cdc2 Rum1
+    description: Tracks Cig2 Cdc2 Rum1. Maps to SBML symbol `G1R`.
+  - name: cdc13_cdc2_rum1
+    maps_to: G2R
+    label: Cdc13 Cdc2 Rum1
+    description: Tracks Cdc13 Cdc2 Rum1. Maps to SBML symbol `G2R`.
+  - name: cdc13_p_cdc2_rum1
+    maps_to: PG2R
+    label: Cdc13 P Cdc2 Rum1
+    description: Tracks Cdc13 P Cdc2 Rum1. Maps to SBML symbol `PG2R`.
+  - name: s_phase_promoting_factor
+    maps_to: SPF
+    label: S Phase Promoting Factor
+    description: Tracks S Phase Promoting Factor. Maps to SBML symbol `SPF`.
+  - name: maturation_promoting_factor
+    maps_to: MPF
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor. Maps to SBML symbol `MPF`.
+  - name: total_rum1
+    maps_to: Rum1Total
+    label: Total Rum1
+    description: Tracks Total Rum1. Maps to SBML symbol `Rum1Total`.
+  - name: total_cdc13
+    maps_to: Cdc13Total
+    label: Total Cdc13
+    description: Tracks Total Cdc13. Maps to SBML symbol `Cdc13Total`.
+  - name: total_cig2
+    maps_to: Cig2Total
+    label: Total Cig2
+    description: Tracks Total Cig2. Maps to SBML symbol `Cig2Total`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: bound_intermediary_enzyme
+    maps_to: IEB
+    label: Bound Intermediary Enzyme
+    accepted_units:
+    - native SBML value
+    description: Controls Bound Intermediary Enzyme. Maps to SBML symbol `IEB`.
+  - name: bound_ubiquitin_protease1
+    maps_to: UbEB
+    label: Bound Ubiquitin Protease1
+    accepted_units:
+    - native SBML value
+    description: Controls Bound Ubiquitin Protease1. Maps to SBML symbol `UbEB`.
+  - name: bound_ubiquitin_protease2
+    maps_to: UbE2B
+    label: Bound Ubiquitin Protease2
+    accepted_units:
+    - native SBML value
+    description: Controls Bound Ubiquitin Protease2. Maps to SBML symbol `UbE2B`.
+  - name: bound_wee1
+    maps_to: Wee1B
+    label: Bound Wee1
+    accepted_units:
+    - native SBML value
+    description: Controls Bound Wee1. Maps to SBML symbol `Wee1B`.
+  - name: bound_cdc25
+    maps_to: Cdc25B
+    label: Bound Cdc25
+    accepted_units:
+    - native SBML value
+    description: Controls Bound Cdc25. Maps to SBML symbol `Cdc25B`.
+  - name: cell_mass
+    maps_to: Mass
+    label: Cell mass
+    accepted_units:
+    - dimensionless
+    description: Controls Cell mass. Maps to SBML symbol `Mass`.

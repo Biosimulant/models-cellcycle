@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Bai2003_G1phaseRegulation
+description: 'This a model from the article: Theoretical and experimental evidence for hysteresis in cell proliferation.
+  Bai S, Goodrich D, Thron CD, Tecarro E, Obeyesekere M.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Shaochun Bai
+- David Goodrich
+- C Dennis Thron
+- Edwin Tecarro
+- Mandri Obeyesekere
+upstream:
+  id: biomodels_ebi:BIOMD0000000242
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000242
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000242
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000242?filename=BIOMD0000000242_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.bai2003_g1phaseregulation_biomd0000000242_model:Bai2003G1phaseregulationBiomd0000000242Model
+  init_kwargs:
+    model_path: data/BIOMD0000000242.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_d
+    maps_to: D_1
+    label: Model state D
+    description: Tracks Model state D. Maps to SBML symbol `D_1`.
+  - name: model_state_e
+    maps_to: E_1
+    label: Model state E
+    description: Tracks Model state E. Maps to SBML symbol `E_1`.
+  - name: model_state_r_r_1
+    maps_to: R_1
+    label: Model state R (R_1)
+    description: Tracks Model state R (R_1). Maps to SBML symbol `R_1`.
+  - name: restriction_point_signal
+    maps_to: RS_1
+    label: Restriction-point signal
+    description: Tracks Restriction-point signal. Maps to SBML symbol `RS_1`.
+  - name: theta
+    maps_to: theta_1
+    label: Theta
+    description: Tracks Theta. Maps to SBML symbol `theta_1`.
+  - name: model_state_x_x_1
+    maps_to: X_1
+    label: Model state X (X_1)
+    description: Tracks Model state X (X_1). Maps to SBML symbol `X_1`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: growth_factor
+    maps_to: GF_1
+    label: Growth Factor
+    accepted_units:
+    - dimensionless
+    description: Controls Growth Factor. Maps to SBML symbol `GF_1`.

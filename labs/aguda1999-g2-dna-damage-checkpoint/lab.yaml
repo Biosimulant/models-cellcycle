@@ -1,0 +1,94 @@
+schema_version: '2.0'
+title: Aguda1999 - G2 DNA damage checkpoint Lab
+description: Single-model lab wrapper for Aguda1999 - G2 DNA damage checkpoint. Baltazar D. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.state
+  to:
+  - visualisation.cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model_state
+- from: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.summary
+  to:
+  - visualisation.cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model_summary
+- from: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: cdc25_active_total
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_active_total
+    label: Cdc25 Active Total
+    description: Controls Cdc25 Active Total in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_active_total`.
+  outputs:
+  - name: cdc25_active
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_active
+    label: Cdc25 Active
+    description: Tracks Cdc25 Active in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_active`.
+  - name: cdc25ps216_active
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_active
+    label: Cdc25Ps216 Active
+    description: Tracks Cdc25Ps216 Active in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_active`.
+  - name: cdc25_inactive
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_inactive
+    label: Cdc25 Inactive
+    description: Tracks Cdc25 Inactive in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25_inactive`.
+  - name: cdc25ps216_inactive
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_inactive
+    label: Cdc25Ps216 Inactive
+    description: Tracks Cdc25Ps216 Inactive in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_inactive`.
+  - name: phosphorylated_chk1
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.phosphorylated_chk1
+    label: Phosphorylated Chk1
+    description: Tracks Phosphorylated Chk1 in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.phosphorylated_chk1`.
+  - name: protein_14_3_3
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.protein_14_3_3
+    label: Protein 14-3-3
+    description: Tracks Protein 14-3-3 in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.protein_14_3_3`.
+  - name: cdc25ps216_14_3_3_inactive
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_14_3_3_inactive
+    label: Cdc25Ps216 14-3-3 Inactive
+    description: Tracks Cdc25Ps216 14-3-3 Inactive in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.cdc25ps216_14_3_3_inactive`.
+  - name: p53_tumor_suppressor
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p53_tumor_suppressor
+    label: p53 tumor suppressor
+    description: Tracks p53 tumor suppressor in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p53_tumor_suppressor`.
+  - name: p21
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p21
+    label: P21
+    description: Tracks P21 in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p21`.
+  - name: maturation_promoting_factor
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.maturation_promoting_factor
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.maturation_promoting_factor`.
+  - name: p21_mpf
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p21_mpf
+    label: P21 MPF
+    description: Tracks P21 MPF in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.p21_mpf`.
+  - name: pre_mpf
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.pre_mpf
+    label: Pre MPF
+    description: Tracks Pre MPF in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.pre_mpf`.
+  - name: wee1_inhibitory_kinase
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.wee1_inhibitory_kinase
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.wee1_inhibitory_kinase`.
+  - name: chk1_checkpoint_kinase
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.chk1_checkpoint_kinase
+    label: Chk1 checkpoint kinase
+    description: Tracks Chk1 checkpoint kinase in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.chk1_checkpoint_kinase`.
+  - name: rad3_atm
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.rad3_atm
+    label: Rad3 ATM
+    description: Tracks Rad3 ATM in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.rad3_atm`.
+  - name: wee1_phosphorylated
+    maps_to: cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.wee1_phosphorylated
+    label: Wee1 Phosphorylated
+    description: Tracks Wee1 Phosphorylated in the lab model via `cellcycle_sbml_aguda1999_g2_dna_damage_checkpoint_biomd0000000704_model.wee1_phosphorylated`.

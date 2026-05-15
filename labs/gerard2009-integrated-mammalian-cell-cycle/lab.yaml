@@ -1,0 +1,215 @@
+schema_version: '2.0'
+title: Gerard2009 - An Integrated Mammalian Cell Cycle Model Lab
+description: Single-model lab wrapper for Gerard2009 - An Integrated Mammalian Cell Cycle Model. We propose an integrated
+  computational model for the network of cyclin-dependent kinases (Cdks) that controls the dynamics of the mammalian
+  cell cycle. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.state
+  to:
+  - visualisation.cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model_state
+- from: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.summary
+  to:
+  - visualisation.cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model_summary
+- from: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: growth_factor
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.growth_factor
+    label: Growth factor
+    description: Controls Growth factor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.growth_factor`.
+  - name: growth_factor_activation_rate
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.growth_factor_activation_rate
+    label: Growth factor activation rate
+    description: Controls Growth factor activation rate in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.growth_factor_activation_rate`.
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_rb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_rb`.
+  - name: singly_phosphorylated_rb
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.singly_phosphorylated_rb
+    label: Singly phosphorylated Rb
+    description: Tracks Singly phosphorylated Rb in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.singly_phosphorylated_rb`.
+  - name: hyperphosphorylated_rb
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.hyperphosphorylated_rb
+    label: Hyperphosphorylated Rb
+    description: Tracks Hyperphosphorylated Rb in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.hyperphosphorylated_rb`.
+  - name: e2f
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.e2f
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.e2f`.
+  - name: phosphorylated_e2f
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_e2f
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_e2f`.
+  - name: rb_e2f_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.rb_e2f_complex
+    label: Rb-E2F complex
+    description: Tracks Rb-E2F complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.rb_e2f_complex`.
+  - name: phosphorylated_rb_e2f_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_rb_e2f_complex
+    label: Phosphorylated Rb-E2F complex
+    description: Tracks Phosphorylated Rb-E2F complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_rb_e2f_complex`.
+  - name: cyclin_d
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_d
+    label: Cyclin D
+    description: Tracks Cyclin D in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_d`.
+  - name: inactive_cyclin_d_cdk_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_d_cdk_complex
+    label: Inactive Cyclin D-CDK4/6 complex
+    description: Tracks Inactive Cyclin D-CDK4/6 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_d_cdk_complex`.
+  - name: active_cyclin_d_cdk_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_d_cdk_complex
+    label: Active Cyclin D-CDK4/6 complex
+    description: Tracks Active Cyclin D-CDK4/6 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_d_cdk_complex`.
+  - name: cyclin_d_cdk_p27_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_d_cdk_p27_complex
+    label: Cyclin D-CDK4/6-p27 complex
+    description: Tracks Cyclin D-CDK4/6-p27 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_d_cdk_p27_complex`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_e`.
+  - name: inactive_cyclin_e_cdk2_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_e_cdk2_complex
+    label: Inactive Cyclin E-CDK2 complex
+    description: Tracks Inactive Cyclin E-CDK2 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_e_cdk2_complex`.
+  - name: active_cyclin_e_cdk2_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_e_cdk2_complex
+    label: Active Cyclin E-CDK2 complex
+    description: Tracks Active Cyclin E-CDK2 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_e_cdk2_complex`.
+  - name: skp2
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.skp2
+    label: Skp2 ubiquitin-ligase adaptor
+    description: Tracks Skp2 ubiquitin-ligase adaptor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.skp2`.
+  - name: cyclin_e_cdk2_p27_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_e_cdk2_p27_complex
+    label: Cyclin E-CDK2-p27 complex
+    description: Tracks Cyclin E-CDK2-p27 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_e_cdk2_p27_complex`.
+  - name: inactive_cyclin_e_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_e_module_regulator
+    label: Inactive Cyclin E module regulator
+    description: Tracks Inactive Cyclin E module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_e_module_regulator`.
+  - name: active_cyclin_e_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_e_module_regulator
+    label: Active Cyclin E module regulator
+    description: Tracks Active Cyclin E module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_e_module_regulator`.
+  - name: cyclin_a
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_a
+    label: Cyclin A
+    description: Tracks Cyclin A in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_a`.
+  - name: inactive_cyclin_a_cdk2_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_a_cdk2_complex
+    label: Inactive Cyclin A-CDK2 complex
+    description: Tracks Inactive Cyclin A-CDK2 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_a_cdk2_complex`.
+  - name: active_cyclin_a_cdk2_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_a_cdk2_complex
+    label: Active Cyclin A-CDK2 complex
+    description: Tracks Active Cyclin A-CDK2 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_a_cdk2_complex`.
+  - name: cyclin_a_cdk2_p27_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_a_cdk2_p27_complex
+    label: Cyclin A-CDK2-p27 complex
+    description: Tracks Cyclin A-CDK2-p27 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_a_cdk2_p27_complex`.
+  - name: p27
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.p27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.p27`.
+  - name: phosphorylated_p27
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_p27
+    label: Phosphorylated p27
+    description: Tracks Phosphorylated p27 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_p27`.
+  - name: inactive_cdh1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cdh1
+    label: Inactive Cdh1
+    description: Tracks Inactive Cdh1 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cdh1`.
+  - name: active_cdh1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cdh1
+    label: Active Cdh1
+    description: Tracks Active Cdh1 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cdh1`.
+  - name: inactive_cyclin_a_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_a_module_regulator
+    label: Inactive Cyclin A module regulator
+    description: Tracks Inactive Cyclin A module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_a_module_regulator`.
+  - name: active_cyclin_a_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_a_module_regulator
+    label: Active Cyclin A module regulator
+    description: Tracks Active Cyclin A module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_a_module_regulator`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_b`.
+  - name: inactive_cyclin_b_cdk1_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_b_cdk1_complex
+    label: Inactive Cyclin B-CDK1 complex
+    description: Tracks Inactive Cyclin B-CDK1 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_b_cdk1_complex`.
+  - name: active_cyclin_b_cdk1_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_b_cdk1_complex
+    label: Active Cyclin B-CDK1 complex
+    description: Tracks Active Cyclin B-CDK1 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_b_cdk1_complex`.
+  - name: cyclin_b_cdk1_p27_complex
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_b_cdk1_p27_complex
+    label: Cyclin B-CDK1-p27 complex
+    description: Tracks Cyclin B-CDK1-p27 complex in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cyclin_b_cdk1_p27_complex`.
+  - name: inactive_cdc20
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cdc20
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cdc20`.
+  - name: active_cdc20
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cdc20
+    label: Active Cdc20
+    description: Tracks Active Cdc20 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cdc20`.
+  - name: inactive_cyclin_b_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_b_module_regulator
+    label: Inactive Cyclin B module regulator
+    description: Tracks Inactive Cyclin B module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.inactive_cyclin_b_module_regulator`.
+  - name: active_cyclin_b_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_b_module_regulator
+    label: Active Cyclin B module regulator
+    description: Tracks Active Cyclin B module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.active_cyclin_b_module_regulator`.
+  - name: wee1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.wee1
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.wee1`.
+  - name: phosphorylated_wee1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_wee1
+    label: Phosphorylated Wee1
+    description: Tracks Phosphorylated Wee1 in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.phosphorylated_wee1`.
+  - name: dna_polymerase
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.dna_polymerase
+    label: DNA polymerase
+    description: Tracks DNA polymerase in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.dna_polymerase`.
+  - name: cdc45
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cdc45
+    label: Cdc45 replication factor
+    description: Tracks Cdc45 replication factor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.cdc45`.
+  - name: replication_primer
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.replication_primer
+    label: Replication primer
+    description: Tracks Replication primer in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.replication_primer`.
+  - name: chk1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.chk1
+    label: Chk1 checkpoint kinase
+    description: Tracks Chk1 checkpoint kinase in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.chk1`.
+  - name: atr
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.atr
+    label: ATR checkpoint kinase
+    description: Tracks ATR checkpoint kinase in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.atr`.
+  - name: ap1
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.ap1
+    label: AP1 transcription factor
+    description: Tracks AP1 transcription factor in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.ap1`.
+  - name: wee1_module_regulator
+    maps_to: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.wee1_module_regulator
+    label: Wee1 module regulator
+    description: Tracks Wee1 module regulator in the lab model via `cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model.wee1_module_regulator`.

@@ -1,0 +1,178 @@
+schema_version: '2.0'
+title: Caydasi2012 - Regulation of Tem1 by the GAP complex in spindle position cell cycle checkpoint - Ubiquitous
+  association model
+description: 'Caydasi2012 - Regulation of Tem1 by the GAPcomplex in spindle position cell cycle checkpoint - Ubiquitousassociation
+  model This model is described in the article: A dynamical model of the spindle posi. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Ayse Koca Caydasi
+- Maiko Lohel
+- "Gerd Gr\xFCnert"
+- Peter Dittrich
+- Gislene Pereira
+upstream:
+  id: biomodels_ebi:BIOMD0000000699
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000699
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000699
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000699?filename=BIOMD0000000699_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model:Caydasi2012RegulationOfTem1ByTheGapCompleBiomd0000000699Model
+  init_kwargs:
+    model_path: data/BIOMD0000000699.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_b
+    maps_to: SPB_B
+    label: Model state B
+    description: Tracks Model state B. Maps to SBML symbol `SPB_B`.
+  - name: model_state_t
+    maps_to: SPB_T
+    label: Model state T
+    description: Tracks Model state T. Maps to SBML symbol `SPB_T`.
+  - name: bfa1_spindle_checkpoint_gap
+    maps_to: Bfa1
+    label: Bfa1 spindle checkpoint GAP
+    description: Tracks Bfa1 spindle checkpoint GAP. Maps to SBML symbol `Bfa1`.
+  - name: bfa1_phosphorylated_state_p4
+    maps_to: Bfa1P4
+    label: Bfa1 phosphorylated state P4
+    description: Tracks Bfa1 phosphorylated state P4. Maps to SBML symbol `Bfa1P4`.
+  - name: bfa1_phosphorylated_state_p5
+    maps_to: Bfa1P5
+    label: Bfa1 phosphorylated state P5
+    description: Tracks Bfa1 phosphorylated state P5. Maps to SBML symbol `Bfa1P5`.
+  - name: phosphorylated_tem1gt
+    maps_to: Tem1GTP
+    label: Phosphorylated Tem1GT
+    description: Tracks Phosphorylated Tem1GT. Maps to SBML symbol `Tem1GTP`.
+  - name: phosphorylated_tem1gd
+    maps_to: Tem1GDP
+    label: Phosphorylated Tem1GD
+    description: Tracks Phosphorylated Tem1GD. Maps to SBML symbol `Tem1GDP`.
+  - name: b_bfa1
+    maps_to: B_Bfa1
+    label: B Bfa1
+    description: Tracks B Bfa1. Maps to SBML symbol `B_Bfa1`.
+  - name: b_bfa1p4
+    maps_to: B_Bfa1P4
+    label: B Bfa1P4
+    description: Tracks B Bfa1P4. Maps to SBML symbol `B_Bfa1P4`.
+  - name: b_bfa1p5
+    maps_to: B_Bfa1P5
+    label: B Bfa1P5
+    description: Tracks B Bfa1P5. Maps to SBML symbol `B_Bfa1P5`.
+  - name: phosphorylated_t_tem1gt
+    maps_to: T_Tem1GTP
+    label: Phosphorylated T Tem1GT
+    description: Tracks Phosphorylated T Tem1GT. Maps to SBML symbol `T_Tem1GTP`.
+  - name: phosphorylated_t_tem1gd
+    maps_to: T_Tem1GDP
+    label: Phosphorylated T Tem1GD
+    description: Tracks Phosphorylated T Tem1GD. Maps to SBML symbol `T_Tem1GDP`.
+  - name: phosphorylated_b_bfa1_tem1gt
+    maps_to: B_Bfa1_Tem1GTP
+    label: Phosphorylated B Bfa1 Tem1GT
+    description: Tracks Phosphorylated B Bfa1 Tem1GT. Maps to SBML symbol `B_Bfa1_Tem1GTP`.
+  - name: phosphorylated_b_bfa1p4_tem1gt
+    maps_to: B_Bfa1P4_Tem1GTP
+    label: Phosphorylated B Bfa1P4 Tem1GT
+    description: Tracks Phosphorylated B Bfa1P4 Tem1GT. Maps to SBML symbol `B_Bfa1P4_Tem1GTP`.
+  - name: phosphorylated_b_bfa1p5_tem1gt
+    maps_to: B_Bfa1P5_Tem1GTP
+    label: Phosphorylated B Bfa1P5 Tem1GT
+    description: Tracks Phosphorylated B Bfa1P5 Tem1GT. Maps to SBML symbol `B_Bfa1P5_Tem1GTP`.
+  - name: phosphorylated_b_bfa1_tem1gd
+    maps_to: B_Bfa1_Tem1GDP
+    label: Phosphorylated B Bfa1 Tem1GD
+    description: Tracks Phosphorylated B Bfa1 Tem1GD. Maps to SBML symbol `B_Bfa1_Tem1GDP`.
+  - name: phosphorylated_b_bfa1p4_tem1gd
+    maps_to: B_Bfa1P4_Tem1GDP
+    label: Phosphorylated B Bfa1P4 Tem1GD
+    description: Tracks Phosphorylated B Bfa1P4 Tem1GD. Maps to SBML symbol `B_Bfa1P4_Tem1GDP`.
+  - name: phosphorylated_b_bfa1p5_tem1gd
+    maps_to: B_Bfa1P5_Tem1GDP
+    label: Phosphorylated B Bfa1P5 Tem1GD
+    description: Tracks Phosphorylated B Bfa1P5 Tem1GD. Maps to SBML symbol `B_Bfa1P5_Tem1GDP`.
+  - name: phosphorylated_bfa1_tem1gt
+    maps_to: Bfa1_Tem1GTP
+    label: Phosphorylated Bfa1 Tem1GT
+    description: Tracks Phosphorylated Bfa1 Tem1GT. Maps to SBML symbol `Bfa1_Tem1GTP`.
+  - name: phosphorylated_bfa1p4_tem1gt
+    maps_to: Bfa1P4_Tem1GTP
+    label: Phosphorylated Bfa1P4 Tem1GT
+    description: Tracks Phosphorylated Bfa1P4 Tem1GT. Maps to SBML symbol `Bfa1P4_Tem1GTP`.
+  - name: phosphorylated_bfa1p5_tem1gt
+    maps_to: Bfa1P5_Tem1GTP
+    label: Phosphorylated Bfa1P5 Tem1GT
+    description: Tracks Phosphorylated Bfa1P5 Tem1GT. Maps to SBML symbol `Bfa1P5_Tem1GTP`.
+  - name: phosphorylated_bfa1_tem1gd
+    maps_to: Bfa1_Tem1GDP
+    label: Phosphorylated Bfa1 Tem1GD
+    description: Tracks Phosphorylated Bfa1 Tem1GD. Maps to SBML symbol `Bfa1_Tem1GDP`.
+  - name: phosphorylated_bfa1p4_tem1gd
+    maps_to: Bfa1P4_Tem1GDP
+    label: Phosphorylated Bfa1P4 Tem1GD
+    description: Tracks Phosphorylated Bfa1P4 Tem1GD. Maps to SBML symbol `Bfa1P4_Tem1GDP`.
+  - name: phosphorylated_bfa1p5_tem1gd
+    maps_to: Bfa1P5_Tem1GDP
+    label: Phosphorylated Bfa1P5 Tem1GD
+    description: Tracks Phosphorylated Bfa1P5 Tem1GD. Maps to SBML symbol `Bfa1P5_Tem1GDP`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: active_bfa1_at_the_spb
+    maps_to: Active_Bfa1_at_the_SPB
+    label: Active Bfa1 At The SPB
+    accepted_units:
+    - native SBML value
+    description: Controls Active Bfa1 At The SPB. Maps to SBML symbol `Active_Bfa1_at_the_SPB`.
+  - name: active_bfa1_at_the_cytosol
+    maps_to: Active_Bfa1_at_the_Cytosol
+    label: Active Bfa1 At The Cytosol
+    accepted_units:
+    - native SBML value
+    description: Controls Active Bfa1 At The Cytosol. Maps to SBML symbol `Active_Bfa1_at_the_Cytosol`.
+  - name: active_tem1_at_the_spb
+    maps_to: Active_Tem1_at_the_SPB
+    label: Active Tem1 At The SPB
+    accepted_units:
+    - native SBML value
+    description: Controls Active Tem1 At The SPB. Maps to SBML symbol `Active_Tem1_at_the_SPB`.
+  - name: active_tem1_in_the_cytosol
+    maps_to: Active_Tem1_in_the_Cytosol
+    label: Active Tem1 In The Cytosol
+    accepted_units:
+    - native SBML value
+    description: Controls Active Tem1 In The Cytosol. Maps to SBML symbol `Active_Tem1_in_the_Cytosol`.
+  - name: inactive_bfa1_at_the_spb
+    maps_to: Inactive_Bfa1_at_the_SPB
+    label: Inactive Bfa1 At The SPB
+    accepted_units:
+    - native SBML value
+    description: Controls Inactive Bfa1 At The SPB. Maps to SBML symbol `Inactive_Bfa1_at_the_SPB`.
+  - name: inactive_bfa1_in_the_cytosol
+    maps_to: Inactive_Bfa1_in_the_cytosol
+    label: Inactive Bfa1 In The Cytosol
+    accepted_units:
+    - native SBML value
+    description: Controls Inactive Bfa1 In The Cytosol. Maps to SBML symbol `Inactive_Bfa1_in_the_cytosol`.

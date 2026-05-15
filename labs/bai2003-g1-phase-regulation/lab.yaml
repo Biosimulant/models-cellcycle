@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Bai2003_G1phaseRegulation Lab
+description: 'Single-model lab wrapper for Bai2003_G1phaseRegulation. This a model from the article: Theoretical
+  and experimental evidence for hysteresis in cell proliferation. Bai S, Goodrich D, Thron CD, Tecarro E, Obeyesekere
+  M.'
+models:
+- alias: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.state
+  to:
+  - visualisation.cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model_state
+- from: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.summary
+  to:
+  - visualisation.cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model_summary
+- from: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: growth_factor
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.growth_factor
+    label: Growth Factor
+    description: Controls Growth Factor in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.growth_factor`.
+  outputs:
+  - name: model_state_d
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_d
+    label: Model state D
+    description: Tracks Model state D in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_d`.
+  - name: model_state_e
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_e
+    label: Model state E
+    description: Tracks Model state E in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_e`.
+  - name: model_state_r_r_1
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_r_r_1
+    label: Model state R (R_1)
+    description: Tracks Model state R (R_1) in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_r_r_1`.
+  - name: restriction_point_signal
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.restriction_point_signal
+    label: Restriction-point signal
+    description: Tracks Restriction-point signal in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.restriction_point_signal`.
+  - name: theta
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.theta
+    label: Theta
+    description: Tracks Theta in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.theta`.
+  - name: model_state_x_x_1
+    maps_to: cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_x_x_1
+    label: Model state X (X_1)
+    description: Tracks Model state X (X_1) in the lab model via `cellcycle_sbml_bai2003_g1phaseregulation_biomd0000000242_model.model_state_x_x_1`.

@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Tyson2001_Cell_Cycle_Regulation
+description: 'This model describes the budding yeast cell cycle model used in fig 8 a in Regulation of the eukaryotic
+  cell cycle: molecular antagonism, hysteresis, and irreversible transitions. It can be used to explore cell-cycle
+  regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- J J Tyson
+- B Novak
+upstream:
+  id: biomodels_ebi:BIOMD0000000195
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000195
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000195
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000195?filename=BIOMD0000000195_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.tyson2001_cell_cycle_regulation_biomd0000000195_model:Tyson2001CellCycleRegulationBiomd0000000195Model
+  init_kwargs:
+    model_path: data/BIOMD0000000195.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_bt
+    maps_to: CycBt
+    label: Cyclin Bt
+    description: Tracks Cyclin Bt. Maps to SBML symbol `CycBt`.
+  - name: active_cdc20
+    maps_to: Cdc20a
+    label: Active Cdc20
+    description: Tracks Active Cdc20. Maps to SBML symbol `Cdc20a`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: model_state_m_m
+    maps_to: m
+    label: Model state M (m)
+    description: Tracks Model state M (m). Maps to SBML symbol `m`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: Cdc20t
+    label: Total Cdc20 APC/C activator
+    description: Tracks Total Cdc20 APC/C activator. Maps to SBML symbol `Cdc20t`.
+  - name: phosphorylated_ie
+    maps_to: IEP
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE. Maps to SBML symbol `IEP`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: CKIt
+    label: Total cyclin-dependent kinase inhibitor
+    description: Tracks Total cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKIt`.
+  - name: model_state_sk
+    maps_to: SK
+    label: Model state SK
+    description: Tracks Model state SK. Maps to SBML symbol `SK`.
+  - name: cyclin_b
+    maps_to: CycB
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `CycB`.
+  - name: trimer_complex
+    maps_to: Trimer
+    label: Trimer complex
+    description: Tracks Trimer complex. Maps to SBML symbol `Trimer`.
+  - name: mad_spindle_checkpoint_signal
+    maps_to: Mad
+    label: Mad spindle checkpoint signal
+    description: Tracks Mad spindle checkpoint signal. Maps to SBML symbol `Mad`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

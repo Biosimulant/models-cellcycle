@@ -1,0 +1,42 @@
+schema_version: '2.0'
+title: Ferrel2011 - Autonomous biochemical oscillator in regulation of CDK1, Plk1, and APC in Xenopus Laevis cell
+  cycle Lab
+description: Single-model lab wrapper for Ferrel2011 - Autonomous biochemical oscillator in regulation of CDK1,
+  Plk1, and APC in Xenopus Laevis cell cycle. Computational modeling and the theory of nonlinear dynamical systems
+  allow one to not simply describe the events of the cell cycle, but also to understand why these events occur,
+  just as the theory of. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior
+  across conditions.
+models:
+- alias: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.state
+  to:
+  - visualisation.cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model_state
+- from: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.summary
+  to:
+  - visualisation.cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model_summary
+- from: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cdk1_active
+    maps_to: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.cdk1_active
+    label: CDK1 Active
+    description: Tracks CDK1 Active in the lab model via `cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.cdk1_active`.
+  - name: apc_c_c_active
+    maps_to: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.apc_c_c_active
+    label: APC/C/C Active
+    description: Tracks APC/C/C Active in the lab model via `cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.apc_c_c_active`.
+  - name: plk1_active
+    maps_to: cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.plk1_active
+    label: Plk1 Active
+    description: Tracks Plk1 Active in the lab model via `cellcycle_sbml_ferrel2011_autonomous_biochemical_oscillator_in_biomd0000000937_model.plk1_active`.

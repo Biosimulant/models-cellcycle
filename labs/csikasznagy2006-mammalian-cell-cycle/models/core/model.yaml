@@ -1,0 +1,136 @@
+schema_version: '2.0'
+title: Csikasz-Nagy2006 - Mammalian Cell Cycle model
+description: 'This model originates from the Cell Cycle Database . It is described in: Analysis of a generic model
+  of eukaryotic cell-cycle regulation.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- "Attila Csik\xE1sz-Nagy"
+- Dorjsuren Battogtokh
+- Katherine C Chen
+- "B\xE9la Nov\xE1k"
+- John J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000001044
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001044
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001044
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001044?filename=Csikasz-Nagy2006.xml
+  license: CC0
+biosim:
+  entrypoint: src.csikasz_nagy2006_mammalian_cell_cycle_model_biomd0000001044_model:CsikaszNagy2006MammalianCellCycleModelBiomd0000001044Model
+  init_kwargs:
+    model_path: data/BIOMD0000001044.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: phosphorylated_apc_c_c
+    maps_to: APCP
+    label: Phosphorylated APC/C/C
+    description: Tracks Phosphorylated APC/C/C. Maps to SBML symbol `APCP`.
+  - name: b_type_cyclin_cdk_inhibitor
+    maps_to: BCKI
+    label: B-type cyclin CDK inhibitor
+    description: Tracks B-type cyclin CDK inhibitor. Maps to SBML symbol `BCKI`.
+  - name: active_cdc20
+    maps_to: Cdc20A
+    label: Active Cdc20
+    description: Tracks Active Cdc20. Maps to SBML symbol `Cdc20A`.
+  - name: inactive_cdc20
+    maps_to: Cdc20i
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20. Maps to SBML symbol `Cdc20i`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: cyclin_dependent_kinase_inhibitor
+    maps_to: CKI
+    label: Cyclin-dependent kinase inhibitor
+    description: Tracks Cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKI`.
+  - name: cyclin_a
+    maps_to: CycA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `CycA`.
+  - name: cyclin_b
+    maps_to: CycB
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `CycB`.
+  - name: cyclin_e
+    maps_to: CycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `CycE`.
+  - name: cell_mass
+    maps_to: Mass
+    label: Cell mass
+    description: Tracks Cell mass. Maps to SBML symbol `Mass`.
+  - name: p_b
+    maps_to: pB
+    label: P B
+    description: Tracks P B. Maps to SBML symbol `pB`.
+  - name: p_bcki
+    maps_to: pBCKI
+    label: P BCKI
+    description: Tracks P BCKI. Maps to SBML symbol `pBCKI`.
+  - name: tri_a
+    maps_to: TriA
+    label: Tri A
+    description: Tracks Tri A. Maps to SBML symbol `TriA`.
+  - name: tri_e
+    maps_to: TriE
+    label: Tri E
+    description: Tracks Tri E. Maps to SBML symbol `TriE`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: apc_c
+    maps_to: APC
+    label: APC/C
+    accepted_units:
+    - native SBML value
+    description: Controls APC/C. Maps to SBML symbol `APC`.
+  - name: cdc14
+    maps_to: Cdc14
+    label: Cdc14
+    accepted_units:
+    - native SBML value
+    description: Controls Cdc14. Maps to SBML symbol `Cdc14`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: Cdc20T
+    label: Total Cdc20 APC/C activator
+    accepted_units:
+    - native SBML value
+    description: Controls Total Cdc20 APC/C activator. Maps to SBML symbol `Cdc20T`.
+  - name: phosphorylated_cdc25
+    maps_to: Cdc25P
+    label: Phosphorylated Cdc25
+    accepted_units:
+    - native SBML value
+    description: Controls Phosphorylated Cdc25. Maps to SBML symbol `Cdc25P`.
+  - name: inactive_cdh1
+    maps_to: Cdh1i
+    label: Inactive Cdh1
+    accepted_units:
+    - native SBML value
+    description: Controls Inactive Cdh1. Maps to SBML symbol `Cdh1i`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: CKIT
+    label: Total cyclin-dependent kinase inhibitor
+    accepted_units:
+    - native SBML value
+    description: Controls Total cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKIT`.

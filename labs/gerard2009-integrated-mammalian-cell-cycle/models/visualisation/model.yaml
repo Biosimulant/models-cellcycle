@@ -1,0 +1,213 @@
+schema_version: '2.0'
+title: Gerard2009 - An Integrated Mammalian Cell Cycle Model Visualisation
+description: Dedicated question-and-answer visualisation model for Gerard2009 - An Integrated Mammalian Cell Cycle
+  Model.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Gerard2009 - An Integrated Mammalian Cell Cycle Model Lab
+    question: Does growth-factor signaling drive the mammalian Rb/E2F and cyclin-CDK program toward cell-cycle progression?
+    answer_focus: The answer is based on Rb phosphorylation, E2F activity, and sequential Cyclin D/E/A/B-CDK module
+      responses.
+    sources:
+    - alias: cellcycle_sbml_gerard2009_an_integrated_mammalian_cell_cycle_mo_biomd0000000730_model
+      title: Gerard2009 - An Integrated Mammalian Cell Cycle Model
+      observables:
+      - id: pRB
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: pRBp
+        port: singly_phosphorylated_rb
+        label: Singly phosphorylated Rb
+        group: g1s
+      - id: pRBpp
+        port: hyperphosphorylated_rb
+        label: Hyperphosphorylated Rb
+        group: g1s
+      - id: E2F
+        port: e2f
+        label: E2F transcription factor
+        group: g1s
+      - id: E2Fp
+        port: phosphorylated_e2f
+        label: Phosphorylated E2F
+        group: g1s
+      - id: pRBc1
+        port: rb_e2f_complex
+        label: Rb-E2F complex
+        group: g1s
+      - id: pRBc2
+        port: phosphorylated_rb_e2f_complex
+        label: Phosphorylated Rb-E2F complex
+        group: g1s
+      - id: Cd
+        port: cyclin_d
+        label: Cyclin D
+        group: g1s
+      - id: Mdi
+        port: inactive_cyclin_d_cdk_complex
+        label: Inactive Cyclin D-CDK4/6 complex
+        group: g1s
+      - id: Md
+        port: active_cyclin_d_cdk_complex
+        label: Active Cyclin D-CDK4/6 complex
+        group: g1s
+      - id: Mdp27
+        port: cyclin_d_cdk_p27_complex
+        label: Cyclin D-CDK4/6-p27 complex
+        group: g1s
+      - id: Ce
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: Mei
+        port: inactive_cyclin_e_cdk2_complex
+        label: Inactive Cyclin E-CDK2 complex
+        group: g1s
+      - id: Me
+        port: active_cyclin_e_cdk2_complex
+        label: Active Cyclin E-CDK2 complex
+        group: g1s
+      - id: Skp2
+        port: skp2
+        label: Skp2 ubiquitin-ligase adaptor
+        group: core
+      - id: Mep27
+        port: cyclin_e_cdk2_p27_complex
+        label: Cyclin E-CDK2-p27 complex
+        group: g1s
+      - id: Pei
+        port: inactive_cyclin_e_module_regulator
+        label: Inactive Cyclin E module regulator
+        group: g1s
+      - id: Pe
+        port: active_cyclin_e_module_regulator
+        label: Active Cyclin E module regulator
+        group: g1s
+      - id: Ca
+        port: cyclin_a
+        label: Cyclin A
+        group: core
+      - id: Mai
+        port: inactive_cyclin_a_cdk2_complex
+        label: Inactive Cyclin A-CDK2 complex
+        group: g1s
+      - id: Ma
+        port: active_cyclin_a_cdk2_complex
+        label: Active Cyclin A-CDK2 complex
+        group: g1s
+      - id: Map27
+        port: cyclin_a_cdk2_p27_complex
+        label: Cyclin A-CDK2-p27 complex
+        group: g1s
+      - id: p27
+        port: p27
+        label: p27 CDK inhibitor
+        group: g1s
+      - id: p27p
+        port: phosphorylated_p27
+        label: Phosphorylated p27
+        group: g1s
+      - id: Cdh1i
+        port: inactive_cdh1
+        label: Inactive Cdh1
+        group: mitosis
+      - id: Cdh1a
+        port: active_cdh1
+        label: Active Cdh1
+        group: mitosis
+      - id: Pai
+        port: inactive_cyclin_a_module_regulator
+        label: Inactive Cyclin A module regulator
+        group: core
+      - id: Pa
+        port: active_cyclin_a_module_regulator
+        label: Active Cyclin A module regulator
+        group: core
+      - id: Cb
+        port: cyclin_b
+        label: Cyclin B
+        group: mitosis
+      - id: Mbi
+        port: inactive_cyclin_b_cdk1_complex
+        label: Inactive Cyclin B-CDK1 complex
+        group: mitosis
+      - id: Mb
+        port: active_cyclin_b_cdk1_complex
+        label: Active Cyclin B-CDK1 complex
+        group: mitosis
+      - id: Mbp27
+        port: cyclin_b_cdk1_p27_complex
+        label: Cyclin B-CDK1-p27 complex
+        group: g1s
+      - id: Cdc20i
+        port: inactive_cdc20
+        label: Inactive Cdc20
+        group: mitosis
+      - id: Cdc20a
+        port: active_cdc20
+        label: Active Cdc20
+        group: mitosis
+      - id: Pbi
+        port: inactive_cyclin_b_module_regulator
+        label: Inactive Cyclin B module regulator
+        group: mitosis
+      - id: Pb
+        port: active_cyclin_b_module_regulator
+        label: Active Cyclin B module regulator
+        group: mitosis
+      - id: Wee1
+        port: wee1
+        label: Wee1 inhibitory kinase
+        group: mitosis
+      - id: Wee1p
+        port: phosphorylated_wee1
+        label: Phosphorylated Wee1
+        group: mitosis
+      - id: Pol
+        port: dna_polymerase
+        label: DNA polymerase
+        group: replication
+      - id: Cdc45
+        port: cdc45
+        label: Cdc45 replication factor
+        group: core
+      - id: Primer
+        port: replication_primer
+        label: Replication primer
+        group: core
+      - id: Chk1
+        port: chk1
+        label: Chk1 checkpoint kinase
+        group: checkpoint
+      - id: ATR
+        port: atr
+        label: ATR checkpoint kinase
+        group: checkpoint
+      - id: AP1
+        port: ap1
+        label: AP1 transcription factor
+        group: core
+      - id: Mw
+        port: wee1_module_regulator
+        label: Wee1 module regulator
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Ciliberto2003_Morphogenesis_Checkpoint Lab
+description: 'Single-model lab wrapper for Ciliberto2003_Morphogenesis_Checkpoint. This a model from the article:
+  Mathematical model of the morphogenesis checkpoint in budding yeast. It can be used to explore cell-cycle regulation
+  dynamics and compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.state
+  to:
+  - visualisation.cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model_state
+- from: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.summary
+  to:
+  - visualisation.cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model_summary
+- from: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: trimer_complex
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.trimer_complex
+    label: Trimer complex
+    description: Tracks Trimer complex in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.trimer_complex`.
+  - name: clb2
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.clb2
+    label: Clb2
+    description: Tracks Clb2 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.clb2`.
+  - name: sic1
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.sic1
+    label: Sic1
+    description: Tracks Sic1 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.sic1`.
+  - name: phosphorylated_trimer_complex
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_trimer_complex
+    label: Phosphorylated trimer complex
+    description: Tracks Phosphorylated trimer complex in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_trimer_complex`.
+  - name: phosphorylated_clb2
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_clb2
+    label: Phosphorylated Clb2
+    description: Tracks Phosphorylated Clb2 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_clb2`.
+  - name: sbf_transcription_factor
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.sbf_transcription_factor
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.sbf_transcription_factor`.
+  - name: intermediary_enzyme
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.intermediary_enzyme
+    label: Intermediary Enzyme
+    description: Tracks Intermediary Enzyme in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.intermediary_enzyme`.
+  - name: cdc20_activated
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdc20_activated
+    label: Cdc20 Activated
+    description: Tracks Cdc20 Activated in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdc20_activated`.
+  - name: cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdc20_apc_c_activator
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdc20_apc_c_activator`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.cdh1_apc_c_activator`.
+  - name: swe1_inhibitory_kinase
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.swe1_inhibitory_kinase
+    label: Swe1 inhibitory kinase
+    description: Tracks Swe1 inhibitory kinase in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.swe1_inhibitory_kinase`.
+  - name: membrane_associated_swe1
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.membrane_associated_swe1
+    label: Membrane-associated Swe1
+    description: Tracks Membrane-associated Swe1 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.membrane_associated_swe1`.
+  - name: phosphorylated_swe1
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_swe1
+    label: Phosphorylated Swe1
+    description: Tracks Phosphorylated Swe1 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.phosphorylated_swe1`.
+  - name: membrane_associated_phosphorylated_swe1
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.membrane_associated_phosphorylated_swe1
+    label: Membrane-associated phosphorylated Swe1
+    description: Tracks Membrane-associated phosphorylated Swe1 in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.membrane_associated_phosphorylated_swe1`.
+  - name: active_mih1_phosphatase
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.active_mih1_phosphatase
+    label: Active Mih1 phosphatase
+    description: Tracks Active Mih1 phosphatase in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.active_mih1_phosphatase`.
+  - name: mcm_replication_licensing_complex
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.mcm_replication_licensing_complex
+    label: MCM replication licensing complex
+    description: Tracks MCM replication licensing complex in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.mcm_replication_licensing_complex`.
+  - name: model_state_be
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.model_state_be
+    label: Model state BE
+    description: Tracks Model state BE in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.model_state_be`.
+  - name: g1_cyclin_pool
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.g1_cyclin_pool
+    label: G1 cyclin pool
+    description: Tracks G1 cyclin pool in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.g1_cyclin_pool`.
+  - name: mass
+    maps_to: cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.mass
+    label: Mass
+    description: Tracks Mass in the lab model via `cellcycle_sbml_ciliberto2003_morphogenesis_checkpoint_biomd0000000297_model.mass`.

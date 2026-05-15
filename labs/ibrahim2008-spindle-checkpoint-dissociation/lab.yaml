@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant Lab
+description: Single-model lab wrapper for Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant.
+  Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Dissociation variant The Mitotic Spindle Assembly Checkpoint
+  ((M)SAC) is an evolutionary conserved mechanism. It can be used to explore cell-cycle regulation dynamics and
+  compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.state
+  to:
+  - visualisation.cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model_state
+- from: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.summary
+  to:
+  - visualisation.cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model_summary
+- from: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: mad1_c_mad2
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mad1_c_mad2
+    label: Mad1:C Mad2
+    description: Tracks Mad1:C Mad2 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mad1_c_mad2`.
+  - name: o_mad2
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.o_mad2
+    label: O Mad2
+    description: Tracks O Mad2 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.o_mad2`.
+  - name: mad1_c_mad2_o_mad2
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mad1_c_mad2_o_mad2
+    label: Mad1:C Mad2:O Mad2*
+    description: Tracks Mad1:C Mad2:O Mad2* in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mad1_c_mad2_o_mad2`.
+  - name: cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.cdc20_apc_c_activator
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.cdc20_apc_c_activator`.
+  - name: cdc20_c_mad2
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.cdc20_c_mad2
+    label: Cdc20:C Mad2
+    description: Tracks Cdc20:C Mad2 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.cdc20_c_mad2`.
+  - name: bub3_bub_model_state_r1
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.bub3_bub_model_state_r1
+    label: Bub3:Bub Model state R1
+    description: Tracks Bub3:Bub Model state R1 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.bub3_bub_model_state_r1`.
+  - name: mitotic_checkpoint_complex
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mitotic_checkpoint_complex
+    label: Mitotic checkpoint complex
+    description: Tracks Mitotic checkpoint complex in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mitotic_checkpoint_complex`.
+  - name: bub3_bub_r1_cdc20
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.bub3_bub_r1_cdc20
+    label: Bub3:Bub R1:Cdc20
+    description: Tracks Bub3:Bub R1:Cdc20 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.bub3_bub_r1_cdc20`.
+  - name: apc_c_c
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.apc_c_c
+    label: APC/C/C
+    description: Tracks APC/C/C in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.apc_c_c`.
+  - name: mcc_apc_c_c
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mcc_apc_c_c
+    label: MCC:APC/C/C
+    description: Tracks MCC:APC/C/C in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.mcc_apc_c_c`.
+  - name: apc_c_c_cdc20
+    maps_to: cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.apc_c_c_cdc20
+    label: APC/C/C:Cdc20
+    description: Tracks APC/C/C:Cdc20 in the lab model via `cellcycle_sbml_ibrahim2008_mitotic_spindle_assembly_checkpoint_biomd0000000186_model.apc_c_c_cdc20`.

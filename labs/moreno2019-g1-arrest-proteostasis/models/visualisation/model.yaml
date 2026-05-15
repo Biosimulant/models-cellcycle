@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan in yeast
+  Visualisation
+description: Dedicated question-and-answer visualisation model for Moreno2019 - Stochastic model of G1 arrest due
+  to proteostasis decline delimits replicative lifespan in yeast.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan
+      in yeast Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_moreno2019_stochastic_model_of_g1_arrest_due_to_model1901210001_model
+      title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan
+        in yeast
+      observables:
+      - id: Prot
+        port: protein_load
+        label: Protein load
+        group: proteostasis
+      - id: YP
+        port: model_state_yp
+        label: Model state YP
+        group: proteostasis
+      - id: Ydj1
+        port: ydj1_chaperone
+        label: Ydj1 chaperone
+        group: proteostasis
+      - id: ProtF
+        port: prot_f
+        label: Prot F
+        group: proteostasis
+      - id: ProtM
+        port: prot_model_state_m
+        label: Prot Model state M
+        group: proteostasis
+      - id: Oli
+        port: oligomerized_proteostasis_species
+        label: Oligomerized proteostasis species
+        group: proteostasis
+      - id: Agg
+        port: protein_aggregate_burden
+        label: Protein aggregate burden
+        group: proteostasis
+      - id: YOAgg
+        port: ydj1_oligomer_aggregate_complex
+        label: Ydj1-oligomer aggregate complex
+        group: proteostasis
+      - id: YM
+        port: model_state_ym
+        label: Model state YM
+        group: proteostasis
+      - id: YO
+        port: model_state_yo
+        label: Model state YO
+        group: proteostasis
+      - id: Cln3
+        port: cln3_start_cyclin
+        label: Cln3 Start cyclin
+        group: proteostasis
+      - id: YC
+        port: model_state_yc
+        label: Model state YC
+        group: proteostasis
+      - id: Cln3F
+        port: folded_cln3_start_cyclin
+        label: Folded Cln3 Start cyclin
+        group: proteostasis
+      - id: Whi5
+        port: whi5_start_inhibitor
+        label: Whi5 Start inhibitor
+        group: proteostasis
+      - id: Whi5i
+        port: inactive_whi5_start_inhibitor
+        label: Inactive Whi5 Start inhibitor
+        group: proteostasis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

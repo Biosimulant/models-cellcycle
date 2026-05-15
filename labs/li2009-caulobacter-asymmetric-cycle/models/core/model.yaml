@@ -1,0 +1,200 @@
+schema_version: '2.0'
+title: Li2009- Assymetric Caulobacter cell cycle
+description: The asymmetric cell division cycle of Caulobacter crescentus is orchestrated by an elaborate gene-protein
+  regulatory network, centered on three major control proteins, DnaA, GcrA and CtrA. It can be used to explore cell-cycle
+  regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Shenghua Li
+- Paul Brazhnik
+- Bruno Sobral
+- John J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000000727
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000727
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000727
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000727?filename=Li2009.xml
+  license: CC0
+biosim:
+  entrypoint: src.li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model:Li2009AssymetricCaulobacterCellCycleBiomd0000000727Model
+  init_kwargs:
+    model_path: data/BIOMD0000000727.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: dna_a_replication_initiator
+    maps_to: DnaA
+    label: DnaA replication initiator
+    description: Tracks DnaA replication initiator. Maps to SBML symbol `DnaA`.
+  - name: gcr_a_transcriptional_regulator
+    maps_to: GcrA
+    label: GcrA transcriptional regulator
+    description: Tracks GcrA transcriptional regulator. Maps to SBML symbol `GcrA`.
+  - name: ctr_a_cell_cycle_regulator
+    maps_to: CtrA
+    label: CtrA cell-cycle regulator
+    description: Tracks CtrA cell-cycle regulator. Maps to SBML symbol `CtrA`.
+  - name: phosphorylated_ctr_a
+    maps_to: CtrA_P
+    label: Phosphorylated CtrA
+    description: Tracks Phosphorylated CtrA. Maps to SBML symbol `CtrA_P`.
+  - name: div_k_polarity_regulator
+    maps_to: DivK
+    label: DivK polarity regulator
+    description: Tracks DivK polarity regulator. Maps to SBML symbol `DivK`.
+  - name: phosphorylated_div_k
+    maps_to: DivK_P
+    label: Phosphorylated DivK
+    description: Tracks Phosphorylated DivK. Maps to SBML symbol `DivK_P`.
+  - name: model_state_i
+    maps_to: I
+    label: Model state I
+    description: Tracks Model state I. Maps to SBML symbol `I`.
+  - name: ccr_model_state_m
+    maps_to: CcrM
+    label: Ccr Model state M
+    description: Tracks Ccr Model state M. Maps to SBML symbol `CcrM`.
+  - name: hcori
+    maps_to: hcori
+    label: Hcori
+    description: Tracks Hcori. Maps to SBML symbol `hcori`.
+  - name: hctr_a
+    maps_to: hctrA
+    label: Hctr A
+    description: Tracks Hctr A. Maps to SBML symbol `hctrA`.
+  - name: hccr_model_state_m
+    maps_to: hccrM
+    label: Hccr Model state M
+    description: Tracks Hccr Model state M. Maps to SBML symbol `hccrM`.
+  - name: hfts_model_state_z
+    maps_to: hftsZ
+    label: Hfts Model state Z
+    description: Tracks Hfts Model state Z. Maps to SBML symbol `hftsZ`.
+  - name: replication_initiation_state
+    maps_to: Ini
+    label: Replication initiation state
+    description: Tracks Replication initiation state. Maps to SBML symbol `Ini`.
+  - name: dna_replication_state
+    maps_to: DNA
+    label: DNA replication state
+    description: Tracks DNA replication state. Maps to SBML symbol `DNA`.
+  - name: division_event_counter
+    maps_to: Count
+    label: Division event counter
+    description: Tracks Division event counter. Maps to SBML symbol `Count`.
+  - name: pod_jl
+    maps_to: PodJL
+    label: Pod JL
+    description: Tracks Pod JL. Maps to SBML symbol `PodJL`.
+  - name: phosphorylated_per
+    maps_to: PerP
+    label: Phosphorylated Per
+    description: Tracks Phosphorylated Per. Maps to SBML symbol `PerP`.
+  - name: div_j
+    maps_to: DivJ
+    label: Div J
+    description: Tracks Div J. Maps to SBML symbol `DivJ`.
+  - name: phosphorylated_cck_a
+    maps_to: CckA_P
+    label: Phosphorylated Cck A
+    description: Tracks Phosphorylated Cck A. Maps to SBML symbol `CckA_P`.
+  - name: cpd_model_state_r
+    maps_to: CpdR
+    label: Cpd Model state R
+    description: Tracks Cpd Model state R. Maps to SBML symbol `CpdR`.
+  - name: rcd_a
+    maps_to: RcdA
+    label: Rcd A
+    description: Tracks Rcd A. Maps to SBML symbol `RcdA`.
+  - name: phosphorylated_par_aad
+    maps_to: ParAADP
+    label: Phosphorylated Par AAD
+    description: Tracks Phosphorylated Par AAD. Maps to SBML symbol `ParAADP`.
+  - name: fts_model_state_z
+    maps_to: FtsZ
+    label: Fts Model state Z
+    description: Tracks Fts Model state Z. Maps to SBML symbol `FtsZ`.
+  - name: z_ring
+    maps_to: Zring
+    label: Z-ring
+    description: Tracks Z-ring. Maps to SBML symbol `Zring`.
+  - name: cck_active_tot
+    maps_to: CckA_tot
+    label: Cck Active Tot
+    description: Tracks Cck Active Tot. Maps to SBML symbol `CckA_tot`.
+  - name: cpd_model_state_r_tot
+    maps_to: CpdR_tot
+    label: Cpd Model state R Tot
+    description: Tracks Cpd Model state R Tot. Maps to SBML symbol `CpdR_tot`.
+  - name: par_active_tot
+    maps_to: ParA_tot
+    label: Par Active Tot
+    description: Tracks Par Active Tot. Maps to SBML symbol `ParA_tot`.
+  - name: cell_elongation_state
+    maps_to: Elong
+    label: Cell elongation state
+    description: Tracks Cell elongation state. Maps to SBML symbol `Elong`.
+  - name: model_state_z_z
+    maps_to: Z
+    label: Model state Z (Z)
+    description: Tracks Model state Z (Z). Maps to SBML symbol `Z`.
+  - name: fts_q
+    maps_to: FtsQ
+    label: Fts Q
+    description: Tracks Fts Q. Maps to SBML symbol `FtsQ`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: ks_dna_a1
+    maps_to: ks_DnaA1
+    label: Ks,DNA A1
+    accepted_units:
+    - dimensionless
+    description: Controls Ks,DNA A1. Maps to SBML symbol `ks_DnaA1`.
+  - name: ks_dna_a2
+    maps_to: ks_DnaA2
+    label: Ks,DNA A2
+    accepted_units:
+    - dimensionless
+    description: Controls Ks,DNA A2. Maps to SBML symbol `ks_DnaA2`.
+  - name: kd_dna_a
+    maps_to: kd_DnaA
+    label: Kd,DnaA
+    accepted_units:
+    - dimensionless
+    description: Controls Kd,DnaA. Maps to SBML symbol `kd_DnaA`.
+  - name: ji_dna_active_gcr_a
+    maps_to: JiDnaA_GcrA
+    label: Ji DNA Active GcrA
+    accepted_units:
+    - dimensionless
+    description: Controls Ji DNA Active GcrA. Maps to SBML symbol `JiDnaA_GcrA`.
+  - name: phosphorylated_ja_dna_ctr_a
+    maps_to: Ja_Dna_CtrA_P
+    label: Phosphorylated Ja DNA CtrA
+    accepted_units:
+    - dimensionless
+    description: Controls Phosphorylated Ja DNA CtrA. Maps to SBML symbol `Ja_Dna_CtrA_P`.
+  - name: ja_fts_q_dna
+    maps_to: Ja_FtsQ_DNA
+    label: Ja,Fts Q,DNA
+    accepted_units:
+    - dimensionless
+    description: Controls Ja,Fts Q,DNA. Maps to SBML symbol `Ja_FtsQ_DNA`.

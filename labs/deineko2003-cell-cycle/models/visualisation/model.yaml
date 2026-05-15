@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Deineko2003_CellCycle Visualisation
+description: Dedicated question-and-answer visualisation model for Deineko2003_CellCycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Deineko2003_CellCycle Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model
+      title: Deineko2003_CellCycle
+      observables:
+      - id: y1
+        port: e2f
+        label: E2F
+        group: g1s
+      - id: y2
+        port: phosphorylated_rb
+        label: Phosphorylated Rb
+        group: g1s
+      - id: y3
+        port: phosphorylated_phosphorylated_rb
+        label: Phosphorylated Phosphorylated Rb
+        group: g1s
+      - id: y4
+        port: inactive_cyclin_e_cdk2
+        label: Inactive Cyclin E CDK2
+        group: g1s
+      - id: y5
+        port: active_cyclin_e_cdk2
+        label: Active Cyclin E CDK2
+        group: g1s
+      - id: y6
+        port: ap_1
+        label: AP 1
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

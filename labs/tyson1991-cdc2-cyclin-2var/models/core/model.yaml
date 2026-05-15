@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Tyson1991 - Cell Cycle 2 var
+description: Tyson1991 - Cell Cycle 2 var Mathematical model of the interactions of cdc2 and cyclin. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- J J Tyson
+upstream:
+  id: biomodels_ebi:BIOMD0000000006
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000006
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000006
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000006?filename=BIOMD0000000006_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.tyson1991_cell_cycle_2_var_biomd0000000006_model:Tyson1991CellCycle2VarBiomd0000000006Model
+  init_kwargs:
+    model_path: data/BIOMD0000000006.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_u_u
+    maps_to: u
+    label: Model state U (u)
+    description: Tracks Model state U (u). Maps to SBML symbol `u`.
+  - name: model_state_v_v
+    maps_to: v
+    label: Model state V (v)
+    description: Tracks Model state V (v). Maps to SBML symbol `v`.
+  - name: alpha
+    maps_to: alpha
+    label: Alpha
+    description: Tracks Alpha. Maps to SBML symbol `alpha`.
+  - name: model_state_z_z
+    maps_to: z
+    label: Model state Z (z)
+    description: Tracks Model state Z (z). Maps to SBML symbol `z`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

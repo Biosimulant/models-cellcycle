@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle.
+description: A mathematical model of regulation of the G1-S transition of the mammalian cell cycle has been formulated
+  to organize available experimental molecular-level information in a systematic quantitative fr. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- V Hatzimanikatis
+- K H Lee
+- J E Bailey
+upstream:
+  id: biomodels_ebi:MODEL2005070001
+  source_db: biomodels_ebi
+  source_id: MODEL2005070001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2005070001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005070001?filename=Hatzimanikatis1999.xml
+  license: CC0
+biosim:
+  entrypoint: src.hatzimanikatis1999_regulation_of_the_g1_s_transi_model2005070001_model:Hatzimanikatis1999RegulationOfTheG1STransiModel2005070001Model
+  init_kwargs:
+    model_path: data/MODEL2005070001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_c_c
+    maps_to: C
+    label: Model state C (C)
+    description: Tracks Model state C (C). Maps to SBML symbol `C`.
+  - name: model_state_k
+    maps_to: K
+    label: Model state K
+    description: Tracks Model state K. Maps to SBML symbol `K`.
+  - name: model_state_rp
+    maps_to: Rp
+    label: Model state Rp
+    description: Tracks Model state Rp. Maps to SBML symbol `Rp`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: model_state_e
+    maps_to: E
+    label: Model state E
+    accepted_units:
+    - native SBML value
+    description: Controls Model state E. Maps to SBML symbol `E`.
+  - name: model_state_kp
+    maps_to: Kp
+    label: Model state Kp
+    accepted_units:
+    - native SBML value
+    description: Controls Model state Kp. Maps to SBML symbol `Kp`.
+  - name: model_state_re
+    maps_to: RE
+    label: Model state RE
+    accepted_units:
+    - native SBML value
+    description: Controls Model state RE. Maps to SBML symbol `RE`.

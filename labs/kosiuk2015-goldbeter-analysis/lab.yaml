@@ -1,0 +1,39 @@
+schema_version: '2.0'
+title: Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle Lab
+description: Single-model lab wrapper for Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic
+  cell cycle. A minimal model describing the embryonic cell division cycle at the molecular level in eukaryotes
+  is analyzed mathematically. It is known from numerical simulations that the corresponding three-dimens.
+models:
+- alias: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.state
+  to:
+  - visualisation.cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model_state
+- from: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.summary
+  to:
+  - visualisation.cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model_summary
+- from: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_c_c
+    maps_to: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_c_c
+    label: Model state C (C)
+    description: Tracks Model state C (C) in the lab model via `cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_c_c`.
+  - name: model_state_m_m
+    maps_to: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_m_m
+    label: Model state M (M)
+    description: Tracks Model state M (M) in the lab model via `cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_m_m`.
+  - name: model_state_x_x
+    maps_to: cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_x_x
+    label: Model state X (X)
+    description: Tracks Model state X (X) in the lab model via `cellcycle_sbml_kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model.model_state_x_x`.

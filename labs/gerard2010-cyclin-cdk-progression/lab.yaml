@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes
+  Lab
+description: Single-model lab wrapper for Gerard2010 - Progression of mammalian cell cycle by successive activation
+  of various cyclin cdk complexes. We previously proposed a detailed, 39-variable model for the network of cyclin-dependent
+  kinases (Cdks) that controls progression along the successive phases of the mammalian cell cycle. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.state
+  to:
+  - visualisation.cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model_state
+- from: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.summary
+  to:
+  - visualisation.cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model_summary
+- from: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: growth_factor
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.growth_factor
+    label: Growth Factor
+    description: Controls Growth Factor in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.growth_factor`.
+  - name: kgf
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.kgf
+    label: Kgf
+    description: Controls Kgf in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.kgf`.
+  outputs:
+  - name: cyclin_d_cdk4_6
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_d_cdk4_6
+    label: Cyclin D CDK4 6
+    description: Tracks Cyclin D CDK4 6 in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_d_cdk4_6`.
+  - name: transcription_factor_e2f_active
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.transcription_factor_e2f_active
+    label: Transcription Factor E2F Active
+    description: Tracks Transcription Factor E2F Active in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.transcription_factor_e2f_active`.
+  - name: cyclin_e_cdk2
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_e_cdk2
+    label: Cyclin E CDK2
+    description: Tracks Cyclin E CDK2 in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_e_cdk2`.
+  - name: cyclin_active_cdk2
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_active_cdk2
+    label: Cyclin Active CDK2
+    description: Tracks Cyclin Active CDK2 in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_active_cdk2`.
+  - name: cyclin_b_cdk1
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_b_cdk1
+    label: Cyclin B CDK1
+    description: Tracks Cyclin B CDK1 in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cyclin_b_cdk1`.
+  - name: cdc20_active
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cdc20_active
+    label: Cdc20 Active
+    description: Tracks Cdc20 Active in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cdc20_active`.
+  - name: e2f_total
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.e2f_total
+    label: E2F Total
+    description: Tracks E2F Total in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.e2f_total`.
+  - name: cdc20_total
+    maps_to: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cdc20_total
+    label: Cdc20 Total
+    description: Tracks Cdc20 Total in the lab model via `cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model.cdc20_total`.

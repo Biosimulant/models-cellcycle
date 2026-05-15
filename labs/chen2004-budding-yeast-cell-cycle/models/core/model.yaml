@@ -1,0 +1,269 @@
+schema_version: '2.0'
+title: Chen2004 - Cell Cycle Regulation
+description: Chen2004 - Cell Cycle Regulation This is a hypothetical model of cell cycle that describes the molecular
+  mechanism for regulating DNA synthesis, bud emergence, mitosis, and cell division in budding ye. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Katherine C Chen
+- Laurence Calzone
+- Attila Csikasz-Nagy
+- Frederick R Cross
+- "B\xE9la Nov\xE1k"
+upstream:
+  id: biomodels_ebi:BIOMD0000000056
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000056
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000056
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000056?filename=BIOMD0000000056_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.chen2004_cell_cycle_regulation_biomd0000000056_model:Chen2004CellCycleRegulationBiomd0000000056Model
+  init_kwargs:
+    model_path: data/BIOMD0000000056.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: bub2
+    maps_to: BUB2
+    label: Bub2
+    description: Tracks Bub2. Maps to SBML symbol `BUB2`.
+  - name: budding_index
+    maps_to: BUD
+    label: Budding index
+    description: Tracks Budding index. Maps to SBML symbol `BUD`.
+  - name: model_state_c2_c2
+    maps_to: C2
+    label: Model state C2 (C2)
+    description: Tracks Model state C2 (C2). Maps to SBML symbol `C2`.
+  - name: phosphorylated_model_state_c2
+    maps_to: C2P
+    label: Phosphorylated Model state C2
+    description: Tracks Phosphorylated Model state C2. Maps to SBML symbol `C2P`.
+  - name: model_state_c5_c5
+    maps_to: C5
+    label: Model state C5 (C5)
+    description: Tracks Model state C5 (C5). Maps to SBML symbol `C5`.
+  - name: phosphorylated_model_state_c5
+    maps_to: C5P
+    label: Phosphorylated Model state C5
+    description: Tracks Phosphorylated Model state C5. Maps to SBML symbol `C5P`.
+  - name: cdc14_phosphatase
+    maps_to: CDC14
+    label: Cdc14 phosphatase
+    description: Tracks Cdc14 phosphatase. Maps to SBML symbol `CDC14`.
+  - name: cdc15_mitotic_exit_kinase
+    maps_to: CDC15
+    label: Cdc15 mitotic exit kinase
+    description: Tracks Cdc15 mitotic exit kinase. Maps to SBML symbol `CDC15`.
+  - name: cdc20
+    maps_to: CDC20
+    label: Cdc20
+    description: Tracks Cdc20. Maps to SBML symbol `CDC20`.
+  - name: inactive_cdc20
+    maps_to: CDC20i
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20. Maps to SBML symbol `CDC20i`.
+  - name: cdc6_replication_licensing_factor
+    maps_to: CDC6
+    label: Cdc6 replication licensing factor
+    description: Tracks Cdc6 replication licensing factor. Maps to SBML symbol `CDC6`.
+  - name: phosphorylated_cdc6
+    maps_to: CDC6P
+    label: Phosphorylated CDC6
+    description: Tracks Phosphorylated CDC6. Maps to SBML symbol `CDC6P`.
+  - name: cdh1_apc_c_activator
+    maps_to: CDH1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `CDH1`.
+  - name: inactive_cdh1
+    maps_to: CDH1i
+    label: Inactive Cdh1
+    description: Tracks Inactive Cdh1. Maps to SBML symbol `CDH1i`.
+  - name: clb2_mitotic_cyclin
+    maps_to: CLB2
+    label: Clb2 mitotic cyclin
+    description: Tracks Clb2 mitotic cyclin. Maps to SBML symbol `CLB2`.
+  - name: clb5_s_phase_cyclin
+    maps_to: CLB5
+    label: Clb5 S-phase cyclin
+    description: Tracks Clb5 S-phase cyclin. Maps to SBML symbol `CLB5`.
+  - name: cln2_g1_cyclin
+    maps_to: CLN2
+    label: Cln2 G1 cyclin
+    description: Tracks Cln2 G1 cyclin. Maps to SBML symbol `CLN2`.
+  - name: esp1_separase
+    maps_to: ESP1
+    label: Esp1 separase
+    description: Tracks Esp1 separase. Maps to SBML symbol `ESP1`.
+  - name: model_state_f2
+    maps_to: F2
+    label: Model state F2
+    description: Tracks Model state F2. Maps to SBML symbol `F2`.
+  - name: phosphorylated_f2
+    maps_to: F2P
+    label: Phosphorylated F2
+    description: Tracks Phosphorylated F2. Maps to SBML symbol `F2P`.
+  - name: model_state_f5
+    maps_to: F5
+    label: Model state F5
+    description: Tracks Model state F5. Maps to SBML symbol `F5`.
+  - name: phosphorylated_f5
+    maps_to: F5P
+    label: Phosphorylated F5
+    description: Tracks Phosphorylated F5. Maps to SBML symbol `F5P`.
+  - name: phosphorylated_ie
+    maps_to: IEP
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE. Maps to SBML symbol `IEP`.
+  - name: lte1_mitotic_exit_regulator
+    maps_to: LTE1
+    label: Lte1 mitotic exit regulator
+    description: Tracks Lte1 mitotic exit regulator. Maps to SBML symbol `LTE1`.
+  - name: mad2_spindle_checkpoint_protein
+    maps_to: MAD2
+    label: Mad2 spindle checkpoint protein
+    description: Tracks Mad2 spindle checkpoint protein. Maps to SBML symbol `MAD2`.
+  - name: cell_mass
+    maps_to: MASS
+    label: Cell mass
+    description: Tracks Cell mass. Maps to SBML symbol `MASS`.
+  - name: net1_nucleolar_cdc14_anchor
+    maps_to: NET1
+    label: Net1 nucleolar Cdc14 anchor
+    description: Tracks Net1 nucleolar Cdc14 anchor. Maps to SBML symbol `NET1`.
+  - name: phosphorylated_net1
+    maps_to: NET1P
+    label: Phosphorylated NET1
+    description: Tracks Phosphorylated NET1. Maps to SBML symbol `NET1P`.
+  - name: replication_origin_state
+    maps_to: ORI
+    label: Replication origin state
+    description: Tracks Replication origin state. Maps to SBML symbol `ORI`.
+  - name: pds1_securin
+    maps_to: PDS1
+    label: Pds1 securin
+    description: Tracks Pds1 securin. Maps to SBML symbol `PDS1`.
+  - name: ppx_phosphatase
+    maps_to: PPX
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase. Maps to SBML symbol `PPX`.
+  - name: rent_cdc14_sequestration_complex
+    maps_to: RENT
+    label: RENT Cdc14 sequestration complex
+    description: Tracks RENT Cdc14 sequestration complex. Maps to SBML symbol `RENT`.
+  - name: phosphorylated_rent
+    maps_to: RENTP
+    label: Phosphorylated RENT
+    description: Tracks Phosphorylated RENT. Maps to SBML symbol `RENTP`.
+  - name: sic1
+    maps_to: SIC1
+    label: Sic1
+    description: Tracks Sic1. Maps to SBML symbol `SIC1`.
+  - name: phosphorylated_sic1
+    maps_to: SIC1P
+    label: Phosphorylated Sic1
+    description: Tracks Phosphorylated Sic1. Maps to SBML symbol `SIC1P`.
+  - name: spindle_state
+    maps_to: SPN
+    label: Spindle state
+    description: Tracks Spindle state. Maps to SBML symbol `SPN`.
+  - name: swi5_transcription_factor
+    maps_to: SWI5
+    label: Swi5 transcription factor
+    description: Tracks Swi5 transcription factor. Maps to SBML symbol `SWI5`.
+  - name: phosphorylated_swi5
+    maps_to: SWI5P
+    label: Phosphorylated SWI5
+    description: Tracks Phosphorylated SWI5. Maps to SBML symbol `SWI5P`.
+  - name: phosphorylated_tem1gt
+    maps_to: TEM1GTP
+    label: Phosphorylated TEM1GT
+    description: Tracks Phosphorylated TEM1GT. Maps to SBML symbol `TEM1GTP`.
+  - name: bck2_g1_regulator
+    maps_to: BCK2
+    label: Bck2 G1 regulator
+    description: Tracks Bck2 G1 regulator. Maps to SBML symbol `BCK2`.
+  - name: total_cdc14_phosphatase
+    maps_to: CDC14T
+    label: Total Cdc14 phosphatase
+    description: Tracks Total Cdc14 phosphatase. Maps to SBML symbol `CDC14T`.
+  - name: total_cdc6_replication_licensing_factor
+    maps_to: CDC6T
+    label: Total Cdc6 replication licensing factor
+    description: Tracks Total Cdc6 replication licensing factor. Maps to SBML symbol `CDC6T`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: CKIT
+    label: Total cyclin-dependent kinase inhibitor
+    description: Tracks Total cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKIT`.
+  - name: total_clb2_mitotic_cyclin
+    maps_to: CLB2T
+    label: Total Clb2 mitotic cyclin
+    description: Tracks Total Clb2 mitotic cyclin. Maps to SBML symbol `CLB2T`.
+  - name: total_clb5_s_phase_cyclin
+    maps_to: CLB5T
+    label: Total Clb5 S-phase cyclin
+    description: Tracks Total Clb5 S-phase cyclin. Maps to SBML symbol `CLB5T`.
+  - name: cln3_start_cyclin
+    maps_to: CLN3
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin. Maps to SBML symbol `CLN3`.
+  - name: mcm1
+    maps_to: MCM1
+    label: Mcm1
+    description: Tracks Mcm1. Maps to SBML symbol `MCM1`.
+  - name: total_net1_nucleolar_cdc14_anchor
+    maps_to: NET1T
+    label: Total Net1 nucleolar Cdc14 anchor
+    description: Tracks Total Net1 nucleolar Cdc14 anchor. Maps to SBML symbol `NET1T`.
+  - name: sbf_transcription_factor
+    maps_to: SBF
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor. Maps to SBML symbol `SBF`.
+  - name: total_sic1_cdk_inhibitor
+    maps_to: SIC1T
+    label: Total Sic1 CDK inhibitor
+    description: Tracks Total Sic1 CDK inhibitor. Maps to SBML symbol `SIC1T`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: cdc15i
+    maps_to: CDC15i
+    label: CDC15i
+    accepted_units:
+    - native SBML value
+    description: Controls CDC15i. Maps to SBML symbol `CDC15i`.
+  - name: model_state_ie
+    maps_to: IE
+    label: Model state IE
+    accepted_units:
+    - native SBML value
+    description: Controls Model state IE. Maps to SBML symbol `IE`.
+  - name: model_state_pe
+    maps_to: PE
+    label: Model state PE
+    accepted_units:
+    - native SBML value
+    description: Controls Model state PE. Maps to SBML symbol `PE`.
+  - name: phosphorylated_tem1gd
+    maps_to: TEM1GDP
+    label: Phosphorylated TEM1GD
+    accepted_units:
+    - native SBML value
+    description: Controls Phosphorylated TEM1GD. Maps to SBML symbol `TEM1GDP`.

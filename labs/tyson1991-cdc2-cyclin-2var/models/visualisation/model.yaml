@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Tyson1991 - Cell Cycle 2 var Visualisation
+description: Dedicated question-and-answer visualisation model for Tyson1991 - Cell Cycle 2 var.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tyson1991 - Cell Cycle 2 var Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_tyson1991_cell_cycle_2_var_biomd0000000006_model
+      title: Tyson1991 - Cell Cycle 2 var
+      observables:
+      - id: u
+        port: model_state_u_u
+        label: Model state U (u)
+        group: mitosis
+      - id: v
+        port: model_state_v_v
+        label: Model state V (v)
+        group: mitosis
+      - id: alpha
+        port: alpha
+        label: Alpha
+        group: mitosis
+      - id: z
+        port: model_state_z_z
+        label: Model state Z (z)
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

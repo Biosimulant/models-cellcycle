@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Deineko2003_CellCycle Lab
+description: Single-model lab wrapper for Deineko2003_CellCycle. The model reproduces Fig 3 of the paper corresponding
+  to the transition to S phase. Units have not been defined for this model because the paper mentions the use of
+  arbitrary units for the various spe.
+models:
+- alias: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.state
+  to:
+  - visualisation.cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model_state
+- from: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.summary
+  to:
+  - visualisation.cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model_summary
+- from: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: e2f
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.e2f
+    label: E2F
+    description: Tracks E2F in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.e2f`.
+  - name: phosphorylated_rb
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.phosphorylated_rb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.phosphorylated_rb`.
+  - name: phosphorylated_phosphorylated_rb
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.phosphorylated_phosphorylated_rb
+    label: Phosphorylated Phosphorylated Rb
+    description: Tracks Phosphorylated Phosphorylated Rb in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.phosphorylated_phosphorylated_rb`.
+  - name: inactive_cyclin_e_cdk2
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.inactive_cyclin_e_cdk2
+    label: Inactive Cyclin E CDK2
+    description: Tracks Inactive Cyclin E CDK2 in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.inactive_cyclin_e_cdk2`.
+  - name: active_cyclin_e_cdk2
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.active_cyclin_e_cdk2
+    label: Active Cyclin E CDK2
+    description: Tracks Active Cyclin E CDK2 in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.active_cyclin_e_cdk2`.
+  - name: ap_1
+    maps_to: cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.ap_1
+    label: AP 1
+    description: Tracks AP 1 in the lab model via `cellcycle_sbml_deineko2003_cellcycle_biomd0000000208_model.ap_1`.

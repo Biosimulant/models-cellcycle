@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Dong2018 - E2F dynamics in G1 phase Visualisation
+description: Dedicated question-and-answer visualisation model for Dong2018 - E2F dynamics in G1 phase.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Dong2018 - E2F dynamics in G1 phase Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_dong2018_e2f_dynamics_in_g1_phase_model1811050001_model
+      title: Dong2018 - E2F dynamics in G1 phase
+      observables:
+      - id: MYC
+        port: myc
+        label: Myc
+        group: g1s
+      - id: S
+        port: model_state_s
+        label: Model state S
+        group: g1s
+      - id: E2Fp
+        port: phosphorylated_e2f
+        label: Phosphorylated E2F
+        group: g1s
+      - id: E2Fm
+        port: e2f_m_rna
+        label: E2F mRNA
+        group: g1s
+      - id: RB
+        port: rb
+        label: Rb
+        group: g1s
+      - id: RE
+        port: model_state_re
+        label: Model state RE
+        group: g1s
+      - id: R
+        port: model_state_r_r
+        label: Model state R (R)
+        group: g1s
+      - id: CD
+        port: model_state_cd
+        label: Model state CD
+        group: g1s
+      - id: CE
+        port: model_state_ce
+        label: Model state CE
+        group: g1s
+      - id: RP
+        port: model_state_rp
+        label: Model state RP
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

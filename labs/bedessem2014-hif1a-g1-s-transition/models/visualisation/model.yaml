@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition Visualisation
+description: Dedicated question-and-answer visualisation model for Bedessem2014 - HiF-1 a -mediated response to
+  hypoxia on the G1/S transition.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition Lab
+    question: Does hypoxia signaling reshape cell-cycle commitment?
+    answer_focus: The answer is based on HIF, Myc, Rb/E2F, and cyclin commitment markers.
+    sources:
+    - alias: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model
+      title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition
+      observables:
+      - id: m
+        port: model_state_m_m
+        label: Model state M (m)
+        group: checkpoint
+      - id: cycD
+        port: cyclin_d
+        label: Cyclin D
+        group: checkpoint
+      - id: Rb
+        port: rb_tumor_suppressor
+        label: Rb tumor suppressor
+        group: checkpoint
+      - id: cycE
+        port: cyclin_e
+        label: Cyclin E
+        group: checkpoint
+      - id: SCF
+        port: scf_ubiquitin_ligase
+        label: SCF ubiquitin ligase
+        group: checkpoint
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: checkpoint
+      - id: E2F_A
+        port: e2f_a
+        label: E2F A
+        group: checkpoint
+      - id: E2F_Rb
+        port: e2f_rb
+        label: E2F Rb
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

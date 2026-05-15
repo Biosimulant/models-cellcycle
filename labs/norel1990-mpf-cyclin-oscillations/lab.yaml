@@ -1,0 +1,36 @@
+schema_version: '2.0'
+title: Norel1990 - MPF and Cyclin Oscillations Lab
+description: Single-model lab wrapper for Norel1990 - MPF and Cyclin Oscillations. A mathematical model of cell
+  cycle progression is presented, which integrates recent biochemical information on the interaction of the maturation
+  promotion factor (MPF) and cyclin. It can be used to explore cell-cycle regulation dynamics and compare checkpoint
+  behavior across conditions.
+models:
+- alias: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.state
+  to:
+  - visualisation.cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model_state
+- from: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.summary
+  to:
+  - visualisation.cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model_summary
+- from: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_m_m
+    maps_to: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.model_state_m_m
+    label: Model state M (M)
+    description: Tracks Model state M (M) in the lab model via `cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.model_state_m_m`.
+  - name: model_state_c_c
+    maps_to: cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.model_state_c_c
+    label: Model state C (C)
+    description: Tracks Model state C (C) in the lab model via `cellcycle_sbml_norel1990_mpf_and_cyclin_oscillations_biomd0000000728_model.model_state_c_c`.

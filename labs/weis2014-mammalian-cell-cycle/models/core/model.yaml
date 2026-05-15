@@ -1,0 +1,143 @@
+schema_version: '2.0'
+title: Weis2014 - Data driven Mammalian Cell Cycle Model
+description: 'This a model from the article: A Data-Driven, Mathematical Model of Mammalian Cell Cycle Regulation.
+  It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Michael C Weis
+- Jayant Avva
+- James W Jacobberger
+- Sree N Sreenath
+upstream:
+  id: biomodels_ebi:BIOMD0000000723
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000723
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000723
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000723?filename=Weis2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model:Weis2014DataDrivenMammalianCellCycleModelBiomd0000000723Model
+  init_kwargs:
+    model_path: data/BIOMD0000000723.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: early_response_gene_module
+    maps_to: ERG
+    label: Early response gene module
+    description: Tracks Early response gene module. Maps to SBML symbol `ERG`.
+  - name: delayed_response_gene_module
+    maps_to: DRG
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module. Maps to SBML symbol `DRG`.
+  - name: hyperphosphorylated_rb
+    maps_to: ppRB
+    label: Hyperphosphorylated Rb
+    description: Tracks Hyperphosphorylated Rb. Maps to SBML symbol `ppRB`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: phosphorylated_e2f
+    maps_to: pE2F
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F. Maps to SBML symbol `pE2F`.
+  - name: rb_tumor_suppressor
+    maps_to: Rb
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor. Maps to SBML symbol `Rb`.
+  - name: e2f_rb_complex
+    maps_to: E2FRB
+    label: E2F-Rb complex
+    description: Tracks E2F-Rb complex. Maps to SBML symbol `E2FRB`.
+  - name: p_e2frb
+    maps_to: pE2FRB
+    label: P E2FRB
+    description: Tracks P E2FRB. Maps to SBML symbol `pE2FRB`.
+  - name: act_cyclin_d
+    maps_to: actCycD
+    label: Act Cyclin D
+    description: Tracks Act Cyclin D. Maps to SBML symbol `actCycD`.
+  - name: tri_d
+    maps_to: TriD
+    label: Tri D
+    description: Tracks Tri D. Maps to SBML symbol `TriD`.
+  - name: act_cyclin_acdk1
+    maps_to: actCycACdk1
+    label: Act Cyclin ACdk1
+    description: Tracks Act Cyclin ACdk1. Maps to SBML symbol `actCycACdk1`.
+  - name: act_cyclin_acdk2
+    maps_to: actCycACdk2
+    label: Act Cyclin ACdk2
+    description: Tracks Act Cyclin ACdk2. Maps to SBML symbol `actCycACdk2`.
+  - name: act_cyclin_b
+    maps_to: actCycB
+    label: Act Cyclin B
+    description: Tracks Act Cyclin B. Maps to SBML symbol `actCycB`.
+  - name: act_cyclin_e
+    maps_to: actCycE
+    label: Act Cyclin E
+    description: Tracks Act Cyclin E. Maps to SBML symbol `actCycE`.
+  - name: cyclin_a
+    maps_to: cycA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `cycA`.
+  - name: cyclin_b
+    maps_to: cycB
+    label: Cyclin B
+    description: Tracks Cyclin B. Maps to SBML symbol `cycB`.
+  - name: cyclin_e
+    maps_to: cycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cycE`.
+  - name: cyclin_dependent_kinase_inhibitor
+    maps_to: CKI
+    label: Cyclin-dependent kinase inhibitor
+    description: Tracks Cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKI`.
+  - name: cdh1_apc_c_activator
+    maps_to: Cdh1
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator. Maps to SBML symbol `Cdh1`.
+  - name: pre_mpf
+    maps_to: preMPF
+    label: Pre MPF
+    description: Tracks Pre MPF. Maps to SBML symbol `preMPF`.
+  - name: tri_a
+    maps_to: TriA
+    label: Tri A
+    description: Tracks Tri A. Maps to SBML symbol `TriA`.
+  - name: phosphorylated_apc_c_c
+    maps_to: APCP
+    label: Phosphorylated APC/C/C
+    description: Tracks Phosphorylated APC/C/C. Maps to SBML symbol `APCP`.
+  - name: active_cdc20
+    maps_to: Cdc20A
+    label: Active Cdc20
+    description: Tracks Active Cdc20. Maps to SBML symbol `Cdc20A`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: Cdc20T
+    label: Total Cdc20 APC/C activator
+    description: Tracks Total Cdc20 APC/C activator. Maps to SBML symbol `Cdc20T`.
+  - name: mass
+    maps_to: mass
+    label: Mass
+    description: Tracks Mass. Maps to SBML symbol `mass`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

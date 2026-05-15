@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Novak1998-Model scenarios for evolution of the eukaryotic cell cycle.
+description: Progress through the division cycle of present day eukaryotic cells is controlled by a complex network
+  consisting of (i) cyclin-dependent kinases (CDKs) and their associated cyclins, (ii) kinases and. It can be used
+  to explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- B Novak
+- A Csikasz-Nagy
+- B Gyorffy
+- K Nasmyth
+- J J Tyson
+upstream:
+  id: biomodels_ebi:MODEL2005040001
+  source_db: biomodels_ebi
+  source_id: MODEL2005040001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2005040001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2005040001?filename=Novak1998.xml
+  license: CC0
+biosim:
+  entrypoint: src.novak1998_model_scenarios_for_evolution_of_the_e_model2005040001_model:Novak1998ModelScenariosForEvolutionOfTheEModel2005040001Model
+  init_kwargs:
+    model_path: data/MODEL2005040001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_dependent_kinase_activity
+    maps_to: CDK
+    label: Cyclin-dependent kinase activity
+    description: Tracks Cyclin-dependent kinase activity. Maps to SBML symbol `CDK`.
+  - name: apc_c_c
+    maps_to: APC
+    label: APC/C/C
+    description: Tracks APC/C/C. Maps to SBML symbol `APC`.
+  - name: size
+    maps_to: size
+    label: Size
+    description: Tracks Size. Maps to SBML symbol `size`.
+  - name: total_active_regulatory_state
+    maps_to: ACTt
+    label: Total active regulatory state
+    description: Tracks Total active regulatory state. Maps to SBML symbol `ACTt`.
+  - name: active_regulatory_state
+    maps_to: ACT
+    label: Active regulatory state
+    description: Tracks Active regulatory state. Maps to SBML symbol `ACT`.
+  - name: cyclin_dependent_kinase_inhibitor
+    maps_to: CKI
+    label: Cyclin-dependent kinase inhibitor
+    description: Tracks Cyclin-dependent kinase inhibitor. Maps to SBML symbol `CKI`.
+  - name: trimer_complex
+    maps_to: TRI
+    label: Trimer complex
+    description: Tracks Trimer complex. Maps to SBML symbol `TRI`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

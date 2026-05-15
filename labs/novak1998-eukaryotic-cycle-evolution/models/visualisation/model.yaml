@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Novak1998-Model scenarios for evolution of the eukaryotic cell cycle. Visualisation
+description: Dedicated question-and-answer visualisation model for Novak1998-Model scenarios for evolution of the
+  eukaryotic cell cycle..
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Novak1998-Model scenarios for evolution of the eukaryotic cell cycle. Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_novak1998_model_scenarios_for_evolution_of_the_e_model2005040001_model
+      title: Novak1998-Model scenarios for evolution of the eukaryotic cell cycle.
+      observables:
+      - id: CDK
+        port: cyclin_dependent_kinase_activity
+        label: Cyclin-dependent kinase activity
+        group: core
+      - id: APC
+        port: apc_c_c
+        label: APC/C/C
+        group: mitosis
+      - id: size
+        port: size
+        label: Size
+        group: replication
+      - id: ACTt
+        port: total_active_regulatory_state
+        label: Total active regulatory state
+        group: core
+      - id: ACT
+        port: active_regulatory_state
+        label: Active regulatory state
+        group: core
+      - id: CKI
+        port: cyclin_dependent_kinase_inhibitor
+        label: Cyclin-dependent kinase inhibitor
+        group: core
+      - id: TRI
+        port: trimer_complex
+        label: Trimer complex
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "__world_inputs__",
+      "position": {
+        "x": 60,
+        "y": 179
+      }
+    },
+    {
+      "id": "cellcycle_sbml_abroudi2017_mammalian_cell_cycle_control_model_model1812130001_model",
+      "position": {
+        "x": 360,
+        "y": -78.13727934211795
+      }
+    },
+    {
+      "id": "__world_outputs__",
+      "position": {
+        "x": 700,
+        "y": -781
+      }
+    }
+  ]
+}

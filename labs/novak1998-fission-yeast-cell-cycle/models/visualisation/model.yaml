@@ -1,0 +1,128 @@
+schema_version: '2.0'
+title: Novak1998 - Mathematical model of fission yeast cell cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Novak1998 - Mathematical model of fission yeast
+  cell cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Novak1998 - Mathematical model of fission yeast cell cycle Lab
+    question: Does the yeast model progress through its cell-cycle phase program?
+    answer_focus: The answer is based on cyclins, inhibitors, APC/C regulators, mass, and phase markers.
+    sources:
+    - alias: cellcycle_sbml_novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model
+      title: Novak1998 - Mathematical model of fission yeast cell cycle
+      observables:
+      - id: AAE
+        port: aggregated_apc_c_enzyme_state
+        label: Aggregated APC/C enzyme state
+        group: proteostasis
+      - id: Cdc13_Cdc2
+        port: cdc13_cdc2
+        label: Cdc13 Cdc2
+        group: mitosis
+      - id: Mik1
+        port: mik1_inhibitory_kinase
+        label: Mik1 inhibitory kinase
+        group: core
+      - id: AAE_total
+        port: aae_total
+        label: AAE Total
+        group: core
+      - id: Wee1
+        port: wee1_inhibitory_kinase
+        label: Wee1 inhibitory kinase
+        group: mitosis
+      - id: Rum1
+        port: rum1_cdk_inhibitor
+        label: Rum1 CDK inhibitor
+        group: core
+      - id: mass
+        port: mass
+        label: Mass
+        group: replication
+      - id: Cdc13_P_Cdc2
+        port: cdc13_p_cdc2
+        label: Cdc13 P Cdc2
+        group: mitosis
+      - id: Rum1_Cdc13_Cdc2
+        port: rum1_cdc13_cdc2
+        label: Rum1 Cdc13 Cdc2
+        group: mitosis
+      - id: APC
+        port: apc_c_c
+        label: APC/C/C
+        group: mitosis
+      - id: Cdc25P
+        port: phosphorylated_cdc25
+        label: Phosphorylated Cdc25
+        group: mitosis
+      - id: Cdc13_total
+        port: cdc13_total
+        label: Cdc13 Total
+        group: core
+      - id: MPF
+        port: maturation_promoting_factor
+        label: Maturation-promoting factor
+        group: core
+      - id: Rum1_total
+        port: rum1_total
+        label: Rum1 Total
+        group: core
+      - id: k2
+        port: model_state_k2
+        label: Model state K2
+        group: core
+      - id: k25r
+        port: k25r
+        label: K25r
+        group: core
+      - id: k2c
+        port: k2c
+        label: K2c
+        group: core
+      - id: k4
+        port: model_state_k4
+        label: Model state K4
+        group: core
+      - id: kai
+        port: kai
+        label: Kai
+        group: core
+      - id: kcdc25
+        port: kcdc25
+        label: Kcdc25
+        group: mitosis
+      - id: kmr
+        port: kmr
+        label: Kmr
+        group: core
+      - id: ks
+        port: model_state_ks
+        label: Model state Ks
+        group: core
+      - id: kwee
+        port: kwee
+        label: Kwee
+        group: core
+      - id: kwr
+        port: kwr
+        label: Kwr
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Morris2002_CellCycle_CDK2Cyclin Visualisation
+description: Dedicated question-and-answer visualisation model for Morris2002_CellCycle_CDK2Cyclin.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Morris2002_CellCycle_CDK2Cyclin Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_morris2002_cellcycle_cdk2cyclin_biomd0000000150_model
+      title: Morris2002_CellCycle_CDK2Cyclin
+      observables:
+      - id: CDK2cycA
+        port: cdk2cyc_a
+        label: CDK2cyc A
+        group: g1s
+      - id: CyclinA
+        port: cyclin_a
+        label: Cyclin A
+        group: g1s
+      - id: Cdk2
+        port: cdk2
+        label: CDK2
+        group: g1s
+      - id: CDK2cycA_star_
+        port: cdk2cyc_active_star
+        label: CDK2cyc Active Star
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

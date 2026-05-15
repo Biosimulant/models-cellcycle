@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Tsai2014 - Cell cycle duration control by oscillatory Dynamics in Early Xenopus laevis Embryos
+description: "During the early development of Xenopus laevis embryos, the first mitotic cell cycle is long (\u223C\
+  85 min) and the subsequent 11 cycles are short (\u223C30 min) and clock-like. It can be used to explore cell-cycle\
+  \ regulation dynamics and compare checkpoint behavior across conditions."
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Tsai TY
+- Julie A Theriot
+- James E Ferrell
+upstream:
+  id: biomodels_ebi:BIOMD0000000719
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000719
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000719
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000719?filename=Tsai2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.tsai2014_cell_cycle_duration_control_by_oscillat_biomd0000000719_model:Tsai2014CellCycleDurationControlByOscillatBiomd0000000719Model
+  init_kwargs:
+    model_path: data/BIOMD0000000719.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: cyclin_b1_cdk1_complex_phosphorylated
+    maps_to: Cyclin_B1_Cdk1_complex_phosphorylated
+    label: Cyclin B1 CDK1 Complex Phosphorylated
+    description: Tracks Cyclin B1 CDK1 Complex Phosphorylated. Maps to SBML symbol `Cyclin_B1_Cdk1_complex_phosphorylated`.
+  - name: cyclin_b1_cdk1_complex_unphosphorylated
+    maps_to: Cyclin_B1_Cdk1_complex_unphosphorylated
+    label: Cyclin B1 CDK1 Complex Unphosphorylated
+    description: Tracks Cyclin B1 CDK1 Complex Unphosphorylated. Maps to SBML symbol `Cyclin_B1_Cdk1_complex_unphosphorylated`.
+  - name: plx1_active
+    maps_to: Plx1_active
+    label: Plx1 Active
+    description: Tracks Plx1 Active. Maps to SBML symbol `Plx1_active`.
+  - name: apc_c_c_model_state_c_active
+    maps_to: APC_C_active
+    label: APC/C/C Model state C Active
+    description: Tracks APC/C/C Model state C Active. Maps to SBML symbol `APC_C_active`.
+  - name: apc_c_c_model_state_c_total
+    maps_to: APC_C_total
+    label: APC/C/C Model state C Total
+    description: Tracks APC/C/C Model state C Total. Maps to SBML symbol `APC_C_total`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: plx1_total
+    maps_to: Plx1_total
+    label: Plx1 Total
+    accepted_units:
+    - native SBML value
+    description: Controls Plx1 Total. Maps to SBML symbol `Plx1_total`.
+  - name: cyclin_b1_cdk1_complex_total
+    maps_to: Cyclin_B1_Cdk1_complex_total
+    label: Cyclin B1 CDK1 Complex Total
+    accepted_units:
+    - native SBML value
+    description: Controls Cyclin B1 CDK1 Complex Total. Maps to SBML symbol `Cyclin_B1_Cdk1_complex_total`.

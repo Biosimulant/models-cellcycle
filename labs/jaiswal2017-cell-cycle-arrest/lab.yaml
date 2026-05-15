@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Jaiswal2017 - Cell cycle arrest Lab
+description: 'Single-model lab wrapper for Jaiswal2017 - Cell cycle arrest. Jaiswal2017 - Cell cycle arrest This
+  model is described in the article: ATM/Wip1 activities at chromatin control Plk1 re-activation to determine G2
+  checkpoint duration. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior
+  across conditions.'
+models:
+- alias: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.state
+  to:
+  - visualisation.cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model_state
+- from: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.summary
+  to:
+  - visualisation.cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model_summary
+- from: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: cell_cycletot
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cycletot
+    label: Cell Cycletot
+    description: Controls Cell Cycletot in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cycletot`.
+  - name: effectortot
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.effectortot
+    label: Effectortot
+    description: Controls Effectortot in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.effectortot`.
+  - name: timertot
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.timertot
+    label: Timertot
+    description: Controls Timertot in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.timertot`.
+  outputs:
+  - name: active_timer_state
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.active_timer_state
+    label: Active timer state
+    description: Tracks Active timer state in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.active_timer_state`.
+  - name: cell_cact
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cact
+    label: Cell Cact
+    description: Tracks Cell Cact in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cact`.
+  - name: active_checkpoint_effector
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.active_checkpoint_effector
+    label: Active checkpoint effector
+    description: Tracks Active checkpoint effector in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.active_checkpoint_effector`.
+  - name: model_state_hr
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.model_state_hr
+    label: Model state HR
+    description: Tracks Model state HR in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.model_state_hr`.
+  - name: non_homologous_end_joining_repair_state
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.non_homologous_end_joining_repair_state
+    label: Non-homologous end joining repair state
+    description: Tracks Non-homologous end joining repair state in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.non_homologous_end_joining_repair_state`.
+  - name: cell_cina
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cina
+    label: Cell Cina
+    description: Tracks Cell Cina in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.cell_cina`.
+  - name: dna_damage
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.dna_damage
+    label: DNA Damage
+    description: Tracks DNA Damage in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.dna_damage`.
+  - name: inactive_checkpoint_effector
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.inactive_checkpoint_effector
+    label: Inactive checkpoint effector
+    description: Tracks Inactive checkpoint effector in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.inactive_checkpoint_effector`.
+  - name: inactive_timer_state
+    maps_to: cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.inactive_timer_state
+    label: Inactive timer state
+    description: Tracks Inactive timer state in the lab model via `cellcycle_sbml_jaiswal2017_cell_cycle_arrest_biomd0000000641_model.inactive_timer_state`.

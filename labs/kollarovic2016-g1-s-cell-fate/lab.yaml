@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Kollarovic2016 - Cell fate decision at G1-S transition Lab
+description: 'Single-model lab wrapper for Kollarovic2016 - Cell fate decision at G1-S transition. Kollarovic2016
+  - Cell fate decision at G1-Stransition This model is described in the article: To senesce or not to senesce: how
+  primary human fibroblasts decide their cell fate after DNA damage. It can be used to explore cell-cycle regulation
+  dynamics and compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.state
+  to:
+  - visualisation.cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model_state
+- from: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.summary
+  to:
+  - visualisation.cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model_summary
+- from: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: ddr
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.ddr
+    label: DDR
+    description: Controls DDR in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.ddr`.
+  - name: dna_damagefoci_0
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damagefoci_0
+    label: DNA damagefoci 0
+    description: Controls DNA damagefoci 0 in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damagefoci_0`.
+  - name: base_dna_damage
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.base_dna_damage
+    label: Base DNA damage
+    description: Controls Base DNA damage in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.base_dna_damage`.
+  outputs:
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_e`.
+  - name: cdk2
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cdk2
+    label: CDK2
+    description: Tracks CDK2 in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cdk2`.
+  - name: cyclin_ecdk2
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_ecdk2
+    label: Cyclin ECdk2
+    description: Tracks Cyclin ECdk2 in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_ecdk2`.
+  - name: cyclin_ecdk2a
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_ecdk2a
+    label: Cyclin ECdk2a
+    description: Tracks Cyclin ECdk2a in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.cyclin_ecdk2a`.
+  - name: p21
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.p21
+    label: P21
+    description: Tracks P21 in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.p21`.
+  - name: dna_damage_model_state_c
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damage_model_state_c
+    label: DNA damage Model state C
+    description: Tracks DNA damage Model state C in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damage_model_state_c`.
+  - name: dna_damage_s
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damage_s
+    label: DNA damage S
+    description: Tracks DNA damage S in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.dna_damage_s`.
+  - name: p53_tumor_suppressor
+    maps_to: cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.p53_tumor_suppressor
+    label: p53 tumor suppressor
+    description: Tracks p53 tumor suppressor in the lab model via `cellcycle_sbml_kollarovic2016_cell_fate_decision_at_g1_s_transi_biomd0000000632_model.p53_tumor_suppressor`.

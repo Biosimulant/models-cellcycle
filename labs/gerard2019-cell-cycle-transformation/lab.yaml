@@ -1,0 +1,152 @@
+schema_version: '2.0'
+title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML) Lab"
+description: "Single-model lab wrapper for G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation\
+  \ networks (SBML). Model for the Let-7-mediated coupling between the CDK network driving the cell cycle and the\
+  \ malignant cell transformation network. It can be used to explore cell-cycle regulation dynamics and compare\
+  \ checkpoint behavior across conditions."
+models:
+- alias: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.state
+  to:
+  - visualisation.cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model_state
+- from: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model_summary
+- from: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: nf_k_b_0_00045
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.nf_k_b_0_00045
+    label: NF-kB = 0 00045
+    description: Tracks NF-kB = 0 00045 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.nf_k_b_0_00045`.
+  - name: lin28_0_34
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.lin28_0_34
+    label: LIN28 = 0 34
+    description: Tracks LIN28 = 0 34 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.lin28_0_34`.
+  - name: let_7_40
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.let_7_40
+    label: let-7 = 40
+    description: Tracks let-7 = 40 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.let_7_40`.
+  - name: model_state_m_il6_0_0003
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_il6_0_0003
+    label: Model state M IL6 = 0 0003
+    description: Tracks Model state M IL6 = 0 0003 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_il6_0_0003`.
+  - name: model_state_m_il6let7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_il6let7
+    label: Model state M IL6let7
+    description: Tracks Model state M IL6let7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_il6let7`.
+  - name: il6_0_001
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.il6_0_001
+    label: IL6 = 0 001
+    description: Tracks IL6 = 0 001 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.il6_0_001`.
+  - name: model_state_m_ras_0_00001
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_ras_0_00001
+    label: Model state M Ras = 0 00001
+    description: Tracks Model state M Ras = 0 00001 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_ras_0_00001`.
+  - name: model_state_m_raslet7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_raslet7
+    label: Model state M Raslet7
+    description: Tracks Model state M Raslet7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_raslet7`.
+  - name: ras_0_0001
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.ras_0_0001
+    label: Ras = 0 0001
+    description: Tracks Ras = 0 0001 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.ras_0_0001`.
+  - name: stat3_0_0001
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.stat3_0_0001
+    label: STAT3 = 0 0001
+    description: Tracks STAT3 = 0 0001 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.stat3_0_0001`.
+  - name: mi_model_state_r21_0_0003
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mi_model_state_r21_0_0003
+    label: Mi Model state R21 = 0 0003
+    description: Tracks Mi Model state R21 = 0 0003 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mi_model_state_r21_0_0003`.
+  - name: model_state_m_pten_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_pten_0_01
+    label: Model state M PTEN = 0 01
+    description: Tracks Model state M PTEN = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_pten_0_01`.
+  - name: mi_rmpten
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mi_rmpten
+    label: Mi Rmpten
+    description: Tracks Mi Rmpten in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mi_rmpten`.
+  - name: pten_0_17
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.pten_0_17
+    label: PTEN = 0 17
+    description: Tracks PTEN = 0 17 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.pten_0_17`.
+  - name: model_state_m_md
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_md
+    label: Model state M Md
+    description: Tracks Model state M Md in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_md`.
+  - name: md_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.md_0_01
+    label: Md = 0 01
+    description: Tracks Md = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.md_0_01`.
+  - name: model_state_m_mdlet7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mdlet7
+    label: Model state M Mdlet7
+    description: Tracks Model state M Mdlet7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mdlet7`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.e2f_transcription_factor`.
+  - name: model_state_m_me
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_me
+    label: Model state M Me
+    description: Tracks Model state M Me in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_me`.
+  - name: me_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.me_0_01
+    label: Me = 0 01
+    description: Tracks Me = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.me_0_01`.
+  - name: model_state_m_melet7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_melet7
+    label: Model state M Melet7
+    description: Tracks Model state M Melet7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_melet7`.
+  - name: model_state_m_ma
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_ma
+    label: Model state M Ma
+    description: Tracks Model state M Ma in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_ma`.
+  - name: ma_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.ma_0_01
+    label: Ma = 0 01
+    description: Tracks Ma = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.ma_0_01`.
+  - name: model_state_m_malet7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_malet7
+    label: Model state M Malet7
+    description: Tracks Model state M Malet7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_malet7`.
+  - name: model_state_m_mb
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mb
+    label: Model state M Mb
+    description: Tracks Model state M Mb in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mb`.
+  - name: mb_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mb_0_01
+    label: Mb = 0 01
+    description: Tracks Mb = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.mb_0_01`.
+  - name: model_state_m_mblet7
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mblet7
+    label: Model state M Mblet7
+    description: Tracks Model state M Mblet7 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_state_m_mblet7`.
+  - name: apc_c_c_0_01
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.apc_c_c_0_01
+    label: APC/C/C = 0 01
+    description: Tracks APC/C/C = 0 01 in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.apc_c_c_0_01`.
+  - name: total_let_7_micro_rna
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.total_let_7_micro_rna
+    label: Total let-7 microRNA
+    description: Tracks Total let-7 microRNA in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.total_let_7_micro_rna`.
+  - name: inactive_nf_k_b
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.inactive_nf_k_b
+    label: Inactive NF-kB
+    description: Tracks Inactive NF-kB in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.inactive_nf_k_b`.
+  - name: model_time
+    maps_to: cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_time
+    label: Model Time
+    description: Tracks Model Time in the lab model via `cellcycle_sbml_g_rard_2019_coupling_the_cell_cycle_and_the_cell_model1906070001_model.model_time`.

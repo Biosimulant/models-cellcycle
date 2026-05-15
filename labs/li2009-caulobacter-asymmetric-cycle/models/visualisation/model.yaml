@@ -1,0 +1,151 @@
+schema_version: '2.0'
+title: Li2009- Assymetric Caulobacter cell cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Li2009- Assymetric Caulobacter cell cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Li2009- Assymetric Caulobacter cell cycle Lab
+    question: Are bacterial replication and division regulators coordinated?
+    answer_focus: The answer is based on DnaA, CtrA, GcrA, DivK, DNA, and division markers.
+    sources:
+    - alias: cellcycle_sbml_li2009_assymetric_caulobacter_cell_cycle_biomd0000000727_model
+      title: Li2009- Assymetric Caulobacter cell cycle
+      observables:
+      - id: DnaA
+        port: dna_a_replication_initiator
+        label: DnaA replication initiator
+        group: replication
+      - id: GcrA
+        port: gcr_a_transcriptional_regulator
+        label: GcrA transcriptional regulator
+        group: replication
+      - id: CtrA
+        port: ctr_a_cell_cycle_regulator
+        label: CtrA cell-cycle regulator
+        group: replication
+      - id: CtrA_P
+        port: phosphorylated_ctr_a
+        label: Phosphorylated CtrA
+        group: replication
+      - id: DivK
+        port: div_k_polarity_regulator
+        label: DivK polarity regulator
+        group: replication
+      - id: DivK_P
+        port: phosphorylated_div_k
+        label: Phosphorylated DivK
+        group: replication
+      - id: I
+        port: model_state_i
+        label: Model state I
+        group: replication
+      - id: CcrM
+        port: ccr_model_state_m
+        label: Ccr Model state M
+        group: replication
+      - id: hcori
+        port: hcori
+        label: Hcori
+        group: replication
+      - id: hctrA
+        port: hctr_a
+        label: Hctr A
+        group: replication
+      - id: hccrM
+        port: hccr_model_state_m
+        label: Hccr Model state M
+        group: replication
+      - id: hftsZ
+        port: hfts_model_state_z
+        label: Hfts Model state Z
+        group: replication
+      - id: Ini
+        port: replication_initiation_state
+        label: Replication initiation state
+        group: replication
+      - id: DNA
+        port: dna_replication_state
+        label: DNA replication state
+        group: replication
+      - id: Count
+        port: division_event_counter
+        label: Division event counter
+        group: replication
+      - id: PodJL
+        port: pod_jl
+        label: Pod JL
+        group: replication
+      - id: PerP
+        port: phosphorylated_per
+        label: Phosphorylated Per
+        group: replication
+      - id: DivJ
+        port: div_j
+        label: Div J
+        group: replication
+      - id: CckA_P
+        port: phosphorylated_cck_a
+        label: Phosphorylated Cck A
+        group: replication
+      - id: CpdR
+        port: cpd_model_state_r
+        label: Cpd Model state R
+        group: replication
+      - id: RcdA
+        port: rcd_a
+        label: Rcd A
+        group: replication
+      - id: ParAADP
+        port: phosphorylated_par_aad
+        label: Phosphorylated Par AAD
+        group: replication
+      - id: FtsZ
+        port: fts_model_state_z
+        label: Fts Model state Z
+        group: replication
+      - id: Zring
+        port: z_ring
+        label: Z-ring
+        group: replication
+      - id: CckA_tot
+        port: cck_active_tot
+        label: Cck Active Tot
+        group: replication
+      - id: CpdR_tot
+        port: cpd_model_state_r_tot
+        label: Cpd Model state R Tot
+        group: replication
+      - id: ParA_tot
+        port: par_active_tot
+        label: Par Active Tot
+        group: replication
+      - id: Elong
+        port: cell_elongation_state
+        label: Cell elongation state
+        group: replication
+      - id: Z
+        port: model_state_z_z
+        label: Model state Z (Z)
+        group: replication
+      - id: FtsQ
+        port: fts_q
+        label: Fts Q
+        group: replication
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

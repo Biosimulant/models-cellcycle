@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition Lab
+description: Single-model lab wrapper for Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition.
+  Cell Cycle Bedessem2014Hif1AMediated Response To Hypoxi Model1812040001Model represents core biological mechanisms
+  from biomodels_ebi reference biomodels_ebi:MODEL1812040001. When you run it, you can inspect state and compare
+  temporal behavior between baseline and adjusted inputs.
+models:
+- alias: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.state
+  to:
+  - visualisation.cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model_state
+- from: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.summary
+  to:
+  - visualisation.cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model_summary
+- from: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_m_m
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.model_state_m_m
+    label: Model state M (m)
+    description: Tracks Model state M (m) in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.model_state_m_m`.
+  - name: cyclin_d
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.cyclin_d
+    label: Cyclin D
+    description: Tracks Cyclin D in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.cyclin_d`.
+  - name: rb_tumor_suppressor
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.rb_tumor_suppressor
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.rb_tumor_suppressor`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.cyclin_e`.
+  - name: scf_ubiquitin_ligase
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.scf_ubiquitin_ligase
+    label: SCF ubiquitin ligase
+    description: Tracks SCF ubiquitin ligase in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.scf_ubiquitin_ligase`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_transcription_factor`.
+  - name: e2f_a
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_a
+    label: E2F A
+    description: Tracks E2F A in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_a`.
+  - name: e2f_rb
+    maps_to: cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_rb
+    label: E2F Rb
+    description: Tracks E2F Rb in the lab model via `cellcycle_sbml_bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model.e2f_rb`.

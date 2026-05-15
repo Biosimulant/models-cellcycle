@@ -1,0 +1,113 @@
+schema_version: '2.0'
+title: Zhang2018 - Cell cycle commitment in hypoxia
+description: Cell Cycle Zhang2018Cell Cycle Commitment In Hypoxia Model1812060002Model represents core biological
+  mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1812060002. When you run it, you can inspect state
+  and compare temporal behavior between baseline and adjusted inputs.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Bo Zhang
+- Hua Ye
+- Aidong Yang
+upstream:
+  id: biomodels_ebi:MODEL1812060002
+  source_db: biomodels_ebi
+  source_id: MODEL1812060002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812060002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812060002?filename=Zhang2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.zhang2018_cell_cycle_commitment_in_hypoxia_model1812060002_model:Zhang2018CellCycleCommitmentInHypoxiaModel1812060002Model
+  init_kwargs:
+    model_path: data/MODEL1812060002.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: hif_1_alpha_myc
+    maps_to: Hif1a_Myc
+    label: HIF-1 alpha Myc
+    description: Tracks HIF-1 alpha Myc. Maps to SBML symbol `Hif1a_Myc`.
+  - name: hif_2_alpha_myc
+    maps_to: Hif2a_Myc
+    label: HIF-2 alpha Myc
+    description: Tracks HIF-2 alpha Myc. Maps to SBML symbol `Hif2a_Myc`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: double_phosphorylated_cyclin_d
+    maps_to: cycD_p_p
+    label: Double-phosphorylated Cyclin D
+    description: Tracks Double-phosphorylated Cyclin D. Maps to SBML symbol `cycD_p_p`.
+  - name: cyclin_d
+    maps_to: cycD
+    label: Cyclin D
+    description: Tracks Cyclin D. Maps to SBML symbol `cycD`.
+  - name: cyclin_e
+    maps_to: cycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cycE`.
+  - name: phosphorylated_rb
+    maps_to: RbP
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb. Maps to SBML symbol `RbP`.
+  - name: unphosphorylated_rb
+    maps_to: Rb_nP
+    label: Unphosphorylated Rb
+    description: Tracks Unphosphorylated Rb. Maps to SBML symbol `Rb_nP`.
+  - name: myc_transcription_factor
+    maps_to: Myc
+    label: Myc transcription factor
+    description: Tracks Myc transcription factor. Maps to SBML symbol `Myc`.
+  - name: e2f_rb
+    maps_to: E2F_RB
+    label: E2F Rb
+    description: Tracks E2F Rb. Maps to SBML symbol `E2F_RB`.
+  - name: rb_tumor_suppressor
+    maps_to: Rb
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor. Maps to SBML symbol `Rb`.
+  - name: double_phosphorylation_signal
+    maps_to: p_p
+    label: Double phosphorylation signal
+    description: Tracks Double phosphorylation signal. Maps to SBML symbol `p_p`.
+  - name: double_phosphorylated_cyclin_e
+    maps_to: cycE_p_p
+    label: Double-phosphorylated Cyclin E
+    description: Tracks Double-phosphorylated Cyclin E. Maps to SBML symbol `cycE_p_p`.
+  - name: oxygen_dependent_degradation_factor
+    maps_to: DEG
+    label: Oxygen-dependent degradation factor
+    description: Tracks Oxygen-dependent degradation factor. Maps to SBML symbol `DEG`.
+  - name: hif_1_alpha
+    maps_to: Hif1a
+    label: HIF-1 alpha
+    description: Tracks HIF-1 alpha. Maps to SBML symbol `Hif1a`.
+  - name: hif_2_alpha
+    maps_to: Hif2a
+    label: HIF-2 alpha
+    description: Tracks HIF-2 alpha. Maps to SBML symbol `Hif2a`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs:
+  - name: oxygen
+    maps_to: O2
+    label: Oxygen
+    accepted_units:
+    - dimensionless
+    description: Controls Oxygen. Maps to SBML symbol `O2`.

@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo Visualisation
+description: Dedicated question-and-answer visualisation model for Ciliberto2003 - CyclinE / Cdk2 timer in the cell
+  cycle of Xenopus laevis embryo.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo Lab
+    question: Does the mitotic switch activate and reset?
+    answer_focus: The answer is based on CDK1/Cdc2, Cyclin B, APC/C, Cdc25, Wee1, and Plk outputs.
+    sources:
+    - alias: cellcycle_sbml_ciliberto2003_cycline_cdk2_timer_in_the_cell_cyc_biomd0000000697_model
+      title: Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo
+      observables:
+      - id: PCdk2_CycE
+        port: pcdk2_cyclin_e
+        label: PCdk2 Cyclin E
+        group: g1s
+      - id: Cdk2_CycE
+        port: cdk2_cyclin_e
+        label: CDK2 Cyclin E
+        group: g1s
+      - id: Wee1_a
+        port: wee1_a
+        label: Wee1 A
+        group: g1s
+      - id: Cdk2_CycErem
+        port: cdk2_cyclin_erem
+        label: CDK2 Cyclin Erem
+        group: g1s
+      - id: PCdk2_CycErem
+        port: pcdk2_cyclin_erem
+        label: PCdk2 Cyclin Erem
+        group: g1s
+      - id: Deg_a
+        port: oxygen_dependent_degradation_factor_cyclin_e
+        label: Oxygen-dependent degradation factor Cyclin E
+        group: checkpoint
+      - id: Xic
+        port: xic_cdk_inhibitor
+        label: Xic CDK inhibitor
+        group: g1s
+      - id: Xic_Cdk2_CycE
+        port: xic_cdk2_cyclin_e
+        label: Xic CDK2 Cyclin E
+        group: g1s
+      - id: Xic_PCdk2_CycE
+        port: xic_pcdk2_cyclin_e
+        label: Xic PCdk2 Cyclin E
+        group: g1s
+      - id: Xic_Cdk2_CycErem
+        port: xic_cdk2_cyclin_erem
+        label: Xic CDK2 Cyclin Erem
+        group: g1s
+      - id: Xic_PCdk2_CycErem
+        port: xic_pcdk2_cyclin_erem
+        label: Xic PCdk2 Cyclin Erem
+        group: g1s
+      - id: Xicrem
+        port: removed_xic_inhibitor_pool
+        label: Removed Xic inhibitor pool
+        group: g1s
+      - id: Kin_a
+        port: kin_a
+        label: Kin A
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,119 @@
+schema_version: '2.0'
+title: Conradie2010_RPControl_CellCycle Lab
+description: 'Single-model lab wrapper for Conradie2010_RPControl_CellCycle. This model is from the article: Restriction
+  point control of the mammalian cell cycle via the cyclin E/Cdk2:p27 complex. Conradie R, Bruggeman FJ, Ciliberto
+  A, Csik\u00e1sz-Nagy A, Nov\u00e1k B, Westerhoff HV,.'
+models:
+- alias: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.state
+  to:
+  - visualisation.cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model_state
+- from: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.summary
+  to:
+  - visualisation.cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model_summary
+- from: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cdc20
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cdc20
+    label: Cdc20
+    description: Tracks Cdc20 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cdc20`.
+  - name: cdh1
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cdh1
+    label: Cdh1
+    description: Tracks Cdh1 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cdh1`.
+  - name: cyclin_a_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_a_cdk2
+    label: Cyclin A:CDK2
+    description: Tracks Cyclin A:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_a_cdk2`.
+  - name: cyclin_b_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_b_cdk2
+    label: Cyclin B:CDK2
+    description: Tracks Cyclin B:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_b_cdk2`.
+  - name: cyclin_d_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_d_cdk2
+    label: Cyclin D:CDK2
+    description: Tracks Cyclin D:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_d_cdk2`.
+  - name: cyclin_e_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_e_cdk2
+    label: Cyclin E:CDK2
+    description: Tracks Cyclin E:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cyclin_e_cdk2`.
+  - name: delayed_response_gene_module
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.delayed_response_gene_module
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.delayed_response_gene_module`.
+  - name: e2f
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.e2f
+    label: E2F
+    description: Tracks E2F in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.e2f`.
+  - name: e2f_rb
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.e2f_rb
+    label: E2F:Rb
+    description: Tracks E2F:Rb in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.e2f_rb`.
+  - name: early_response_gene_module
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.early_response_gene_module
+    label: Early response gene module
+    description: Tracks Early response gene module in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.early_response_gene_module`.
+  - name: general_machinery_for_protein_synthesis
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.general_machinery_for_protein_synthesis
+    label: General Machinery For Protein Synthesis
+    description: Tracks General Machinery For Protein Synthesis in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.general_machinery_for_protein_synthesis`.
+  - name: hypophosphorylated_rb
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.hypophosphorylated_rb
+    label: Hypophosphorylated Rb
+    description: Tracks Hypophosphorylated Rb in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.hypophosphorylated_rb`.
+  - name: inactive_cdc20
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.inactive_cdc20
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.inactive_cdc20`.
+  - name: cell_mass
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cell_mass
+    label: Cell mass
+    description: Tracks Cell mass in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.cell_mass`.
+  - name: p27_cdk_inhibitor
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cdk_inhibitor
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cdk_inhibitor`.
+  - name: p27_cyclin_a_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_a_cdk2
+    label: P27:cyclin A:CDK2
+    description: Tracks P27:cyclin A:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_a_cdk2`.
+  - name: p27_cyclin_d_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_d_cdk2
+    label: P27:cyclin D:CDK2
+    description: Tracks P27:cyclin D:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_d_cdk2`.
+  - name: p27_cyclin_e_cdk2
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_e_cdk2
+    label: P27:cyclin E:CDK2
+    description: Tracks P27:cyclin E:CDK2 in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.p27_cyclin_e_cdk2`.
+  - name: phosphorylated_e2f
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_e2f
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_e2f`.
+  - name: phosphorylated_e2f_rb
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_e2f_rb
+    label: Phosphorylated E2F:Rb
+    description: Tracks Phosphorylated E2F:Rb in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_e2f_rb`.
+  - name: phosphorylated_ie
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_ie
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.phosphorylated_ie`.
+  - name: ppx_phosphatase
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.ppx_phosphatase
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.ppx_phosphatase`.
+  - name: retinoblastoma_protein_rb
+    maps_to: cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.retinoblastoma_protein_rb
+    label: Retinoblastoma Protein (Rb)
+    description: Tracks Retinoblastoma Protein (Rb) in the lab model via `cellcycle_sbml_conradie2010_rpcontrol_cellcycle_biomd0000000265_model.retinoblastoma_protein_rb`.

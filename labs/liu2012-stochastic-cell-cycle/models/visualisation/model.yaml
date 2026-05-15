@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic cell cycle.
+  Visualisation
+description: Dedicated question-and-answer visualisation model for Liu2012-Hybrid modeling and simulation of stochastic
+  effects on progression through the eukaryotic cell cycle..
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic
+      cell cycle. Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_liu2012_hybrid_modeling_and_simulation_of_stocha_model2004140002_model
+      title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic
+        cell cycle.
+      observables:
+      - id: X
+        port: model_state_x_x
+        label: Model state X (X)
+        group: core
+      - id: V
+        port: model_state_v_v
+        label: Model state V (V)
+        group: core
+      - id: Y
+        port: model_state_y_y
+        label: Model state Y (Y)
+        group: core
+      - id: Z
+        port: model_state_z_z
+        label: Model state Z (Z)
+        group: core
+      - id: YT
+        port: model_state_yt
+        label: Model state YT
+        group: core
+      - id: Mx
+        port: model_state_mx
+        label: Model state Mx
+        group: core
+      - id: My
+        port: model_state_my
+        label: Model state My
+        group: core
+      - id: Mz
+        port: model_state_mz
+        label: Model state Mz
+        group: core
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

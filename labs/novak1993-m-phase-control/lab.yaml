@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Novak1993 - Cell cycle M-phase control Lab
+description: Single-model lab wrapper for Novak1993 - Cell cycle M-phase control. Novak1993 - Cell cycle M-phase
+  control The model reproduces Figure 9 of the paper. It can be used to explore cell-cycle regulation dynamics and
+  compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.state
+  to:
+  - visualisation.cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model_state
+- from: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.summary
+  to:
+  - visualisation.cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model_summary
+- from: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: cdc2
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cdc2
+    label: Cdc2
+    description: Controls Cdc2 in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cdc2`.
+  - name: cdc25
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cdc25
+    label: Cdc25
+    description: Controls Cdc25 in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cdc25`.
+  - name: wee1
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.wee1
+    label: Wee1
+    description: Controls Wee1 in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.wee1`.
+  - name: intermediary_enzyme
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.intermediary_enzyme
+    label: Intermediary Enzyme
+    description: Controls Intermediary Enzyme in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.intermediary_enzyme`.
+  - name: ubiquitin_conjugating_enzyme
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.ubiquitin_conjugating_enzyme
+    label: Ubiquitin Conjugating Enzyme
+    description: Controls Ubiquitin Conjugating Enzyme in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.ubiquitin_conjugating_enzyme`.
+  outputs:
+  - name: cyclin
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cyclin
+    label: Cyclin
+    description: Tracks Cyclin in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cyclin`.
+  - name: cyclin_cdc2_dimer
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cyclin_cdc2_dimer
+    label: Cyclin Cdc2 Dimer
+    description: Tracks Cyclin Cdc2 Dimer in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.cyclin_cdc2_dimer`.
+  - name: phosphorylated_dimer
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_dimer
+    label: Phosphorylated Dimer
+    description: Tracks Phosphorylated Dimer in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_dimer`.
+  - name: tyr15_phosphorylated_dimer
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.tyr15_phosphorylated_dimer
+    label: Tyr15 Phosphorylated Dimer
+    description: Tracks Tyr15 Phosphorylated Dimer in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.tyr15_phosphorylated_dimer`.
+  - name: phosphorylated_p_dimer
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_p_dimer
+    label: Phosphorylated P Dimer
+    description: Tracks Phosphorylated P Dimer in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_p_dimer`.
+  - name: phosphorylated_cdc25
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_cdc25
+    label: Phosphorylated Cdc25
+    description: Tracks Phosphorylated Cdc25 in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_cdc25`.
+  - name: phosphorylated_wee1
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_wee1
+    label: Phosphorylated Wee1
+    description: Tracks Phosphorylated Wee1 in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_wee1`.
+  - name: phosphorylated_ie
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_ie
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.phosphorylated_ie`.
+  - name: ubiquitin_conjugating_enzyme
+    maps_to: cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.ubiquitin_conjugating_enzyme
+    label: Ubiquitin Conjugating Enzyme
+    description: Tracks Ubiquitin Conjugating Enzyme in the lab model via `cellcycle_sbml_novak1993_cell_cycle_m_phase_control_biomd0000000107_model.ubiquitin_conjugating_enzyme`.

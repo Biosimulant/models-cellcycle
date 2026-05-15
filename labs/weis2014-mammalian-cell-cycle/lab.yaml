@@ -1,0 +1,127 @@
+schema_version: '2.0'
+title: Weis2014 - Data driven Mammalian Cell Cycle Model Lab
+description: 'Single-model lab wrapper for Weis2014 - Data driven Mammalian Cell Cycle Model. This a model from
+  the article: A Data-Driven, Mathematical Model of Mammalian Cell Cycle Regulation. It can be used to explore cell-cycle
+  regulation dynamics and compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.state
+  to:
+  - visualisation.cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model_state
+- from: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.summary
+  to:
+  - visualisation.cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model_summary
+- from: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: early_response_gene_module
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.early_response_gene_module
+    label: Early response gene module
+    description: Tracks Early response gene module in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.early_response_gene_module`.
+  - name: delayed_response_gene_module
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.delayed_response_gene_module
+    label: Delayed response gene module
+    description: Tracks Delayed response gene module in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.delayed_response_gene_module`.
+  - name: hyperphosphorylated_rb
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.hyperphosphorylated_rb
+    label: Hyperphosphorylated Rb
+    description: Tracks Hyperphosphorylated Rb in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.hyperphosphorylated_rb`.
+  - name: e2f_transcription_factor
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.e2f_transcription_factor
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.e2f_transcription_factor`.
+  - name: phosphorylated_e2f
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.phosphorylated_e2f
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.phosphorylated_e2f`.
+  - name: rb_tumor_suppressor
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.rb_tumor_suppressor
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.rb_tumor_suppressor`.
+  - name: e2f_rb_complex
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.e2f_rb_complex
+    label: E2F-Rb complex
+    description: Tracks E2F-Rb complex in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.e2f_rb_complex`.
+  - name: p_e2frb
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.p_e2frb
+    label: P E2FRB
+    description: Tracks P E2FRB in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.p_e2frb`.
+  - name: act_cyclin_d
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_d
+    label: Act Cyclin D
+    description: Tracks Act Cyclin D in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_d`.
+  - name: tri_d
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.tri_d
+    label: Tri D
+    description: Tracks Tri D in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.tri_d`.
+  - name: act_cyclin_acdk1
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_acdk1
+    label: Act Cyclin ACdk1
+    description: Tracks Act Cyclin ACdk1 in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_acdk1`.
+  - name: act_cyclin_acdk2
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_acdk2
+    label: Act Cyclin ACdk2
+    description: Tracks Act Cyclin ACdk2 in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_acdk2`.
+  - name: act_cyclin_b
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_b
+    label: Act Cyclin B
+    description: Tracks Act Cyclin B in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_b`.
+  - name: act_cyclin_e
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_e
+    label: Act Cyclin E
+    description: Tracks Act Cyclin E in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.act_cyclin_e`.
+  - name: cyclin_a
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_a
+    label: Cyclin A
+    description: Tracks Cyclin A in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_a`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_b`.
+  - name: cyclin_e
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_e
+    label: Cyclin E
+    description: Tracks Cyclin E in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_e`.
+  - name: cyclin_dependent_kinase_inhibitor
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_dependent_kinase_inhibitor
+    label: Cyclin-dependent kinase inhibitor
+    description: Tracks Cyclin-dependent kinase inhibitor in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cyclin_dependent_kinase_inhibitor`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.cdh1_apc_c_activator`.
+  - name: pre_mpf
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.pre_mpf
+    label: Pre MPF
+    description: Tracks Pre MPF in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.pre_mpf`.
+  - name: tri_a
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.tri_a
+    label: Tri A
+    description: Tracks Tri A in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.tri_a`.
+  - name: phosphorylated_apc_c_c
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.phosphorylated_apc_c_c
+    label: Phosphorylated APC/C/C
+    description: Tracks Phosphorylated APC/C/C in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.phosphorylated_apc_c_c`.
+  - name: active_cdc20
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.active_cdc20
+    label: Active Cdc20
+    description: Tracks Active Cdc20 in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.active_cdc20`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.total_cdc20_apc_c_activator
+    label: Total Cdc20 APC/C activator
+    description: Tracks Total Cdc20 APC/C activator in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.total_cdc20_apc_c_activator`.
+  - name: mass
+    maps_to: cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.mass
+    label: Mass
+    description: Tracks Mass in the lab model via `cellcycle_sbml_weis2014_data_driven_mammalian_cell_cycle_model_biomd0000000723_model.mass`.

@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release Lab
+description: Single-model lab wrapper for Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release.
+  Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release This model is designed based on the hypothesis
+  that cytoplasmic calcium accelerates entry into S phase of the cell cycle and/or act. It can be used to explore
+  cell-cycle regulation dynamics and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.state
+  to:
+  - visualisation.cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model_state
+- from: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.summary
+  to:
+  - visualisation.cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model_summary
+- from: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: model_state_d
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_d
+    label: Model state D
+    description: Tracks Model state D in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_d`.
+  - name: model_state_ad
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_ad
+    label: Model state Ad
+    description: Tracks Model state Ad in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_ad`.
+  - name: model_state_e
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_e
+    label: Model state E
+    description: Tracks Model state E in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_e`.
+  - name: model_state_r_r
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_r_r
+    label: Model state R (r)
+    description: Tracks Model state R (r) in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_r_r`.
+  - name: model_state_rs
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_rs
+    label: Model state Rs
+    description: Tracks Model state Rs in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_rs`.
+  - name: model_state_x_x
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_x_x
+    label: Model state X (x)
+    description: Tracks Model state X (x) in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_x_x`.
+  - name: ip3
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.ip3
+    label: IP3
+    description: Tracks IP3 in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.ip3`.
+  - name: model_state_kg
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_kg
+    label: Model state Kg
+    description: Tracks Model state Kg in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_kg`.
+  - name: gstar
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.gstar
+    label: Gstar
+    description: Tracks Gstar in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.gstar`.
+  - name: model_state_ro
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_ro
+    label: Model state Ro
+    description: Tracks Model state Ro in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_ro`.
+  - name: ip3con
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.ip3con
+    label: Ip3con
+    description: Tracks Ip3con in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.ip3con`.
+  - name: rscon
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.rscon
+    label: Rscon
+    description: Tracks Rscon in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.rscon`.
+  - name: atp
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.atp
+    label: ATP
+    description: Tracks ATP in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.atp`.
+  - name: model_state_y_y
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_y_y
+    label: Model state Y (y)
+    description: Tracks Model state Y (y) in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.model_state_y_y`.
+  - name: delta
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.delta
+    label: Delta
+    description: Tracks Delta in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.delta`.
+  - name: calcium
+    maps_to: cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.calcium
+    label: Calcium
+    description: Tracks Calcium in the lab model via `cellcycle_sbml_barrack2014_calcium_cell_cycle_coupling_rs_depen_biomd0000000509_model.calcium`.

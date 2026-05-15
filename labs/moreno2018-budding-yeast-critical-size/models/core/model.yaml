@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Model of budding yeast critical cell size dependence on growth rate with parameter set 3114
+description: "Model published in the paperChaperone availability subordinates cell cycle entry to growth and stressbyDavid\
+  \ F. Moreno1, Eva Parisi1, Galal Yahya, Federico Vaggi, Attila Csik\xE1sz-Nagy, Mart\xED Aldea."
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- David F Moreno
+- Eva Parisi
+- Galal Yahya
+- Federico Vaggi
+- "Attila Csik\xE1sz-Nagy"
+upstream:
+  id: biomodels_ebi:MODEL1808310001
+  source_db: biomodels_ebi
+  source_id: MODEL1808310001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1808310001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1808310001?filename=MolCompVol ps3114.xml
+  license: CC0
+biosim:
+  entrypoint: src.model_of_budding_yeast_critical_cell_size_depend_model1808310001_model:ModelOfBuddingYeastCriticalCellSizeDependModel1808310001Model
+  init_kwargs:
+    model_path: data/MODEL1808310001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: folded_cln3_start_cyclin
+    maps_to: Cln3F
+    label: Folded Cln3 Start cyclin
+    description: Tracks Folded Cln3 Start cyclin. Maps to SBML symbol `Cln3F`.
+  - name: unfolded_cln3_start_cyclin
+    maps_to: Cln3U
+    label: Unfolded Cln3 Start cyclin
+    description: Tracks Unfolded Cln3 Start cyclin. Maps to SBML symbol `Cln3U`.
+  - name: ydj1_chaperone
+    maps_to: Ydj1
+    label: Ydj1 chaperone
+    description: Tracks Ydj1 chaperone. Maps to SBML symbol `Ydj1`.
+  - name: model_state_yp
+    maps_to: YP
+    label: Model state YP
+    description: Tracks Model state YP. Maps to SBML symbol `YP`.
+  - name: model_state_yc
+    maps_to: YC
+    label: Model state YC
+    description: Tracks Model state YC. Maps to SBML symbol `YC`.
+  - name: prot_model_state_u
+    maps_to: ProtU
+    label: Prot Model state U
+    description: Tracks Prot Model state U. Maps to SBML symbol `ProtU`.
+  - name: prot_f
+    maps_to: ProtF
+    label: Prot F
+    description: Tracks Prot F. Maps to SBML symbol `ProtF`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

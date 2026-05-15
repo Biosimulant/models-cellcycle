@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Tyson2001_Cell_Cycle_Regulation Lab
+description: 'Single-model lab wrapper for Tyson2001_Cell_Cycle_Regulation. This model describes the budding yeast
+  cell cycle model used in fig 8 a in Regulation of the eukaryotic cell cycle: molecular antagonism, hysteresis,
+  and irreversible transitions. It can be used to explore cell-cycle regulation dynamics and compare checkpoint
+  behavior across conditions.'
+models:
+- alias: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.state
+  to:
+  - visualisation.cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model_state
+- from: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.summary
+  to:
+  - visualisation.cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model_summary
+- from: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cyclin_bt
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cyclin_bt
+    label: Cyclin Bt
+    description: Tracks Cyclin Bt in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cyclin_bt`.
+  - name: active_cdc20
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.active_cdc20
+    label: Active Cdc20
+    description: Tracks Active Cdc20 in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.active_cdc20`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cdh1_apc_c_activator`.
+  - name: model_state_m_m
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.model_state_m_m
+    label: Model state M (m)
+    description: Tracks Model state M (m) in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.model_state_m_m`.
+  - name: total_cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.total_cdc20_apc_c_activator
+    label: Total Cdc20 APC/C activator
+    description: Tracks Total Cdc20 APC/C activator in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.total_cdc20_apc_c_activator`.
+  - name: phosphorylated_ie
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.phosphorylated_ie
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.phosphorylated_ie`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.total_cyclin_dependent_kinase_inhibitor
+    label: Total cyclin-dependent kinase inhibitor
+    description: Tracks Total cyclin-dependent kinase inhibitor in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.total_cyclin_dependent_kinase_inhibitor`.
+  - name: model_state_sk
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.model_state_sk
+    label: Model state SK
+    description: Tracks Model state SK in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.model_state_sk`.
+  - name: cyclin_b
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cyclin_b
+    label: Cyclin B
+    description: Tracks Cyclin B in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.cyclin_b`.
+  - name: trimer_complex
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.trimer_complex
+    label: Trimer complex
+    description: Tracks Trimer complex in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.trimer_complex`.
+  - name: mad_spindle_checkpoint_signal
+    maps_to: cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.mad_spindle_checkpoint_signal
+    label: Mad spindle checkpoint signal
+    description: Tracks Mad spindle checkpoint signal in the lab model via `cellcycle_sbml_tyson2001_cell_cycle_regulation_biomd0000000195_model.mad_spindle_checkpoint_signal`.

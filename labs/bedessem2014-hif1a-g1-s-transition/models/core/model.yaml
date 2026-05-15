@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition
+description: Cell Cycle Bedessem2014Hif1AMediated Response To Hypoxi Model1812040001Model represents core biological
+  mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1812040001. When you run it, you can inspect state
+  and compare temporal behavior between baseline and adjusted inputs.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- B Bedessem
+- "A St\xE9phanou"
+upstream:
+  id: biomodels_ebi:MODEL1812040001
+  source_db: biomodels_ebi
+  source_id: MODEL1812040001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812040001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812040001?filename=Model.xml
+  license: CC0
+biosim:
+  entrypoint: src.bedessem2014_hif_1_a_mediated_response_to_hypoxi_model1812040001_model:Bedessem2014Hif1AMediatedResponseToHypoxiModel1812040001Model
+  init_kwargs:
+    model_path: data/MODEL1812040001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_m_m
+    maps_to: m
+    label: Model state M (m)
+    description: Tracks Model state M (m). Maps to SBML symbol `m`.
+  - name: cyclin_d
+    maps_to: cycD
+    label: Cyclin D
+    description: Tracks Cyclin D. Maps to SBML symbol `cycD`.
+  - name: rb_tumor_suppressor
+    maps_to: Rb
+    label: Rb tumor suppressor
+    description: Tracks Rb tumor suppressor. Maps to SBML symbol `Rb`.
+  - name: cyclin_e
+    maps_to: cycE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `cycE`.
+  - name: scf_ubiquitin_ligase
+    maps_to: SCF
+    label: SCF ubiquitin ligase
+    description: Tracks SCF ubiquitin ligase. Maps to SBML symbol `SCF`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: e2f_a
+    maps_to: E2F_A
+    label: E2F A
+    description: Tracks E2F A. Maps to SBML symbol `E2F_A`.
+  - name: e2f_rb
+    maps_to: E2F_Rb
+    label: E2F Rb
+    description: Tracks E2F Rb. Maps to SBML symbol `E2F_Rb`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

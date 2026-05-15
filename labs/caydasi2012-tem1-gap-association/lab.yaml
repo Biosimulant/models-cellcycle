@@ -1,0 +1,150 @@
+schema_version: '2.0'
+title: Caydasi2012 - Regulation of Tem1 by the GAP complex in spindle position cell cycle checkpoint - Ubiquitous
+  association model Lab
+description: 'Single-model lab wrapper for Caydasi2012 - Regulation of Tem1 by the GAP complex in spindle position
+  cell cycle checkpoint - Ubiquitous association model. Caydasi2012 - Regulation of Tem1 by the GAPcomplex in spindle
+  position cell cycle checkpoint - Ubiquitousassociation model This model is described in the article: A dynamical
+  model of the spindle posi. It can be used to explore cell-cycle regulation dynamics and compare checkpoint behavior
+  across conditions.'
+models:
+- alias: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.state
+  to:
+  - visualisation.cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model_state
+- from: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.summary
+  to:
+  - visualisation.cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model_summary
+- from: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: active_bfa1_at_the_spb
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_bfa1_at_the_spb
+    label: Active Bfa1 At The SPB
+    description: Controls Active Bfa1 At The SPB in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_bfa1_at_the_spb`.
+  - name: active_bfa1_at_the_cytosol
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_bfa1_at_the_cytosol
+    label: Active Bfa1 At The Cytosol
+    description: Controls Active Bfa1 At The Cytosol in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_bfa1_at_the_cytosol`.
+  - name: active_tem1_at_the_spb
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_tem1_at_the_spb
+    label: Active Tem1 At The SPB
+    description: Controls Active Tem1 At The SPB in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_tem1_at_the_spb`.
+  - name: active_tem1_in_the_cytosol
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_tem1_in_the_cytosol
+    label: Active Tem1 In The Cytosol
+    description: Controls Active Tem1 In The Cytosol in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.active_tem1_in_the_cytosol`.
+  - name: inactive_bfa1_at_the_spb
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.inactive_bfa1_at_the_spb
+    label: Inactive Bfa1 At The SPB
+    description: Controls Inactive Bfa1 At The SPB in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.inactive_bfa1_at_the_spb`.
+  - name: inactive_bfa1_in_the_cytosol
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.inactive_bfa1_in_the_cytosol
+    label: Inactive Bfa1 In The Cytosol
+    description: Controls Inactive Bfa1 In The Cytosol in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.inactive_bfa1_in_the_cytosol`.
+  outputs:
+  - name: model_state_b
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.model_state_b
+    label: Model state B
+    description: Tracks Model state B in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.model_state_b`.
+  - name: model_state_t
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.model_state_t
+    label: Model state T
+    description: Tracks Model state T in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.model_state_t`.
+  - name: bfa1_spindle_checkpoint_gap
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_spindle_checkpoint_gap
+    label: Bfa1 spindle checkpoint GAP
+    description: Tracks Bfa1 spindle checkpoint GAP in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_spindle_checkpoint_gap`.
+  - name: bfa1_phosphorylated_state_p4
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_phosphorylated_state_p4
+    label: Bfa1 phosphorylated state P4
+    description: Tracks Bfa1 phosphorylated state P4 in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_phosphorylated_state_p4`.
+  - name: bfa1_phosphorylated_state_p5
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_phosphorylated_state_p5
+    label: Bfa1 phosphorylated state P5
+    description: Tracks Bfa1 phosphorylated state P5 in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.bfa1_phosphorylated_state_p5`.
+  - name: phosphorylated_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_tem1gt
+    label: Phosphorylated Tem1GT
+    description: Tracks Phosphorylated Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_tem1gt`.
+  - name: phosphorylated_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_tem1gd
+    label: Phosphorylated Tem1GD
+    description: Tracks Phosphorylated Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_tem1gd`.
+  - name: b_bfa1
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1
+    label: B Bfa1
+    description: Tracks B Bfa1 in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1`.
+  - name: b_bfa1p4
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1p4
+    label: B Bfa1P4
+    description: Tracks B Bfa1P4 in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1p4`.
+  - name: b_bfa1p5
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1p5
+    label: B Bfa1P5
+    description: Tracks B Bfa1P5 in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.b_bfa1p5`.
+  - name: phosphorylated_t_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_t_tem1gt
+    label: Phosphorylated T Tem1GT
+    description: Tracks Phosphorylated T Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_t_tem1gt`.
+  - name: phosphorylated_t_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_t_tem1gd
+    label: Phosphorylated T Tem1GD
+    description: Tracks Phosphorylated T Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_t_tem1gd`.
+  - name: phosphorylated_b_bfa1_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1_tem1gt
+    label: Phosphorylated B Bfa1 Tem1GT
+    description: Tracks Phosphorylated B Bfa1 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1_tem1gt`.
+  - name: phosphorylated_b_bfa1p4_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p4_tem1gt
+    label: Phosphorylated B Bfa1P4 Tem1GT
+    description: Tracks Phosphorylated B Bfa1P4 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p4_tem1gt`.
+  - name: phosphorylated_b_bfa1p5_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p5_tem1gt
+    label: Phosphorylated B Bfa1P5 Tem1GT
+    description: Tracks Phosphorylated B Bfa1P5 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p5_tem1gt`.
+  - name: phosphorylated_b_bfa1_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1_tem1gd
+    label: Phosphorylated B Bfa1 Tem1GD
+    description: Tracks Phosphorylated B Bfa1 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1_tem1gd`.
+  - name: phosphorylated_b_bfa1p4_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p4_tem1gd
+    label: Phosphorylated B Bfa1P4 Tem1GD
+    description: Tracks Phosphorylated B Bfa1P4 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p4_tem1gd`.
+  - name: phosphorylated_b_bfa1p5_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p5_tem1gd
+    label: Phosphorylated B Bfa1P5 Tem1GD
+    description: Tracks Phosphorylated B Bfa1P5 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_b_bfa1p5_tem1gd`.
+  - name: phosphorylated_bfa1_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1_tem1gt
+    label: Phosphorylated Bfa1 Tem1GT
+    description: Tracks Phosphorylated Bfa1 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1_tem1gt`.
+  - name: phosphorylated_bfa1p4_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p4_tem1gt
+    label: Phosphorylated Bfa1P4 Tem1GT
+    description: Tracks Phosphorylated Bfa1P4 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p4_tem1gt`.
+  - name: phosphorylated_bfa1p5_tem1gt
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p5_tem1gt
+    label: Phosphorylated Bfa1P5 Tem1GT
+    description: Tracks Phosphorylated Bfa1P5 Tem1GT in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p5_tem1gt`.
+  - name: phosphorylated_bfa1_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1_tem1gd
+    label: Phosphorylated Bfa1 Tem1GD
+    description: Tracks Phosphorylated Bfa1 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1_tem1gd`.
+  - name: phosphorylated_bfa1p4_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p4_tem1gd
+    label: Phosphorylated Bfa1P4 Tem1GD
+    description: Tracks Phosphorylated Bfa1P4 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p4_tem1gd`.
+  - name: phosphorylated_bfa1p5_tem1gd
+    maps_to: cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p5_tem1gd
+    label: Phosphorylated Bfa1P5 Tem1GD
+    description: Tracks Phosphorylated Bfa1P5 Tem1GD in the lab model via `cellcycle_sbml_caydasi2012_regulation_of_tem1_by_the_gap_comple_biomd0000000699_model.phosphorylated_bfa1p5_tem1gd`.

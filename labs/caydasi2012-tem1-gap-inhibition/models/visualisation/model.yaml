@@ -1,0 +1,128 @@
+schema_version: '2.0'
+title: Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint Visualisation
+description: Dedicated question-and-answer visualisation model for Caydasi2012 - Inhibition of Tem1 by the GAP complex
+  in Spindle Position Checkpoint.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint Lab
+    question: Does checkpoint signaling suppress or redirect cell-cycle progression?
+    answer_focus: The answer is based on DNA damage, p53/p21, checkpoint kinases, and CDK activity.
+    sources:
+    - alias: cellcycle_sbml_caydasi2012_inhibition_of_tem1_by_the_gap_comple_biomd0000000701_model
+      title: Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint
+      observables:
+      - id: SPB_B
+        port: model_state_b
+        label: Model state B
+        group: checkpoint
+      - id: SPB_T
+        port: model_state_t
+        label: Model state T
+        group: checkpoint
+      - id: Bfa1
+        port: bfa1_spindle_checkpoint_gap
+        label: Bfa1 spindle checkpoint GAP
+        group: checkpoint
+      - id: Bfa1P4
+        port: bfa1_phosphorylated_state_p4
+        label: Bfa1 phosphorylated state P4
+        group: checkpoint
+      - id: Bfa1P5
+        port: bfa1_phosphorylated_state_p5
+        label: Bfa1 phosphorylated state P5
+        group: checkpoint
+      - id: Tem1GTP
+        port: phosphorylated_tem1gt
+        label: Phosphorylated Tem1GT
+        group: checkpoint
+      - id: Tem1GDP
+        port: phosphorylated_tem1gd
+        label: Phosphorylated Tem1GD
+        group: checkpoint
+      - id: B_Bfa1
+        port: b_bfa1
+        label: B Bfa1
+        group: checkpoint
+      - id: B_Bfa1P4
+        port: b_bfa1p4
+        label: B Bfa1P4
+        group: checkpoint
+      - id: B_Bfa1P5
+        port: b_bfa1p5
+        label: B Bfa1P5
+        group: checkpoint
+      - id: T_Tem1GTP
+        port: phosphorylated_t_tem1gt
+        label: Phosphorylated T Tem1GT
+        group: checkpoint
+      - id: T_Tem1GDP
+        port: phosphorylated_t_tem1gd
+        label: Phosphorylated T Tem1GD
+        group: checkpoint
+      - id: B_Bfa1_Tem1GTP
+        port: phosphorylated_b_bfa1_tem1gt
+        label: Phosphorylated B Bfa1 Tem1GT
+        group: checkpoint
+      - id: B_Bfa1P4_Tem1GTP
+        port: phosphorylated_b_bfa1p4_tem1gt
+        label: Phosphorylated B Bfa1P4 Tem1GT
+        group: checkpoint
+      - id: B_Bfa1P5_Tem1GTP
+        port: phosphorylated_b_bfa1p5_tem1gt
+        label: Phosphorylated B Bfa1P5 Tem1GT
+        group: checkpoint
+      - id: B_Bfa1_Tem1GDP
+        port: phosphorylated_b_bfa1_tem1gd
+        label: Phosphorylated B Bfa1 Tem1GD
+        group: checkpoint
+      - id: B_Bfa1P4_Tem1GDP
+        port: phosphorylated_b_bfa1p4_tem1gd
+        label: Phosphorylated B Bfa1P4 Tem1GD
+        group: checkpoint
+      - id: B_Bfa1P5_Tem1GDP
+        port: phosphorylated_b_bfa1p5_tem1gd
+        label: Phosphorylated B Bfa1P5 Tem1GD
+        group: checkpoint
+      - id: Bfa1_Tem1GTP
+        port: phosphorylated_bfa1_tem1gt
+        label: Phosphorylated Bfa1 Tem1GT
+        group: checkpoint
+      - id: Bfa1P4_Tem1GTP
+        port: phosphorylated_bfa1p4_tem1gt
+        label: Phosphorylated Bfa1P4 Tem1GT
+        group: checkpoint
+      - id: Bfa1P5_Tem1GTP
+        port: phosphorylated_bfa1p5_tem1gt
+        label: Phosphorylated Bfa1P5 Tem1GT
+        group: checkpoint
+      - id: Bfa1_Tem1GDP
+        port: phosphorylated_bfa1_tem1gd
+        label: Phosphorylated Bfa1 Tem1GD
+        group: checkpoint
+      - id: Bfa1P4_Tem1GDP
+        port: phosphorylated_bfa1p4_tem1gd
+        label: Phosphorylated Bfa1P4 Tem1GD
+        group: checkpoint
+      - id: Bfa1P5_Tem1GDP
+        port: phosphorylated_bfa1p5_tem1gd
+        label: Phosphorylated Bfa1P5 Tem1GD
+        group: checkpoint
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

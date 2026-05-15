@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Swat2004_Mammalian_G1_S_Transition
+description: 'This is the extended model described the article: Bifurcation analysis of the regulatory modules of
+  the mammalian G1/S transition. It can be used to explore cell-cycle regulation dynamics and compare checkpoint
+  behavior across conditions.'
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Maciej Swat
+- Alexander Kel
+- Hanspeter Herzel
+upstream:
+  id: biomodels_ebi:BIOMD0000000228
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000228
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000228
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000228?filename=BIOMD0000000228_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.swat2004_mammalian_g1_s_transition_biomd0000000228_model:Swat2004MammalianG1STransitionBiomd0000000228Model
+  init_kwargs:
+    model_path: data/BIOMD0000000228.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: pRB
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb. Maps to SBML symbol `pRB`.
+  - name: p_rbp
+    maps_to: pRBp
+    label: P RBp
+    description: Tracks P RBp. Maps to SBML symbol `pRBp`.
+  - name: e2f1_transcription_factor
+    maps_to: E2F1
+    label: E2F1 transcription factor
+    description: Tracks E2F1 transcription factor. Maps to SBML symbol `E2F1`.
+  - name: cyclin_d_cdk4_6_i
+    maps_to: CycDi
+    label: Cyclin D CDK4,6(i)
+    description: Tracks Cyclin D CDK4,6(i). Maps to SBML symbol `CycDi`.
+  - name: cyclin_d_cdk4_6_a
+    maps_to: CycDa
+    label: Cyclin D CDK4,6(a)
+    description: Tracks Cyclin D CDK4,6(a). Maps to SBML symbol `CycDa`.
+  - name: ap1_transcription_factor
+    maps_to: AP1
+    label: AP1 transcription factor
+    description: Tracks AP1 transcription factor. Maps to SBML symbol `AP1`.
+  - name: p_rbpp
+    maps_to: pRBpp
+    label: P RBpp
+    description: Tracks P RBpp. Maps to SBML symbol `pRBpp`.
+  - name: cyclin_e_cdk2_i
+    maps_to: CycEi
+    label: Cyclin E CDK2(i)
+    description: Tracks Cyclin E CDK2(i). Maps to SBML symbol `CycEi`.
+  - name: cyclin_ea_cdk2_a
+    maps_to: CycEa
+    label: Cyclin Ea CDK2(a)
+    description: Tracks Cyclin Ea CDK2(a). Maps to SBML symbol `CycEa`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

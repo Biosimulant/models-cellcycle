@@ -1,0 +1,31 @@
+schema_version: '2.0'
+title: DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell cycle model Lab
+description: Single-model lab wrapper for DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell
+  cycle model. Models the production and degradation of cyclin B that drives the early embryonic cell cycle.Cyclin
+  B is degraded by APC/C. The activity of APC/C is modeled not through biochemical interactions, but t.
+models:
+- alias: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model.state
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model_state
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model.summary
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model_summary
+- from: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: cyclin_cdk
+    maps_to: cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model.cyclin_cdk
+    label: Cyclin CDK
+    description: Tracks Cyclin CDK in the lab model via `cellcycle_sbml_deboeck2021_modular_approach_to_modeling_the_cel_biomd0000001079_model.cyclin_cdk`.

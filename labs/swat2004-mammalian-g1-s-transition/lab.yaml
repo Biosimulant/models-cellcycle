@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Swat2004_Mammalian_G1_S_Transition Lab
+description: 'Single-model lab wrapper for Swat2004_Mammalian_G1_S_Transition. This is the extended model described
+  the article: Bifurcation analysis of the regulatory modules of the mammalian G1/S transition. It can be used to
+  explore cell-cycle regulation dynamics and compare checkpoint behavior across conditions.'
+models:
+- alias: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.state
+  to:
+  - visualisation.cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model_state
+- from: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.summary
+  to:
+  - visualisation.cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model_summary
+- from: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs: []
+  outputs:
+  - name: phosphorylated_rb
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.phosphorylated_rb
+    label: Phosphorylated Rb
+    description: Tracks Phosphorylated Rb in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.phosphorylated_rb`.
+  - name: p_rbp
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.p_rbp
+    label: P RBp
+    description: Tracks P RBp in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.p_rbp`.
+  - name: e2f1_transcription_factor
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.e2f1_transcription_factor
+    label: E2F1 transcription factor
+    description: Tracks E2F1 transcription factor in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.e2f1_transcription_factor`.
+  - name: cyclin_d_cdk4_6_i
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_d_cdk4_6_i
+    label: Cyclin D CDK4,6(i)
+    description: Tracks Cyclin D CDK4,6(i) in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_d_cdk4_6_i`.
+  - name: cyclin_d_cdk4_6_a
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_d_cdk4_6_a
+    label: Cyclin D CDK4,6(a)
+    description: Tracks Cyclin D CDK4,6(a) in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_d_cdk4_6_a`.
+  - name: ap1_transcription_factor
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.ap1_transcription_factor
+    label: AP1 transcription factor
+    description: Tracks AP1 transcription factor in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.ap1_transcription_factor`.
+  - name: p_rbpp
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.p_rbpp
+    label: P RBpp
+    description: Tracks P RBpp in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.p_rbpp`.
+  - name: cyclin_e_cdk2_i
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_e_cdk2_i
+    label: Cyclin E CDK2(i)
+    description: Tracks Cyclin E CDK2(i) in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_e_cdk2_i`.
+  - name: cyclin_ea_cdk2_a
+    maps_to: cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_ea_cdk2_a
+    label: Cyclin Ea CDK2(a)
+    description: Tracks Cyclin Ea CDK2(a) in the lab model via `cellcycle_sbml_swat2004_mammalian_g1_s_transition_biomd0000000228_model.cyclin_ea_cdk2_a`.

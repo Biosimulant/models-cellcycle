@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Dong2018 - E2F dynamics in G1 phase
+description: The length of the G1 phase in the cell cycle shows significant variability in different cell types
+  and tissue types. To gain insights into the control of G1 length, we generated an E2F activity report.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Peng Dong
+- Carolyn Zhang
+- Bao-Tran Parker
+- Lingchong You
+- Bernard Mathey-Prevot
+upstream:
+  id: biomodels_ebi:MODEL1811050001
+  source_db: biomodels_ebi
+  source_id: MODEL1811050001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1811050001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1811050001?filename=Dong2018_final.xml
+  license: CC0
+biosim:
+  entrypoint: src.dong2018_e2f_dynamics_in_g1_phase_model1811050001_model:Dong2018E2fDynamicsInG1PhaseModel1811050001Model
+  init_kwargs:
+    model_path: data/MODEL1811050001.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: myc
+    maps_to: MYC
+    label: Myc
+    description: Tracks Myc. Maps to SBML symbol `MYC`.
+  - name: model_state_s
+    maps_to: S
+    label: Model state S
+    description: Tracks Model state S. Maps to SBML symbol `S`.
+  - name: phosphorylated_e2f
+    maps_to: E2Fp
+    label: Phosphorylated E2F
+    description: Tracks Phosphorylated E2F. Maps to SBML symbol `E2Fp`.
+  - name: e2f_m_rna
+    maps_to: E2Fm
+    label: E2F mRNA
+    description: Tracks E2F mRNA. Maps to SBML symbol `E2Fm`.
+  - name: rb
+    maps_to: RB
+    label: Rb
+    description: Tracks Rb. Maps to SBML symbol `RB`.
+  - name: model_state_re
+    maps_to: RE
+    label: Model state RE
+    description: Tracks Model state RE. Maps to SBML symbol `RE`.
+  - name: model_state_r_r
+    maps_to: R
+    label: Model state R (R)
+    description: Tracks Model state R (R). Maps to SBML symbol `R`.
+  - name: model_state_cd
+    maps_to: CD
+    label: Model state CD
+    description: Tracks Model state CD. Maps to SBML symbol `CD`.
+  - name: model_state_ce
+    maps_to: CE
+    label: Model state CE
+    description: Tracks Model state CE. Maps to SBML symbol `CE`.
+  - name: model_state_rp
+    maps_to: RP
+    label: Model state RP
+    description: Tracks Model state RP. Maps to SBML symbol `RP`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

@@ -1,0 +1,140 @@
+schema_version: '2.0'
+title: Novak1998 - Mathematical model of fission yeast cell cycle
+description: Mathematical model of the fission yeast cell cycle with checkpointcontrols at the G1/S, G2/M and metaphase/anaphase
+  transitions. Model encoded by Matthieu Maire and submitted to BioModels by Krishna k.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- B Novak
+- A Csikasz-Nagy
+- B Gyorffy
+- K Chen
+- John J Tyson
+upstream:
+  id: biomodels_ebi:MODEL2003190004
+  source_db: biomodels_ebi
+  source_id: MODEL2003190004
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190004
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190004?filename=Novak1998.xml
+  license: CC0
+biosim:
+  entrypoint: src.novak1998_mathematical_model_of_fission_yeast_ce_model2003190004_model:Novak1998MathematicalModelOfFissionYeastCeModel2003190004Model
+  init_kwargs:
+    model_path: data/MODEL2003190004.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: aggregated_apc_c_enzyme_state
+    maps_to: AAE
+    label: Aggregated APC/C enzyme state
+    description: Tracks Aggregated APC/C enzyme state. Maps to SBML symbol `AAE`.
+  - name: cdc13_cdc2
+    maps_to: Cdc13_Cdc2
+    label: Cdc13 Cdc2
+    description: Tracks Cdc13 Cdc2. Maps to SBML symbol `Cdc13_Cdc2`.
+  - name: mik1_inhibitory_kinase
+    maps_to: Mik1
+    label: Mik1 inhibitory kinase
+    description: Tracks Mik1 inhibitory kinase. Maps to SBML symbol `Mik1`.
+  - name: aae_total
+    maps_to: AAE_total
+    label: AAE Total
+    description: Tracks AAE Total. Maps to SBML symbol `AAE_total`.
+  - name: wee1_inhibitory_kinase
+    maps_to: Wee1
+    label: Wee1 inhibitory kinase
+    description: Tracks Wee1 inhibitory kinase. Maps to SBML symbol `Wee1`.
+  - name: rum1_cdk_inhibitor
+    maps_to: Rum1
+    label: Rum1 CDK inhibitor
+    description: Tracks Rum1 CDK inhibitor. Maps to SBML symbol `Rum1`.
+  - name: mass
+    maps_to: mass
+    label: Mass
+    description: Tracks Mass. Maps to SBML symbol `mass`.
+  - name: cdc13_p_cdc2
+    maps_to: Cdc13_P_Cdc2
+    label: Cdc13 P Cdc2
+    description: Tracks Cdc13 P Cdc2. Maps to SBML symbol `Cdc13_P_Cdc2`.
+  - name: rum1_cdc13_cdc2
+    maps_to: Rum1_Cdc13_Cdc2
+    label: Rum1 Cdc13 Cdc2
+    description: Tracks Rum1 Cdc13 Cdc2. Maps to SBML symbol `Rum1_Cdc13_Cdc2`.
+  - name: apc_c_c
+    maps_to: APC
+    label: APC/C/C
+    description: Tracks APC/C/C. Maps to SBML symbol `APC`.
+  - name: phosphorylated_cdc25
+    maps_to: Cdc25P
+    label: Phosphorylated Cdc25
+    description: Tracks Phosphorylated Cdc25. Maps to SBML symbol `Cdc25P`.
+  - name: cdc13_total
+    maps_to: Cdc13_total
+    label: Cdc13 Total
+    description: Tracks Cdc13 Total. Maps to SBML symbol `Cdc13_total`.
+  - name: maturation_promoting_factor
+    maps_to: MPF
+    label: Maturation-promoting factor
+    description: Tracks Maturation-promoting factor. Maps to SBML symbol `MPF`.
+  - name: rum1_total
+    maps_to: Rum1_total
+    label: Rum1 Total
+    description: Tracks Rum1 Total. Maps to SBML symbol `Rum1_total`.
+  - name: model_state_k2
+    maps_to: k2
+    label: Model state K2
+    description: Tracks Model state K2. Maps to SBML symbol `k2`.
+  - name: k25r
+    maps_to: k25r
+    label: K25r
+    description: Tracks K25r. Maps to SBML symbol `k25r`.
+  - name: k2c
+    maps_to: k2c
+    label: K2c
+    description: Tracks K2c. Maps to SBML symbol `k2c`.
+  - name: model_state_k4
+    maps_to: k4
+    label: Model state K4
+    description: Tracks Model state K4. Maps to SBML symbol `k4`.
+  - name: kai
+    maps_to: kai
+    label: Kai
+    description: Tracks Kai. Maps to SBML symbol `kai`.
+  - name: kcdc25
+    maps_to: kcdc25
+    label: Kcdc25
+    description: Tracks Kcdc25. Maps to SBML symbol `kcdc25`.
+  - name: kmr
+    maps_to: kmr
+    label: Kmr
+    description: Tracks Kmr. Maps to SBML symbol `kmr`.
+  - name: model_state_ks
+    maps_to: ks
+    label: Model state Ks
+    description: Tracks Model state Ks. Maps to SBML symbol `ks`.
+  - name: kwee
+    maps_to: kwee
+    label: Kwee
+    description: Tracks Kwee. Maps to SBML symbol `kwee`.
+  - name: kwr
+    maps_to: kwr
+    label: Kwr
+    description: Tracks Kwr. Maps to SBML symbol `kwr`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

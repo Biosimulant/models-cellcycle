@@ -1,0 +1,212 @@
+# SPDX-FileCopyrightText: 2025-present Demi <bjaiye1@gmail.com>
+#
+# SPDX-License-Identifier: MIT
+"""TelluriumSBMLBioModule wrapper for Haberichter2007_cellcycle.
+
+Source: biomodels_ebi:BIOMD0000000109
+Original: https://www.ebi.ac.uk/biomodels/BIOMD0000000109
+"""
+from __future__ import annotations
+
+from typing import Any, Optional
+
+from biosim.contrib.sbml import TelluriumSBMLBioModule
+
+
+class SbmlHaberichter2007Cellcycle(TelluriumSBMLBioModule):
+    """BioModule wrapper for SBML model: Haberichter2007_cellcycle."""
+
+    _SBML_ID = 'BIOMD0000000109'
+    _TITLE = 'Haberichter2007_cellcycle'
+    _TIME_UNIT = 'model_time'
+    _OBSERVABLE_STRATEGY = 'species'
+    _OBSERVABLES = [
+        'APCC',
+        'APCCYCdk1Y00YCdk1Y01YInt',
+        'APCCYCdk1Y10YCdk1Y11YInt',
+        'APCCYCdk2Y000YCdk2Y002YInt',
+        'APCCYCdk2Y010YCdk2Y012YInt',
+        'APCCYCdk2Y100YCdk2Y102YInt',
+        'APCCYCdk2Y110YCdk2Y112YInt',
+        'APCCYCyclinAYInt',
+        'APCCYEmi1',
+        'Cdk1Y00',
+        'Cdk1Y01',
+        'Cdk1Y10',
+        'Cdk1Y11',
+        'Cdk1Y11YpRbY10YpRbY20YInt',
+        'Cdk1Y11YpRbY11YpRbY21YInt',
+        'Cdk2Y000',
+        'Cdk2Y001',
+        'Cdk2Y002',
+        'Cdk2Y010',
+        'Cdk2Y011',
+        'Cdk2Y011YpRbY10YpRbY20YInt',
+        'Cdk2Y011YpRbY11YpRbY21YInt',
+        'Cdk2Y012',
+        'Cdk2Y012YpRbY10YpRbY20YInt',
+        'Cdk2Y012YpRbY11YpRbY21YInt',
+        'Cdk2Y100',
+        'Cdk2Y101',
+        'Cdk2Y102',
+        'Cdk2Y110',
+        'Cdk2Y111',
+        'Cdk2Y112',
+        'Cdk4Y00',
+        'Cdk4Y01',
+        'Cdk4Y01YpRbY00YpRbY10YInt',
+        'Cdk4Y01YpRbY01YpRbY11YInt',
+        'Cdk4Y10',
+        'Cdk4Y11',
+        'CyclinA',
+        'CyclinD',
+        'CyclinE',
+        'E2F',
+        'Emi1',
+        'p27',
+        'pRbY00',
+        'pRbY01',
+        'pRbY10',
+        'pRbY11',
+        'pRbY20',
+        'pRbY21',
+        'totalYCyclinYD',
+        'totalYCyclinYE',
+        'totalYCyclinYA',
+        'totalYp27',
+        'hypophosphorylatedYpRb',
+        'hyperphosphorylatedYpRb',
+        'totalYEmi1',
+        'activeYCdk2',
+    ]
+    _SPECIES_LABELS = {
+        'APCC': 'APC/C complex',
+        'APCCYCdk1Y00YCdk1Y01YInt': 'APC/C-CDK interaction state APCCYCdk1Y00YCdk1Y01YInt',
+        'APCCYCdk1Y10YCdk1Y11YInt': 'APC/C-CDK interaction state APCCYCdk1Y10YCdk1Y11YInt',
+        'APCCYCdk2Y000YCdk2Y002YInt': 'APC/C-CDK interaction state APCCYCdk2Y000YCdk2Y002YInt',
+        'APCCYCdk2Y010YCdk2Y012YInt': 'APC/C-CDK interaction state APCCYCdk2Y010YCdk2Y012YInt',
+        'APCCYCdk2Y100YCdk2Y102YInt': 'APC/C-CDK interaction state APCCYCdk2Y100YCdk2Y102YInt',
+        'APCCYCdk2Y110YCdk2Y112YInt': 'APC/C-CDK interaction state APCCYCdk2Y110YCdk2Y112YInt',
+        'APCCYCyclinAYInt': 'APC/C-bound CyclinAYInt state',
+        'APCCYEmi1': 'APC/C-bound Emi1 state',
+        'Cdk1Y00': 'CDK1 phosphorylation state 00',
+        'Cdk1Y01': 'CDK1 phosphorylation state 01',
+        'Cdk1Y10': 'CDK1 phosphorylation state 10',
+        'Cdk1Y11': 'CDK1 phosphorylation state 11',
+        'Cdk1Y11YpRbY10YpRbY20YInt': 'Cdk1Y11Yp Rb Y10Yp Rb Y20YInt',
+        'Cdk1Y11YpRbY11YpRbY21YInt': 'Cdk1Y11Yp Rb Y11Yp Rb Y21YInt',
+        'Cdk2Y000': 'CDK2 phosphorylation state 000',
+        'Cdk2Y001': 'CDK2 phosphorylation state 001',
+        'Cdk2Y002': 'CDK2 phosphorylation state 002',
+        'Cdk2Y010': 'CDK2 phosphorylation state 010',
+        'Cdk2Y011': 'CDK2 phosphorylation state 011',
+        'Cdk2Y011YpRbY10YpRbY20YInt': 'Cdk2Y011Yp Rb Y10Yp Rb Y20YInt',
+        'Cdk2Y011YpRbY11YpRbY21YInt': 'Cdk2Y011Yp Rb Y11Yp Rb Y21YInt',
+        'Cdk2Y012': 'CDK2 phosphorylation state 012',
+        'Cdk2Y012YpRbY10YpRbY20YInt': 'Cdk2Y012Yp Rb Y10Yp Rb Y20YInt',
+        'Cdk2Y012YpRbY11YpRbY21YInt': 'Cdk2Y012Yp Rb Y11Yp Rb Y21YInt',
+        'Cdk2Y100': 'CDK2 phosphorylation state 100',
+        'Cdk2Y101': 'CDK2 phosphorylation state 101',
+        'Cdk2Y102': 'CDK2 phosphorylation state 102',
+        'Cdk2Y110': 'CDK2 phosphorylation state 110',
+        'Cdk2Y111': 'CDK2 phosphorylation state 111',
+        'Cdk2Y112': 'CDK2 phosphorylation state 112',
+        'Cdk4Y00': 'CDK4 phosphorylation state 00',
+        'Cdk4Y01': 'CDK4 phosphorylation state 01',
+        'Cdk4Y01YpRbY00YpRbY10YInt': 'Cdk4Y01Yp Rb Y00Yp Rb Y10YInt',
+        'Cdk4Y01YpRbY01YpRbY11YInt': 'Cdk4Y01Yp Rb Y01Yp Rb Y11YInt',
+        'Cdk4Y10': 'CDK4 phosphorylation state 10',
+        'Cdk4Y11': 'CDK4 phosphorylation state 11',
+        'CyclinA': 'Cyclin A',
+        'CyclinD': 'Cyclin D',
+        'CyclinE': 'Cyclin E',
+        'E2F': 'E2F transcription factor',
+        'Emi1': 'Emi1 APC/C inhibitor',
+        'p27': 'p27 CDK inhibitor',
+        'pRbY00': 'Phosphorylated Rb Model state Y00',
+        'pRbY01': 'Phosphorylated Rb Model state Y01',
+        'pRbY10': 'Phosphorylated Rb Model state Y10',
+        'pRbY11': 'Phosphorylated Rb Model state Y11',
+        'pRbY20': 'Phosphorylated Rb Model state Y20',
+        'pRbY21': 'Phosphorylated Rb Model state Y21',
+        'totalYCyclinYD': 'Total YCyclin YD',
+        'totalYCyclinYE': 'Total YCyclin YE',
+        'totalYCyclinYA': 'Total YCyclin YA',
+        'totalYp27': 'Total Yp27',
+        'hypophosphorylatedYpRb': 'Hypophosphorylated Yp Rb',
+        'hyperphosphorylatedYpRb': 'Hyperphosphorylated Yp Rb',
+        'totalYEmi1': 'Total YEmi1',
+        'activeYCdk2': 'Active YCdk2',
+    }
+    _PARAMETER_INPUTS = {}
+    _HEADLINE_OUTPUTS = {
+        'apc_c_complex': ('APCC', 'native SBML value', 'Tracks APC/C complex. Maps to SBML symbol `APCC`.'),
+        'apc_c_cdk_interaction_state_apccycdk1y00ycdk1y01yint': ('APCCYCdk1Y00YCdk1Y01YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk1Y00YCdk1Y01YInt. Maps to SBML symbol `APCCYCdk1Y00YCdk1Y01YInt`.'),
+        'apc_c_cdk_interaction_state_apccycdk1y10ycdk1y11yint': ('APCCYCdk1Y10YCdk1Y11YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk1Y10YCdk1Y11YInt. Maps to SBML symbol `APCCYCdk1Y10YCdk1Y11YInt`.'),
+        'apc_c_cdk_interaction_state_apccycdk2y000ycdk2y002yint': ('APCCYCdk2Y000YCdk2Y002YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk2Y000YCdk2Y002YInt. Maps to SBML symbol `APCCYCdk2Y000YCdk2Y002YInt`.'),
+        'apc_c_cdk_interaction_state_apccycdk2y010ycdk2y012yint': ('APCCYCdk2Y010YCdk2Y012YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk2Y010YCdk2Y012YInt. Maps to SBML symbol `APCCYCdk2Y010YCdk2Y012YInt`.'),
+        'apc_c_cdk_interaction_state_apccycdk2y100ycdk2y102yint': ('APCCYCdk2Y100YCdk2Y102YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk2Y100YCdk2Y102YInt. Maps to SBML symbol `APCCYCdk2Y100YCdk2Y102YInt`.'),
+        'apc_c_cdk_interaction_state_apccycdk2y110ycdk2y112yint': ('APCCYCdk2Y110YCdk2Y112YInt', 'native SBML value', 'Tracks APC/C-CDK interaction state APCCYCdk2Y110YCdk2Y112YInt. Maps to SBML symbol `APCCYCdk2Y110YCdk2Y112YInt`.'),
+        'apc_c_bound_cyclin_ayint_state': ('APCCYCyclinAYInt', 'native SBML value', 'Tracks APC/C-bound CyclinAYInt state. Maps to SBML symbol `APCCYCyclinAYInt`.'),
+        'apc_c_bound_emi1_state': ('APCCYEmi1', 'native SBML value', 'Tracks APC/C-bound Emi1 state. Maps to SBML symbol `APCCYEmi1`.'),
+        'cdk1_phosphorylation_state_00': ('Cdk1Y00', 'native SBML value', 'Tracks CDK1 phosphorylation state 00. Maps to SBML symbol `Cdk1Y00`.'),
+        'cdk1_phosphorylation_state_01': ('Cdk1Y01', 'native SBML value', 'Tracks CDK1 phosphorylation state 01. Maps to SBML symbol `Cdk1Y01`.'),
+        'cdk1_phosphorylation_state_10': ('Cdk1Y10', 'native SBML value', 'Tracks CDK1 phosphorylation state 10. Maps to SBML symbol `Cdk1Y10`.'),
+        'cdk1_phosphorylation_state_11': ('Cdk1Y11', 'native SBML value', 'Tracks CDK1 phosphorylation state 11. Maps to SBML symbol `Cdk1Y11`.'),
+        'cdk1y11yp_rb_y10yp_rb_y20yint': ('Cdk1Y11YpRbY10YpRbY20YInt', 'native SBML value', 'Tracks Cdk1Y11Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk1Y11YpRbY10YpRbY20YInt`.'),
+        'cdk1y11yp_rb_y11yp_rb_y21yint': ('Cdk1Y11YpRbY11YpRbY21YInt', 'native SBML value', 'Tracks Cdk1Y11Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk1Y11YpRbY11YpRbY21YInt`.'),
+        'cdk2_phosphorylation_state_000': ('Cdk2Y000', 'native SBML value', 'Tracks CDK2 phosphorylation state 000. Maps to SBML symbol `Cdk2Y000`.'),
+        'cdk2_phosphorylation_state_001': ('Cdk2Y001', 'native SBML value', 'Tracks CDK2 phosphorylation state 001. Maps to SBML symbol `Cdk2Y001`.'),
+        'cdk2_phosphorylation_state_002': ('Cdk2Y002', 'native SBML value', 'Tracks CDK2 phosphorylation state 002. Maps to SBML symbol `Cdk2Y002`.'),
+        'cdk2_phosphorylation_state_010': ('Cdk2Y010', 'native SBML value', 'Tracks CDK2 phosphorylation state 010. Maps to SBML symbol `Cdk2Y010`.'),
+        'cdk2_phosphorylation_state_011': ('Cdk2Y011', 'native SBML value', 'Tracks CDK2 phosphorylation state 011. Maps to SBML symbol `Cdk2Y011`.'),
+        'cdk2y011yp_rb_y10yp_rb_y20yint': ('Cdk2Y011YpRbY10YpRbY20YInt', 'native SBML value', 'Tracks Cdk2Y011Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk2Y011YpRbY10YpRbY20YInt`.'),
+        'cdk2y011yp_rb_y11yp_rb_y21yint': ('Cdk2Y011YpRbY11YpRbY21YInt', 'native SBML value', 'Tracks Cdk2Y011Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk2Y011YpRbY11YpRbY21YInt`.'),
+        'cdk2_phosphorylation_state_012': ('Cdk2Y012', 'native SBML value', 'Tracks CDK2 phosphorylation state 012. Maps to SBML symbol `Cdk2Y012`.'),
+        'cdk2y012yp_rb_y10yp_rb_y20yint': ('Cdk2Y012YpRbY10YpRbY20YInt', 'native SBML value', 'Tracks Cdk2Y012Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk2Y012YpRbY10YpRbY20YInt`.'),
+        'cdk2y012yp_rb_y11yp_rb_y21yint': ('Cdk2Y012YpRbY11YpRbY21YInt', 'native SBML value', 'Tracks Cdk2Y012Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk2Y012YpRbY11YpRbY21YInt`.'),
+        'cdk2_phosphorylation_state_100': ('Cdk2Y100', 'native SBML value', 'Tracks CDK2 phosphorylation state 100. Maps to SBML symbol `Cdk2Y100`.'),
+        'cdk2_phosphorylation_state_101': ('Cdk2Y101', 'native SBML value', 'Tracks CDK2 phosphorylation state 101. Maps to SBML symbol `Cdk2Y101`.'),
+        'cdk2_phosphorylation_state_102': ('Cdk2Y102', 'native SBML value', 'Tracks CDK2 phosphorylation state 102. Maps to SBML symbol `Cdk2Y102`.'),
+        'cdk2_phosphorylation_state_110': ('Cdk2Y110', 'native SBML value', 'Tracks CDK2 phosphorylation state 110. Maps to SBML symbol `Cdk2Y110`.'),
+        'cdk2_phosphorylation_state_111': ('Cdk2Y111', 'native SBML value', 'Tracks CDK2 phosphorylation state 111. Maps to SBML symbol `Cdk2Y111`.'),
+        'cdk2_phosphorylation_state_112': ('Cdk2Y112', 'native SBML value', 'Tracks CDK2 phosphorylation state 112. Maps to SBML symbol `Cdk2Y112`.'),
+        'cdk4_phosphorylation_state_00': ('Cdk4Y00', 'native SBML value', 'Tracks CDK4 phosphorylation state 00. Maps to SBML symbol `Cdk4Y00`.'),
+        'cdk4_phosphorylation_state_01': ('Cdk4Y01', 'native SBML value', 'Tracks CDK4 phosphorylation state 01. Maps to SBML symbol `Cdk4Y01`.'),
+        'cdk4y01yp_rb_y00yp_rb_y10yint': ('Cdk4Y01YpRbY00YpRbY10YInt', 'native SBML value', 'Tracks Cdk4Y01Yp Rb Y00Yp Rb Y10YInt. Maps to SBML symbol `Cdk4Y01YpRbY00YpRbY10YInt`.'),
+        'cdk4y01yp_rb_y01yp_rb_y11yint': ('Cdk4Y01YpRbY01YpRbY11YInt', 'native SBML value', 'Tracks Cdk4Y01Yp Rb Y01Yp Rb Y11YInt. Maps to SBML symbol `Cdk4Y01YpRbY01YpRbY11YInt`.'),
+        'cdk4_phosphorylation_state_10': ('Cdk4Y10', 'native SBML value', 'Tracks CDK4 phosphorylation state 10. Maps to SBML symbol `Cdk4Y10`.'),
+        'cdk4_phosphorylation_state_11': ('Cdk4Y11', 'native SBML value', 'Tracks CDK4 phosphorylation state 11. Maps to SBML symbol `Cdk4Y11`.'),
+        'cyclin_a': ('CyclinA', 'native SBML value', 'Tracks Cyclin A. Maps to SBML symbol `CyclinA`.'),
+        'cyclin_d': ('CyclinD', 'native SBML value', 'Tracks Cyclin D. Maps to SBML symbol `CyclinD`.'),
+        'cyclin_e': ('CyclinE', 'native SBML value', 'Tracks Cyclin E. Maps to SBML symbol `CyclinE`.'),
+        'e2f_transcription_factor': ('E2F', 'native SBML value', 'Tracks E2F transcription factor. Maps to SBML symbol `E2F`.'),
+        'emi1_apc_c_inhibitor': ('Emi1', 'native SBML value', 'Tracks Emi1 APC/C inhibitor. Maps to SBML symbol `Emi1`.'),
+        'p27_cdk_inhibitor': ('p27', 'native SBML value', 'Tracks p27 CDK inhibitor. Maps to SBML symbol `p27`.'),
+        'phosphorylated_rb_model_state_y00': ('pRbY00', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y00. Maps to SBML symbol `pRbY00`.'),
+        'phosphorylated_rb_model_state_y01': ('pRbY01', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y01. Maps to SBML symbol `pRbY01`.'),
+        'phosphorylated_rb_model_state_y10': ('pRbY10', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y10. Maps to SBML symbol `pRbY10`.'),
+        'phosphorylated_rb_model_state_y11': ('pRbY11', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y11. Maps to SBML symbol `pRbY11`.'),
+        'phosphorylated_rb_model_state_y20': ('pRbY20', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y20. Maps to SBML symbol `pRbY20`.'),
+        'phosphorylated_rb_model_state_y21': ('pRbY21', 'native SBML value', 'Tracks Phosphorylated Rb Model state Y21. Maps to SBML symbol `pRbY21`.'),
+        'total_ycyclin_yd': ('totalYCyclinYD', 'native SBML value', 'Tracks Total YCyclin YD. Maps to SBML symbol `totalYCyclinYD`.'),
+        'total_ycyclin_ye': ('totalYCyclinYE', 'native SBML value', 'Tracks Total YCyclin YE. Maps to SBML symbol `totalYCyclinYE`.'),
+        'total_ycyclin_ya': ('totalYCyclinYA', 'native SBML value', 'Tracks Total YCyclin YA. Maps to SBML symbol `totalYCyclinYA`.'),
+        'total_yp27': ('totalYp27', 'native SBML value', 'Tracks Total Yp27. Maps to SBML symbol `totalYp27`.'),
+        'hypophosphorylated_yp_rb': ('hypophosphorylatedYpRb', 'native SBML value', 'Tracks Hypophosphorylated Yp Rb. Maps to SBML symbol `hypophosphorylatedYpRb`.'),
+        'hyperphosphorylated_yp_rb': ('hyperphosphorylatedYpRb', 'native SBML value', 'Tracks Hyperphosphorylated Yp Rb. Maps to SBML symbol `hyperphosphorylatedYpRb`.'),
+        'total_yemi1': ('totalYEmi1', 'native SBML value', 'Tracks Total YEmi1. Maps to SBML symbol `totalYEmi1`.'),
+        'active_ycdk2': ('activeYCdk2', 'native SBML value', 'Tracks Active YCdk2. Maps to SBML symbol `activeYCdk2`.'),
+    }
+
+    def __init__(self, model_path: str = 'data/BIOMD0000000109.xml', integration_step: float = 0.01) -> None:
+        super().__init__(model_path=model_path, integration_step=integration_step)
+
+    def inputs(self):
+        specs = super().inputs()
+        specs.pop("integration_step", None)
+        return specs
+
+
+# Canonical alias for stable entrypoint naming.
+Haberichter2007CellcycleBiomd0000000109Model = SbmlHaberichter2007Cellcycle

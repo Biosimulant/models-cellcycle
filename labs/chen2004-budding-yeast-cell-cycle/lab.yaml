@@ -1,0 +1,244 @@
+schema_version: '2.0'
+title: Chen2004 - Cell Cycle Regulation Lab
+description: Single-model lab wrapper for Chen2004 - Cell Cycle Regulation. Chen2004 - Cell Cycle Regulation This
+  is a hypothetical model of cell cycle that describes the molecular mechanism for regulating DNA synthesis, bud
+  emergence, mitosis, and cell division in budding ye. It can be used to explore cell-cycle regulation dynamics
+  and compare checkpoint behavior across conditions.
+models:
+- alias: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.state
+  to:
+  - visualisation.cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model_state
+- from: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.summary
+  to:
+  - visualisation.cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model_summary
+- from: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: cdc15i
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc15i
+    label: CDC15i
+    description: Controls CDC15i in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc15i`.
+  - name: model_state_ie
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_ie
+    label: Model state IE
+    description: Controls Model state IE in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_ie`.
+  - name: model_state_pe
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_pe
+    label: Model state PE
+    description: Controls Model state PE in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_pe`.
+  - name: phosphorylated_tem1gd
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_tem1gd
+    label: Phosphorylated TEM1GD
+    description: Controls Phosphorylated TEM1GD in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_tem1gd`.
+  outputs:
+  - name: bub2
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.bub2
+    label: Bub2
+    description: Tracks Bub2 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.bub2`.
+  - name: budding_index
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.budding_index
+    label: Budding index
+    description: Tracks Budding index in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.budding_index`.
+  - name: model_state_c2_c2
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_c2_c2
+    label: Model state C2 (C2)
+    description: Tracks Model state C2 (C2) in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_c2_c2`.
+  - name: phosphorylated_model_state_c2
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_model_state_c2
+    label: Phosphorylated Model state C2
+    description: Tracks Phosphorylated Model state C2 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_model_state_c2`.
+  - name: model_state_c5_c5
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_c5_c5
+    label: Model state C5 (C5)
+    description: Tracks Model state C5 (C5) in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_c5_c5`.
+  - name: phosphorylated_model_state_c5
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_model_state_c5
+    label: Phosphorylated Model state C5
+    description: Tracks Phosphorylated Model state C5 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_model_state_c5`.
+  - name: cdc14_phosphatase
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc14_phosphatase
+    label: Cdc14 phosphatase
+    description: Tracks Cdc14 phosphatase in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc14_phosphatase`.
+  - name: cdc15_mitotic_exit_kinase
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc15_mitotic_exit_kinase
+    label: Cdc15 mitotic exit kinase
+    description: Tracks Cdc15 mitotic exit kinase in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc15_mitotic_exit_kinase`.
+  - name: cdc20
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc20
+    label: Cdc20
+    description: Tracks Cdc20 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc20`.
+  - name: inactive_cdc20
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.inactive_cdc20
+    label: Inactive Cdc20
+    description: Tracks Inactive Cdc20 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.inactive_cdc20`.
+  - name: cdc6_replication_licensing_factor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc6_replication_licensing_factor
+    label: Cdc6 replication licensing factor
+    description: Tracks Cdc6 replication licensing factor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdc6_replication_licensing_factor`.
+  - name: phosphorylated_cdc6
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_cdc6
+    label: Phosphorylated CDC6
+    description: Tracks Phosphorylated CDC6 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_cdc6`.
+  - name: cdh1_apc_c_activator
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdh1_apc_c_activator
+    label: Cdh1 APC/C activator
+    description: Tracks Cdh1 APC/C activator in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cdh1_apc_c_activator`.
+  - name: inactive_cdh1
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.inactive_cdh1
+    label: Inactive Cdh1
+    description: Tracks Inactive Cdh1 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.inactive_cdh1`.
+  - name: clb2_mitotic_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.clb2_mitotic_cyclin
+    label: Clb2 mitotic cyclin
+    description: Tracks Clb2 mitotic cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.clb2_mitotic_cyclin`.
+  - name: clb5_s_phase_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.clb5_s_phase_cyclin
+    label: Clb5 S-phase cyclin
+    description: Tracks Clb5 S-phase cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.clb5_s_phase_cyclin`.
+  - name: cln2_g1_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cln2_g1_cyclin
+    label: Cln2 G1 cyclin
+    description: Tracks Cln2 G1 cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cln2_g1_cyclin`.
+  - name: esp1_separase
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.esp1_separase
+    label: Esp1 separase
+    description: Tracks Esp1 separase in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.esp1_separase`.
+  - name: model_state_f2
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_f2
+    label: Model state F2
+    description: Tracks Model state F2 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_f2`.
+  - name: phosphorylated_f2
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_f2
+    label: Phosphorylated F2
+    description: Tracks Phosphorylated F2 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_f2`.
+  - name: model_state_f5
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_f5
+    label: Model state F5
+    description: Tracks Model state F5 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.model_state_f5`.
+  - name: phosphorylated_f5
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_f5
+    label: Phosphorylated F5
+    description: Tracks Phosphorylated F5 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_f5`.
+  - name: phosphorylated_ie
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_ie
+    label: Phosphorylated IE
+    description: Tracks Phosphorylated IE in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_ie`.
+  - name: lte1_mitotic_exit_regulator
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.lte1_mitotic_exit_regulator
+    label: Lte1 mitotic exit regulator
+    description: Tracks Lte1 mitotic exit regulator in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.lte1_mitotic_exit_regulator`.
+  - name: mad2_spindle_checkpoint_protein
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.mad2_spindle_checkpoint_protein
+    label: Mad2 spindle checkpoint protein
+    description: Tracks Mad2 spindle checkpoint protein in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.mad2_spindle_checkpoint_protein`.
+  - name: cell_mass
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cell_mass
+    label: Cell mass
+    description: Tracks Cell mass in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cell_mass`.
+  - name: net1_nucleolar_cdc14_anchor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.net1_nucleolar_cdc14_anchor
+    label: Net1 nucleolar Cdc14 anchor
+    description: Tracks Net1 nucleolar Cdc14 anchor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.net1_nucleolar_cdc14_anchor`.
+  - name: phosphorylated_net1
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_net1
+    label: Phosphorylated NET1
+    description: Tracks Phosphorylated NET1 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_net1`.
+  - name: replication_origin_state
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.replication_origin_state
+    label: Replication origin state
+    description: Tracks Replication origin state in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.replication_origin_state`.
+  - name: pds1_securin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.pds1_securin
+    label: Pds1 securin
+    description: Tracks Pds1 securin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.pds1_securin`.
+  - name: ppx_phosphatase
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.ppx_phosphatase
+    label: PPX phosphatase
+    description: Tracks PPX phosphatase in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.ppx_phosphatase`.
+  - name: rent_cdc14_sequestration_complex
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.rent_cdc14_sequestration_complex
+    label: RENT Cdc14 sequestration complex
+    description: Tracks RENT Cdc14 sequestration complex in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.rent_cdc14_sequestration_complex`.
+  - name: phosphorylated_rent
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_rent
+    label: Phosphorylated RENT
+    description: Tracks Phosphorylated RENT in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_rent`.
+  - name: sic1
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.sic1
+    label: Sic1
+    description: Tracks Sic1 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.sic1`.
+  - name: phosphorylated_sic1
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_sic1
+    label: Phosphorylated Sic1
+    description: Tracks Phosphorylated Sic1 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_sic1`.
+  - name: spindle_state
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.spindle_state
+    label: Spindle state
+    description: Tracks Spindle state in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.spindle_state`.
+  - name: swi5_transcription_factor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.swi5_transcription_factor
+    label: Swi5 transcription factor
+    description: Tracks Swi5 transcription factor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.swi5_transcription_factor`.
+  - name: phosphorylated_swi5
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_swi5
+    label: Phosphorylated SWI5
+    description: Tracks Phosphorylated SWI5 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_swi5`.
+  - name: phosphorylated_tem1gt
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_tem1gt
+    label: Phosphorylated TEM1GT
+    description: Tracks Phosphorylated TEM1GT in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.phosphorylated_tem1gt`.
+  - name: bck2_g1_regulator
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.bck2_g1_regulator
+    label: Bck2 G1 regulator
+    description: Tracks Bck2 G1 regulator in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.bck2_g1_regulator`.
+  - name: total_cdc14_phosphatase
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cdc14_phosphatase
+    label: Total Cdc14 phosphatase
+    description: Tracks Total Cdc14 phosphatase in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cdc14_phosphatase`.
+  - name: total_cdc6_replication_licensing_factor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cdc6_replication_licensing_factor
+    label: Total Cdc6 replication licensing factor
+    description: Tracks Total Cdc6 replication licensing factor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cdc6_replication_licensing_factor`.
+  - name: total_cyclin_dependent_kinase_inhibitor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cyclin_dependent_kinase_inhibitor
+    label: Total cyclin-dependent kinase inhibitor
+    description: Tracks Total cyclin-dependent kinase inhibitor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_cyclin_dependent_kinase_inhibitor`.
+  - name: total_clb2_mitotic_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_clb2_mitotic_cyclin
+    label: Total Clb2 mitotic cyclin
+    description: Tracks Total Clb2 mitotic cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_clb2_mitotic_cyclin`.
+  - name: total_clb5_s_phase_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_clb5_s_phase_cyclin
+    label: Total Clb5 S-phase cyclin
+    description: Tracks Total Clb5 S-phase cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_clb5_s_phase_cyclin`.
+  - name: cln3_start_cyclin
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cln3_start_cyclin
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.cln3_start_cyclin`.
+  - name: mcm1
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.mcm1
+    label: Mcm1
+    description: Tracks Mcm1 in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.mcm1`.
+  - name: total_net1_nucleolar_cdc14_anchor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_net1_nucleolar_cdc14_anchor
+    label: Total Net1 nucleolar Cdc14 anchor
+    description: Tracks Total Net1 nucleolar Cdc14 anchor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_net1_nucleolar_cdc14_anchor`.
+  - name: sbf_transcription_factor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.sbf_transcription_factor
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.sbf_transcription_factor`.
+  - name: total_sic1_cdk_inhibitor
+    maps_to: cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_sic1_cdk_inhibitor
+    label: Total Sic1 CDK inhibitor
+    description: Tracks Total Sic1 CDK inhibitor in the lab model via `cellcycle_sbml_chen2004_cell_cycle_regulation_biomd0000000056_model.total_sic1_cdk_inhibitor`.

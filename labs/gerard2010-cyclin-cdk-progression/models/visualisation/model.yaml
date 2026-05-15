@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes
+  Visualisation
+description: Dedicated question-and-answer visualisation model for Gerard2010 - Progression of mammalian cell cycle
+  by successive activation of various cyclin cdk complexes.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes
+      Lab
+    question: Which model variables show measurable cell-cycle activity in this run?
+    answer_focus: The answer is based on module-specific trajectories and ranked changes from the SBML simulation.
+    sources:
+    - alias: cellcycle_sbml_gerard2010_progression_of_mammalian_cell_cycle_b_biomd0000000941_model
+      title: Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes
+      observables:
+      - id: cyclin_D_Cdk4_6
+        port: cyclin_d_cdk4_6
+        label: Cyclin D CDK4 6
+        group: g1s
+      - id: transcription_factor_E2F_active
+        port: transcription_factor_e2f_active
+        label: Transcription Factor E2F Active
+        group: g1s
+      - id: cyclin_E_Cdk2
+        port: cyclin_e_cdk2
+        label: Cyclin E CDK2
+        group: g1s
+      - id: cyclin_A_Cdk2
+        port: cyclin_active_cdk2
+        label: Cyclin Active CDK2
+        group: g1s
+      - id: cyclin_B_Cdk1
+        port: cyclin_b_cdk1
+        label: Cyclin B CDK1
+        group: mitosis
+      - id: Cdc20_active
+        port: cdc20_active
+        label: Cdc20 Active
+        group: mitosis
+      - id: E2F_total
+        port: e2f_total
+        label: E2F Total
+        group: g1s
+      - id: Cdc20_total
+        port: cdc20_total
+        label: Cdc20 Total
+        group: mitosis
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

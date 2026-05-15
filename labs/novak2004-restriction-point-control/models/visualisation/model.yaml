@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle Visualisation
+description: Dedicated question-and-answer visualisation model for Novak2004 - A Model for Restriction Point Control
+  of the Mammalian Cell Cycle.
+standard: other
+tags:
+- cellcycle
+- visualisation
+- sbml
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.cellcycle_visualisation:CellCycleVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle Lab
+    question: Does the G1/S commitment gate open during this simulation?
+    answer_focus: The answer is based on Rb/E2F, Cyclin D/E, CDK2, and inhibitor variables.
+    sources:
+    - alias: cellcycle_sbml_novak2004_a_model_for_restriction_point_control_model2006080001_model
+      title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle
+      observables:
+      - id: ERG
+        port: early_response_gene_module
+        label: Early response gene module
+        group: g1s
+      - id: DRG
+        port: delayed_response_gene_module
+        label: Delayed response gene module
+        group: g1s
+      - id: cycD
+        port: cyclin_d
+        label: Cyclin D
+        group: g1s
+      - id: cycD_Kip1
+        port: cyclin_d_kip1
+        label: Cyclin D:Kip1
+        group: g1s
+      - id: cycE
+        port: cyclin_e
+        label: Cyclin E
+        group: g1s
+      - id: cycE_Kip1
+        port: cyclin_e_kip1
+        label: Cyclin E:Kip1
+        group: g1s
+      - id: cycA
+        port: cyclin_a
+        label: Cyclin A
+        group: g1s
+      - id: cycA_Kip1
+        port: cyclin_a_kip1
+        label: Cyclin A:Kip1
+        group: g1s
+      - id: Kip1
+        port: kip1_cdk_inhibitor
+        label: Kip1 CDK inhibitor
+        group: g1s
+      - id: E2F
+        port: e2f_transcription_factor
+        label: E2F transcription factor
+        group: g1s
+      - id: cycB
+        port: cyclin_b
+        label: Cyclin B
+        group: g1s
+      - id: Cdh1
+        port: cdh1_apc_c_activator
+        label: Cdh1 APC/C activator
+        group: g1s
+      - id: cdc20T
+        port: cdc20t
+        label: Cdc20T
+        group: g1s
+      - id: Cdc20
+        port: cdc20_apc_c_activator
+        label: Cdc20 APC/C activator
+        group: g1s
+      - id: PPX
+        port: ppx_phosphatase
+        label: PPX phosphatase
+        group: g1s
+      - id: IEP
+        port: phosphorylated_ie
+        label: Phosphorylated IE
+        group: g1s
+      - id: GM
+        port: model_state_gm
+        label: Model state GM
+        group: g1s
+      - id: mass
+        port: mass
+        label: Mass
+        group: g1s
+  communication_step: 1.0
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

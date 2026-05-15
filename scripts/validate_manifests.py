@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate model.yaml and space.yaml manifests in models."""
+"""Validate model.yaml and lab.yaml manifests in labs."""
 
 from __future__ import annotations
 
@@ -19,10 +19,10 @@ def _load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
-def _resolve_local_path(raw_path: Any) -> Path | None:
+def _resolve_embedded_path(manifest_path: Path, raw_path: Any) -> Path | None:
     if not isinstance(raw_path, str) or not raw_path.strip():
         return None
-    target = (ROOT / raw_path).resolve()
+    target = (manifest_path.parent / raw_path.strip()).resolve()
     if ROOT not in target.parents and target != ROOT:
         return None
     return target
@@ -59,7 +59,7 @@ def _validate_model_manifest(path: Path) -> list[str]:
     return errors
 
 
-def _validate_space_manifest(path: Path) -> list[str]:
+def _validate_lab_manifest(path: Path) -> list[str]:
     errors: list[str] = []
     try:
         manifest = _load_yaml(path)
@@ -79,28 +79,20 @@ def _validate_space_manifest(path: Path) -> list[str]:
             errors.append(f"{path}: models[{idx}] missing required alias")
 
         local_path = entry.get("path")
-        package_name = entry.get("package")
-        version = entry.get("version")
-        has_package_ref = (
-            isinstance(package_name, str)
-            and bool(package_name.strip())
-            and isinstance(version, str)
-            and bool(version.strip())
-        )
-
-        if local_path is not None:
-            if not isinstance(local_path, str) or not local_path.strip():
-                errors.append(f"{path}: models[{idx}].path must be a non-empty string")
-                continue
-            target = _resolve_local_path(local_path)
-            if target is None:
-                errors.append(f"{path}: models[{idx}].path must stay within the repository: {local_path}")
-            elif not target.exists():
-                errors.append(f"{path}: models[{idx}].path does not exist: {local_path}")
+        if not isinstance(local_path, str) or not local_path.strip():
+            errors.append(f"{path}: models[{idx}] must define a non-empty path")
             continue
 
-        if not has_package_ref:
-            errors.append(f"{path}: models[{idx}] must define either path or package/version")
+        target = _resolve_embedded_path(path, local_path)
+        if target is None:
+            errors.append(f"{path}: models[{idx}].path must stay within the repository: {local_path}")
+        elif not target.exists():
+            errors.append(f"{path}: models[{idx}].path does not exist: {local_path}")
+        elif target.is_dir() and not any((target / name).exists() for name in ("model.yaml", "model.yml")):
+            errors.append(f"{path}: models[{idx}].path is missing model.yaml/model.yml: {local_path}")
+
+        if entry.get("package") is not None or entry.get("version") is not None:
+            errors.append(f"{path}: models[{idx}] must not use package/version; use path only")
 
     return errors
 
@@ -109,16 +101,16 @@ def main() -> int:
     errors: list[str] = []
 
     model_manifests = sorted(ROOT.rglob("model.yaml"))
-    space_manifests = sorted(ROOT.rglob("space.yaml"))
+    lab_manifests = sorted(ROOT.rglob("lab.yaml"))
 
     for path in model_manifests:
         if "/templates/" in str(path):
             continue
         errors.extend(_validate_model_manifest(path))
-    for path in space_manifests:
+    for path in lab_manifests:
         if "/templates/" in str(path):
             continue
-        errors.extend(_validate_space_manifest(path))
+        errors.extend(_validate_lab_manifest(path))
 
     if errors:
         print("Manifest validation failed:")
@@ -126,7 +118,7 @@ def main() -> int:
             print(f" - {err}")
         return 1
 
-    print(f"Validated {len(model_manifests)} model manifest(s) and {len(space_manifests)} space manifest(s).")
+    print(f"Validated {len(model_manifests)} model manifest(s) and {len(lab_manifests)} lab manifest(s).")
     return 0
 
 

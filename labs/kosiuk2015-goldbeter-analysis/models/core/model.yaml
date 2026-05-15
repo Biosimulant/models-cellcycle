@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle
+description: A minimal model describing the embryonic cell division cycle at the molecular level in eukaryotes is
+  analyzed mathematically. It is known from numerical simulations that the corresponding three-dimens.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Ilona Kosiuk
+- Peter Szmolyan
+upstream:
+  id: biomodels_ebi:BIOMD0000000933
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000933
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000933
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000933?filename=Kosiuk2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.kosiuk2015_geometric_analysis_of_the_goldbeter_m_biomd0000000933_model:Kosiuk2015GeometricAnalysisOfTheGoldbeterMBiomd0000000933Model
+  init_kwargs:
+    model_path: data/BIOMD0000000933.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: model_state_c_c
+    maps_to: C
+    label: Model state C (C)
+    description: Tracks Model state C (C). Maps to SBML symbol `C`.
+  - name: model_state_m_m
+    maps_to: M
+    label: Model state M (M)
+    description: Tracks Model state M (M). Maps to SBML symbol `M`.
+  - name: model_state_x_x
+    maps_to: X
+    label: Model state X (X)
+    description: Tracks Model state X (X). Maps to SBML symbol `X`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

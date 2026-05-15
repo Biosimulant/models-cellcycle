@@ -1,0 +1,272 @@
+schema_version: '2.0'
+title: Haberichter2007_cellcycle
+description: This model is according to the paper A systems biology dynamical model of mammalian G1 cell cycle progression.
+  Supplementary Figure 2A has been reproduced by the MathSBML and CellDesigner.
+standard: other
+tags:
+- cellcycle
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Thomas Haberichter
+- "Britta M\xE4dge"
+- Renee A Christopher
+- Naohisa Yoshioka
+- Anjali Dhiman
+upstream:
+  id: biomodels_ebi:BIOMD0000000109
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000109
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000109
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000109?filename=BIOMD0000000109_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.haberichter2007_cellcycle_biomd0000000109_model:Haberichter2007CellcycleBiomd0000000109Model
+  init_kwargs:
+    model_path: data/BIOMD0000000109.xml
+  communication_step: 0.01
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  outputs:
+  - name: apc_c_complex
+    maps_to: APCC
+    label: APC/C complex
+    description: Tracks APC/C complex. Maps to SBML symbol `APCC`.
+  - name: apc_c_cdk_interaction_state_apccycdk1y00ycdk1y01yint
+    maps_to: APCCYCdk1Y00YCdk1Y01YInt
+    label: APC/C-CDK interaction state APCCYCdk1Y00YCdk1Y01YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk1Y00YCdk1Y01YInt. Maps to SBML symbol `APCCYCdk1Y00YCdk1Y01YInt`.
+  - name: apc_c_cdk_interaction_state_apccycdk1y10ycdk1y11yint
+    maps_to: APCCYCdk1Y10YCdk1Y11YInt
+    label: APC/C-CDK interaction state APCCYCdk1Y10YCdk1Y11YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk1Y10YCdk1Y11YInt. Maps to SBML symbol `APCCYCdk1Y10YCdk1Y11YInt`.
+  - name: apc_c_cdk_interaction_state_apccycdk2y000ycdk2y002yint
+    maps_to: APCCYCdk2Y000YCdk2Y002YInt
+    label: APC/C-CDK interaction state APCCYCdk2Y000YCdk2Y002YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk2Y000YCdk2Y002YInt. Maps to SBML symbol `APCCYCdk2Y000YCdk2Y002YInt`.
+  - name: apc_c_cdk_interaction_state_apccycdk2y010ycdk2y012yint
+    maps_to: APCCYCdk2Y010YCdk2Y012YInt
+    label: APC/C-CDK interaction state APCCYCdk2Y010YCdk2Y012YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk2Y010YCdk2Y012YInt. Maps to SBML symbol `APCCYCdk2Y010YCdk2Y012YInt`.
+  - name: apc_c_cdk_interaction_state_apccycdk2y100ycdk2y102yint
+    maps_to: APCCYCdk2Y100YCdk2Y102YInt
+    label: APC/C-CDK interaction state APCCYCdk2Y100YCdk2Y102YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk2Y100YCdk2Y102YInt. Maps to SBML symbol `APCCYCdk2Y100YCdk2Y102YInt`.
+  - name: apc_c_cdk_interaction_state_apccycdk2y110ycdk2y112yint
+    maps_to: APCCYCdk2Y110YCdk2Y112YInt
+    label: APC/C-CDK interaction state APCCYCdk2Y110YCdk2Y112YInt
+    description: Tracks APC/C-CDK interaction state APCCYCdk2Y110YCdk2Y112YInt. Maps to SBML symbol `APCCYCdk2Y110YCdk2Y112YInt`.
+  - name: apc_c_bound_cyclin_ayint_state
+    maps_to: APCCYCyclinAYInt
+    label: APC/C-bound CyclinAYInt state
+    description: Tracks APC/C-bound CyclinAYInt state. Maps to SBML symbol `APCCYCyclinAYInt`.
+  - name: apc_c_bound_emi1_state
+    maps_to: APCCYEmi1
+    label: APC/C-bound Emi1 state
+    description: Tracks APC/C-bound Emi1 state. Maps to SBML symbol `APCCYEmi1`.
+  - name: cdk1_phosphorylation_state_00
+    maps_to: Cdk1Y00
+    label: CDK1 phosphorylation state 00
+    description: Tracks CDK1 phosphorylation state 00. Maps to SBML symbol `Cdk1Y00`.
+  - name: cdk1_phosphorylation_state_01
+    maps_to: Cdk1Y01
+    label: CDK1 phosphorylation state 01
+    description: Tracks CDK1 phosphorylation state 01. Maps to SBML symbol `Cdk1Y01`.
+  - name: cdk1_phosphorylation_state_10
+    maps_to: Cdk1Y10
+    label: CDK1 phosphorylation state 10
+    description: Tracks CDK1 phosphorylation state 10. Maps to SBML symbol `Cdk1Y10`.
+  - name: cdk1_phosphorylation_state_11
+    maps_to: Cdk1Y11
+    label: CDK1 phosphorylation state 11
+    description: Tracks CDK1 phosphorylation state 11. Maps to SBML symbol `Cdk1Y11`.
+  - name: cdk1y11yp_rb_y10yp_rb_y20yint
+    maps_to: Cdk1Y11YpRbY10YpRbY20YInt
+    label: Cdk1Y11Yp Rb Y10Yp Rb Y20YInt
+    description: Tracks Cdk1Y11Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk1Y11YpRbY10YpRbY20YInt`.
+  - name: cdk1y11yp_rb_y11yp_rb_y21yint
+    maps_to: Cdk1Y11YpRbY11YpRbY21YInt
+    label: Cdk1Y11Yp Rb Y11Yp Rb Y21YInt
+    description: Tracks Cdk1Y11Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk1Y11YpRbY11YpRbY21YInt`.
+  - name: cdk2_phosphorylation_state_000
+    maps_to: Cdk2Y000
+    label: CDK2 phosphorylation state 000
+    description: Tracks CDK2 phosphorylation state 000. Maps to SBML symbol `Cdk2Y000`.
+  - name: cdk2_phosphorylation_state_001
+    maps_to: Cdk2Y001
+    label: CDK2 phosphorylation state 001
+    description: Tracks CDK2 phosphorylation state 001. Maps to SBML symbol `Cdk2Y001`.
+  - name: cdk2_phosphorylation_state_002
+    maps_to: Cdk2Y002
+    label: CDK2 phosphorylation state 002
+    description: Tracks CDK2 phosphorylation state 002. Maps to SBML symbol `Cdk2Y002`.
+  - name: cdk2_phosphorylation_state_010
+    maps_to: Cdk2Y010
+    label: CDK2 phosphorylation state 010
+    description: Tracks CDK2 phosphorylation state 010. Maps to SBML symbol `Cdk2Y010`.
+  - name: cdk2_phosphorylation_state_011
+    maps_to: Cdk2Y011
+    label: CDK2 phosphorylation state 011
+    description: Tracks CDK2 phosphorylation state 011. Maps to SBML symbol `Cdk2Y011`.
+  - name: cdk2y011yp_rb_y10yp_rb_y20yint
+    maps_to: Cdk2Y011YpRbY10YpRbY20YInt
+    label: Cdk2Y011Yp Rb Y10Yp Rb Y20YInt
+    description: Tracks Cdk2Y011Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk2Y011YpRbY10YpRbY20YInt`.
+  - name: cdk2y011yp_rb_y11yp_rb_y21yint
+    maps_to: Cdk2Y011YpRbY11YpRbY21YInt
+    label: Cdk2Y011Yp Rb Y11Yp Rb Y21YInt
+    description: Tracks Cdk2Y011Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk2Y011YpRbY11YpRbY21YInt`.
+  - name: cdk2_phosphorylation_state_012
+    maps_to: Cdk2Y012
+    label: CDK2 phosphorylation state 012
+    description: Tracks CDK2 phosphorylation state 012. Maps to SBML symbol `Cdk2Y012`.
+  - name: cdk2y012yp_rb_y10yp_rb_y20yint
+    maps_to: Cdk2Y012YpRbY10YpRbY20YInt
+    label: Cdk2Y012Yp Rb Y10Yp Rb Y20YInt
+    description: Tracks Cdk2Y012Yp Rb Y10Yp Rb Y20YInt. Maps to SBML symbol `Cdk2Y012YpRbY10YpRbY20YInt`.
+  - name: cdk2y012yp_rb_y11yp_rb_y21yint
+    maps_to: Cdk2Y012YpRbY11YpRbY21YInt
+    label: Cdk2Y012Yp Rb Y11Yp Rb Y21YInt
+    description: Tracks Cdk2Y012Yp Rb Y11Yp Rb Y21YInt. Maps to SBML symbol `Cdk2Y012YpRbY11YpRbY21YInt`.
+  - name: cdk2_phosphorylation_state_100
+    maps_to: Cdk2Y100
+    label: CDK2 phosphorylation state 100
+    description: Tracks CDK2 phosphorylation state 100. Maps to SBML symbol `Cdk2Y100`.
+  - name: cdk2_phosphorylation_state_101
+    maps_to: Cdk2Y101
+    label: CDK2 phosphorylation state 101
+    description: Tracks CDK2 phosphorylation state 101. Maps to SBML symbol `Cdk2Y101`.
+  - name: cdk2_phosphorylation_state_102
+    maps_to: Cdk2Y102
+    label: CDK2 phosphorylation state 102
+    description: Tracks CDK2 phosphorylation state 102. Maps to SBML symbol `Cdk2Y102`.
+  - name: cdk2_phosphorylation_state_110
+    maps_to: Cdk2Y110
+    label: CDK2 phosphorylation state 110
+    description: Tracks CDK2 phosphorylation state 110. Maps to SBML symbol `Cdk2Y110`.
+  - name: cdk2_phosphorylation_state_111
+    maps_to: Cdk2Y111
+    label: CDK2 phosphorylation state 111
+    description: Tracks CDK2 phosphorylation state 111. Maps to SBML symbol `Cdk2Y111`.
+  - name: cdk2_phosphorylation_state_112
+    maps_to: Cdk2Y112
+    label: CDK2 phosphorylation state 112
+    description: Tracks CDK2 phosphorylation state 112. Maps to SBML symbol `Cdk2Y112`.
+  - name: cdk4_phosphorylation_state_00
+    maps_to: Cdk4Y00
+    label: CDK4 phosphorylation state 00
+    description: Tracks CDK4 phosphorylation state 00. Maps to SBML symbol `Cdk4Y00`.
+  - name: cdk4_phosphorylation_state_01
+    maps_to: Cdk4Y01
+    label: CDK4 phosphorylation state 01
+    description: Tracks CDK4 phosphorylation state 01. Maps to SBML symbol `Cdk4Y01`.
+  - name: cdk4y01yp_rb_y00yp_rb_y10yint
+    maps_to: Cdk4Y01YpRbY00YpRbY10YInt
+    label: Cdk4Y01Yp Rb Y00Yp Rb Y10YInt
+    description: Tracks Cdk4Y01Yp Rb Y00Yp Rb Y10YInt. Maps to SBML symbol `Cdk4Y01YpRbY00YpRbY10YInt`.
+  - name: cdk4y01yp_rb_y01yp_rb_y11yint
+    maps_to: Cdk4Y01YpRbY01YpRbY11YInt
+    label: Cdk4Y01Yp Rb Y01Yp Rb Y11YInt
+    description: Tracks Cdk4Y01Yp Rb Y01Yp Rb Y11YInt. Maps to SBML symbol `Cdk4Y01YpRbY01YpRbY11YInt`.
+  - name: cdk4_phosphorylation_state_10
+    maps_to: Cdk4Y10
+    label: CDK4 phosphorylation state 10
+    description: Tracks CDK4 phosphorylation state 10. Maps to SBML symbol `Cdk4Y10`.
+  - name: cdk4_phosphorylation_state_11
+    maps_to: Cdk4Y11
+    label: CDK4 phosphorylation state 11
+    description: Tracks CDK4 phosphorylation state 11. Maps to SBML symbol `Cdk4Y11`.
+  - name: cyclin_a
+    maps_to: CyclinA
+    label: Cyclin A
+    description: Tracks Cyclin A. Maps to SBML symbol `CyclinA`.
+  - name: cyclin_d
+    maps_to: CyclinD
+    label: Cyclin D
+    description: Tracks Cyclin D. Maps to SBML symbol `CyclinD`.
+  - name: cyclin_e
+    maps_to: CyclinE
+    label: Cyclin E
+    description: Tracks Cyclin E. Maps to SBML symbol `CyclinE`.
+  - name: e2f_transcription_factor
+    maps_to: E2F
+    label: E2F transcription factor
+    description: Tracks E2F transcription factor. Maps to SBML symbol `E2F`.
+  - name: emi1_apc_c_inhibitor
+    maps_to: Emi1
+    label: Emi1 APC/C inhibitor
+    description: Tracks Emi1 APC/C inhibitor. Maps to SBML symbol `Emi1`.
+  - name: p27_cdk_inhibitor
+    maps_to: p27
+    label: p27 CDK inhibitor
+    description: Tracks p27 CDK inhibitor. Maps to SBML symbol `p27`.
+  - name: phosphorylated_rb_model_state_y00
+    maps_to: pRbY00
+    label: Phosphorylated Rb Model state Y00
+    description: Tracks Phosphorylated Rb Model state Y00. Maps to SBML symbol `pRbY00`.
+  - name: phosphorylated_rb_model_state_y01
+    maps_to: pRbY01
+    label: Phosphorylated Rb Model state Y01
+    description: Tracks Phosphorylated Rb Model state Y01. Maps to SBML symbol `pRbY01`.
+  - name: phosphorylated_rb_model_state_y10
+    maps_to: pRbY10
+    label: Phosphorylated Rb Model state Y10
+    description: Tracks Phosphorylated Rb Model state Y10. Maps to SBML symbol `pRbY10`.
+  - name: phosphorylated_rb_model_state_y11
+    maps_to: pRbY11
+    label: Phosphorylated Rb Model state Y11
+    description: Tracks Phosphorylated Rb Model state Y11. Maps to SBML symbol `pRbY11`.
+  - name: phosphorylated_rb_model_state_y20
+    maps_to: pRbY20
+    label: Phosphorylated Rb Model state Y20
+    description: Tracks Phosphorylated Rb Model state Y20. Maps to SBML symbol `pRbY20`.
+  - name: phosphorylated_rb_model_state_y21
+    maps_to: pRbY21
+    label: Phosphorylated Rb Model state Y21
+    description: Tracks Phosphorylated Rb Model state Y21. Maps to SBML symbol `pRbY21`.
+  - name: total_ycyclin_yd
+    maps_to: totalYCyclinYD
+    label: Total YCyclin YD
+    description: Tracks Total YCyclin YD. Maps to SBML symbol `totalYCyclinYD`.
+  - name: total_ycyclin_ye
+    maps_to: totalYCyclinYE
+    label: Total YCyclin YE
+    description: Tracks Total YCyclin YE. Maps to SBML symbol `totalYCyclinYE`.
+  - name: total_ycyclin_ya
+    maps_to: totalYCyclinYA
+    label: Total YCyclin YA
+    description: Tracks Total YCyclin YA. Maps to SBML symbol `totalYCyclinYA`.
+  - name: total_yp27
+    maps_to: totalYp27
+    label: Total Yp27
+    description: Tracks Total Yp27. Maps to SBML symbol `totalYp27`.
+  - name: hypophosphorylated_yp_rb
+    maps_to: hypophosphorylatedYpRb
+    label: Hypophosphorylated Yp Rb
+    description: Tracks Hypophosphorylated Yp Rb. Maps to SBML symbol `hypophosphorylatedYpRb`.
+  - name: hyperphosphorylated_yp_rb
+    maps_to: hyperphosphorylatedYpRb
+    label: Hyperphosphorylated Yp Rb
+    description: Tracks Hyperphosphorylated Yp Rb. Maps to SBML symbol `hyperphosphorylatedYpRb`.
+  - name: total_yemi1
+    maps_to: totalYEmi1
+    label: Total YEmi1
+    description: Tracks Total YEmi1. Maps to SBML symbol `totalYEmi1`.
+  - name: active_ycdk2
+    maps_to: activeYCdk2
+    label: Active YCdk2
+    description: Tracks Active YCdk2. Maps to SBML symbol `activeYCdk2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Largest-change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML symbols to human-friendly labels.
+  inputs: []

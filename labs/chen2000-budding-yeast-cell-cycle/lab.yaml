@@ -1,0 +1,154 @@
+schema_version: '2.0'
+title: Chen2000_CellCycle Lab
+description: 'Single-model lab wrapper for Chen2000_CellCycle. This a model from the article: Kinetic analysis of
+  a molecular model of the budding yeast cell cycle. Chen KC, Csikasz-Nagy A, Gyorffy B, Val J, Novak B, Tyson JJ.'
+models:
+- alias: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.state
+  to:
+  - visualisation.cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model_state
+- from: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.summary
+  to:
+  - visualisation.cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model_summary
+- from: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.species_labels
+  to:
+  - visualisation.cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
+io:
+  inputs:
+  - name: hct1_t
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.hct1_t
+    label: Hct1 T
+    description: Controls Hct1 T in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.hct1_t`.
+  - name: bck2_0
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.bck2_0
+    label: Bck2 0
+    description: Controls Bck2 0 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.bck2_0`.
+  - name: cln3_max
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln3_max
+    label: Cln3 Max
+    description: Controls Cln3 Max in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln3_max`.
+  outputs:
+  - name: cln2_g1_cyclin
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln2_g1_cyclin
+    label: Cln2 G1 cyclin
+    description: Tracks Cln2 G1 cyclin in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln2_g1_cyclin`.
+  - name: cdc20_apc_c_activator
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cdc20_apc_c_activator
+    label: Cdc20 APC/C activator
+    description: Tracks Cdc20 APC/C activator in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cdc20_apc_c_activator`.
+  - name: cdc20_t
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cdc20_t
+    label: Cdc20 T
+    description: Tracks Cdc20 T in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cdc20_t`.
+  - name: hct1_apc_c_activator
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.hct1_apc_c_activator
+    label: Hct1 APC/C activator
+    description: Tracks Hct1 APC/C activator in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.hct1_apc_c_activator`.
+  - name: clb2_sic1
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_sic1
+    label: Clb2 Sic1
+    description: Tracks Clb2 Sic1 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_sic1`.
+  - name: sic1_t
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sic1_t
+    label: Sic1 T
+    description: Tracks Sic1 T in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sic1_t`.
+  - name: clb5_sic1
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_sic1
+    label: Clb5 Sic1
+    description: Tracks Clb5 Sic1 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_sic1`.
+  - name: clb5_t
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_t
+    label: Clb5 T
+    description: Tracks Clb5 T in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_t`.
+  - name: clb2_t
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_t
+    label: Clb2 T
+    description: Tracks Clb2 T in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_t`.
+  - name: mass
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mass
+    label: Mass
+    description: Tracks Mass in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mass`.
+  - name: replication_origin_state
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.replication_origin_state
+    label: Replication origin state
+    description: Tracks Replication origin state in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.replication_origin_state`.
+  - name: budding_index
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.budding_index
+    label: Budding index
+    description: Tracks Budding index in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.budding_index`.
+  - name: spindle_state
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.spindle_state
+    label: Spindle state
+    description: Tracks Spindle state in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.spindle_state`.
+  - name: bck2_g1_regulator
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.bck2_g1_regulator
+    label: Bck2 G1 regulator
+    description: Tracks Bck2 G1 regulator in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.bck2_g1_regulator`.
+  - name: clb2_mitotic_cyclin
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_mitotic_cyclin
+    label: Clb2 mitotic cyclin
+    description: Tracks Clb2 mitotic cyclin in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb2_mitotic_cyclin`.
+  - name: clb5_s_phase_cyclin
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_s_phase_cyclin
+    label: Clb5 S-phase cyclin
+    description: Tracks Clb5 S-phase cyclin in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.clb5_s_phase_cyclin`.
+  - name: cln3_start_cyclin
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln3_start_cyclin
+    label: Cln3 Start cyclin
+    description: Tracks Cln3 Start cyclin in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.cln3_start_cyclin`.
+  - name: model_state_d
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.model_state_d
+    label: Model state D
+    description: Tracks Model state D in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.model_state_d`.
+  - name: mbf_transcription_factor
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mbf_transcription_factor
+    label: MBF transcription factor
+    description: Tracks MBF transcription factor in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mbf_transcription_factor`.
+  - name: mcm1_transcription_factor
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mcm1_transcription_factor
+    label: Mcm1 transcription factor
+    description: Tracks Mcm1 transcription factor in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.mcm1_transcription_factor`.
+  - name: sbf_transcription_factor
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sbf_transcription_factor
+    label: SBF transcription factor
+    description: Tracks SBF transcription factor in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sbf_transcription_factor`.
+  - name: sic1_cdk_inhibitor
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sic1_cdk_inhibitor
+    label: Sic1 CDK inhibitor
+    description: Tracks Sic1 CDK inhibitor in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.sic1_cdk_inhibitor`.
+  - name: swi5_transcription_factor
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.swi5_transcription_factor
+    label: Swi5 transcription factor
+    description: Tracks Swi5 transcription factor in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.swi5_transcription_factor`.
+  - name: va_sbf
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.va_sbf
+    label: Va Sbf
+    description: Tracks Va Sbf in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.va_sbf`.
+  - name: vd2_model_state_c1
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd2_model_state_c1
+    label: Vd2 Model state C1
+    description: Tracks Vd2 Model state C1 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd2_model_state_c1`.
+  - name: vd_b2
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd_b2
+    label: Vd B2
+    description: Tracks Vd B2 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd_b2`.
+  - name: vd_b5
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd_b5
+    label: Vd B5
+    description: Tracks Vd B5 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vd_b5`.
+  - name: vi_20
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vi_20
+    label: Vi 20
+    description: Tracks Vi 20 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vi_20`.
+  - name: vi_t1
+    maps_to: cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vi_t1
+    label: Vi T1
+    description: Tracks Vi T1 in the lab model via `cellcycle_sbml_chen2000_cellcycle_biomd0000000675_model.vi_t1`.
