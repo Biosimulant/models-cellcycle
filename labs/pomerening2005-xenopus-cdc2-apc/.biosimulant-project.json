@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "59311f17-f5ac-45dc-9995-f39fcd34ed59",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "b5e8239c-d144-4ec4-8db0-dc067ba17b11",
+  "created_at": "2026-05-15T07:28:13.074583839+00:00",
+  "last_synced_at": "2026-05-15T11:12:32.954017+00:00",
+  "hub_manifest_hash": "77ffd7f5b0073dd7d6e78239696b2db5f9323fee16a51743a7997c5502a9be7f",
+  "package_name": "pomerening2005-model-of-the-xenopus-cdc2-apc-system-lab"
+}

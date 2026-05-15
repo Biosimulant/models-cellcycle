@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "78197f56-575c-4360-972c-bab509b7fe69",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "373dd9f8-eaa8-4cb1-bea8-4836732ccbfd",
+  "created_at": "2026-05-15T07:28:13.008382917+00:00",
+  "last_synced_at": "2026-05-15T11:11:25.531423+00:00",
+  "hub_manifest_hash": "2c5b373b52546be85692ab9f8fc4be76a7a3589914961f3d8dadb619481c24e8",
+  "package_name": "novak1998-mathematical-model-of-fission-yeast-cell-cycle-lab"
+}

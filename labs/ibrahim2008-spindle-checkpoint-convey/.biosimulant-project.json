@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3e210841-2b24-43e2-8ffc-aa7c7af41b41",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1017c99c-bb9e-40ed-9b17-c3085b28c6d6",
+  "created_at": "2026-05-15T07:28:12.322238933+00:00",
+  "last_synced_at": "2026-05-15T11:03:37.880990+00:00",
+  "hub_manifest_hash": "b63a5135d18998ff5e7cde24bfca1c710d5199ff793c7be817b0fcd8f77a00e0",
+  "package_name": "ibrahim2008-mitotic-spindle-assembly-checkpoint-convey-variant-l"
+}

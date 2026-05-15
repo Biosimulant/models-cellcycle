@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "324632a3-fdcd-4f31-95eb-3db3e5f42837",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "93551ade-f296-4743-a626-a7043965d936",
+  "created_at": "2026-05-15T07:28:11.642674146+00:00",
+  "last_synced_at": "2026-05-15T10:51:43.444548+00:00",
+  "hub_manifest_hash": "0109e0e8b2bf4eeb7944d6feb784eddffcfa5e72bf7c9be5ed16d918d01e2f6c",
+  "package_name": "chen2004-cell-cycle-regulation-lab"
+}

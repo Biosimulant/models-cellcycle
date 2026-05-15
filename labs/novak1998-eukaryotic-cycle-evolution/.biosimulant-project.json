@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "9f32c9ac-11bf-490e-8550-0e93bdb65fd2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ca888330-fe15-4c71-96ac-352b94c77b48",
+  "created_at": "2026-05-15T07:28:12.969429149+00:00",
+  "last_synced_at": "2026-05-15T11:10:54.125005+00:00",
+  "hub_manifest_hash": "a9bde80c0ba96f1edfd581cda3e2f78fc22e460274beec13d08d249e5722cc10",
+  "package_name": "novak1998-model-scenarios-for-evolution-of-the-eukaryotic-cell-c"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "38177ac9-5aac-4528-a420-f23a53aa4758",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a559ad55-b9f9-43b5-acbe-058425c2e1b3",
+  "created_at": "2026-05-15T07:28:11.897720622+00:00",
+  "last_synced_at": "2026-05-15T10:57:30.312901+00:00",
+  "hub_manifest_hash": "cbf898486765b1aabed3f917ab0e068de3ff6f732e75197b45901d41761d74e8",
+  "package_name": "deineko2003-cellcycle-lab"
+}

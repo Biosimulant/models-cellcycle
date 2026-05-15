@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "19c3549d-0c31-4392-b5a5-b79f4587bafc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "b42fb36e-e9a0-464f-9118-4ee1a36fe1f7",
+  "created_at": "2026-05-15T07:28:11.341789957+00:00",
+  "last_synced_at": "2026-05-15T10:49:00.615692+00:00",
+  "hub_manifest_hash": "426b1b73a98424f198e2f90f1226cbb31f7a17cf48878d88461a1c79fbf8fbcb",
+  "package_name": "barrack2014-calcium-cell-cycle-coupling-rs-dependent-atp-release"
+}

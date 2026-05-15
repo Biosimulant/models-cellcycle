@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c7303ba7-9674-46bd-9edd-0767da09ec7a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7f392549-3cf5-44ec-b149-5fa89cc04aca",
+  "created_at": "2026-05-15T07:28:13.239697419+00:00",
+  "last_synced_at": "2026-05-15T11:17:53.954596+00:00",
+  "hub_manifest_hash": "d3c4ca3f022f51532433f37986028a1e1daee754957a2499c84c93d0801c76c9",
+  "package_name": "weis2014-data-driven-mammalian-cell-cycle-model-lab"
+}

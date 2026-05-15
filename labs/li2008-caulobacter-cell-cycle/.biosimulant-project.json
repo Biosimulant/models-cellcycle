@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f26de275-5181-4930-a2f4-341668318741",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9a530f66-df22-4df8-895a-7335a9a46a2f",
+  "created_at": "2026-05-15T07:28:12.733284771+00:00",
+  "last_synced_at": "2026-05-15T11:06:42.668868+00:00",
+  "hub_manifest_hash": "2be1d7ffba2a41cde71120fe638d66cb27ee7f0e3c6872a3d0284476e4e213b6",
+  "package_name": "li2008-caulobacter-cell-cycle-lab"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "49cc41bb-61d9-4710-9c45-306f8adf4f69",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "369c1ca8-dc7a-4dd3-8253-6d3963c2301e",
+  "created_at": "2026-05-15T07:28:13.143615780+00:00",
+  "last_synced_at": "2026-05-15T11:15:00.686600+00:00",
+  "hub_manifest_hash": "76fd3cb4131819a9f9751d4fddd7d9b97733aece8d837408f08507ead48fa79e",
+  "package_name": "tsai2014-cell-cycle-duration-control-by-oscillatory-dynamics-in"
+}

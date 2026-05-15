@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "13603b04-e8f2-44ee-967a-b25f9097da5f",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "516fc23f-991a-49ad-85ed-0531e25f5a72",
+  "created_at": "2026-05-15T07:28:13.270769542+00:00",
+  "last_synced_at": "2026-05-15T11:18:23.108791+00:00",
+  "hub_manifest_hash": "2e0b4f810f6f957a6452ae04b3859135cfca237313a28f15b187f1a832613d1e",
+  "package_name": "zhang2018-cell-cycle-commitment-in-hypoxia-lab"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "b41bf5a7-4743-46e7-a226-031787fd1713",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "a664789b-b571-4b2d-bede-4d5629c9122e",
+  "created_at": "2026-05-15T07:28:12.808389621+00:00",
+  "last_synced_at": "2026-05-15T11:07:43.657886+00:00",
+  "hub_manifest_hash": "4ac640bd698587adf09e6aaa39830f224dd35c877e0c917d046d7ca3900695a9",
+  "package_name": "liu2012-hybrid-modeling-and-simulation-of-stochastic-effects-on"
+}

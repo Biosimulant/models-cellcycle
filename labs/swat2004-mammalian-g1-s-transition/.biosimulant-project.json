@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "565b8b78-ed23-4487-bf37-a82c0cd1187a",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "22fac489-b09b-4795-8de7-a441f1080e06",
+  "created_at": "2026-05-15T07:28:13.122317786+00:00",
+  "last_synced_at": "2026-05-15T11:14:23.503054+00:00",
+  "hub_manifest_hash": "752f72bbe6c5278515416411ecfaae0ed000721f95ffd83f4e1ce082b70149be",
+  "package_name": "swat2004-mammalian-g1-s-transition-lab"
+}

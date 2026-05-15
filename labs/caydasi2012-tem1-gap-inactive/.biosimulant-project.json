@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c6aad44d-6e21-49f7-a78f-71197c591aa1",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "4a95b9f4-0c94-4bfb-b704-a0bd95d2fb45",
+  "created_at": "2026-05-15T07:28:11.458788343+00:00",
+  "last_synced_at": "2026-05-15T10:50:15.574760+00:00",
+  "hub_manifest_hash": "e358c731c11877714df0ba0c3a77821c454421c12f32e5db1292c6c328218170",
+  "package_name": "caydasi2012-ubiquitous-inactive-tem1-gap-model-lab"
+}

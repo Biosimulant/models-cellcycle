@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4442396b-4b50-4687-aaac-96aa906c2461",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0931a165-c402-40d5-971b-8e099b0db65a",
+  "created_at": "2026-05-15T07:28:11.361726087+00:00",
+  "last_synced_at": "2026-05-15T10:49:24.078212+00:00",
+  "hub_manifest_hash": "a8569f4cb931a29a7f9ffe9422045ed9cc4aa0dffeecd1dd9baa84eb29650c19",
+  "package_name": "bedessem2014-hif-1-a-mediated-response-to-hypoxia-on-the-g1-s-tr"
+}

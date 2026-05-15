@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "c0ca0ce6-6dd1-4f0f-86e8-adfcff8dacc3",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "47be60f7-3e00-4d10-8df7-5da7828b0112",
+  "created_at": "2026-05-15T07:28:12.888298473+00:00",
+  "last_synced_at": "2026-05-15T11:09:32.550098+00:00",
+  "hub_manifest_hash": "9bd2220b831493588c4dcfabbbc05b375f80692aa1af86c10501e3c423fac0b5",
+  "package_name": "norel1990-mpf-and-cyclin-oscillations-lab"
+}

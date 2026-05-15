@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7bd44331-7b14-4ad5-a020-60f66160fd46",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "691b927f-f117-4151-b1e7-81775d33bea3",
+  "created_at": "2026-05-15T07:28:12.237102331+00:00",
+  "last_synced_at": "2026-05-15T11:02:23.996108+00:00",
+  "hub_manifest_hash": "6df5da9cfc88d3bf8ed11d4ca52df72ff768ba1912a662ee12a20ffe577f2290",
+  "package_name": "haberichter2007-cellcycle-lab"
+}

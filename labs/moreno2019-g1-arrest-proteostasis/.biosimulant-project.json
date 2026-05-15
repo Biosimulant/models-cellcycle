@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d86ab836-5bd0-4eef-b0bf-4aabccf348ea",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9420b64c-938e-4a85-b631-61b1a1f171da",
+  "created_at": "2026-05-15T07:28:12.855849070+00:00",
+  "last_synced_at": "2026-05-15T11:08:38.502680+00:00",
+  "hub_manifest_hash": "56d3aadfcefafe7dff045b96628d092445ada5586b652ddd17735574dea4c095",
+  "package_name": "moreno2019-stochastic-model-of-g1-arrest-due-to-proteostasis-dec"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f381651e-ff3c-495b-9dd6-554108455ade",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "3172fbf5-7a1d-469a-866e-6bb342bce3a6",
+  "created_at": "2026-05-15T07:28:11.238229420+00:00",
+  "last_synced_at": "2026-05-15T10:47:12.093770+00:00",
+  "hub_manifest_hash": "6445b79ca12f4c779133f90185f2b771b27e53552ae4cf49600932618568a1a9",
+  "package_name": "aguda1999-g2-dna-damage-checkpoint-lab"
+}

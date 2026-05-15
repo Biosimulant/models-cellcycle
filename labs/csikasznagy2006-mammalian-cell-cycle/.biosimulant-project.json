@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4c4f8b1a-238e-4ec4-96cd-8b6a8bae1f97",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "cebdcd24-b2c1-426e-ba03-f9d271d53aba",
+  "created_at": "2026-05-15T07:28:11.852826777+00:00",
+  "last_synced_at": "2026-05-15T10:55:10.611259+00:00",
+  "hub_manifest_hash": "b2e6e01820e23bc11ebdd92e75fe650ab0e8c21b25c583662a666263528d0400",
+  "package_name": "csikasz-nagy2006-mammalian-cell-cycle-model-lab"
+}

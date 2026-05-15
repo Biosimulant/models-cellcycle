@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "0c07e733-0684-450d-a72f-6c077acda9cc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ffd926a8-e9cd-415d-97a0-e1005a230c69",
+  "created_at": "2026-05-15T07:28:12.369632591+00:00",
+  "last_synced_at": "2026-05-15T11:55:11.200411+00:00",
+  "hub_manifest_hash": "5d14712726767df67f8008928e128441687ffea48c009582e694088e02ed5254",
+  "package_name": "jaiswal2017-cell-cycle-arrest-lab"
+}

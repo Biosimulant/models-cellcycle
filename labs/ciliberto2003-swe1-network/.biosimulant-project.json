@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "3fc70c47-bd90-4bf6-a0cc-58fbec4b25e2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f938cbdd-01ea-40c3-a548-b08c0edbf338",
+  "created_at": "2026-05-15T07:28:11.782474638+00:00",
+  "last_synced_at": "2026-05-15T10:53:56.076896+00:00",
+  "hub_manifest_hash": "1b295785dd86fa3166a906cf2fca1947a3d51a8d2be61448ef798c333ae0e7ec",
+  "package_name": "ciliberto2003-swe1network-lab"
+}

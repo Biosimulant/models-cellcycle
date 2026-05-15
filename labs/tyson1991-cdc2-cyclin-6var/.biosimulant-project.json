@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7d3e2358-d294-435e-b079-1ad5c4ae3612",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "878b3f8d-0be8-4ccf-850b-b5cfa6b5974e",
+  "created_at": "2026-05-15T07:28:13.175820061+00:00",
+  "last_synced_at": "2026-05-15T11:16:37.742095+00:00",
+  "hub_manifest_hash": "f9ecd675d68db6957e52f3ee615ee30749329c032b480769834d8362c8587078",
+  "package_name": "tyson1991-cell-cycle-6-var-lab"
+}

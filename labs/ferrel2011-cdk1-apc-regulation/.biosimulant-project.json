@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f609f935-51ca-4e7a-98b5-639a8a49fb5c",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e2b7bc71-e9ad-4509-b989-0921ad61a476",
+  "created_at": "2026-05-15T07:28:11.933243084+00:00",
+  "last_synced_at": "2026-05-15T10:58:25.307934+00:00",
+  "hub_manifest_hash": "1c895399ebb772264e3517c52b5e2fd9dd2389727d982be04bf06244030208b1",
+  "package_name": "ferrel2011-cdk1-and-apc-regulation-in-cell-cycle-in-xenopus-laev"
+}

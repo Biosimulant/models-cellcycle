@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "280594ff-bac1-42db-9874-0ac01caf3cca",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1d4b7154-b64b-42bb-a73e-8722cb990689",
+  "created_at": "2026-05-15T07:28:11.285333581+00:00",
+  "last_synced_at": "2026-05-15T10:48:09.448199+00:00",
+  "hub_manifest_hash": "d193eabef17b5c8a446586fdee9b65c30385f032c2c08e295abe8153ea7b2210",
+  "package_name": "barr2016-all-or-nothing-g1-s-transition-lab"
+}

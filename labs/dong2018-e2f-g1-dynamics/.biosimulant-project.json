@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4bf32544-23da-4518-a3ba-5f0ba7fbee50",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0c643371-4010-46bf-a41a-0df391a47ffd",
+  "created_at": "2026-05-15T07:28:11.919892025+00:00",
+  "last_synced_at": "2026-05-15T10:57:56.250503+00:00",
+  "hub_manifest_hash": "b8780521b5e3b8cac52cf392fb7ab2973b94b731fe2298748497434a10688a9b",
+  "package_name": "dong2018-e2f-dynamics-in-g1-phase-lab"
+}

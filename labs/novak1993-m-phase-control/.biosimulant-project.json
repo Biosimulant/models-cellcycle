@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "00d3755f-524a-4ade-9bdf-2f3f580e3788",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "17068bc8-7a00-45a4-8e0c-00e814892269",
+  "created_at": "2026-05-15T07:28:12.913999765+00:00",
+  "last_synced_at": "2026-05-15T11:10:03.256276+00:00",
+  "hub_manifest_hash": "1c9c6afa43893cd62b11715bb2e72e46d2d37d3c525da5b8ded465733430171e",
+  "package_name": "novak1993-cell-cycle-m-phase-control-lab"
+}

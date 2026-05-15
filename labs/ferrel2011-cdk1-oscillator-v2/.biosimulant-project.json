@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "858a16cf-4eac-4f3e-a884-14f781f6af8e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0fa9fa4f-1c91-42c7-8025-1259cf08cb95",
+  "created_at": "2026-05-15T07:28:11.946453060+00:00",
+  "last_synced_at": "2026-05-15T10:58:58.725982+00:00",
+  "hub_manifest_hash": "80dbeb1bed0ef8e1db189327516dd0d01126423f9215a95cb0eddc41369ca722",
+  "package_name": "ferrel2011-autonomous-biochemical-oscillator-in-cell-cycle-in-xe"
+}

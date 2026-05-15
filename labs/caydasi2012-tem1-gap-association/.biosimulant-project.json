@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f7e5cddc-5b65-48a3-93b0-655d1e7ecbb1",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7adbc169-d387-4f39-b23f-3bdc4643c23f",
+  "created_at": "2026-05-15T07:28:11.412772132+00:00",
+  "last_synced_at": "2026-05-15T10:49:49.260365+00:00",
+  "hub_manifest_hash": "de86444457ed9e4b17de8b6a220b3c8a25dc8df3b1f222314629c4027199679f",
+  "package_name": "caydasi2012-regulation-of-tem1-by-the-gap-complex-in-spindle-pos"
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "e2dacf21-75d7-4e36-9d17-f15e482e8adc",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "6e4ba006-fb13-441f-843a-c41611b69b85",
+  "created_at": "2026-05-15T07:28:11.702597869+00:00",
+  "last_synced_at": "2026-05-15T10:53:04.115652+00:00",
+  "hub_manifest_hash": "a2ad87e67a56ab92cb0bef93d56a64e04fa7a50ad33c6f98ccd2e698528dcb7f",
+  "package_name": "ciliberto2003-cycline-cdk2-timer-in-the-cell-cycle-of-xenopus-la"
+}

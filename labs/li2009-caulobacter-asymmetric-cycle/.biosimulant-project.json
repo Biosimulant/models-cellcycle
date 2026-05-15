@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "88463824-73a1-4ac8-bdfe-d7c63004ac19",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "824b8777-c4d9-4006-9b91-a3958eef8b33",
+  "created_at": "2026-05-15T07:28:12.787746496+00:00",
+  "last_synced_at": "2026-05-15T11:07:11.038776+00:00",
+  "hub_manifest_hash": "a2ebf57dfff2c9bb1558ca03d15dec8026c5a0f04fd6bcf7abc9964a0b7baa29",
+  "package_name": "li2009-assymetric-caulobacter-cell-cycle-lab"
+}

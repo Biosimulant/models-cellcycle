@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "81fec183-35d9-48bc-b371-98e44b3b2e3f",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0d1ee665-b171-4086-8eb7-66f4c6799a16",
+  "created_at": "2026-05-15T07:28:11.553112413+00:00",
+  "last_synced_at": "2026-05-15T10:51:03.834342+00:00",
+  "hub_manifest_hash": "d71076f779afc589d2598ee9c7e1cd2f71e4368c35197d1f1758338a51b9a3da",
+  "package_name": "chen2000-cellcycle-lab"
+}

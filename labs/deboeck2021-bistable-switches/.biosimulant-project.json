@@ -3,5 +3,9 @@
   "local_id": "4d661d15-f532-483b-b4a8-23c022fff65d",
   "kind": "lab",
   "source": "local",
-  "created_at": "2026-05-15T03:03:03.677288504+00:00"
+  "hub_id": "d166d8c8-a978-4164-8392-f93c78b8d7b3",
+  "created_at": "2026-05-15T03:03:03.677288504+00:00",
+  "last_synced_at": "2026-05-15T10:55:35.767753+00:00",
+  "hub_manifest_hash": "14faa988831ba845ee46d9052ae2aa039250566b0010f24a2fd65dd3a8f5a301",
+  "package_name": "deboeck2021-modular-approach-to-modeling-the-cell-cycle-5-ode-mo"
 }

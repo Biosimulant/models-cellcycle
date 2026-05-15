@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7df1d716-7c69-4359-89f6-47e83d51883b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "f4b56eab-dea1-4a1a-9f02-5a4f827d2ebb",
+  "created_at": "2026-05-15T07:28:13.048784757+00:00",
+  "last_synced_at": "2026-05-15T11:11:57.821914+00:00",
+  "hub_manifest_hash": "d320231cdc3ea8d38742400933b2d29869e034f8f7cfc1277bc79f0d8bd9f79d",
+  "package_name": "novak2004-a-model-for-restriction-point-control-of-the-mammalian"
+}

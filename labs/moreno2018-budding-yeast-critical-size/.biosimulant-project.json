@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "edb9ad54-55bd-4b64-a06e-711e9f6eafdf",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "88a7b81c-3dc3-4225-899f-5074c0a75c88",
+  "created_at": "2026-05-15T07:28:12.827220135+00:00",
+  "last_synced_at": "2026-05-15T11:08:08.061208+00:00",
+  "hub_manifest_hash": "07367d4c479bfd8d4e0480fd80cf1f5cd960aa829f4d8a7997ba12d32723188f",
+  "package_name": "model-of-budding-yeast-critical-cell-size-dependence-on-growth-r"
+}

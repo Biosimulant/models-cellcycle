@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "cdcef5f1-75bf-4c4a-b25f-a14a90a320ad",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "01ad9231-6fed-400e-b7a5-a4f8e5104110",
+  "created_at": "2026-05-15T07:28:11.735792308+00:00",
+  "last_synced_at": "2026-05-15T10:53:28.784426+00:00",
+  "hub_manifest_hash": "571ed7a03373759e4be29d91f5649ecad54b47f3cca1dc6f7ffe816c7b4571bf",
+  "package_name": "ciliberto2003-morphogenesis-checkpoint-lab"
+}

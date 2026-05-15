@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "4c4a4038-675a-40a1-824e-60af6872ee99",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "7cb7a439-b0d6-4253-a3d4-729fd0383e24",
+  "created_at": "2026-05-15T07:28:13.199953616+00:00",
+  "last_synced_at": "2026-05-15T11:17:09.309495+00:00",
+  "hub_manifest_hash": "0ba045499e8c0d42822779064269fb42f539719f6823f51dd50687dff0a1abc4",
+  "package_name": "tyson2001-cell-cycle-regulation-lab"
+}

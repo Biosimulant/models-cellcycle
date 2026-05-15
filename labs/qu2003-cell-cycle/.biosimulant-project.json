@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "12ba74cb-ebf3-4fb4-a27c-5680b50b100c",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "18682d35-f16c-4201-933e-a6114ed05df2",
+  "created_at": "2026-05-15T07:28:13.102489072+00:00",
+  "last_synced_at": "2026-05-15T11:13:43.304974+00:00",
+  "hub_manifest_hash": "ad3fad6e97468a8bdbe007a798f38c6823009f8d7e7ef4596c6e949f654582d6",
+  "package_name": "qu2003-cellcycle-lab"
+}
