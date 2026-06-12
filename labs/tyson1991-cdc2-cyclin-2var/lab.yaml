@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: tyson1991-cdc2-cyclin-2var
+version: 1.0.0
 title: Tyson1991 - Cell Cycle 2 var Lab
 description: Single-model lab wrapper for Tyson1991 - Cell Cycle 2 var. Tyson1991 - Cell Cycle 2 var Mathematical
   model of the interactions of cdc2 and cyclin. It can be used to explore cell-cycle regulation dynamics and compare

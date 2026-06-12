@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: novak1998-eukaryotic-cycle-evolution
+version: 1.0.0
 title: Novak1998-Model scenarios for evolution of the eukaryotic cell cycle. Lab
 description: Single-model lab wrapper for Novak1998-Model scenarios for evolution of the eukaryotic cell cycle..
   Progress through the division cycle of present day eukaryotic cells is controlled by a complex network consisting

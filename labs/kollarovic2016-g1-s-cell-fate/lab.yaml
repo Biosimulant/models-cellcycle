@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: kollarovic2016-g1-s-cell-fate
+version: 1.0.0
 title: Kollarovic2016 - Cell fate decision at G1-S transition Lab
 description: 'Single-model lab wrapper for Kollarovic2016 - Cell fate decision at G1-S transition. Kollarovic2016
   - Cell fate decision at G1-Stransition This model is described in the article: To senesce or not to senesce: how

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zhang2018-hypoxia-commitment
+version: 1.0.0
 title: Zhang2018 - Cell cycle commitment in hypoxia Lab
 description: Single-model lab wrapper for Zhang2018 - Cell cycle commitment in hypoxia. Cell Cycle Zhang2018Cell
   Cycle Commitment In Hypoxia Model1812060002Model represents core biological mechanisms from biomodels_ebi reference

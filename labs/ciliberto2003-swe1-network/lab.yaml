@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ciliberto2003-swe1-network
+version: 1.0.0
 title: Ciliberto2003_Swe1Network Lab
 description: 'Single-model lab wrapper for Ciliberto2003_Swe1Network. This a model from the article: Mathematical
   model of the morphogenesis checkpoint in budding yeast. It can be used to explore cell-cycle regulation dynamics

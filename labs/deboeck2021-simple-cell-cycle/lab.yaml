@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: deboeck2021-simple-cell-cycle
+version: 1.0.0
 title: DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell cycle model Lab
 description: Single-model lab wrapper for DeBoeck2021 - Modular approach to modeling the cell cycle, simple cell
   cycle model. Models the production and degradation of cyclin B that drives the early embryonic cell cycle.Cyclin

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ferrel2011-cdk1-apc-regulation
+version: 1.0.0
 title: Ferrel2011 - Cdk1 and APC regulation in cell cycle in Xenopus laevis Lab
 description: Single-model lab wrapper for Ferrel2011 - Cdk1 and APC regulation in cell cycle in Xenopus laevis.
   Mathematical model of the regulation of Cdk1 and APC in cell cycle in Xenopus Laevis. It can be used to explore

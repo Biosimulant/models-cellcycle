@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: gerard2009-integrated-mammalian-cell-cycle
+version: 1.0.0
 title: Gerard2009 - An Integrated Mammalian Cell Cycle Model Lab
 description: Single-model lab wrapper for Gerard2009 - An Integrated Mammalian Cell Cycle Model. We propose an integrated
   computational model for the network of cyclin-dependent kinases (Cdks) that controls the dynamics of the mammalian

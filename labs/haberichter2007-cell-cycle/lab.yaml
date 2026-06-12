@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: haberichter2007-cell-cycle
+version: 1.0.0
 title: Haberichter2007_cellcycle Lab
 description: Single-model lab wrapper for Haberichter2007_cellcycle. This model is according to the paper A systems
   biology dynamical model of mammalian G1 cell cycle progression. Supplementary Figure 2A has been reproduced by

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: conradie2010-restriction-point-control
+version: 1.0.0
 title: Conradie2010_RPControl_CellCycle Lab
 description: 'Single-model lab wrapper for Conradie2010_RPControl_CellCycle. This model is from the article: Restriction
   point control of the mammalian cell cycle via the cyclin E/Cdk2:p27 complex. Conradie R, Bruggeman FJ, Ciliberto

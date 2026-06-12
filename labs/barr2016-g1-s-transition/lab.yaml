@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: barr2016-g1-s-transition
+version: 1.0.0
 title: Barr2016 - All-or-nothing G1/S transition Lab
 description: 'Single-model lab wrapper for Barr2016 - All-or-nothing G1/S transition. Barr2016 - All-or-nothing
   G1/Stransition This model is described in the article: A Dynamical Framework for the All-or-None G1/S Transition.

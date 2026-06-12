@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bai2003-g1-phase-regulation
+version: 1.0.0
 title: Bai2003_G1phaseRegulation Lab
 description: 'Single-model lab wrapper for Bai2003_G1phaseRegulation. This a model from the article: Theoretical
   and experimental evidence for hysteresis in cell proliferation. Bai S, Goodrich D, Thron CD, Tecarro E, Obeyesekere

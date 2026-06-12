@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: dong2018-e2f-g1-dynamics
+version: 1.0.0
 title: Dong2018 - E2F dynamics in G1 phase Lab
 description: Single-model lab wrapper for Dong2018 - E2F dynamics in G1 phase. The length of the G1 phase in the
   cell cycle shows significant variability in different cell types and tissue types. To gain insights into the control

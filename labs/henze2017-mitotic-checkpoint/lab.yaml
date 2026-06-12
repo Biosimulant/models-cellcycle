@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: henze2017-mitotic-checkpoint
+version: 1.0.0
 title: Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic Checkpoint Lab
 description: Single-model lab wrapper for Henze2017 - A Dynamical Model for Activating and Silencing the Mitotic
   Checkpoint. The spindle assembly checkpoint (SAC) is an evolutionarily conserved mechanism, exclusively sensitive

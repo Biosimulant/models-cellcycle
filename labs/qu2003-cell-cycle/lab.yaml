@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: qu2003-cell-cycle-models-cellcycle
+version: 1.0.0
 title: Qu2003_CellCycle Lab
 description: 'Single-model lab wrapper for Qu2003_CellCycle. This model is from the article: Dynamics of the cell
   cycle: checkpoints, sizers, and timers. It can be used to explore cell-cycle regulation dynamics and compare checkpoint

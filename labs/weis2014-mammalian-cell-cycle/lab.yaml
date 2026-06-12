@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: weis2014-mammalian-cell-cycle
+version: 1.0.0
 title: Weis2014 - Data driven Mammalian Cell Cycle Model Lab
 description: 'Single-model lab wrapper for Weis2014 - Data driven Mammalian Cell Cycle Model. This a model from
   the article: A Data-Driven, Mathematical Model of Mammalian Cell Cycle Regulation. It can be used to explore cell-cycle

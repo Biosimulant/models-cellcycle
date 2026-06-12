@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: deboeck2021-bistable-switches
+version: 1.0.0
 title: DeBoeck2021 - Modular approach to modeling the cell cycle, 5 ODE model with 3 bistable switches Lab
 description: 'Single-model lab wrapper for DeBoeck2021 - Modular approach to modeling the cell cycle, 5 ODE model
   with 3 bistable switches. Model of the mammalian cell cycle as a chain of bistable switches. There are three bistable

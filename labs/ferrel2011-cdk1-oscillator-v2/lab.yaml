@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ferrel2011-cdk1-oscillator-v2
+version: 1.0.0
 title: ferrel2011 - autonomous biochemical oscillator in cell cycle in Xenopus laevis v2 Lab
 description: Single-model lab wrapper for ferrel2011 - autonomous biochemical oscillator in cell cycle in Xenopus
   laevis v2. Computational modeling and the theory of nonlinear dynamical systems allow one to not simply describe

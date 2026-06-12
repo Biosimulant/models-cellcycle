@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hatzimanikatis1999-g1-s-transition
+version: 1.0.0
 title: Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle. Lab
 description: Single-model lab wrapper for Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian
   cell cycle.. A mathematical model of regulation of the G1-S transition of the mammalian cell cycle has been formulated

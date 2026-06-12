@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: morris2002-cdk2-cyclin
+version: 1.0.0
 title: Morris2002_CellCycle_CDK2Cyclin Lab
 description: 'Single-model lab wrapper for Morris2002_CellCycle_CDK2Cyclin. Notes from the original DOCQS curator:
   In this version of the CDK2/Cyclin A complex activation there is discrepancy in the first curve which plots the

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ciliberto2003-cycline-cdk2-timer
+version: 1.0.0
 title: Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo Lab
 description: 'Single-model lab wrapper for Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis
   embryo. Ciliberto2003 - CyclinE / Cdk2 timer in thecell cycle of Xenopus laevis embryo This model is described

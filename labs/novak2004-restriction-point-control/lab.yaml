@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: novak2004-restriction-point-control
+version: 1.0.0
 title: Novak2004 - A Model for Restriction Point Control of the Mammalian Cell Cycle Lab
 description: Single-model lab wrapper for Novak2004 - A Model for Restriction Point Control of the Mammalian Cell
   Cycle. &lt;notes xmlns='http://www.sbml.org/sbml/level2/version4'&gt; &lt;body xmlns='http://www.w3.org/1999/xhtml'&gt;

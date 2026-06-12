@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: lang2024-rpe1-compartment-dynamics
+version: 1.0.0
 title: Lang2024 - Cell cycle model explains compartment-resolved dynamics of 16 observables in RPE1 cells Lab
 description: Single-model lab wrapper for Lang2024 - Cell cycle model explains compartment-resolved dynamics of
   16 observables in RPE1 cells. This model provides a molecularly detailed description of the biochemical reaction

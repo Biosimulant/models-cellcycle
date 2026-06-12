@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chen2004-budding-yeast-cell-cycle
+version: 1.0.0
 title: Chen2004 - Cell Cycle Regulation Lab
 description: Single-model lab wrapper for Chen2004 - Cell Cycle Regulation. Chen2004 - Cell Cycle Regulation This
   is a hypothetical model of cell cycle that describes the molecular mechanism for regulating DNA synthesis, bud

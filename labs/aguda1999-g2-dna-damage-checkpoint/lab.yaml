@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: aguda1999-g2-dna-damage-checkpoint-models-cellcycle
+version: 1.0.0
 title: Aguda1999 - G2 DNA damage checkpoint Lab
 description: Single-model lab wrapper for Aguda1999 - G2 DNA damage checkpoint. Baltazar D. It can be used to explore
   cell-cycle regulation dynamics and compare checkpoint behavior across conditions.

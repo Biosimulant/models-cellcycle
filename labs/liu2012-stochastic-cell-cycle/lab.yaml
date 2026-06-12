@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: liu2012-stochastic-cell-cycle
+version: 1.0.0
 title: Liu2012-Hybrid modeling and simulation of stochastic effects on progression through the eukaryotic cell cycle.
   Lab
 description: Single-model lab wrapper for Liu2012-Hybrid modeling and simulation of stochastic effects on progression

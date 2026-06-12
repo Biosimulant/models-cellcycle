@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: jaiswal2017-cell-cycle-arrest
+version: 1.0.0
 title: Jaiswal2017 - Cell cycle arrest Lab
 description: 'Single-model lab wrapper for Jaiswal2017 - Cell cycle arrest. Jaiswal2017 - Cell cycle arrest This
   model is described in the article: ATM/Wip1 activities at chromatin control Plk1 re-activation to determine G2

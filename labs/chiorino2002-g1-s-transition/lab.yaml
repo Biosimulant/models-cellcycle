@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chiorino2002-g1-s-transition
+version: 1.0.0
 title: Chiorino2002 - G1/S transition model Lab
 description: Single-model lab wrapper for Chiorino2002 - G1/S transition model. mathematical approach to model the
   protein interactions regulating the transition from the G1 phase to the phase of DNA synthesis. Model is encoded

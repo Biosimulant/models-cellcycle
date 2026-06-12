@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: moreno2019-g1-arrest-proteostasis
+version: 1.0.0
 title: Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline delimits replicative lifespan in yeast
   Lab
 description: 'Single-model lab wrapper for Moreno2019 - Stochastic model of G1 arrest due to proteostasis decline

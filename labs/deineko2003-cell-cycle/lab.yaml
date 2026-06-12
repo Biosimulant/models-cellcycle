@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: deineko2003-cell-cycle
+version: 1.0.0
 title: Deineko2003_CellCycle Lab
 description: Single-model lab wrapper for Deineko2003_CellCycle. The model reproduces Fig 3 of the paper corresponding
   to the transition to S phase. Units have not been defined for this model because the paper mentions the use of

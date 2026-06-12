@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: gerard2019-cell-cycle-transformation
+version: 1.0.0
 title: "G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation networks (SBML) Lab"
 description: "Single-model lab wrapper for G\xE9rard - 2019 - Coupling the cell cycle and the cell transformation\
   \ networks (SBML). Model for the Let-7-mediated coupling between the CDK network driving the cell cycle and the\

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chen2000-budding-yeast-cell-cycle
+version: 1.0.0
 title: Chen2000_CellCycle Lab
 description: 'Single-model lab wrapper for Chen2000_CellCycle. This a model from the article: Kinetic analysis of
   a molecular model of the budding yeast cell cycle. Chen KC, Csikasz-Nagy A, Gyorffy B, Val J, Novak B, Tyson JJ.'

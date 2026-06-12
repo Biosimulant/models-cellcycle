@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: li2008-caulobacter-cell-cycle
+version: 1.0.0
 title: Li2008 - Caulobacter Cell Cycle Lab
 description: 'Single-model lab wrapper for Li2008 - Caulobacter Cell Cycle. This a model from the article: A Quantitative
   Study of the Division Cycle of Caulobacter crescentus Stalked Cells. Shenghua Li, Paul Brazhnik, Bruno Sobral,

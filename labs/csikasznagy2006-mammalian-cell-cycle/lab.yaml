@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: csikasznagy2006-mammalian-cell-cycle
+version: 1.0.0
 title: Csikasz-Nagy2006 - Mammalian Cell Cycle model Lab
 description: 'Single-model lab wrapper for Csikasz-Nagy2006 - Mammalian Cell Cycle model. This model originates
   from the Cell Cycle Database . It is described in: Analysis of a generic model of eukaryotic cell-cycle regulation.'

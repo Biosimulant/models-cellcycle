@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bedessem2014-hif1a-g1-s-transition
+version: 1.0.0
 title: Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition Lab
 description: Single-model lab wrapper for Bedessem2014 - HiF-1 a -mediated response to hypoxia on the G1/S transition.
   Cell Cycle Bedessem2014Hif1AMediated Response To Hypoxi Model1812040001Model represents core biological mechanisms

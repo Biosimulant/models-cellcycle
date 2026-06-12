@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: caydasi2012-tem1-gap-inhibition
+version: 1.0.0
 title: Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint Lab
 description: 'Single-model lab wrapper for Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position
   Checkpoint. This model is from the article: A dynamical model of the spindle position checkpoint Ayse Koca Caydasi,
